@@ -1,0 +1,34 @@
+name: Daily Content Update
+
+on:
+  schedule:
+    - cron: '30 3 * * *'   # 9:00 AM IST every day
+  workflow_dispatch:         # allow manual run from GitHub Actions tab
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run content engine
+        env:
+          GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
+          GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
+          GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+        run: python news_engine.py
+
+      - name: Commit and push
+        run: |
+          git config --global user.name  "CatchTheBrief Bot"
+          git config --global user.email "bot@catchthebrief.com"
+          git add index.html deals.html sitemap.xml articles/
+          git diff --staged --quiet || git commit -m "chore: daily update $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
