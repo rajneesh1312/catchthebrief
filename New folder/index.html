@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatchTheBrief — Tech News & Daily Deals</title>
+    <meta name="description" content="AI-powered tech news summaries and the hottest daily deals, curated for India. Get the brief, not the noise.">
+    <meta property="og:title" content="CatchTheBrief — Tech News & Daily Deals">
+    <meta property="og:description" content="AI-powered 3-bullet summaries of today's top tech news, plus the hottest deals curated daily.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://catchthebrief.com">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #0f172a; }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 4px; }
+
+        /* Glassmorphism & Glows */
+        .bg-glow-blue   { position: absolute; top: -10%; left: -10%; width: 28rem; height: 28rem; background-color: #1d4ed8; border-radius: 50%; filter: blur(110px); opacity: 0.25; z-index: -1; }
+        .bg-glow-indigo { position: absolute; bottom: 10%; right: -10%; width: 28rem; height: 28rem; background-color: #4338ca; border-radius: 50%; filter: blur(110px); opacity: 0.25; z-index: -1; }
+        .bg-glow-mid    { position: absolute; top: 50%; left: 40%; width: 20rem; height: 20rem; background-color: #1e3a8a; border-radius: 50%; filter: blur(120px); opacity: 0.15; z-index: -1; }
+        .glass-panel    { background-color: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+
+        /* AI Bullet Point Formatting */
+        .ai-content ul  { list-style-type: disc; padding-left: 1.5rem; margin-top: 0.75rem; color: #cbd5e1; line-height: 1.8; }
+        .ai-content li  { margin-bottom: 0.4rem; font-size: 0.925rem; }
+
+        /* Logo wordmark */
+        .logo-catch { color: #60a5fa; }
+        .logo-the   { color: #94a3b8; font-weight: 400; }
+        .logo-brief { color: #ffffff; }
+
+        /* Ticker bar animation */
+        @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .ticker-inner { display: flex; animation: ticker 30s linear infinite; white-space: nowrap; }
+        .ticker-inner:hover { animation-play-state: paused; }
+
+        /* Fade-in cards */
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        article, .deal-card { animation: fadeUp 0.4s ease both; }
+
+        /* Category pill hover */
+        .cat-pill { transition: background 0.2s; }
+        .cat-pill:hover { background: #1e3a8a; }
+    </style>
+</head>
+<body class="text-white font-sans antialiased relative min-h-screen overflow-x-hidden">
+
+    <!-- Background glow orbs -->
+    <div class="fixed inset-0 z-[-1] bg-gray-900">
+        <div class="bg-glow-blue"></div>
+        <div class="bg-glow-indigo"></div>
+        <div class="bg-glow-mid"></div>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="sticky top-0 z-50 glass-panel border-b border-white border-opacity-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <!-- Logo -->
+                <a href="/" class="flex-shrink-0 font-black text-2xl tracking-tight">
+                    <span class="logo-catch">Catch</span><span class="logo-the">The</span><span class="logo-brief">Brief</span>
+                </a>
+
+                <!-- Nav links -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#news"  class="text-gray-300 hover:text-blue-400 text-sm font-semibold tracking-wide transition-colors">Tech News</a>
+                    <a href="#deals" class="text-gray-300 hover:text-green-400 text-sm font-semibold tracking-wide transition-colors">Deals</a>
+                    <span class="text-gray-600 text-xs">|</span>
+                    <span class="text-gray-500 text-xs">Updated: 12 April 2026 at 9:31 PM IST</span>
+                </div>
+
+                <!-- Mobile timestamp -->
+                <div class="md:hidden text-gray-500 text-xs">12 April 2026 at 9:31 PM IST</div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== DEALS TICKER BAR ===== -->
+    <div class="bg-blue-700 border-b border-blue-500 overflow-hidden">
+        <div class="flex items-center h-9">
+            <div class="flex-shrink-0 bg-blue-900 px-4 h-full flex items-center z-10">
+                <svg class="w-3 h-3 mr-1.5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.381z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="text-white font-black text-xs uppercase tracking-widest">Top Deals</span>
+            </div>
+            <div class="overflow-hidden flex-1">
+                <div class="ticker-inner">
+                    <span class="px-8 text-white text-xs font-semibold opacity-90">Smart TVs &mdash; Up to 40% off &nbsp;&nbsp;&nbsp; Laptops &mdash; Best prices this week &nbsp;&nbsp;&nbsp; Audio Gear &mdash; Budget picks &nbsp;&nbsp;&nbsp; Smartphones &mdash; Exchange offers live &nbsp;&nbsp;&nbsp;</span>
+                    <span class="px-8 text-white text-xs font-semibold opacity-90">Smart TVs &mdash; Up to 40% off &nbsp;&nbsp;&nbsp; Laptops &mdash; Best prices this week &nbsp;&nbsp;&nbsp; Audio Gear &mdash; Budget picks &nbsp;&nbsp;&nbsp; Smartphones &mdash; Exchange offers live &nbsp;&nbsp;&nbsp;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HERO STRIP ===== -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-6">
+        <div class="glass-panel rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+                <h1 class="text-3xl sm:text-4xl font-black tracking-tight">
+                    Today's <span class="text-blue-400">Tech Brief</span>
+                </h1>
+                <p class="text-gray-400 mt-1 text-sm">AI-curated news summaries &amp; the hottest deals — no noise, just the brief.</p>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                <span class="text-green-400 text-xs font-bold uppercase tracking-wider">Live &amp; Updated Daily</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MAIN GRID ===== -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+            <!-- LEFT: News Feed (2/3 width) -->
+            <div id="news" class="lg:col-span-2">
+                <h2 class="text-2xl font-black text-white tracking-wide border-b border-gray-700 pb-3 mb-8 flex items-center gap-3">
+                    <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 12h6M7 8h2v4"></path>
+                    </svg>
+                    Latest Tech Briefs
+                </h2>
+
+                
+    <article class="glass-panel rounded-2xl p-8 shadow-2xl transition-all duration-300 hover:bg-opacity-20 hover:bg-white mb-8">
+        <span class="inline-block bg-blue-900 text-blue-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 border border-blue-500">
+            AI Software news
+        </span>
+        <h3 class="text-xl font-bold text-white leading-tight mb-2">Project Glasswing: Securing critical software for the AI era - Anthropic</h3>
+        <div class="ai-content"><ul><li>Anthropic's Project Glasswing secures crucial software for the AI era.</li><li>Aims to protect critical systems, ensuring robustness against emerging threats.</li><li>Essential for building a trustworthy and secure foundation for AI's future.</li></ul></div>
+        <a href="https://news.google.com/rss/articles/CBMiS0FVX3lxTFBfQUdtMDZYaEtZV0JMSk1ZSzdqTl9mV3dQTnZYcVEzaHo4cV8yUEl2a25QMWRXenFTYUQ3NF9WakR5WXVwaDRTZC1ZYw?oc=5" target="_blank" rel="noopener noreferrer"
+           class="mt-6 inline-block text-blue-400 hover:text-blue-300 font-bold text-sm uppercase tracking-wide">
+            Read Full Story &rarr;
+        </a>
+    </article>
+    
+    <article class="glass-panel rounded-2xl p-8 shadow-2xl transition-all duration-300 hover:bg-opacity-20 hover:bg-white mb-8">
+        <span class="inline-block bg-blue-900 text-blue-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 border border-blue-500">
+            Laptop deals India
+        </span>
+        <h3 class="text-xl font-bold text-white leading-tight mb-2">I'm a laptop expert and these are the 12 best laptops money can buy - TechRadar</h3>
+        <div class="ai-content"><ul><li>TechRadar's laptop guru reveals their top 12 expert picks.</li><li>A curated list of 12 "best-in-class" laptops for diverse needs.</li><li>Guidance to find your ideal laptop, covering all budgets and uses.</li></ul></div>
+        <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxNb1l0T21NOXRUUkR2cWU2eWp2UnpzMGdtYXBMaTFKalo0TnNjWHRYQ2c0cmJObUdCT0k1ZXlDYk9kTHV1Y0Y0bWthWFZKaEV2ZUVjOVpTLVNXN2VtbmxTSkRINV96QWs1dFNVS0JTVGIyWWFLY0JRUHU4b3d1aHVpMzZB?oc=5" target="_blank" rel="noopener noreferrer"
+           class="mt-6 inline-block text-blue-400 hover:text-blue-300 font-bold text-sm uppercase tracking-wide">
+            Read Full Story &rarr;
+        </a>
+    </article>
+    
+    <article class="glass-panel rounded-2xl p-8 shadow-2xl transition-all duration-300 hover:bg-opacity-20 hover:bg-white mb-8">
+        <span class="inline-block bg-blue-900 text-blue-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 border border-blue-500">
+            Smartphone deals India
+        </span>
+        <h3 class="text-xl font-bold text-white leading-tight mb-2">Apple leads global smartphone sales as India marks steep iPhone offers - MSN</h3>
+        <div class="ai-content"><ul><li>Apple has officially snatched the top spot in global smartphone sales!</li><li>Massive iPhone discounts in India played a significant role in fueling this global success.</li><li>This shows Apple's aggressive push and growing focus on the vibrant Indian market.</li></ul></div>
+        <a href="https://news.google.com/rss/articles/CBMigwJBVV95cUxPVTFjemJxY0o4ZE9VY3dqVFdlUEtTYk11VXpnVzZTWVNVVEdBbW5vSUZUSjNMQk54Ukx5QkkzeWs2d0NFVVB3aF8yOUt0SVJRVG9EZFlhS2NHT0c4OHBnbEpHUk92YnZZN0xvWXJLLVJicUlYU0RjZE5fX09CRTZRQVhneVdwR2wzNkJlR0pBNnNIQ3I0VlFDejQ2OHVyM24tVWZ0dzdNUDM5YlNFXzR1WHlJcXcwN0l3dzlwRkFVR1A4cjVNVktGUWhRckJNYzZnMTNmdjhjQ0dYYUFEQVpfc1ZMaWNkdS12MHBweU9rSGk1SGxyMVJBZm52MTdmaWxSdWFV?oc=5" target="_blank" rel="noopener noreferrer"
+           class="mt-6 inline-block text-blue-400 hover:text-blue-300 font-bold text-sm uppercase tracking-wide">
+            Read Full Story &rarr;
+        </a>
+    </article>
+    
+    <article class="glass-panel rounded-2xl p-8 shadow-2xl transition-all duration-300 hover:bg-opacity-20 hover:bg-white mb-8">
+        <span class="inline-block bg-blue-900 text-blue-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 border border-blue-500">
+            Smart TV deals India
+        </span>
+        <h3 class="text-xl font-bold text-white leading-tight mb-2">Best Budget- Friendly Smart TVs Under Rs. 30,000 to Buy in India Right Now - The New Indian Express</h3>
+        <div class="ai-content"><ul><li>Discover India's top budget-friendly smart TVs, all priced under ₹30,000, for savvy shoppers right now.</li><li>Find feature-packed models offering great value without compromising on your home entertainment experience.</li><li>This guide helps you choose the perfect affordable smart TV to upgrade your setup today.</li></ul></div>
+        <a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxNNjdROG5EY2pxamN3Z0JWSEV4LWgzSUE1TXhqQ2RkTk1sSmJHY1JDeTNlRFRJWFBmbHRBLWhGRjR0eGNyZzZoejE0TExoX0RJUnFCV3FzQXUzekFOVE9XX0d1SGpUeWVWZUhGdjBlbHI3azFXY1NrU3JhcTVKVzgxWnE1QW13UnJWd0R6cVlpLXBBSTRzd1hralJic1lCOThyWWpveUJpMnBOOV9yY0l2aU1QZTBYb2JPb01ocWxrT3djZGxQcm9LZExxR3fSAdoBQVVfeXFMTkluZHF2dzNESWZtSWRvLW44VWNDa1RieU9FLTJ2S3Q5b2ZRM3MxQ2pXTXFMZUpTZnhyUl8yLUFyN1psT09Pb3BGLWgyUHdiMEwzZ2F5eXpyT2N2d2JscmZhY1RRQ09NR2d5c2M2YXBvemgybEhtQ1A0TTU3WGgyaWpzUXUzOTNtR1VwWnZWa0RJZF9fTDZRMTZLeldDZnVRa1lpbGpCV1k3Zng5R0lJdE9KNnB4S2tPQU5YZ1VlOXM3UzcwaTFUamw2NWtwTWZUYWs1RGpkU3pIVXc?oc=5" target="_blank" rel="noopener noreferrer"
+           class="mt-6 inline-block text-blue-400 hover:text-blue-300 font-bold text-sm uppercase tracking-wide">
+            Read Full Story &rarr;
+        </a>
+    </article>
+    
+    <article class="glass-panel rounded-2xl p-8 shadow-2xl transition-all duration-300 hover:bg-opacity-20 hover:bg-white mb-8">
+        <span class="inline-block bg-blue-900 text-blue-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 border border-blue-500">
+            Gaming news
+        </span>
+        <h3 class="text-xl font-bold text-white leading-tight mb-2">Garena Free Fire MAX Redeem Codes for April 12, 2026: Unlock free diamonds and skins - Storyboard18</h3>
+        <div class="ai-content"><ul>
+    <li>Attention, Free Fire MAX players! New redeem codes are out for April 12, 2026.</li>
+    <li>Use these codes to unlock exciting free diamonds and exclusive in-game skins.</li>
+    <li>Don't miss this chance to grab your rewards and upgrade your gaming experience!</li>
+</ul></div>
+        <a href="https://news.google.com/rss/articles/CBMizgFBVV95cUxOVlYwcHpVa1BlaHVacmlNZ2c4NFFveS1qQ3VpdURfLWVpdDlOY2ptRmcxcnBDaTRiUkp1TWZnVGlvM2RPekt6T3VBaWY1c3FleFZSajBIdXhJVmN6YXZ3Zk1ZeEN6V2RVS3psZE9UT2NWZ2lOVG1PVnUtdG41ZEVfZEpJU3JnQVFBZTZGV1JwRk5mMXdPeG1WZ0Ewd0dVSUFQTWc2NG43S2ZTMkVIQkN6T2lNM0tpTjR4QmJlSXJsOVp0MTJqSXFQM2xCbS1RUdIB0wFBVV95cUxPS2Z6LUpkZHkzTkhJend0amktLTNNaWhPU1dlQjRJYWtmTTRnampkQkNDRjNXVEcxRWViRF8xQjdtNmlNdUJUNXRrNnVmUFpLRUlPMzFTaTlvT2VKMV9ib0JycmNZS0phVmpLb0xQenY2eGQxSVUzTlV2ZU83N2pxSG93T0VBOXlzd25aOUUwM2ltSEZEem12MmVMZDJDMnE1aGNxdTQyN1hzS1hJYTBjdEVsYkNfYjRHN1JOSzZxaTdfeHZtVm9GSDJRN21zMUMxZTFN?oc=5" target="_blank" rel="noopener noreferrer"
+           class="mt-6 inline-block text-blue-400 hover:text-blue-300 font-bold text-sm uppercase tracking-wide">
+            Read Full Story &rarr;
+        </a>
+    </article>
+    
+    <article class="glass-panel rounded-2xl p-8 shadow-2xl transition-all duration-300 hover:bg-opacity-20 hover:bg-white mb-8">
+        <span class="inline-block bg-blue-900 text-blue-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 border border-blue-500">
+            Cybersecurity news
+        </span>
+        <h3 class="text-xl font-bold text-white leading-tight mb-2">Hacker Uses Claude and ChatGPT to Breach Multiple Government Agencies - CyberSecurityNews</h3>
+        <div class="ai-content"><ul><li>Hacker exploited AI tools like Claude and ChatGPT for sophisticated attacks.</li><li>Multiple government agencies across the globe faced serious security breaches.</li><li>This incident highlights the alarming rise of AI in cybercrime strategies.</li></ul></div>
+        <a href="https://news.google.com/rss/articles/CBMie0FVX3lxTE01MVpFd1ZHMWZteW4tV1FFZzNaRm9uR2FmaUtPM0pKUDBndXdOVmhGN1Zuc0FYMkVkWGZGbmhqMW9CMm41S2daem5PSEJlR3liWFRuaUNoX2lhUVBBTlRQYWJxRG1hRXZYR0dpMTJYbGdFWEpxbDQxNnp5SdIBgAFBVV95cUxORWlMU0I5NXlBWVE3eXQ4dnhsU1JKZDVtQ2RJUGV1QTZxaWlYREgwVFNpTzI1R3RtWDN4cTE3QXQ5T0pCVWNsVjhrTTJ6WXg5SWpGekpuaFhOSzgwUDhQWXU2QWxoZFlUMmlIQ0lvLTRrNjJKTTRCMzJHT3ZqemxVSA?oc=5" target="_blank" rel="noopener noreferrer"
+           class="mt-6 inline-block text-blue-400 hover:text-blue-300 font-bold text-sm uppercase tracking-wide">
+            Read Full Story &rarr;
+        </a>
+    </article>
+    
+    <article class="glass-panel rounded-2xl p-8 shadow-2xl transition-all duration-300 hover:bg-opacity-20 hover:bg-white mb-8">
+        <span class="inline-block bg-blue-900 text-blue-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 border border-blue-500">
+            Tech startup news India
+        </span>
+        <h3 class="text-xl font-bold text-white leading-tight mb-2">Indian tech startup funding down 18% to $11.7 bn in FY26: Tracxn - EdexLive</h3>
+        <div class="ai-content"><ul><li>AI servers are busy. Click the link below to read the full story!</li></ul></div>
+        <a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNUEQxa0dsdWV1b2pBRE9kOFFIVkpSaG0xR3VyUXNYS1hnandsZ01nV0djVFBTaWZBazNVOERDcElZY2c0TFVQZU9XTW5Xc3Y2TWNLc0tra2lWeTdJTXJMc0hZcHRjRWlPWXdEajRfYTQzTUkwS09VT3VKSHl4Wl9faDBxc1BSUjd5eFZremMyUFo5TUZiVS1oUkV1aENSUWJBSW1od0tR0gGzAUFVX3lxTE85RER1NmlMdXdfSjNrWGRIb19aRWhhQ1dkbU5jU0VrNEpCaTZOeUVldkMyUE9EbkZobmthWkt0YVl6eDl1dGMwZVlaV3d3V0ZZUG5icGt0VUUxUFBwM05sOThlWTdnMUhzQjhmSGZMN25fWmFmaEo0alBOc0ZRTnpwd2tIX2tpNFhDb2NwamhIRmxrRHltdnluRlJpXzRVR2VWdUgwaWozbnNMSGI5aG9xQnRv?oc=5" target="_blank" rel="noopener noreferrer"
+           class="mt-6 inline-block text-blue-400 hover:text-blue-300 font-bold text-sm uppercase tracking-wide">
+            Read Full Story &rarr;
+        </a>
+    </article>
+    
+    <article class="glass-panel rounded-2xl p-8 shadow-2xl transition-all duration-300 hover:bg-opacity-20 hover:bg-white mb-8">
+        <span class="inline-block bg-blue-900 text-blue-200 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4 border border-blue-500">
+            Software deals
+        </span>
+        <h3 class="text-xl font-bold text-white leading-tight mb-2">Best antivirus software deals for Feb. 2024: NordVPN, Bitdefender, Aura, and more - Mashable</h3>
+        <div class="ai-content"><ul><li>AI servers are busy. Click the link below to read the full story!</li></ul></div>
+        <a href="https://news.google.com/rss/articles/CBMi7wFBVV95cUxQUVJiZ0ZfRGhQc1dZRk5LUVBVTGZ5VndvQ2YyaFEteURaZlIzRnRNNC1zcWtBUU5xNlA4RHZWVHR6NjBEQVhValZTVFV5cWF3V0VpZmRKb0tMMV9FempBM0RJQlp5U0J3UHlqN3F1dUhBRjUwVXhNdEFQSjVHN21icUNFNUxteElrWElHeVAtbURNZUhwR09KbEpZV0JHaW5qYTl5c3YxSXZhRmpabG1WQV95cnlNM2x6MTBxYk8yaG5vNW5PLTNhd2MyMFZZLXo5X0IwZUd2MlNvZHRzR0xvY0VrdC1yS2k3aWdPWU9RRQ?oc=5" target="_blank" rel="noopener noreferrer"
+           class="mt-6 inline-block text-blue-400 hover:text-blue-300 font-bold text-sm uppercase tracking-wide">
+            Read Full Story &rarr;
+        </a>
+    </article>
+    
+
+            </div>
+
+            <!-- RIGHT: Deals Sidebar (1/3 width) -->
+            <div id="deals" class="space-y-2">
+                <h2 class="text-2xl font-black text-white tracking-wide border-b border-gray-700 pb-3 mb-8 flex items-center gap-3">
+                    <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    Today's Deals
+                </h2>
+
+                
+    <div class="glass-panel rounded-2xl p-5 shadow-xl flex flex-col items-center text-center relative mb-5">
+        <div class="absolute top-4 right-4 bg-green-500 text-white text-xs font-black px-2 py-1 rounded shadow-lg uppercase z-10">HOT DEAL</div>
+        <div class="w-full h-32 bg-gray-800 rounded-xl mb-4 flex items-center justify-center border border-gray-700">
+            <svg width="36" height="36" class="text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+        </div>
+        <span class="text-xs text-gray-400 mb-2 uppercase tracking-wider">r/deals</span>
+        <h3 class="text-sm font-bold text-white mb-4 leading-snug">Amazon US, 75% OFF - Digital Tire Pressure Gauge - $2.98 (!)</h3>
+        <a href="https://www.amazon.com/dp/B0C3LC4J4K?tag=drxth-20&amp;linkCode=ogi&amp;th=1&amp;psc=1" target="_blank" rel="noopener noreferrer"
+           class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black text-sm py-2 px-4 rounded-xl shadow-lg transition-all duration-200 transform hover:-translate-y-1 block">
+            Claim Deal &rarr;
+        </a>
+    </div>
+    
+    <div class="glass-panel rounded-2xl p-5 shadow-xl flex flex-col items-center text-center relative mb-5">
+        
+        <div class="w-full h-32 bg-gray-800 rounded-xl mb-4 flex items-center justify-center border border-gray-700">
+            <svg width="36" height="36" class="text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+        </div>
+        <span class="text-xs text-gray-400 mb-2 uppercase tracking-wider">r/deals</span>
+        <h3 class="text-sm font-bold text-white mb-4 leading-snug">33% LIMITED TIME OFF $19.99 – 62" Phone Tripod with Selfie Stick + Remote (EUCOS) #1 best seller</h3>
+        <a href="https://www.amazon.com/dp/B09XHZ8F7F?th=1&amp;linkCode=ll2&amp;tag=cvamonra-20&amp;linkId=66e8302e974661aa5adb0553964ed5b9&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer"
+           class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black text-sm py-2 px-4 rounded-xl shadow-lg transition-all duration-200 transform hover:-translate-y-1 block">
+            Claim Deal &rarr;
+        </a>
+    </div>
+    
+    <div class="glass-panel rounded-2xl p-5 shadow-xl flex flex-col items-center text-center relative mb-5">
+        
+        <div class="w-full h-32 bg-gray-800 rounded-xl mb-4 flex items-center justify-center border border-gray-700">
+            <svg width="36" height="36" class="text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+            </svg>
+        </div>
+        <span class="text-xs text-gray-400 mb-2 uppercase tracking-wider">r/deals</span>
+        <h3 class="text-sm font-bold text-white mb-4 leading-snug">Cubii JR1, Under Desk Elliptical, Under Desk Bike Pedal Exerciser at $179 [39% off]</h3>
+        <a href="https://www.amazon.com/dp/B074F1S194?th=1&amp;linkCode=ll2&amp;tag=deals00007-20&amp;linkId=6c0e727ad979459edba154772fd9399b&amp;language=en_US&amp;ref_=as_li_ss_tl" target="_blank" rel="noopener noreferrer"
+           class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black text-sm py-2 px-4 rounded-xl shadow-lg transition-all duration-200 transform hover:-translate-y-1 block">
+            Claim Deal &rarr;
+        </a>
+    </div>
+    
+
+                <!-- Community Note -->
+                <div class="glass-panel rounded-xl p-4 text-center mt-6">
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Deals sourced from community-vetted Reddit feeds.<br>
+                        Always verify prices before purchasing.
+                    </p>
+                    <a href="https://reddit.com/r/IndiaDeals" target="_blank" rel="noopener noreferrer"
+                       class="text-blue-400 hover:text-blue-300 text-xs font-bold mt-2 inline-block">
+                        Browse r/IndiaDeals &rarr;
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="glass-panel border-t border-white border-opacity-10 mt-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                    <span class="font-black text-lg">
+                        <span class="logo-catch">Catch</span><span class="logo-the">The</span><span class="logo-brief">Brief</span>
+                    </span>
+                    <p class="text-gray-500 text-xs mt-1">AI-powered news &amp; deals, updated daily.</p>
+                </div>
+                <div class="text-gray-600 text-xs text-center sm:text-right">
+                    <p>Summaries generated by Google Gemini AI.</p>
+                    <p>Deals sourced from community forums. Not financial advice.</p>
+                    <p class="mt-1">Last updated: 12 April 2026 at 9:31 PM IST</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CatchTheBrief — Tech News & Deals for India</title>
+  <meta name="description" content="AI-powered 3-point summaries of today's top tech news plus the hottest deals — curated daily for Indian buyers.">
+  <meta name="keywords" content="tech news India, deals India, laptop deals, smartphone deals, AI news, CatchTheBrief">
+  <meta property="og:title" content="CatchTheBrief — Tech News & Deals for India">
+  <meta property="og:description" content="No noise. Just the brief. AI-curated tech news and deals updated daily.">
+  <meta property="og:url" content="{{SITE_URL}}">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="{{SITE_URL}}">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Fonts: Playfair Display for headlines, DM Sans for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ── DESIGN TOKENS ──────────────────────────────────── */
+    :root {
+      --bg:          #0a0a0f;
+      --bg2:         #111118;
+      --bg3:         #18181f;
+      --border:      rgba(255,255,255,0.07);
+      --border-hover:rgba(255,255,255,0.15);
+      --text:        #e8e8f0;
+      --text-muted:  #7070a0;
+      --text-dim:    #404060;
+
+      --accent-purple: #a78bfa;
+      --accent-blue:   #60a5fa;
+      --accent-green:  #34d399;
+      --accent-orange: #fb923c;
+      --accent-red:    #f87171;
+      --accent-teal:   #2dd4bf;
+      --accent-indigo: #818cf8;
+      --accent-pink:   #f472b6;
+      --accent-yellow: #fbbf24;
+      --accent-gray:   #94a3b8;
+
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'DM Sans', system-ui, sans-serif;
+      --font-mono:    'DM Mono', monospace;
+
+      --radius:   12px;
+      --radius-sm: 6px;
+    }
+
+    /* ── RESET & BASE ───────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.65;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: #303050; border-radius: 3px; }
+
+    /* ── GRAIN TEXTURE OVERLAY ──────────────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.4;
+    }
+
+    /* ── AMBIENT GLOWS ──────────────────────────────────── */
+    .glow-orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .glow-1 { width: 500px; height: 500px; top: -150px; left: -100px; background: #1e0a3c; opacity: 0.6; }
+    .glow-2 { width: 400px; height: 400px; bottom: 20%; right: -100px; background: #0a1f3c; opacity: 0.5; }
+    .glow-3 { width: 300px; height: 300px; top: 50%; left: 40%; background: #0a2a1a; opacity: 0.3; }
+
+    /* ── LAYOUT WRAPPER ─────────────────────────────────── */
+    .site-wrap { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── MASTHEAD ───────────────────────────────────────── */
+    .masthead {
+      padding: 32px 0 20px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1;
+    }
+    .logo-catch { color: var(--accent-purple); }
+    .logo-the   { color: var(--text-muted); font-weight: 700; }
+    .logo-brief { color: var(--text); }
+
+    .masthead-right { display: flex; align-items: center; gap: 24px; flex-shrink: 0; }
+
+    .nav-links { display: flex; gap: 20px; }
+    .nav-links a {
+      color: var(--text-muted);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+
+    .live-dot {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--accent-green);
+      letter-spacing: 0.05em;
+    }
+    .live-dot::before {
+      content: '';
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--accent-green);
+      box-shadow: 0 0 8px var(--accent-green);
+      animation: pulse 2s ease infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    /* ── TICKER ─────────────────────────────────────────── */
+    .ticker-wrap {
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg2);
+    }
+    .ticker-inner {
+      display: flex;
+      width: max-content;
+      animation: ticker 35s linear infinite;
+    }
+    .ticker-inner:hover { animation-play-state: paused; }
+    .ticker-item {
+      padding: 9px 40px;
+      font-size: 12px;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .ticker-item span { color: var(--accent-yellow); margin-right: 8px; }
+    @keyframes ticker {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── HERO STRIP ─────────────────────────────────────── */
+    .hero {
+      padding: 40px 0 32px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-left h1 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -1px;
+      color: var(--text);
+    }
+    .hero-left h1 em {
+      font-style: normal;
+      color: var(--accent-purple);
+    }
+    .hero-sub {
+      margin-top: 12px;
+      color: var(--text-muted);
+      font-size: 15px;
+      max-width: 480px;
+    }
+    .hero-meta {
+      text-align: right;
+      flex-shrink: 0;
+    }
+    .hero-date {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--text-dim);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .hero-count {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* ── EMAIL CAPTURE ──────────────────────────────────── */
+    .email-bar {
+      background: linear-gradient(135deg, #1a0a2e 0%, #0a1020 100%);
+      border: 1px solid rgba(167,139,250,0.2);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 28px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .email-bar-text strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .email-bar-text span {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .email-form {
+      display: flex;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+    .email-input {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border-hover);
+      border-radius: var(--radius-sm);
+      padding: 9px 14px;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 14px;
+      width: 220px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .email-input::placeholder { color: var(--text-dim); }
+    .email-input:focus { border-color: var(--accent-purple); }
+    .email-btn {
+      background: var(--accent-purple);
+      color: #0a0a0f;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 9px 18px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+    .email-btn:hover { opacity: 0.85; }
+
+    /* ── MAIN GRID ──────────────────────────────────────── */
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 40px;
+      padding: 32px 0 60px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .main-grid { grid-template-columns: 1fr; }
+      .sidebar { order: -1; }
+    }
+
+    /* ── SECTION LABEL ──────────────────────────────────── */
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── ARTICLE CARDS ──────────────────────────────────── */
+    .cards-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      transition: border-color 0.25s, background 0.25s;
+      animation: fadeUp 0.5s ease both;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      border-radius: 3px 0 0 3px;
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    .card:hover {
+      border-color: var(--border-hover);
+      background: var(--bg3);
+    }
+    .card:hover::before { opacity: 1; }
+
+    /* Accent left bar color per category */
+    .card[data-color="accent-purple"]::before { background: var(--accent-purple); }
+    .card[data-color="accent-blue"]::before   { background: var(--accent-blue); }
+    .card[data-color="accent-green"]::before  { background: var(--accent-green); }
+    .card[data-color="accent-orange"]::before { background: var(--accent-orange); }
+    .card[data-color="accent-red"]::before    { background: var(--accent-red); }
+    .card[data-color="accent-teal"]::before   { background: var(--accent-teal); }
+    .card[data-color="accent-indigo"]::before { background: var(--accent-indigo); }
+    .card[data-color="accent-pink"]::before   { background: var(--accent-pink); }
+    .card[data-color="accent-yellow"]::before { background: var(--accent-yellow); }
+    .card[data-color="accent-gray"]::before   { background: var(--accent-gray); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-family: var(--font-mono);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+      border: 1px solid currentColor;
+      opacity: 0.8;
+    }
+    .accent-purple { color: var(--accent-purple); }
+    .accent-blue   { color: var(--accent-blue); }
+    .accent-green  { color: var(--accent-green); }
+    .accent-orange { color: var(--accent-orange); }
+    .accent-red    { color: var(--accent-red); }
+    .accent-teal   { color: var(--accent-teal); }
+    .accent-indigo { color: var(--accent-indigo); }
+    .accent-pink   { color: var(--accent-pink); }
+    .accent-yellow { color: var(--accent-yellow); }
+    .accent-gray   { color: var(--accent-gray); }
+
+    .card-hook {
+      font-size: 12px;
+      font-family: var(--font-mono);
+      color: var(--text-muted);
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: clamp(17px, 2.5vw, 22px);
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    .card-bullets ul {
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .card-bullets li {
+      padding-left: 16px;
+      position: relative;
+      font-size: 14px;
+      color: #b0b0d0;
+      line-height: 1.55;
+    }
+    .card-bullets li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--text-dim);
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      gap: 12px;
+    }
+    .card-source {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+    }
+    .card-links { display: flex; gap: 10px; }
+
+    .btn-brief, .btn-source {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      transition: opacity 0.2s, background 0.2s;
+    }
+    .btn-brief {
+      background: var(--accent-purple);
+      color: #0a0a0f;
+    }
+    .btn-brief:hover { opacity: 0.85; }
+    .btn-source {
+      border: 1px solid var(--border-hover);
+      color: var(--text-muted);
+    }
+    .btn-source:hover { color: var(--text); border-color: var(--text-muted); }
+
+    /* ── SIDEBAR ────────────────────────────────────────── */
+    .sidebar { position: sticky; top: 24px; }
+
+    .sidebar-section { margin-bottom: 32px; }
+
+    /* ── DEAL CARDS ─────────────────────────────────────── */
+    .deal-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      margin-bottom: 10px;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .deal-card:hover { border-color: var(--border-hover); }
+
+    .deal-featured {
+      border-color: rgba(52, 211, 153, 0.25);
+      background: linear-gradient(135deg, rgba(52,211,153,0.04) 0%, var(--bg2) 100%);
+    }
+
+    .deal-badge {
+      position: absolute;
+      top: -9px; right: 12px;
+      background: var(--accent-green);
+      color: #0a0a0f;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 20px;
+      letter-spacing: 0.04em;
+    }
+
+    .deal-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .deal-flair, .deal-sub {
+      font-size: 10px;
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+    }
+
+    .deal-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      line-height: 1.45;
+      margin-bottom: 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .deal-btn {
+      display: block;
+      text-align: center;
+      background: rgba(52,211,153,0.1);
+      border: 1px solid rgba(52,211,153,0.25);
+      color: var(--accent-green);
+      border-radius: var(--radius-sm);
+      padding: 7px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .deal-btn:hover { background: rgba(52,211,153,0.18); }
+
+    .deals-link {
+      display: block;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-dim);
+      padding: 10px;
+      border: 1px dashed var(--border);
+      border-radius: var(--radius-sm);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .deals-link:hover { color: var(--text-muted); border-color: var(--border-hover); }
+
+    /* ── ABOUT WIDGET ───────────────────────────────────── */
+    .about-widget {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .about-widget p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 4px;
+    }
+    .about-widget .disclaimer {
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-top: 10px;
+      font-family: var(--font-mono);
+      line-height: 1.5;
+    }
+
+    /* ── FOOTER ─────────────────────────────────────────── */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 900;
+    }
+    .footer-meta {
+      font-size: 12px;
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+      text-align: right;
+      line-height: 1.7;
+    }
+
+    /* ── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 640px) {
+      .masthead { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .masthead-right { gap: 16px; }
+      .hero { flex-direction: column; align-items: flex-start; }
+      .hero-meta { text-align: left; }
+      .email-bar { flex-direction: column; align-items: flex-start; }
+      .email-form { flex-direction: column; width: 100%; }
+      .email-input { width: 100%; }
+      .card { padding: 20px; }
+      .card-footer { flex-direction: column; align-items: flex-start; }
+      .footer { flex-direction: column; }
+      .footer-meta { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient glows -->
+  <div class="glow-orb glow-1"></div>
+  <div class="glow-orb glow-2"></div>
+  <div class="glow-orb glow-3"></div>
+
+  <div class="site-wrap">
+
+    <!-- MASTHEAD -->
+    <header class="masthead">
+      <a href="/" class="logo">
+        <span class="logo-catch">Catch</span><span class="logo-the">The</span><span class="logo-brief">Brief</span>
+      </a>
+      <div class="masthead-right">
+        <nav class="nav-links">
+          <a href="/">News</a>
+          <a href="deals.html">Deals</a>
+        </nav>
+        <div class="live-dot">LIVE</div>
+      </div>
+    </header>
+
+  </div><!-- /site-wrap -->
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-inner">
+      <div class="ticker-item"><span>↗</span>Budget Laptops India</div>
+      <div class="ticker-item"><span>↗</span>AI News Today</div>
+      <div class="ticker-item"><span>↗</span>Smartphone Deals Under ₹20K</div>
+      <div class="ticker-item"><span>↗</span>Smart TV Offers</div>
+      <div class="ticker-item"><span>↗</span>Cybersecurity Alerts</div>
+      <div class="ticker-item"><span>↗</span>Startup Funding Rounds</div>
+      <div class="ticker-item"><span>↗</span>Gaming Deals</div>
+      <div class="ticker-item"><span>↗</span>Audio Gear Picks</div>
+      <div class="ticker-item"><span>↗</span>Budget Laptops India</div>
+      <div class="ticker-item"><span>↗</span>AI News Today</div>
+      <div class="ticker-item"><span>↗</span>Smartphone Deals Under ₹20K</div>
+      <div class="ticker-item"><span>↗</span>Smart TV Offers</div>
+      <div class="ticker-item"><span>↗</span>Cybersecurity Alerts</div>
+      <div class="ticker-item"><span>↗</span>Startup Funding Rounds</div>
+      <div class="ticker-item"><span>↗</span>Gaming Deals</div>
+      <div class="ticker-item"><span>↗</span>Audio Gear Picks</div>
+    </div>
+  </div>
+
+  <div class="site-wrap">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-left">
+        <h1>No noise.<br><em>Just the brief.</em></h1>
+        <p class="hero-sub">AI-curated tech news summaries and the hottest deals — updated every morning for Indian buyers.</p>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-date">{{ISO_DATE}}</div>
+        <div class="hero-count">10 briefs · 6 deals</div>
+      </div>
+    </div>
+
+    <!-- EMAIL CAPTURE -->
+    <div class="email-bar">
+      <div class="email-bar-text">
+        <strong>Get the brief in your inbox every morning</strong>
+        <span>No spam. Unsubscribe any time. Takes 10 seconds.</span>
+      </div>
+      <!-- Replace action URL with your Mailchimp / Buttondown / ConvertKit embed URL -->
+      <form class="email-form" action="https://buttondown.email/api/emails/embed-subscribe/catchthebrief" method="post" target="_blank">
+        <input class="email-input" type="email" name="email" placeholder="you@example.com" required>
+        <button class="email-btn" type="submit">Subscribe Free →</button>
+      </form>
+    </div>
+
+    <!-- MAIN GRID -->
+    <div class="main-grid">
+
+      <!-- LEFT: ARTICLES -->
+      <main>
+        <div class="section-label">Today's Tech Briefs</div>
+        <div class="cards-grid">
+          {{ALL_ARTICLES}}
+        </div>
+      </main>
+
+      <!-- RIGHT: SIDEBAR -->
+      <aside class="sidebar">
+
+        <div class="sidebar-section">
+          <div class="section-label">Hot Deals</div>
+          {{SIDEBAR_DEALS}}
+          <a class="deals-link" href="deals.html">View all deals →</a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="section-label">About</div>
+          <div class="about-widget">
+            <p>CatchTheBrief uses AI to read tech articles and extract the 3 facts that actually matter — so you don't have to.</p>
+            <p class="disclaimer">
+              Summaries are AI-generated. Deal links may be affiliate links — we earn a small commission at no cost to you. Updated daily via automation.
+            </p>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-logo">
+        <span class="logo-catch">Catch</span><span class="logo-the">The</span><span class="logo-brief">Brief</span>
+      </div>
+      <div class="footer-meta">
+        <div>Summaries by Google Gemini · Deals from community forums</div>
+        <div>Last updated: {{LAST_UPDATED}}</div>
+        <div>© 2025 CatchTheBrief.com</div>
+      </div>
+    </footer>
+
+  </div><!-- /site-wrap -->
+</body>
+</html>

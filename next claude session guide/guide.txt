@@ -1,0 +1,13 @@
+How to use it next time:
+Open a new Claude chat, paste the entire contents of CLAUDE_HANDOFF.md, then add one line at the end describing what you want to do next. For example:
+
+"I have pasted the project handoff above. Today I want to deploy to GitHub for the first time — walk me through it step by step."
+
+Claude will read the handoff and pick up exactly where we left off without you having to re-explain anything.
+One habit to build: whenever we finish a session and something significant changed — a bug was fixed, a new feature was added, a decision was made — spend 2 minutes updating the PENDING NEXT STEPS and KNOWN ISSUES sections of that file. That way it stays accurate and the next session starts fast.
+Your immediate next steps before we lose this session:
+
+Download CLAUDE_HANDOFF.md and save it in your project folder
+Go to aistudio.google.com and create 2 more free projects to get 2 more API keys
+Set all 3 keys and run python news_engine.py — you should get a complete successful build
+Once it works, come back and we'll do the GitHub deployment together
