@@ -13,42 +13,45 @@
   <link rel="canonical" href="https://catchthebrief.com">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
-  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 
-  <!-- Fonts: Playfair Display for headlines, DM Sans for body -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     /* ── DESIGN TOKENS ──────────────────────────────────── */
     :root {
-      --bg:          #0a0a0f;
-      --bg2:         #111118;
-      --bg3:         #18181f;
-      --border:      rgba(255,255,255,0.07);
-      --border-hover:rgba(255,255,255,0.15);
-      --text:        #e8e8f0;
-      --text-muted:  #7070a0;
-      --text-dim:    #404060;
+      /* NEW: Warm off-white light theme — readable, clean, editorial */
+      --bg:           #f7f5f0;
+      --bg2:          #ffffff;
+      --bg3:          #f0ede8;
+      --border:       rgba(0,0,0,0.09);
+      --border-hover: rgba(0,0,0,0.18);
+      --text:         #1a1814;
+      --text-muted:   #5a5650;
+      --text-dim:     #9a9690;
 
-      --accent-purple: #a78bfa;
-      --accent-blue:   #60a5fa;
-      --accent-green:  #34d399;
-      --accent-orange: #fb923c;
-      --accent-red:    #f87171;
-      --accent-teal:   #2dd4bf;
-      --accent-indigo: #818cf8;
-      --accent-pink:   #f472b6;
-      --accent-yellow: #fbbf24;
-      --accent-gray:   #94a3b8;
+      --accent-purple: #6d28d9;
+      --accent-blue:   #1d4ed8;
+      --accent-green:  #059669;
+      --accent-orange: #c2410c;
+      --accent-red:    #dc2626;
+      --accent-teal:   #0d9488;
+      --accent-indigo: #4338ca;
+      --accent-pink:   #be185d;
+      --accent-yellow: #b45309;
+      --accent-gray:   #475569;
 
       --font-display: 'Playfair Display', Georgia, serif;
       --font-body:    'DM Sans', system-ui, sans-serif;
       --font-mono:    'DM Mono', monospace;
 
-      --radius:   12px;
-      --radius-sm: 6px;
+      --radius:    12px;
+      --radius-sm:  6px;
+
+      /* Ad slot colors */
+      --ad-bg:     #fff8ed;
+      --ad-border: #f59e0b;
     }
 
     /* ── RESET & BASE ───────────────────────────────────── */
@@ -68,50 +71,76 @@
     a { color: inherit; text-decoration: none; }
     ul { list-style: none; }
 
-    /* Scrollbar */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: #303050; border-radius: 3px; }
-
-    /* ── GRAIN TEXTURE OVERLAY ──────────────────────────── */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 999;
-      opacity: 0.4;
-    }
-
-    /* ── AMBIENT GLOWS ──────────────────────────────────── */
-    .glow-orb {
-      position: fixed;
-      border-radius: 50%;
-      filter: blur(120px);
-      pointer-events: none;
-      z-index: 0;
-    }
-    .glow-1 { width: 500px; height: 500px; top: -150px; left: -100px; background: #1e0a3c; opacity: 0.6; }
-    .glow-2 { width: 400px; height: 400px; bottom: 20%; right: -100px; background: #0a1f3c; opacity: 0.5; }
-    .glow-3 { width: 300px; height: 300px; top: 50%; left: 40%; background: #0a2a1a; opacity: 0.3; }
+    ::-webkit-scrollbar-thumb { background: #c8c4be; border-radius: 3px; }
 
     /* ── LAYOUT WRAPPER ─────────────────────────────────── */
-    .site-wrap { position: relative; z-index: 1; max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    .site-wrap { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── TOP AD BANNER ──────────────────────────────────── */
+    .ad-banner-top {
+      background: var(--ad-bg);
+      border-bottom: 2px solid var(--ad-border);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 12px;
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+    }
+    .ad-banner-top .ad-label {
+      display: inline-block;
+      background: var(--ad-border);
+      color: #fff;
+      font-size: 9px;
+      padding: 1px 6px;
+      border-radius: 3px;
+      margin-right: 8px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      vertical-align: middle;
+    }
+    /* Placeholder text shown until real ad code is inserted */
+    .ad-placeholder {
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed var(--ad-border);
+      border-radius: var(--radius-sm);
+      background: var(--ad-bg);
+      color: var(--text-dim);
+      font-size: 12px;
+      font-family: var(--font-mono);
+      letter-spacing: 0.05em;
+    }
 
     /* ── MASTHEAD ───────────────────────────────────────── */
     .masthead {
-      padding: 32px 0 20px;
-      border-bottom: 1px solid var(--border);
+      padding: 24px 0 20px;
+      border-bottom: 2px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
+      background: var(--bg2);
+    }
+
+    .masthead-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
     }
 
     .logo {
       font-family: var(--font-display);
-      font-size: clamp(28px, 5vw, 42px);
+      font-size: clamp(24px, 4vw, 38px);
       font-weight: 900;
       letter-spacing: -0.5px;
       line-height: 1;
@@ -126,12 +155,14 @@
     .nav-links a {
       color: var(--text-muted);
       font-size: 13px;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 0.04em;
       text-transform: uppercase;
       transition: color 0.2s;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
     }
-    .nav-links a:hover { color: var(--text); }
+    .nav-links a:hover { color: var(--accent-purple); border-bottom-color: var(--accent-purple); }
 
     .live-dot {
       display: flex;
@@ -147,19 +178,19 @@
       width: 7px; height: 7px;
       border-radius: 50%;
       background: var(--accent-green);
-      box-shadow: 0 0 8px var(--accent-green);
+      box-shadow: 0 0 6px var(--accent-green);
       animation: pulse 2s ease infinite;
     }
     @keyframes pulse {
       0%, 100% { opacity: 1; transform: scale(1); }
-      50%       { opacity: 0.5; transform: scale(0.85); }
+      50%       { opacity: 0.4; transform: scale(0.85); }
     }
 
     /* ── TICKER ─────────────────────────────────────────── */
     .ticker-wrap {
       overflow: hidden;
       border-bottom: 1px solid var(--border);
-      background: var(--bg2);
+      background: var(--accent-purple);
     }
     .ticker-inner {
       display: flex;
@@ -168,13 +199,13 @@
     }
     .ticker-inner:hover { animation-play-state: paused; }
     .ticker-item {
-      padding: 9px 40px;
+      padding: 7px 36px;
       font-size: 12px;
       font-family: var(--font-mono);
-      color: var(--text-muted);
+      color: rgba(255,255,255,0.85);
       white-space: nowrap;
     }
-    .ticker-item span { color: var(--accent-yellow); margin-right: 8px; }
+    .ticker-item span { color: #fde68a; margin-right: 8px; }
     @keyframes ticker {
       0%   { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -182,7 +213,7 @@
 
     /* ── HERO STRIP ─────────────────────────────────────── */
     .hero {
-      padding: 40px 0 32px;
+      padding: 36px 0 28px;
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
@@ -191,10 +222,10 @@
     }
     .hero-left h1 {
       font-family: var(--font-display);
-      font-size: clamp(32px, 6vw, 56px);
+      font-size: clamp(28px, 5vw, 48px);
       font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: -1px;
+      line-height: 1.08;
+      letter-spacing: -0.5px;
       color: var(--text);
     }
     .hero-left h1 em {
@@ -202,15 +233,12 @@
       color: var(--accent-purple);
     }
     .hero-sub {
-      margin-top: 12px;
+      margin-top: 10px;
       color: var(--text-muted);
       font-size: 15px;
       max-width: 480px;
     }
-    .hero-meta {
-      text-align: right;
-      flex-shrink: 0;
-    }
+    .hero-meta { text-align: right; flex-shrink: 0; }
     .hero-date {
       font-family: var(--font-mono);
       font-size: 11px;
@@ -218,16 +246,11 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
     }
-    .hero-count {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
+    .hero-count { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
 
     /* ── EMAIL CAPTURE ──────────────────────────────────── */
     .email-bar {
-      background: linear-gradient(135deg, #1a0a2e 0%, #0a1020 100%);
-      border: 1px solid rgba(167,139,250,0.2);
+      background: var(--accent-purple);
       border-radius: var(--radius);
       padding: 20px 24px;
       margin: 28px 0;
@@ -240,45 +263,38 @@
       display: block;
       font-size: 15px;
       font-weight: 600;
-      color: var(--text);
+      color: #fff;
     }
-    .email-bar-text span {
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-    .email-form {
-      display: flex;
-      gap: 8px;
-      flex-shrink: 0;
-    }
+    .email-bar-text span { font-size: 13px; color: rgba(255,255,255,0.75); }
+    .email-form { display: flex; gap: 8px; flex-shrink: 0; }
     .email-input {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border-hover);
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
       border-radius: var(--radius-sm);
       padding: 9px 14px;
-      color: var(--text);
+      color: #fff;
       font-family: var(--font-body);
       font-size: 14px;
       width: 220px;
       outline: none;
       transition: border-color 0.2s;
     }
-    .email-input::placeholder { color: var(--text-dim); }
-    .email-input:focus { border-color: var(--accent-purple); }
+    .email-input::placeholder { color: rgba(255,255,255,0.55); }
+    .email-input:focus { border-color: rgba(255,255,255,0.7); }
     .email-btn {
-      background: var(--accent-purple);
-      color: #0a0a0f;
+      background: #fff;
+      color: var(--accent-purple);
       border: none;
       border-radius: var(--radius-sm);
       padding: 9px 18px;
       font-family: var(--font-body);
       font-size: 13px;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       transition: opacity 0.2s;
       white-space: nowrap;
     }
-    .email-btn:hover { opacity: 0.85; }
+    .email-btn:hover { opacity: 0.88; }
 
     /* ── MAIN GRID ──────────────────────────────────────── */
     .main-grid {
@@ -288,9 +304,18 @@
       padding: 32px 0 60px;
       align-items: start;
     }
+
+    /* FIX: On mobile, articles come FIRST, deals come AFTER */
     @media (max-width: 900px) {
-      .main-grid { grid-template-columns: 1fr; }
-      .sidebar { order: -1; }
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        order: 2; /* deals go BELOW articles on mobile */
+      }
+      main {
+        order: 1; /* articles always on top */
+      }
     }
 
     /* ── SECTION LABEL ──────────────────────────────────── */
@@ -316,7 +341,7 @@
     .cards-grid {
       display: flex;
       flex-direction: column;
-      gap: 2px;
+      gap: 16px;
     }
 
     .card {
@@ -324,8 +349,7 @@
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 28px 32px;
-      transition: border-color 0.25s, background 0.25s;
-      animation: fadeUp 0.5s ease both;
+      transition: border-color 0.25s, box-shadow 0.25s;
       position: relative;
       overflow: hidden;
     }
@@ -333,18 +357,13 @@
       content: '';
       position: absolute;
       top: 0; left: 0;
-      width: 3px; height: 100%;
-      border-radius: 3px 0 0 3px;
-      opacity: 0;
-      transition: opacity 0.25s;
+      width: 4px; height: 100%;
     }
     .card:hover {
       border-color: var(--border-hover);
-      background: var(--bg3);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
     }
-    .card:hover::before { opacity: 1; }
 
-    /* Accent left bar color per category */
     .card[data-color="accent-purple"]::before { background: var(--accent-purple); }
     .card[data-color="accent-blue"]::before   { background: var(--accent-blue); }
     .card[data-color="accent-green"]::before  { background: var(--accent-green); }
@@ -356,23 +375,17 @@
     .card[data-color="accent-yellow"]::before { background: var(--accent-yellow); }
     .card[data-color="accent-gray"]::before   { background: var(--accent-gray); }
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(12px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
     .card-tag {
       display: inline-block;
       font-size: 10px;
       font-family: var(--font-mono);
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       padding: 3px 10px;
       border-radius: 20px;
       margin-bottom: 10px;
       border: 1px solid currentColor;
-      opacity: 0.8;
     }
     .accent-purple { color: var(--accent-purple); }
     .accent-blue   { color: var(--accent-blue); }
@@ -386,7 +399,7 @@
     .accent-gray   { color: var(--accent-gray); }
 
     .card-hook {
-      font-size: 12px;
+      font-size: 13px;
       font-family: var(--font-mono);
       color: var(--text-muted);
       margin-bottom: 8px;
@@ -395,9 +408,9 @@
 
     .card-title {
       font-family: var(--font-display);
-      font-size: clamp(17px, 2.5vw, 22px);
+      font-size: clamp(17px, 2.5vw, 21px);
       font-weight: 700;
-      line-height: 1.25;
+      line-height: 1.3;
       color: var(--text);
       margin-bottom: 14px;
     }
@@ -406,14 +419,14 @@
       padding-left: 0;
       display: flex;
       flex-direction: column;
-      gap: 7px;
+      gap: 8px;
     }
     .card-bullets li {
-      padding-left: 16px;
+      padding-left: 18px;
       position: relative;
       font-size: 14px;
-      color: #b0b0d0;
-      line-height: 1.55;
+      color: var(--text-muted);
+      line-height: 1.6;
     }
     .card-bullets li::before {
       content: '→';
@@ -447,19 +460,62 @@
     }
     .btn-brief {
       background: var(--accent-purple);
-      color: #0a0a0f;
+      color: #fff;
     }
     .btn-brief:hover { opacity: 0.85; }
     .btn-source {
       border: 1px solid var(--border-hover);
       color: var(--text-muted);
+      background: transparent;
     }
     .btn-source:hover { color: var(--text); border-color: var(--text-muted); }
+
+    /* ── MID-FEED AD SLOT ───────────────────────────────── */
+    .ad-mid-feed {
+      background: var(--ad-bg);
+      border: 1px dashed var(--ad-border);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      text-align: center;
+      margin: 8px 0;
+    }
+    .ad-mid-feed .ad-label-inline {
+      font-size: 9px;
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 6px;
+    }
 
     /* ── SIDEBAR ────────────────────────────────────────── */
     .sidebar { position: sticky; top: 24px; }
 
-    .sidebar-section { margin-bottom: 32px; }
+    .sidebar-section { margin-bottom: 28px; }
+
+    /* ── SIDEBAR AD SLOT ────────────────────────────────── */
+    .ad-sidebar {
+      background: var(--ad-bg);
+      border: 1px dashed var(--ad-border);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 28px;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .ad-sidebar .ad-label-inline {
+      font-size: 9px;
+      font-family: var(--font-mono);
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
 
     /* ── DEAL CARDS ─────────────────────────────────────── */
     .deal-card {
@@ -469,20 +525,23 @@
       padding: 16px 18px;
       margin-bottom: 10px;
       position: relative;
-      transition: border-color 0.2s;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
-    .deal-card:hover { border-color: var(--border-hover); }
+    .deal-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
 
     .deal-featured {
-      border-color: rgba(52, 211, 153, 0.25);
-      background: linear-gradient(135deg, rgba(52,211,153,0.04) 0%, var(--bg2) 100%);
+      border-color: rgba(5,150,105,0.3);
+      background: #f0fdf9;
     }
 
     .deal-badge {
       position: absolute;
       top: -9px; right: 12px;
       background: var(--accent-green);
-      color: #0a0a0f;
+      color: #fff;
       font-size: 10px;
       font-weight: 700;
       padding: 2px 8px;
@@ -518,8 +577,8 @@
     .deal-btn {
       display: block;
       text-align: center;
-      background: rgba(52,211,153,0.1);
-      border: 1px solid rgba(52,211,153,0.25);
+      background: #f0fdf9;
+      border: 1px solid rgba(5,150,105,0.3);
       color: var(--accent-green);
       border-radius: var(--radius-sm);
       padding: 7px 12px;
@@ -527,7 +586,7 @@
       font-weight: 600;
       transition: background 0.2s;
     }
-    .deal-btn:hover { background: rgba(52,211,153,0.18); }
+    .deal-btn:hover { background: #dcfce7; }
 
     .deals-link {
       display: block;
@@ -535,11 +594,11 @@
       font-size: 12px;
       color: var(--text-dim);
       padding: 10px;
-      border: 1px dashed var(--border);
+      border: 1px dashed var(--border-hover);
       border-radius: var(--radius-sm);
-      transition: color 0.2s, border-color 0.2s;
+      transition: color 0.2s;
     }
-    .deals-link:hover { color: var(--text-muted); border-color: var(--border-hover); }
+    .deals-link:hover { color: var(--accent-purple); }
 
     /* ── ABOUT WIDGET ───────────────────────────────────── */
     .about-widget {
@@ -564,19 +623,17 @@
 
     /* ── FOOTER ─────────────────────────────────────────── */
     .footer {
-      border-top: 1px solid var(--border);
+      border-top: 2px solid var(--border);
       padding: 32px 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
+      background: var(--bg2);
+      margin-top: 20px;
     }
-    .footer-logo {
-      font-family: var(--font-display);
-      font-size: 20px;
-      font-weight: 900;
-    }
+    .footer-logo { font-family: var(--font-display); font-size: 20px; font-weight: 900; }
     .footer-meta {
       font-size: 12px;
       color: var(--text-dim);
@@ -587,8 +644,7 @@
 
     /* ── RESPONSIVE ─────────────────────────────────────── */
     @media (max-width: 640px) {
-      .masthead { flex-direction: column; align-items: flex-start; gap: 12px; }
-      .masthead-right { gap: 16px; }
+      .masthead-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
       .hero { flex-direction: column; align-items: flex-start; }
       .hero-meta { text-align: left; }
       .email-bar { flex-direction: column; align-items: flex-start; }
@@ -598,20 +654,24 @@
       .card-footer { flex-direction: column; align-items: flex-start; }
       .footer { flex-direction: column; }
       .footer-meta { text-align: left; }
+      .sidebar { position: static; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Ambient glows -->
-  <div class="glow-orb glow-1"></div>
-  <div class="glow-orb glow-2"></div>
-  <div class="glow-orb glow-3"></div>
+  <!-- TOP BANNER AD SLOT — replace content below with your ad network code -->
+  <div class="ad-banner-top">
+    <span class="ad-label">AD</span>
+    <!-- PASTE YOUR LEADERBOARD AD CODE (728x90) HERE -->
+    <div class="ad-placeholder" style="max-width:728px; margin:0 auto; min-height:50px;">
+      Advertisement — your ad banner appears here
+    </div>
+  </div>
 
-  <div class="site-wrap">
-
-    <!-- MASTHEAD -->
-    <header class="masthead">
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <div class="masthead-inner">
       <a href="/" class="logo">
         <span class="logo-catch">Catch</span><span class="logo-the">The</span><span class="logo-brief">Brief</span>
       </a>
@@ -622,9 +682,8 @@
         </nav>
         <div class="live-dot">LIVE</div>
       </div>
-    </header>
-
-  </div><!-- /site-wrap -->
+    </div>
+  </header>
 
   <!-- TICKER -->
   <div class="ticker-wrap">
@@ -668,14 +727,14 @@
         <strong>Get the brief in your inbox every morning</strong>
         <span>No spam. Unsubscribe any time. Takes 10 seconds.</span>
       </div>
-      <!-- Replace action URL with your Mailchimp / Buttondown / ConvertKit embed URL -->
       <form class="email-form" action="https://buttondown.email/api/emails/embed-subscribe/catchthebrief" method="post" target="_blank">
         <input class="email-input" type="email" name="email" placeholder="you@example.com" required>
         <button class="email-btn" type="submit">Subscribe Free →</button>
       </form>
     </div>
 
-    <!-- MAIN GRID -->
+    <!-- MAIN GRID: articles left, sidebar right -->
+    <!-- On mobile: articles first (order:1), sidebar/deals second (order:2) -->
     <div class="main-grid">
 
       <!-- LEFT: ARTICLES -->
@@ -686,12 +745,12 @@
         <article class="card" style="animation-delay:0ms" data-color="accent-purple">
           <div class="card-tag accent-purple">AI & Machine Learning</div>
           <p class="card-hook">Read the full story for details.</p>
-          <h2 class="card-title">Press Note Details: Press Information Bureau - PIB</h2>
+          <h2 class="card-title">Press Note Details: Press Information Bureau - PIB India</h2>
           <div class="card-bullets"><ul><li>Click the link below to read the full story.</li></ul></div>
           <div class="card-footer">
-            <span class="card-source">PIB</span>
+            <span class="card-source">PIB India</span>
             <div class="card-links">
-              <a href="articles/press-note-details-press-information-bureau-pib.html" class="btn-brief">Full Brief →</a>
+              <a href="articles/press-note-details-press-information-bureau-pib-india.html" class="btn-brief">Full Brief →</a>
               <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQbkljSTJMc19iM1NEcEpWSmJ1VnEyY3dhNWRQamt0Sm5aZnBMc3M4bzNHclpWVmlfWTdCNzVfSlRvbmprdFJDb2thWjlmZHJhTDd1eFAyd29rQzdjelA4a3pBWENOR012bWgwaWw3SUdUQ2ZyQi1YdlQ3VElubTNwXzd1em93Y1ZyYmpoWFBKcFZ0STNPU3l1Wg?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
             </div>
           </div>
@@ -700,13 +759,13 @@
         <article class="card" style="animation-delay:80ms" data-color="accent-blue">
           <div class="card-tag accent-blue">Laptop Deals</div>
           <p class="card-hook">Read the full story for details.</p>
-          <h2 class="card-title">I'm a laptop expert and these are the 12 best laptops money can buy - TechRadar</h2>
+          <h2 class="card-title">Buying a laptop? These are the 9 best laptops you can buy today - PCWorld</h2>
           <div class="card-bullets"><ul><li>Click the link below to read the full story.</li></ul></div>
           <div class="card-footer">
-            <span class="card-source">TechRadar</span>
+            <span class="card-source">PCWorld</span>
             <div class="card-links">
-              <a href="articles/im-a-laptop-expert-and-these-are-the-12-best-laptops-money-can-buy-techradar.html" class="btn-brief">Full Brief →</a>
-              <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxNb1l0T21NOXRUUkR2cWU2eWp2UnpzMGdtYXBMaTFKalo0TnNjWHRYQ2c0cmJObUdCT0k1ZXlDYk9kTHV1Y0Y0bWthWFZKaEV2ZUVjOVpTLVNXN2VtbmxTSkRINV96QWs1dFNVS0JTVGIyWWFLY0JRUHU4b3d1aHVpMzZB?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
+              <a href="articles/buying-a-laptop-these-are-the-9-best-laptops-you-can-buy-today-pcworld.html" class="btn-brief">Full Brief →</a>
+              <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5rUW5ERWwwUWcxZWlSZmZTZWhMUHFLQTJLendwbGlyRXJDekVZWkJkQmZjQ3hBRXdNdkNpYmxWY3RKcHJKVHBHRmdoOEh1b2ZOdVF6Tlp4T3l6bTBzanBiLU1GdURPRkNWSWY0?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
             </div>
           </div>
         </article>
@@ -727,9 +786,13 @@
 
         <article class="card" style="animation-delay:240ms" data-color="accent-orange">
           <div class="card-tag accent-orange">Smart TV</div>
-          <p class="card-hook">Read the full story for details.</p>
+          <p class="card-hook">With India's booming demand for premium entertainment, knowing 2026's top 55-inch TV picks ensures future-proof home viewing.</p>
           <h2 class="card-title">The 6 Best 55-Inch TVs of 2026 - RTINGS.com</h2>
-          <div class="card-bullets"><ul><li>Click the link below to read the full story.</li></ul></div>
+          <div class="card-bullets"><ul>
+            <li>Top tech sites are already ranking 2026 TV models. Planning your next big screen purchase needs a two-year forward-looking strategy now.</li>
+            <li>Expect 55-inch TVs in 2026 to bring advanced display tech like micro-LEDs and improved AI upscaling, not just incremental upgrades.</li>
+            <li>Beyond raw specs, 2026's 'best' 55-inch TVs will likely prioritize seamless smart home integration and localized content support for users.</li>
+          </ul></div>
           <div class="card-footer">
             <span class="card-source">RTINGS.com</span>
             <div class="card-links">
@@ -769,9 +832,13 @@
 
         <article class="card" style="animation-delay:480ms" data-color="accent-indigo">
           <div class="card-tag accent-indigo">Software Deals</div>
-          <p class="card-hook">Read the full story for details.</p>
+          <p class="card-hook">Will this global SaaS slump translate to cheaper software subscriptions and fresh opportunities for Indian tech?</p>
           <h2 class="card-title">The SaaS Rout of 2026 Is Even Worse Than You Think. For the First Time Ever, Software Now Trades at a Discount to the S&P 500. - SaaStr</h2>
-          <div class="card-bullets"><ul><li>Click the link below to read the full story.</li></ul></div>
+          <div class="card-bullets"><ul>
+            <li>For the first time ever, software stocks are trading at a discount compared to the broad S&P 500 market average. This is a historic shift.</li>
+            <li>A significant downturn for the global SaaS industry is forecast for 2026, potentially shaking up tech valuations more severely than expected.</li>
+            <li>This unprecedented valuation drop suggests a new, tougher reality for SaaS, prompting a rethink of investment and growth strategies.</li>
+          </ul></div>
           <div class="card-footer">
             <span class="card-source">SaaStr</span>
             <div class="card-links">
@@ -784,13 +851,13 @@
         <article class="card" style="animation-delay:560ms" data-color="accent-pink">
           <div class="card-tag accent-pink">Gaming</div>
           <p class="card-hook">Read the full story for details.</p>
-          <h2 class="card-title">Amazon Great Indian Festival 2025: Power Up with Epic Deals on Gaming Laptops & Video Games! - The Economic Times</h2>
+          <h2 class="card-title">Xbox launches cloud gaming for paying Game Pass subscribers in India - The Hindu</h2>
           <div class="card-bullets"><ul><li>Click the link below to read the full story.</li></ul></div>
           <div class="card-footer">
-            <span class="card-source">The Economic Times</span>
+            <span class="card-source">The Hindu</span>
             <div class="card-links">
-              <a href="articles/amazon-great-indian-festival-2025-power-up-with-epic-deals-on-gaming-laptops-vid.html" class="btn-brief">Full Brief →</a>
-              <a href="https://news.google.com/rss/articles/CBMi7wFBVV95cUxORnVlenE5Ti1pZV82ZURnb1RRS25QcXZRN3dnZzRqbzJZSnppdU95NWVRVVkxZmVLQ2FLSFdqU0w5SVp3TDFyV3lLc2dsOXRJeWh2MlI0RUt5ZkQ3WEZXMXZISW04YXMxbFl6QVBqdUpfRm04dXBSaExsVUpuM1lvOWM5YkZHOHZuTE91YUNLenFLcVRTSDI0UGM5dUlla1FVY3Z6NWZSanFUTlJJclZ0c0NYRldGNU5PX2h5bVlKWVJOc2N5d3VMR3Fnak80ZXY0VzhYQUVNRjQ5RmtNdUlEM2FpUW9WOEY1TzVCcWp5d9IB9AFBVV95cUxNOWVEeGFhNFRRUmNwdVBKSEk3NTBPMzBvSWRBZ1Z6VXI5cUIxQVE2SHNoNTJabWlYejZSQTZobktDWXJmSy1YQzZsOFQxY19YRWRHQmd3bWNmNTZSM2o0WXlkaU04dDdGeEZUempSN2dESUJoZDNab2xfYXA2eUNFQnhEdE1DMjhCZ05fS0Npd3hwakpmSkxSVWxJNG9IQ3NERlF4Ymh3TDZ6NllQMjJ4TE5uZjMwZFhKNExsbjFJN3pXSk93ZWxuNk5xQW92di1FM21aLWE0bnI5aVhkaDJwMklhOWFqMmpRZ09PQ2M1QXF0M0xN?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
+              <a href="articles/xbox-launches-cloud-gaming-for-paying-game-pass-subscribers-in-india-the-hindu.html" class="btn-brief">Full Brief →</a>
+              <a href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQNnluajh6Q1F1MHg0X1BrUjBCR3ljSDZPVzZBYzZ0WUF6bDZKN0wyRmQwOUU4eGloLUwzajJlb3JIMEh5M1ZLS2lRUGZvckZJdjc5eE13Mk9qbFBUdk5xTC1EUTVCWGFqQkpBMFhURTZuN1gyMlBCaDMzYTk3SEpSbFE4eEpfTWVLNWc0SlcySjNWQWpqVmU3bS1GdHN5enBoUWZIanhsZGJiajNqR0lVRUQ4YjFSYWFFcVloN19UQdIBxgFBVV95cUxOeDZtQ0RsRlJkUkJSNnRXem9hUGdHSzF1MV9pcEU0aTVybXd5N0swWm5GdWNfZ3hHRE9RbG5VQWFLclZHSTU2bHlfRkZyaVJMUEp3eEd6LVRULVZVRm1RdWVMaTBJV09yd3ZTUHlfOVFTandxRUZOUmlDY1MxV0lTWVFKYUxFWlVjZ0dkWkktZFRjaTRQTGJXR0FZRVhGcU8tVEY5MWotUkF5cXd0MlM3RVRFaDlxWjFiMFExSGhaUmFQeXViYkE?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
             </div>
           </div>
         </article>
@@ -822,11 +889,31 @@
             </div>
           </div>
         </article>
+
+          <!-- MID-FEED AD SLOT — appears after article 5 (insert via Python if needed) -->
+          <!-- To activate: move this block into news_engine.py after the 5th card -->
+          <div class="ad-mid-feed">
+            <span class="ad-label-inline">Advertisement</span>
+            <!-- PASTE YOUR IN-FEED AD CODE (e.g. Google AdSense native) HERE -->
+            <div class="ad-placeholder" style="min-height:90px; width:100%;">
+              In-feed advertisement — appears between articles
+            </div>
+          </div>
+
         </div>
       </main>
 
-      <!-- RIGHT: SIDEBAR -->
+      <!-- RIGHT: SIDEBAR — moves BELOW articles on mobile via CSS order -->
       <aside class="sidebar">
+
+        <!-- SIDEBAR AD SLOT -->
+        <div class="ad-sidebar">
+          <span class="ad-label-inline">Advertisement</span>
+          <!-- PASTE YOUR SIDEBAR AD CODE (300x250 or 300x600) HERE -->
+          <div class="ad-placeholder" style="min-height:100px; width:100%;">
+            Sidebar ad (300×250)
+          </div>
+        </div>
 
         <div class="sidebar-section">
           <div class="section-label">Hot Deals</div>
@@ -834,8 +921,8 @@
           <div class="deal-card  deal-featured">
             <span class="deal-badge">🔥 Hot</span>
             <div class="deal-meta"><span class="deal-sub">r/slickdeals.net</span></div>
-            <p class="deal-title">SEGA Genesis Cartridge Collectible Altered Beast Retro Graveyard Diorama Set $9.10</p>
-            <a href="https://slickdeals.net/f/19410306-sega-genesis-cartridge-collectible-altered-beast-retro-graveyard-diorama-set-9-10?utm_source=rss&utm_content=fp&utm_medium=RSS2" target="_blank" rel="noopener sponsored" class="deal-btn">
+            <p class="deal-title">Select Accounts: TUMS Antacid Tablets & Chewable Tablets (Various) $1.80 w/ S&S</p>
+            <a href="https://slickdeals.net/f/19413129-sns-ac-1-80-72-ct-tums-ultra-strength-1000-antacid-tablets-assorted-fruit-at-amazon?utm_source=rss&utm_content=fp&utm_medium=RSS2" target="_blank" rel="noopener sponsored" class="deal-btn">
               Claim Deal →
             </a>
           </div>
@@ -843,8 +930,8 @@
           <div class="deal-card">
             
             <div class="deal-meta"><span class="deal-sub">r/slickdeals.net</span></div>
-            <p class="deal-title">The Mistborn Saga Series: Books 3-7 by Brandon Sanderson (Kindle eBooks) $4 Each</p>
-            <a href="https://slickdeals.net/f/19410492-the-mistborn-saga-series-books-3-7-by-brandon-sanderson-kindle-ebooks-4-each?utm_source=rss&utm_content=fp&utm_medium=RSS2" target="_blank" rel="noopener sponsored" class="deal-btn">
+            <p class="deal-title">28.7-Lb Scotts GrubEx1 Season Long Grub Killer (10000 sq. ft.) $33.25 w/ S&S</p>
+            <a href="https://slickdeals.net/f/19411083-scotts-grubex1-season-long-grub-killer-for-lawns-protects-lawns-up-to-4-months-10-000-sq-ft-28-7-lbs-34-98-at-lowe-s-and-amazon?utm_source=rss&utm_content=fp&utm_medium=RSS2" target="_blank" rel="noopener sponsored" class="deal-btn">
               Claim Deal →
             </a>
           </div>
@@ -852,8 +939,8 @@
           <div class="deal-card">
             
             <div class="deal-meta"><span class="deal-sub">r/slickdeals.net</span></div>
-            <p class="deal-title">8" Ego Power+ 56V Lawn Edger w/ 4Ah Battery/Charger + Trimmer Attachment $269 + Free S&H</p>
-            <a href="https://slickdeals.net/f/19406730-ego-power-multi-head-system-carbon-fiber-8-in-lawn-edger-free-gift-combo-string-trimmer-and-4-ah-battery-and-charger-269?utm_source=rss&utm_content=fp&utm_medium=RSS2" target="_blank" rel="noopener sponsored" class="deal-btn">
+            <p class="deal-title">14.5-Oz Prego Alfredo Pasta Sauce (Roasted Garlic Parmesan) $1.85 w/ S&S</p>
+            <a href="https://slickdeals.net/f/19411950-prego-alfredo-pasta-sauce-with-roasted-garlic-and-parmesan-cheese-14-5-oz-jar-1-86-with-s-s-amazon?utm_source=rss&utm_content=fp&utm_medium=RSS2" target="_blank" rel="noopener sponsored" class="deal-btn">
               Claim Deal →
             </a>
           </div>
@@ -880,8 +967,8 @@
       </div>
       <div class="footer-meta">
         <div>Summaries by Google Gemini · Deals from community forums</div>
-        <div>Last updated: 13 April 2026 at 8:36 AM IST</div>
-        <div>© 2025 CatchTheBrief.com</div>
+        <div>Last updated: 13 April 2026 at 10:57 AM IST</div>
+        <div>© 2026 CatchTheBrief.com</div>
       </div>
     </footer>
 
