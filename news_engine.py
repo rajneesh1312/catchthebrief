@@ -108,9 +108,9 @@ NEWS_CATEGORIES = [
 ]
 
 # ── REDDIT DEAL SOURCES ────────────────────────────────────────────────────────
-REDDIT_SOURCES = [
-    "https://www.reddit.com/r/IndiaDeals/hot.json?limit=8",
-    "https://www.reddit.com/r/deals/hot.json?limit=8",
+DEAL_FEEDS = [
+    "https://slickdeals.net/newsearch.php?mode=frontpage&searcharea=deals&searchin=first&rss=1",
+    "https://www.reddit.com/r/IndiaDeals.rss",
 ]
 
 # ── RATE LIMITING ──────────────────────────────────────────────────────────────
@@ -358,46 +358,79 @@ def process_all_articles(items: list[dict]) -> list[dict]:
 # ══════════════════════════════════════════════════════════════════════════════
 
 def fetch_deals() -> list[dict]:
-    """Fetch top deals from Reddit, affiliate-tag Amazon links, sort by score."""
+    """Fetch top deals from RSS feeds, affiliate-tag Amazon links."""
     print("\n── Fetching Deals ──────────────────────────────────────")
     all_deals = []
-    headers   = {"User-Agent": "CatchTheBriefBot/1.0 (catchthebrief.com)"}
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/120.0.0.0 Safari/537.36"
+        )
+    }
 
-    for source_url in REDDIT_SOURCES:
-        subreddit = source_url.split("/r/")[1].split("/")[0]
+    for feed_url in DEAL_FEEDS:
         try:
-            r = requests.get(source_url, headers=headers, timeout=10)
+            r = requests.get(feed_url, headers=headers, timeout=10)
             if r.status_code != 200:
-                print(f"  ✗ r/{subreddit}: HTTP {r.status_code}")
+                print(f"  ✗ {feed_url}: HTTP {r.status_code}")
                 continue
 
-            posts = r.json()["data"]["children"]
-            for post in posts[1:6]:
-                p = post["data"]
-                if p.get("stickied") or p.get("is_self"):
+            root = ET.fromstring(r.content)
+            # Handle both RSS <item> and Atom <entry> formats
+            items = root.findall(".//item") or root.findall(
+                ".//{http://www.w3.org/2005/Atom}entry"
+            )
+
+            for item in items[:8]:
+                title = (
+                    item.findtext("title")
+                    or item.findtext("{http://www.w3.org/2005/Atom}title")
+                    or ""
+                ).strip()
+
+                link = (
+                    item.findtext("link")
+                    or item.findtext("{http://www.w3.org/2005/Atom}link")
+                    or ""
+                ).strip()
+
+                # Atom <link> is sometimes an attribute, not text
+                if not link:
+                    link_el = item.find("{http://www.w3.org/2005/Atom}link")
+                    if link_el is not None:
+                        link = link_el.get("href", "")
+
+                if not title or not link:
                     continue
+
                 all_deals.append({
-                    "title":     p["title"],
-                    "link":      tag_amazon_link(p["url"]),
-                    "score":     p.get("score", 0),
-                    "subreddit": subreddit,
-                    "flair":     p.get("link_flair_text", "") or "",
+                    "title":     title,
+                    "link":      tag_amazon_link(link),
+                    "score":     0,
+                    "subreddit": feed_url.split("/")[2],  # domain as source label
+                    "flair":     "",
                 })
-                print(f"  ✓ r/{subreddit}: {p['title'][:60]}...")
+                print(f"  ✓ {title[:60]}...")
 
         except Exception as e:
-            print(f"  ✗ r/{subreddit}: {e}")
+            print(f"  ✗ {feed_url}: {e}")
 
-    # Deduplicate and return top 6 by score
+    # Deduplicate by title prefix
     seen, unique = set(), []
-    for d in sorted(all_deals, key=lambda x: x["score"], reverse=True):
+    for d in all_deals:
         key = d["title"][:50]
         if key not in seen:
             seen.add(key)
             unique.append(d)
 
-    return unique[:6] or [{"title": "Check back soon — deals updating!", "link": "#",
-                            "score": 0, "subreddit": "deals", "flair": ""}]
+    return unique[:6] or [{
+        "title": "Check back soon — deals updating!",
+        "link": "#",
+        "score": 0,
+        "subreddit": "deals",
+        "flair": ""
+    }]
 
 
 # ══════════════════════════════════════════════════════════════════════════════
