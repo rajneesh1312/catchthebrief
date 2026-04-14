@@ -1,34 +1,41 @@
-name: Daily Content Update
+name: Daily Content Build
 
 on:
   schedule:
-    - cron: '30 3 * * *'   # 9:00 AM IST every day
-  workflow_dispatch:         # allow manual run from GitHub Actions tab
+    - cron: '30 3 * * *'   # 3:30 AM UTC = 9:00 AM IST daily
+  workflow_dispatch:         # allow manual trigger from GitHub UI
+
+permissions:
+  contents: write            # needed to commit generated files
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: pip install requests beautifulsoup4 google-genai
 
       - name: Run content engine
         env:
           GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
           GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
           GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
+          GROQ_API_KEY:     ${{ secrets.GROQ_API_KEY }}
         run: python news_engine.py
 
-      - name: Commit and push
+      - name: Commit and push generated files
         run: |
-          git config --global user.name  "CatchTheBrief Bot"
-          git config --global user.email "bot@catchthebrief.com"
-          git add index.html deals.html sitemap.xml articles/
-          git diff --staged --quiet || git commit -m "chore: daily update $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Daily build: $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push
