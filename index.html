@@ -3,25 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CatchTheBrief — Tech News & Deals for India</title>
-  <meta name="description" content="AI-powered 3-point summaries of today's top tech news plus the hottest deals — curated daily for Indian buyers.">
-  <meta name="keywords" content="tech news India, deals India, laptop deals, smartphone deals, AI news, CatchTheBrief">
-  <meta property="og:title" content="CatchTheBrief — Tech News & Deals for India">
-  <meta property="og:description" content="No noise. Just the brief. AI-curated tech news and deals updated daily.">
+  <title>CatchTheBrief — News & Deals for India</title>
+  <meta name="description" content="AI-curated news summaries and the hottest deals — updated every morning for Indian readers. Tech, cricket, entertainment, business and more.">
+  <meta name="keywords" content="tech news India, deals India, cricket news, Bollywood news, business news India, laptop deals, smartphone deals, CatchTheBrief">
+  <meta property="og:title" content="CatchTheBrief — News & Deals for India">
+  <meta property="og:description" content="No noise. Just the brief. AI-curated news and deals updated daily.">
   <meta property="og:url" content="https://catchthebrief.com">
   <meta property="og:type" content="website">
   <link rel="canonical" href="https://catchthebrief.com">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-2453013968799709">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2453013968799709" crossorigin="anonymous"></script>
+
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6N03CT88P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-V6N03CT88P');
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* ── DESIGN TOKENS ──────────────────────────────────── */
     :root {
-      /* NEW: Warm off-white light theme — readable, clean, editorial */
       --bg:           #f7f5f0;
       --bg2:          #ffffff;
       --bg3:          #f0ede8;
@@ -31,618 +41,167 @@
       --text-muted:   #5a5650;
       --text-dim:     #9a9690;
 
-      --accent-purple: #6d28d9;
-      --accent-blue:   #1d4ed8;
-      --accent-green:  #059669;
-      --accent-orange: #c2410c;
-      --accent-red:    #dc2626;
-      --accent-teal:   #0d9488;
-      --accent-indigo: #4338ca;
-      --accent-pink:   #be185d;
-      --accent-yellow: #b45309;
-      --accent-gray:   #475569;
+      --accent-purple:    #6d28d9;
+      --accent-blue:      #1d4ed8;
+      --accent-green:     #059669;
+      --accent-orange:    #c2410c;
+      --accent-red:       #dc2626;
+      --accent-teal:      #0d9488;
+      --accent-pink:      #be185d;
+      --accent-yellow:    #b45309;
+      --accent-cricket:   #1a7a3c;
+      --accent-entertain: #9c2786;
+      --accent-business:  #1e3a8a;
+      --accent-india:     #b91c1c;
 
       --font-display: 'Playfair Display', Georgia, serif;
       --font-body:    'DM Sans', system-ui, sans-serif;
       --font-mono:    'DM Mono', monospace;
-
       --radius:    12px;
       --radius-sm:  6px;
-
-      /* Ad slot colors */
       --ad-bg:     #fff8ed;
       --ad-border: #f59e0b;
     }
 
-    /* ── RESET & BASE ───────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--font-body);
-      font-size: 15px;
-      line-height: 1.65;
-      min-height: 100vh;
-      -webkit-font-smoothing: antialiased;
-    }
-
+    body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 15px; line-height: 1.65; min-height: 100vh; -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
     ul { list-style: none; }
-
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: #c8c4be; border-radius: 3px; }
 
-    /* ── LAYOUT WRAPPER ─────────────────────────────────── */
     .site-wrap { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
 
-    /* ── TOP AD BANNER ──────────────────────────────────── */
-    .ad-banner-top {
-      background: var(--ad-bg);
-      border-bottom: 2px solid var(--ad-border);
-      text-align: center;
-      padding: 10px 16px;
-      font-size: 12px;
-      font-family: var(--font-mono);
-      color: var(--text-dim);
-      letter-spacing: 0.05em;
-    }
-    .ad-banner-top .ad-label {
-      display: inline-block;
-      background: var(--ad-border);
-      color: #fff;
-      font-size: 9px;
-      padding: 1px 6px;
-      border-radius: 3px;
-      margin-right: 8px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      vertical-align: middle;
-    }
-    /* Placeholder text shown until real ad code is inserted */
-    .ad-placeholder {
-      min-height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 2px dashed var(--ad-border);
-      border-radius: var(--radius-sm);
-      background: var(--ad-bg);
-      color: var(--text-dim);
-      font-size: 12px;
-      font-family: var(--font-mono);
-      letter-spacing: 0.05em;
-    }
+    .ad-banner-top { background: var(--ad-bg); border-bottom: 2px solid var(--ad-border); text-align: center; padding: 10px 16px; }
+    .ad-placeholder { min-height: 60px; display: flex; align-items: center; justify-content: center; border: 2px dashed var(--ad-border); border-radius: var(--radius-sm); background: var(--ad-bg); color: var(--text-dim); font-size: 12px; font-family: var(--font-mono); }
 
-    /* ── MASTHEAD ───────────────────────────────────────── */
-    .masthead {
-      padding: 24px 0 20px;
-      border-bottom: 2px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      background: var(--bg2);
-    }
-
-    .masthead-inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      width: 100%;
-    }
-
-    .logo {
-      font-family: var(--font-display);
-      font-size: clamp(24px, 4vw, 38px);
-      font-weight: 900;
-      letter-spacing: -0.5px;
-      line-height: 1;
-    }
+    .masthead { padding: 24px 0 20px; border-bottom: 2px solid var(--border); background: var(--bg2); }
+    .masthead-inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 20px; width: 100%; }
+    .logo { font-family: var(--font-display); font-size: clamp(24px, 4vw, 38px); font-weight: 900; letter-spacing: -0.5px; line-height: 1; }
     .logo-catch { color: var(--accent-purple); }
     .logo-the   { color: var(--text-muted); font-weight: 700; }
     .logo-brief { color: var(--text); }
-
     .masthead-right { display: flex; align-items: center; gap: 24px; flex-shrink: 0; }
-
     .nav-links { display: flex; gap: 20px; }
-    .nav-links a {
-      color: var(--text-muted);
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      transition: color 0.2s;
-      padding: 4px 0;
-      border-bottom: 2px solid transparent;
-    }
-    .nav-links a:hover { color: var(--accent-purple); border-bottom-color: var(--accent-purple); }
+    .nav-links a { color: var(--text-muted); font-size: 13px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; transition: color 0.2s; padding: 4px 0; border-bottom: 2px solid transparent; }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent-purple); border-bottom-color: var(--accent-purple); }
+    .live-dot { display: flex; align-items: center; gap: 7px; font-size: 11px; font-family: var(--font-mono); color: var(--accent-green); letter-spacing: 0.05em; }
+    .live-dot::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--accent-green); box-shadow: 0 0 6px var(--accent-green); animation: pulse 2s ease infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.85); } }
 
-    .live-dot {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 11px;
-      font-family: var(--font-mono);
-      color: var(--accent-green);
-      letter-spacing: 0.05em;
-    }
-    .live-dot::before {
-      content: '';
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      background: var(--accent-green);
-      box-shadow: 0 0 6px var(--accent-green);
-      animation: pulse 2s ease infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50%       { opacity: 0.4; transform: scale(0.85); }
-    }
-
-    /* ── TICKER ─────────────────────────────────────────── */
-    .ticker-wrap {
-      overflow: hidden;
-      border-bottom: 1px solid var(--border);
-      background: var(--accent-purple);
-    }
-    .ticker-inner {
-      display: flex;
-      width: max-content;
-      animation: ticker 35s linear infinite;
-    }
+    .ticker-wrap { overflow: hidden; border-bottom: 1px solid var(--border); background: var(--accent-purple); }
+    .ticker-inner { display: flex; width: max-content; animation: ticker 40s linear infinite; }
     .ticker-inner:hover { animation-play-state: paused; }
-    .ticker-item {
-      padding: 7px 36px;
-      font-size: 12px;
-      font-family: var(--font-mono);
-      color: rgba(255,255,255,0.85);
-      white-space: nowrap;
-    }
+    .ticker-item { padding: 7px 36px; font-size: 12px; font-family: var(--font-mono); color: rgba(255,255,255,0.85); white-space: nowrap; }
     .ticker-item span { color: #fde68a; margin-right: 8px; }
-    @keyframes ticker {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+    @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-    /* ── HERO STRIP ─────────────────────────────────────── */
-    .hero {
-      padding: 36px 0 28px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 24px;
-      border-bottom: 1px solid var(--border);
-    }
-    .hero-left h1 {
-      font-family: var(--font-display);
-      font-size: clamp(28px, 5vw, 48px);
-      font-weight: 900;
-      line-height: 1.08;
-      letter-spacing: -0.5px;
-      color: var(--text);
-    }
-    .hero-left h1 em {
-      font-style: normal;
-      color: var(--accent-purple);
-    }
-    .hero-sub {
-      margin-top: 10px;
-      color: var(--text-muted);
-      font-size: 15px;
-      max-width: 480px;
-    }
+    .hero { padding: 36px 0 28px; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; border-bottom: 1px solid var(--border); }
+    .hero-left h1 { font-family: var(--font-display); font-size: clamp(28px, 5vw, 48px); font-weight: 900; line-height: 1.08; letter-spacing: -0.5px; }
+    .hero-left h1 em { font-style: normal; color: var(--accent-purple); }
+    .hero-sub { margin-top: 10px; color: var(--text-muted); font-size: 15px; max-width: 480px; }
     .hero-meta { text-align: right; flex-shrink: 0; }
-    .hero-date {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--text-dim);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
+    .hero-date { font-family: var(--font-mono); font-size: 11px; color: var(--text-dim); letter-spacing: 0.06em; text-transform: uppercase; }
     .hero-count { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
 
-    /* ── EMAIL CAPTURE ──────────────────────────────────── */
-    .email-bar {
-      background: var(--accent-purple);
-      border-radius: var(--radius);
-      padding: 20px 24px;
-      margin: 28px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-    .email-bar-text strong {
-      display: block;
-      font-size: 15px;
-      font-weight: 600;
-      color: #fff;
-    }
-    .email-bar-text span { font-size: 13px; color: rgba(255,255,255,0.75); }
-    .email-form { display: flex; gap: 8px; flex-shrink: 0; }
-    .email-input {
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.3);
-      border-radius: var(--radius-sm);
-      padding: 9px 14px;
-      color: #fff;
-      font-family: var(--font-body);
-      font-size: 14px;
-      width: 220px;
-      outline: none;
-      transition: border-color 0.2s;
-    }
+    .email-bar { background: var(--accent-purple); border-radius: var(--radius); padding: 20px 24px; margin: 28px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .email-bar-text strong { display: block; font-size: 15px; font-weight: 600; color: #fff; }
+    .email-bar-text span   { font-size: 13px; color: rgba(255,255,255,0.75); }
+    .email-form  { display: flex; gap: 8px; flex-shrink: 0; }
+    .email-input { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: var(--radius-sm); padding: 9px 14px; color: #fff; font-family: var(--font-body); font-size: 14px; width: 220px; outline: none; transition: border-color 0.2s; }
     .email-input::placeholder { color: rgba(255,255,255,0.55); }
     .email-input:focus { border-color: rgba(255,255,255,0.7); }
-    .email-btn {
-      background: #fff;
-      color: var(--accent-purple);
-      border: none;
-      border-radius: var(--radius-sm);
-      padding: 9px 18px;
-      font-family: var(--font-body);
-      font-size: 13px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: opacity 0.2s;
-      white-space: nowrap;
-    }
+    .email-btn { background: #fff; color: var(--accent-purple); border: none; border-radius: var(--radius-sm); padding: 9px 18px; font-family: var(--font-body); font-size: 13px; font-weight: 700; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; }
     .email-btn:hover { opacity: 0.88; }
 
-    /* ── MAIN GRID ──────────────────────────────────────── */
-    .main-grid {
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 40px;
-      padding: 32px 0 60px;
-      align-items: start;
-    }
+    .main-grid { display: grid; grid-template-columns: 1fr 300px; gap: 40px; padding: 32px 0 60px; align-items: start; }
+    @media (max-width: 900px) { .main-grid { grid-template-columns: 1fr; } .sidebar { order: 2; } main { order: 1; } }
 
-    /* FIX: On mobile, articles come FIRST, deals come AFTER */
-    @media (max-width: 900px) {
-      .main-grid {
-        grid-template-columns: 1fr;
-      }
-      .sidebar {
-        order: 2; /* deals go BELOW articles on mobile */
-      }
-      main {
-        order: 1; /* articles always on top */
-      }
-    }
+    .section-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
-    /* ── SECTION LABEL ──────────────────────────────────── */
-    .section-label {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .section-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
+    .cards-grid { display: flex; flex-direction: column; gap: 16px; }
 
-    /* ── ARTICLE CARDS ──────────────────────────────────── */
-    .cards-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+    .card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; transition: border-color 0.25s, box-shadow 0.25s; position: relative; overflow: hidden; }
+    .card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; }
+    .card:hover { border-color: var(--border-hover); box-shadow: 0 4px 20px rgba(0,0,0,0.07); }
 
-    .card {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 28px 32px;
-      transition: border-color 0.25s, box-shadow 0.25s;
-      position: relative;
-      overflow: hidden;
-    }
-    .card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 4px; height: 100%;
-    }
-    .card:hover {
-      border-color: var(--border-hover);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-    }
+    .card[data-color="accent-purple"]::before    { background: var(--accent-purple); }
+    .card[data-color="accent-blue"]::before      { background: var(--accent-blue); }
+    .card[data-color="accent-green"]::before     { background: var(--accent-green); }
+    .card[data-color="accent-orange"]::before    { background: var(--accent-orange); }
+    .card[data-color="accent-red"]::before       { background: var(--accent-red); }
+    .card[data-color="accent-teal"]::before      { background: var(--accent-teal); }
+    .card[data-color="accent-pink"]::before      { background: var(--accent-pink); }
+    .card[data-color="accent-yellow"]::before    { background: var(--accent-yellow); }
+    .card[data-color="accent-cricket"]::before   { background: var(--accent-cricket); }
+    .card[data-color="accent-entertain"]::before { background: var(--accent-entertain); }
+    .card[data-color="accent-business"]::before  { background: var(--accent-business); }
+    .card[data-color="accent-india"]::before     { background: var(--accent-india); }
 
-    .card[data-color="accent-purple"]::before { background: var(--accent-purple); }
-    .card[data-color="accent-blue"]::before   { background: var(--accent-blue); }
-    .card[data-color="accent-green"]::before  { background: var(--accent-green); }
-    .card[data-color="accent-orange"]::before { background: var(--accent-orange); }
-    .card[data-color="accent-red"]::before    { background: var(--accent-red); }
-    .card[data-color="accent-teal"]::before   { background: var(--accent-teal); }
-    .card[data-color="accent-indigo"]::before { background: var(--accent-indigo); }
-    .card[data-color="accent-pink"]::before   { background: var(--accent-pink); }
-    .card[data-color="accent-yellow"]::before { background: var(--accent-yellow); }
-    .card[data-color="accent-gray"]::before   { background: var(--accent-gray); }
+    .card-tag { display: inline-block; font-size: 10px; font-family: var(--font-mono); font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; border: 1px solid currentColor; }
+    .accent-purple    { color: var(--accent-purple); }
+    .accent-blue      { color: var(--accent-blue); }
+    .accent-green     { color: var(--accent-green); }
+    .accent-orange    { color: var(--accent-orange); }
+    .accent-red       { color: var(--accent-red); }
+    .accent-teal      { color: var(--accent-teal); }
+    .accent-pink      { color: var(--accent-pink); }
+    .accent-yellow    { color: var(--accent-yellow); }
+    .accent-cricket   { color: var(--accent-cricket); }
+    .accent-entertain { color: var(--accent-entertain); }
+    .accent-business  { color: var(--accent-business); }
+    .accent-india     { color: var(--accent-india); }
 
-    .card-tag {
-      display: inline-block;
-      font-size: 10px;
-      font-family: var(--font-mono);
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 3px 10px;
-      border-radius: 20px;
-      margin-bottom: 10px;
-      border: 1px solid currentColor;
-    }
-    .accent-purple { color: var(--accent-purple); }
-    .accent-blue   { color: var(--accent-blue); }
-    .accent-green  { color: var(--accent-green); }
-    .accent-orange { color: var(--accent-orange); }
-    .accent-red    { color: var(--accent-red); }
-    .accent-teal   { color: var(--accent-teal); }
-    .accent-indigo { color: var(--accent-indigo); }
-    .accent-pink   { color: var(--accent-pink); }
-    .accent-yellow { color: var(--accent-yellow); }
-    .accent-gray   { color: var(--accent-gray); }
+    .card-hook  { font-size: 13px; font-family: var(--font-mono); color: var(--text-muted); margin-bottom: 8px; line-height: 1.5; }
+    .card-title { font-family: var(--font-display); font-size: clamp(17px, 2.5vw, 21px); font-weight: 700; line-height: 1.3; color: var(--text); margin-bottom: 14px; }
 
-    .card-hook {
-      font-size: 13px;
-      font-family: var(--font-mono);
-      color: var(--text-muted);
-      margin-bottom: 8px;
-      line-height: 1.5;
-    }
+    /* Hybrid brief format */
+    .card-bullets .brief-hook { display: none; } /* shown above title as card-hook */
+    .card-bullets ul { padding-left: 0; display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+    .card-bullets li { padding-left: 18px; position: relative; font-size: 14px; color: var(--text-muted); line-height: 1.55; }
+    .card-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--text-dim); }
+    .card-bullets .brief-why { font-size: 12px; font-family: var(--font-mono); color: var(--text-dim); margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border); line-height: 1.5; }
+    .card-bullets .brief-why strong { color: var(--accent-purple); }
 
-    .card-title {
-      font-family: var(--font-display);
-      font-size: clamp(17px, 2.5vw, 21px);
-      font-weight: 700;
-      line-height: 1.3;
-      color: var(--text);
-      margin-bottom: 14px;
-    }
-
-    .card-bullets ul {
-      padding-left: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .card-bullets li {
-      padding-left: 18px;
-      position: relative;
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-    .card-bullets li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: var(--text-dim);
-    }
-
-    .card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 18px;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
-      gap: 12px;
-    }
-    .card-source {
-      font-size: 11px;
-      font-family: var(--font-mono);
-      color: var(--text-dim);
-    }
-    .card-links { display: flex; gap: 10px; }
-
-    .btn-brief, .btn-source {
-      font-size: 12px;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: var(--radius-sm);
-      transition: opacity 0.2s, background 0.2s;
-    }
-    .btn-brief {
-      background: var(--accent-purple);
-      color: #fff;
-    }
+    .card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border); gap: 12px; }
+    .card-source { font-size: 11px; font-family: var(--font-mono); color: var(--text-dim); }
+    .card-links  { display: flex; gap: 10px; }
+    .btn-brief, .btn-source { font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: var(--radius-sm); transition: opacity 0.2s, background 0.2s; }
+    .btn-brief  { background: var(--accent-purple); color: #fff; }
     .btn-brief:hover { opacity: 0.85; }
-    .btn-source {
-      border: 1px solid var(--border-hover);
-      color: var(--text-muted);
-      background: transparent;
-    }
+    .btn-source { border: 1px solid var(--border-hover); color: var(--text-muted); }
     .btn-source:hover { color: var(--text); border-color: var(--text-muted); }
 
-    /* ── MID-FEED AD SLOT ───────────────────────────────── */
-    .ad-mid-feed {
-      background: var(--ad-bg);
-      border: 1px dashed var(--ad-border);
-      border-radius: var(--radius);
-      padding: 16px 20px;
-      text-align: center;
-      margin: 8px 0;
-    }
-    .ad-mid-feed .ad-label-inline {
-      font-size: 9px;
-      font-family: var(--font-mono);
-      color: var(--text-dim);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 6px;
-    }
+    .ad-mid-feed { background: var(--ad-bg); border: 1px dashed var(--ad-border); border-radius: var(--radius); padding: 16px 20px; text-align: center; margin: 8px 0; }
+    .ad-label-inline { font-size: 9px; font-family: var(--font-mono); color: var(--text-dim); letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+    .ad-sidebar { background: var(--ad-bg); border: 1px dashed var(--ad-border); border-radius: var(--radius); padding: 16px; text-align: center; margin-bottom: 28px; min-height: 120px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
 
-    /* ── SIDEBAR ────────────────────────────────────────── */
     .sidebar { position: sticky; top: 24px; }
-
     .sidebar-section { margin-bottom: 28px; }
 
-    /* ── SIDEBAR AD SLOT ────────────────────────────────── */
-    .ad-sidebar {
-      background: var(--ad-bg);
-      border: 1px dashed var(--ad-border);
-      border-radius: var(--radius);
-      padding: 16px;
-      text-align: center;
-      margin-bottom: 28px;
-      min-height: 120px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-    }
-    .ad-sidebar .ad-label-inline {
-      font-size: 9px;
-      font-family: var(--font-mono);
-      color: var(--text-dim);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    /* ── DEAL CARDS ─────────────────────────────────────── */
-    .deal-card {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 16px 18px;
-      margin-bottom: 10px;
-      position: relative;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .deal-card:hover {
-      border-color: var(--border-hover);
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    }
-
-    .deal-featured {
-      border-color: rgba(5,150,105,0.3);
-      background: #f0fdf9;
-    }
-
-    .deal-badge {
-      position: absolute;
-      top: -9px; right: 12px;
-      background: var(--accent-green);
-      color: #fff;
-      font-size: 10px;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 20px;
-      letter-spacing: 0.04em;
-    }
-
-    .deal-meta {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 8px;
-    }
-    .deal-flair, .deal-sub {
-      font-size: 10px;
-      font-family: var(--font-mono);
-      color: var(--text-dim);
-      letter-spacing: 0.05em;
-    }
-
-    .deal-title {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text);
-      line-height: 1.45;
-      margin-bottom: 12px;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .deal-btn {
-      display: block;
-      text-align: center;
-      background: #f0fdf9;
-      border: 1px solid rgba(5,150,105,0.3);
-      color: var(--accent-green);
-      border-radius: var(--radius-sm);
-      padding: 7px 12px;
-      font-size: 12px;
-      font-weight: 600;
-      transition: background 0.2s;
-    }
+    .deal-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; margin-bottom: 10px; position: relative; transition: border-color 0.2s, box-shadow 0.2s; }
+    .deal-card:hover { border-color: var(--border-hover); box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .deal-featured { border-color: rgba(5,150,105,0.3); background: #f0fdf9; }
+    .deal-badge { position: absolute; top: -9px; right: 12px; background: var(--accent-green); color: #fff; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 20px; letter-spacing: 0.04em; }
+    .deal-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .deal-sub  { font-size: 10px; font-family: var(--font-mono); color: var(--text-dim); }
+    .deal-title { font-size: 13px; font-weight: 500; color: var(--text); line-height: 1.45; margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    .deal-btn { display: block; text-align: center; background: #f0fdf9; border: 1px solid rgba(5,150,105,0.3); color: var(--accent-green); border-radius: var(--radius-sm); padding: 7px 12px; font-size: 12px; font-weight: 600; transition: background 0.2s; }
     .deal-btn:hover { background: #dcfce7; }
-
-    .deals-link {
-      display: block;
-      text-align: center;
-      font-size: 12px;
-      color: var(--text-dim);
-      padding: 10px;
-      border: 1px dashed var(--border-hover);
-      border-radius: var(--radius-sm);
-      transition: color 0.2s;
-    }
+    .deals-link { display: block; text-align: center; font-size: 12px; color: var(--text-dim); padding: 10px; border: 1px dashed var(--border-hover); border-radius: var(--radius-sm); transition: color 0.2s; }
     .deals-link:hover { color: var(--accent-purple); }
 
-    /* ── ABOUT WIDGET ───────────────────────────────────── */
-    .about-widget {
-      background: var(--bg2);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 18px;
-    }
-    .about-widget p {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 4px;
-    }
-    .about-widget .disclaimer {
-      font-size: 11px;
-      color: var(--text-dim);
-      margin-top: 10px;
-      font-family: var(--font-mono);
-      line-height: 1.5;
-    }
+    .about-widget { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; }
+    .about-widget p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 4px; }
+    .about-widget .disclaimer { font-size: 11px; color: var(--text-dim); margin-top: 10px; font-family: var(--font-mono); line-height: 1.5; }
 
-    /* ── FOOTER ─────────────────────────────────────────── */
-    .footer {
-      border-top: 2px solid var(--border);
-      padding: 32px 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      background: var(--bg2);
-      margin-top: 20px;
-    }
+    .footer { border-top: 2px solid var(--border); padding: 32px 0; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; background: var(--bg2); margin-top: 20px; }
     .footer-logo { font-family: var(--font-display); font-size: 20px; font-weight: 900; }
-    .footer-meta {
-      font-size: 12px;
-      color: var(--text-dim);
-      font-family: var(--font-mono);
-      text-align: right;
-      line-height: 1.7;
-    }
+    .footer-meta { font-size: 12px; color: var(--text-dim); font-family: var(--font-mono); text-align: right; line-height: 1.7; }
 
-    /* ── RESPONSIVE ─────────────────────────────────────── */
     @media (max-width: 640px) {
       .masthead-inner { flex-direction: column; align-items: flex-start; gap: 12px; }
       .hero { flex-direction: column; align-items: flex-start; }
@@ -660,16 +219,17 @@
 </head>
 <body>
 
-  <!-- TOP BANNER AD SLOT — replace content below with your ad network code -->
+  <!-- TOP BANNER AD SLOT -->
   <div class="ad-banner-top">
-    <span class="ad-label">AD</span>
-    <!-- PASTE YOUR LEADERBOARD AD CODE (728x90) HERE -->
-    <div class="ad-placeholder" style="max-width:728px; margin:0 auto; min-height:50px;">
-      Advertisement — your ad banner appears here
-    </div>
+    <ins class="adsbygoogle"
+         style="display:block;max-width:728px;margin:0 auto;"
+         data-ad-client="ca-pub-2453013968799709"
+         data-ad-slot="auto"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   </div>
 
-  <!-- MASTHEAD -->
   <header class="masthead">
     <div class="masthead-inner">
       <a href="/" class="logo">
@@ -677,7 +237,7 @@
       </a>
       <div class="masthead-right">
         <nav class="nav-links">
-          <a href="/">News</a>
+          <a href="/" class="active">News</a>
           <a href="deals.html">Deals</a>
         </nav>
         <div class="live-dot">LIVE</div>
@@ -685,104 +245,96 @@
     </div>
   </header>
 
-  <!-- TICKER -->
   <div class="ticker-wrap">
     <div class="ticker-inner">
-      <div class="ticker-item"><span>↗</span>Budget Laptops India</div>
-      <div class="ticker-item"><span>↗</span>AI News Today</div>
+      <div class="ticker-item"><span>↗</span>AI News India</div>
+      <div class="ticker-item"><span>🏏</span>Cricket Latest</div>
       <div class="ticker-item"><span>↗</span>Smartphone Deals Under ₹20K</div>
-      <div class="ticker-item"><span>↗</span>Smart TV Offers</div>
-      <div class="ticker-item"><span>↗</span>Cybersecurity Alerts</div>
+      <div class="ticker-item"><span>🎬</span>Bollywood Today</div>
       <div class="ticker-item"><span>↗</span>Startup Funding Rounds</div>
-      <div class="ticker-item"><span>↗</span>Gaming Deals</div>
-      <div class="ticker-item"><span>↗</span>Audio Gear Picks</div>
+      <div class="ticker-item"><span>📈</span>Business & Markets</div>
       <div class="ticker-item"><span>↗</span>Budget Laptops India</div>
-      <div class="ticker-item"><span>↗</span>AI News Today</div>
-      <div class="ticker-item"><span>↗</span>Smartphone Deals Under ₹20K</div>
-      <div class="ticker-item"><span>↗</span>Smart TV Offers</div>
-      <div class="ticker-item"><span>↗</span>Cybersecurity Alerts</div>
-      <div class="ticker-item"><span>↗</span>Startup Funding Rounds</div>
+      <div class="ticker-item"><span>🇮🇳</span>India Top News</div>
       <div class="ticker-item"><span>↗</span>Gaming Deals</div>
+      <div class="ticker-item"><span>↗</span>Cybersecurity Alerts</div>
       <div class="ticker-item"><span>↗</span>Audio Gear Picks</div>
+      <div class="ticker-item"><span>↗</span>Smart TV Offers</div>
+      <div class="ticker-item"><span>↗</span>AI News India</div>
+      <div class="ticker-item"><span>🏏</span>Cricket Latest</div>
+      <div class="ticker-item"><span>↗</span>Smartphone Deals Under ₹20K</div>
+      <div class="ticker-item"><span>🎬</span>Bollywood Today</div>
+      <div class="ticker-item"><span>↗</span>Startup Funding Rounds</div>
+      <div class="ticker-item"><span>📈</span>Business & Markets</div>
+      <div class="ticker-item"><span>↗</span>Budget Laptops India</div>
+      <div class="ticker-item"><span>🇮🇳</span>India Top News</div>
+      <div class="ticker-item"><span>↗</span>Gaming Deals</div>
+      <div class="ticker-item"><span>↗</span>Cybersecurity Alerts</div>
+      <div class="ticker-item"><span>↗</span>Audio Gear Picks</div>
+      <div class="ticker-item"><span>↗</span>Smart TV Offers</div>
     </div>
   </div>
 
   <div class="site-wrap">
 
-    <!-- HERO -->
     <div class="hero">
       <div class="hero-left">
         <h1>No noise.<br><em>Just the brief.</em></h1>
-        <p class="hero-sub">AI-curated tech news summaries and the hottest deals — updated every morning for Indian buyers.</p>
+        <p class="hero-sub">AI-curated news — tech, cricket, entertainment, business and more — updated every morning for Indian readers.</p>
       </div>
       <div class="hero-meta">
         <div class="hero-date">2026-04-14</div>
-        <div class="hero-count">10 briefs · 6 deals</div>
+        <div class="hero-count">5 briefs · 6 deals</div>
       </div>
     </div>
 
-    <!-- EMAIL CAPTURE -->
+    <!-- EMAIL CAPTURE — Kit (ConvertKit) -->
     <div class="email-bar">
       <div class="email-bar-text">
         <strong>Get the brief in your inbox every morning</strong>
         <span>No spam. Unsubscribe any time. Takes 10 seconds.</span>
       </div>
-      <form class="email-form" action="https://buttondown.email/api/emails/embed-subscribe/catchthebrief" method="post" target="_blank">
+      <form class="email-form" action="https://buttondown.com/api/emails/embed-subscribe/catchthebrief" method="post" target="_blank">
         <input class="email-input" type="email" name="email" placeholder="you@example.com" required>
         <button class="email-btn" type="submit">Subscribe Free →</button>
-      </form>
+     </form>
     </div>
 
-    <!-- MAIN GRID: articles left, sidebar right -->
-    <!-- On mobile: articles first (order:1), sidebar/deals second (order:2) -->
     <div class="main-grid">
-
-      <!-- LEFT: ARTICLES -->
       <main>
-        <div class="section-label">Today's Tech Briefs</div>
+        <div class="section-label">Today's Briefs</div>
         <div class="cards-grid">
           
         <article class="card" style="animation-delay:0ms" data-color="accent-purple">
           <div class="card-tag accent-purple">AI & Machine Learning</div>
-          <p class="card-hook">Read the full story for details.</p>
-          <h2 class="card-title">Statement on Inclusive and Sustainable Artificial Intelligence for People and the Planet - France ONU</h2>
-          <div class="card-bullets"><ul><li>Click the link below to read the full story.</li></ul></div>
+          <p class="card-hook">India Pharma 2026 is gearing up to showcase a huge transformation in our pharmaceutical sector. Expect key discussions o</p>
+          <h2 class="card-title">India Pharma 2026 Showcases Sectoral Transformation Through Four Key Plenary Discussions - PIB</h2>
+          <div class="card-bullets"><p class="brief-hook">India Pharma 2026 is gearing up to showcase a huge transformation in our pharmaceutical sector. Expect key discussions on how cutting-edge tech, especially AI and machine learning, will revolutionize everything from drug discovery to manufacturing.</p>
+<ul>
+            <li>India Pharma 2026 event slated for major industry transformation.</li>
+            <li>Four key plenary discussions will shape future pharma strategies.</li>
+            <li>AI & Machine Learning expected to be a core focus for innovation.</li>
+          </ul>
+<p class="brief-why"><strong>Why it matters:</strong> AI in pharma means faster drug development, efficient production, and potentially lower medicine costs for Indians.</p></div>
           <div class="card-footer">
-            <span class="card-source">France ONU</span>
+            <span class="card-source">PIB</span>
             <div class="card-links">
-              <a href="articles/statement-on-inclusive-and-sustainable-artificial-intelligence-for-people-and-th.html" class="btn-brief">Full Brief →</a>
-              <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQZXptTldQWmRaRUYwU3lBNjlncUItOVB0b3pJWTFlVVQxTndBWldhb0VjYzFfTTJqQXhYSnZTUFFqUk9KV01ZcUN0OFNjbmJVMzU5eDVLQ1RwUmMyWENKcUl3Zmk3SE1Wa2diOG90Tkh2T3lWZ2VGMkc1RmlHTVpscmV3bDNnUEZNMU5TTEdzMlJlMHBvMFdmM1ktcDNRMHJMSnJieDRKdXU?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
+              <a href="articles/india-pharma-2026-showcases-sectoral-transformation-through-four-key-plenary-dis.html" class="btn-brief">Full Brief →</a>
+              <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5JMnF6UlFIWHc0TkdjUVNVUGJibVg2dDZTeWdMbWRRUEtUdGZWZl9VcEw3VGtvLThKQ3RoTEpFU3NRVWg1cnVTeTUzTktnb3ZOMURIWldnQ3RlVkp6QzZVZ3lXNW1UYm9D?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
             </div>
           </div>
         </article>
 
-        <article class="card" style="animation-delay:80ms" data-color="accent-blue">
-          <div class="card-tag accent-blue">Laptop Deals</div>
-          <p class="card-hook">Amidst India's diverse laptop market, knowing the truly 'best' options is vital for smart buying decisions.</p>
-          <h2 class="card-title">Buying a laptop? These are the 9 best laptops you can buy today - PCWorld</h2>
-          <div class="card-bullets"><ul>
-            <li>Don't just chase raw specs; PCWorld often highlights laptops offering the best *overall value* and practical features for daily use.</li>
-            <li>While Apple often shines, Windows laptops from brands like Dell or HP likely dominate with innovative features across budgets.</li>
-            <li>Beyond raw performance, the top picks often excel in battery life, display quality, and portability – essential for hybrid lifestyles.</li>
-          </ul></div>
-          <div class="card-footer">
-            <span class="card-source">PCWorld</span>
-            <div class="card-links">
-              <a href="articles/buying-a-laptop-these-are-the-9-best-laptops-you-can-buy-today-pcworld.html" class="btn-brief">Full Brief →</a>
-              <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE5rUW5ERWwwUWcxZWlSZmZTZWhMUHFLQTJLendwbGlyRXJDekVZWkJkQmZjQ3hBRXdNdkNpYmxWY3RKcHJKVHBHRmdoOEh1b2ZOdVF6Tlp4T3l6bTBzanBiLU1GdURPRkNWSWY0?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" style="animation-delay:160ms" data-color="accent-green">
+        <article class="card" style="animation-delay:80ms" data-color="accent-green">
           <div class="card-tag accent-green">Smartphone Deals</div>
-          <p class="card-hook">Future-proof your smartphone budget: See which phones will dominate India's sub-₹20,000 market in 2026.</p>
+          <p class="card-hook">Alright, tech fam! If you're eyeing a new smartphone that gives serious bang for your buck, Gadgets 360 has just spilled</p>
           <h2 class="card-title">Best Smartphones Under 20,000 to Buy in India in 2026: Moto G67 Power, Realme P4 5G, and More - Gadgets 360</h2>
-          <div class="card-bullets"><ul>
-            <li>Expect the Moto G67 Power and Realme P4 5G to lead India's sub-₹20,000 smartphone race by 2026, prioritizing power and 5G.</li>
-            <li>India's crucial under-₹20,000 segment promises surprising advancements by 2026, making premium features more accessible than ever.</li>
-            <li>Thinking of an upgrade? This 2026 list suggests holding off if you want future-proof tech for under ₹20,000.</li>
-          </ul></div>
+          <div class="card-bullets"><p class="brief-hook">Alright, tech fam! If you're eyeing a new smartphone that gives serious bang for your buck, Gadgets 360 has just spilled the beans. They've listed the best phones under ₹20,000 to look out for in 2026, like the Moto G67 Power and Realme P4 5G.</p>
+<ul>
+            <li>Top smartphones under ₹20,000 for 2026.</li>
+            <li>List highlights Moto G67 Power and Realme P4 5G.</li>
+            <li>Recommendations published by Gadgets 360.</li>
+          </ul>
+<p class="brief-why"><strong>Why it matters:</strong> It guides Indian consumers to affordable, powerful phones in the crucial sub-₹20k segment.</p></div>
           <div class="card-footer">
             <span class="card-source">Gadgets 360</span>
             <div class="card-links">
@@ -792,151 +344,89 @@
           </div>
         </article>
 
-        <article class="card" style="animation-delay:240ms" data-color="accent-orange">
-          <div class="card-tag accent-orange">Smart TV</div>
-          <p class="card-hook">With India's TV market booming, knowing 2026's top 55-inch models helps smart buyers make informed decisions now.</p>
-          <h2 class="card-title">The 6 Best 55-Inch TVs of 2026 - RTINGS.com</h2>
-          <div class="card-bullets"><ul>
-            <li>Planning your big screen upgrade? This list reveals top 55-inch models for 2026, helping you future-proof your living room entertainment.</li>
-            <li>Looking for a popular size? Discover which 55-inch TVs are predicted to excel in performance, picture quality, and features by 2026.</li>
-            <li>Don't buy blind. RTINGS.com, known for unbiased reviews, has curated this definitive list to guide your premium TV purchase.</li>
-          </ul></div>
+        <article class="card" style="animation-delay:160ms" data-color="accent-cricket">
+          <div class="card-tag accent-cricket">Cricket</div>
+          <p class="card-hook">Hold up, folks! Olympics.com just dropped the full IPL 2026 schedule, and everyone's wondering why a site dedicated to t</p>
+          <h2 class="card-title">IPL 2026 schedule - full match list - olympics.com</h2>
+          <div class="card-bullets"><p class="brief-hook">Hold up, folks! Olympics.com just dropped the full IPL 2026 schedule, and everyone's wondering why a site dedicated to the Olympics would carry cricket's biggest league. It's a truly head-scratching moment for sports fans!</p>
+<ul>
+            <li>Olympics.com unexpectedly published the complete IPL 2026 match list.</li>
+            <li>The official schedule details every game for the highly anticipated T20 season.</li>
+            <li>This unusual crossover has sparked widespread discussion among sports enthusiasts.</li>
+          </ul>
+<p class="brief-why"><strong>Why it matters:</strong> This surprising update from an unexpected source will have millions of Indian cricket fans buzzing with curiosity.</p></div>
           <div class="card-footer">
-            <span class="card-source">RTINGS.com</span>
+            <span class="card-source">olympics.com</span>
             <div class="card-links">
-              <a href="articles/the-6-best-55-inch-tvs-of-2026-rtingscom.html" class="btn-brief">Full Brief →</a>
-              <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5fMnlOaHBkMDhCX0xxRXJTQnluOEVzMGx1ZEdGOFRPbTNDaEVkV2JhcUR6QzY4dVhFME9zZnlPYlFJZ1ZFSEsxM2VWdGM4Z1FxeXVKUDJ3eTNqdzU4aXlGaWFOOEg?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
+              <a href="articles/ipl-2026-schedule-full-match-list-olympicscom.html" class="btn-brief">Full Brief →</a>
+              <a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxOTmM2d05MTDFSalR2TzlyTDhKMEZHUWR6eC1ZSTlvcTl6TENnQmwxWHcyeDBWdDdwNElDbVZfUTVNeFI1Ry0yWHVYQUltOFpUbjZqai02aHpoZDBVMWZzNXd5a1lJTzdXNlZ1OFo1YXNHYlU4YVpQRmpUem5xcDVFZ3hoNVEyWVIwZnJ3?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
             </div>
           </div>
         </article>
 
-        <article class="card" style="animation-delay:320ms" data-color="accent-red">
-          <div class="card-tag accent-red">Cybersecurity</div>
-          <p class="card-hook">This global outlook is crucial for Indian businesses and tech users navigating rapid digital transformation and evolving threats.</p>
-          <h2 class="card-title">Cybersecurity Market Size, Share, Analysis | Global Report 2034 - Fortune Business Insights</h2>
-          <div class="card-bullets"><ul>
-            <li>The global cybersecurity market is projected for an explosive boom, with its size and value dramatically expanding by 2034.</li>
-            <li>This report signals crucial shifts in cyber threats and defensive strategies, forcing companies worldwide to re-evaluate their security postures.</li>
-            <li>Businesses neglecting their digital defenses now risk significant financial and reputational damage as cyberattacks become more sophisticated.</li>
-          </ul></div>
-          <div class="card-footer">
-            <span class="card-source">Fortune Business Insights</span>
-            <div class="card-links">
-              <a href="articles/cybersecurity-market-size-share-analysis-global-report-2034-fortune-business-ins.html" class="btn-brief">Full Brief →</a>
-              <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPMFIxZDUwdGM1SkItQTllQTFQenlBYnVnZnhpdXJkQlRSQWFFdFY4MDg0VVNSY2RaUDhjbE0xcElnNnVSNmhfQnFzQXJuLXAzbEFoaE16WXFEQWVKeURtaHZXckRFOVNHSURwN0p0OE5tLXZvT3FJVnpoWEJTLWJ2d0hOWUVxdS1rd1ktYkZB?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" style="animation-delay:400ms" data-color="accent-teal">
+        <article class="card" style="animation-delay:240ms" data-color="accent-teal">
           <div class="card-tag accent-teal">Startup Scene</div>
-          <p class="card-hook">This growth means more innovative local products and services are coming your way, enhancing daily life.</p>
-          <h2 class="card-title">India’s tech ecosystem ranks 4th globally with $11.7 billion in funding. But who’s ahead? - Indian Startup News</h2>
-          <div class="card-bullets"><ul>
-            <li>India now proudly ranks as the fourth largest tech ecosystem globally, showcasing remarkable growth and innovation.</li>
-            <li>Indian tech startups collectively secured a substantial $11.7 billion in funding, indicating robust investor trust.</li>
-            <li>Despite this massive funding, three other nations still outrank India, highlighting intense global competition in the tech arena.</li>
-          </ul></div>
+          <p class="card-hook">Big news for India's startup scene! The government has officially launched a massive ₹10,000 crore fund. This isn't just</p>
+          <h2 class="card-title">Government Notifies ₹10,000 Crore Startup India Fund of Funds 2.0 to Power Deep-Tech and Next-Gen Innovation - Indian Startup Times</h2>
+          <div class="card-bullets"><p class="brief-hook">Big news for India's startup scene! The government has officially launched a massive ₹10,000 crore fund. This isn't just any fund; it's specifically designed to boost cutting-edge deep-tech and future-focused innovations across the country.</p>
+<ul>
+            <li>The fund is a significant ₹10,000 Crore allocation from the government.</li>
+            <li>It's officially called Startup India Fund of Funds 2.0.</li>
+            <li>Aims to fuel deep-tech and next-gen innovation in startups.</li>
+          </ul>
+<p class="brief-why"><strong>Why it matters:</strong> This fund promises a huge boost for Indian deep-tech startups, fostering home-grown innovation and job creation.</p></div>
           <div class="card-footer">
-            <span class="card-source">Indian Startup News</span>
+            <span class="card-source">Indian Startup Times</span>
             <div class="card-links">
-              <a href="articles/indias-tech-ecosystem-ranks-4th-globally-with-117-billion-in-funding-but-whos-ah.html" class="btn-brief">Full Brief →</a>
-              <a href="https://news.google.com/rss/articles/CBMixgFBVV95cUxNTUVUSEZiWncxRjlNLVZoU05tOHpLZGo4dl9BcVJNd3FHUGhpZkJ3TmExRTJCNFQ2NXU3VEZjNVBjbmZUQmtyNC1uc1FlbjZTc1B4c0h1aXd0SFdKLWpXRTRWVEd6Z2F2cVBjM0RnSUo0akJxVnphZldtZGc0WnVKZDV5ZzJ1R3NvUEUzbEV0MUd6VHByZS1TbnlyTDZBV1VIQmQ0dWJPaTlLRkJvcEgyZTc1YXFGRmhueEx3eHJwZ0FIN09pVnfSAcYBQVVfeXFMTU1FVEhGYlp3MUY5TS1WaFNObTh6S2RqOHZfQXFSTXdxR1BoaWZCd05hMUUyQjRUNjV1N1RGYzVQY25mVEJrcjQtbnNRZW42U3NQeHNIdWl3dEhXSi1qV0U0VlRHemdhdnFQYzNEZ0lKNGpCcVZ6YWZXbWRnNFp1SmQ1eWcydUdzb1BFM2xFdDFHelRwcmUtU255ckw2QVdVSEJkNHViT2k5S0ZCb3BIMmU3NWFxRkZobnhMd3hycGdBSDdPaVZ3?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
+              <a href="articles/government-notifies-10000-crore-startup-india-fund-of-funds-20-to-power-deep-tec.html" class="btn-brief">Full Brief →</a>
+              <a href="https://news.google.com/rss/articles/CBMi7AFBVV95cUxQd2I3LU5GNVdwWVlvcVBzYmdhUkx3T1ZKZUtFdkdIWEYtS0VnVmZxd3lPYnE1TllLY2N1c3Z4U2pBSDQ4Q1ptNlZEQnlLMzB2MjloWHM5UHJFbUNtUmxFNXhSTi1wSFJnSDd2c2tWcm1CWDBDRWpCZ1ZNVnZuZ2NBakVkRjNNNDdtRjhGWDdadWZEd0tEYlRDSURNTkQyNEVrWXAzTFVIMlZ4VUhiTk1KRWpnNzRVdGNtdll2cFZLS09WTGtNaDJBRUxTRDZMZ09QRjZ1WUtqR2VxRDMxOVlpRkp2cUF2X045dE1FdQ?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
             </div>
           </div>
         </article>
 
-        <article class="card" style="animation-delay:480ms" data-color="accent-indigo">
-          <div class="card-tag accent-indigo">Software Deals</div>
-          <p class="card-hook">Read the full story for details.</p>
-          <h2 class="card-title">35+ Best SaaS Lifetime Deals and Discounts in November 2025 - 99signals</h2>
-          <div class="card-bullets"><ul><li>Click the link below to read the full story.</li></ul></div>
+        <article class="card" style="animation-delay:320ms" data-color="accent-india">
+          <div class="card-tag accent-india">India Today</div>
+          <p class="card-hook">Physics Wallah just dropped their daily news digest, perfect for school assemblies or anyone wanting a quick update. It </p>
+          <h2 class="card-title">School Assembly News Headlines (14 April 2026): National, International, Business & Sports Updates - Physics Wallah</h2>
+          <div class="card-bullets"><p class="brief-hook">Physics Wallah just dropped their daily news digest, perfect for school assemblies or anyone wanting a quick update. It covers all the latest from national, international, business, and sports on April 14, 2026. Great for students and competitive exam aspirants to stay sharp!</p>
+<ul>
+            <li>Daily briefing covers national news highlights.</li>
+            <li>International, Business, and Sports updates are also included.</li>
+            <li>Content provided by Physics Wallah for April 14, 2026.</li>
+          </ul>
+<p class="brief-why"><strong>Why it matters:</strong> This digest helps Indian students and aspirants quickly catch up on daily current affairs for competitive exams.</p></div>
           <div class="card-footer">
-            <span class="card-source">99signals</span>
+            <span class="card-source">Physics Wallah</span>
             <div class="card-links">
-              <a href="articles/35-best-saas-lifetime-deals-and-discounts-in-november-2025-99signals.html" class="btn-brief">Full Brief →</a>
-              <a href="https://news.google.com/rss/articles/CBMiVEFVX3lxTFA5cWZ2VGJPRWN0RXdySlJXVUxNLUxPQjdDLWtxOElldHlJR3FnR1NpSUJTSmIxLVNQSGpmaG5Ic3RTX0VVTnVteXUzQVY0cWtDQUZTaQ?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
+              <a href="articles/school-assembly-news-headlines-14-april-2026-national-international-business-spo.html" class="btn-brief">Full Brief →</a>
+              <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE9palBMRDlEVzNObDg0dVV0M1RidXZISTdsb25ySVZ5c3dPZFp2cUI5ejRHT1FVa0RKV25ZN1dIYWkwZWt0V3FuUHRrNXhidklFVUFneWIxTDhiZXJsWGIxOE5ja3lPM002SmxvM3ROMWdZWS0tTTJ1ZVlKczIwMFE?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
             </div>
           </div>
         </article>
 
-        <article class="card" style="animation-delay:560ms" data-color="accent-pink">
-          <div class="card-tag accent-pink">Gaming</div>
-          <p class="card-hook">For Indian gamers, this means a head start on planning major tech upgrades without breaking the bank.</p>
-          <h2 class="card-title">Amazon Great Indian Festival 2025: Power Up with Epic Deals on Gaming Laptops & Video Games! - The Economic Times</h2>
-          <div class="card-bullets"><ul>
-            <li>Start saving now; the Amazon Great Indian Festival's epic gaming deals are over a year away, confirmed for 2025.</li>
-            <li>Amazon is *already* specifically highlighting gaming laptops and video games, suggesting a major focus for future sales.</li>
-            <li>Track current prices on your wishlist now to identify truly 'epic' gaming deals when the 2025 festival finally hits.</li>
-          </ul></div>
-          <div class="card-footer">
-            <span class="card-source">The Economic Times</span>
-            <div class="card-links">
-              <a href="articles/amazon-great-indian-festival-2025-power-up-with-epic-deals-on-gaming-laptops-vid.html" class="btn-brief">Full Brief →</a>
-              <a href="https://news.google.com/rss/articles/CBMi7wFBVV95cUxORnVlenE5Ti1pZV82ZURnb1RRS25QcXZRN3dnZzRqbzJZSnppdU95NWVRVVkxZmVLQ2FLSFdqU0w5SVp3TDFyV3lLc2dsOXRJeWh2MlI0RUt5ZkQ3WEZXMXZISW04YXMxbFl6QVBqdUpfRm04dXBSaExsVUpuM1lvOWM5YkZHOHZuTE91YUNLenFLcVRTSDI0UGM5dUlla1FVY3Z6NWZSanFUTlJJclZ0c0NYRldGNU5PX2h5bVlKWVJOc2N5d3VMR3Fnak80ZXY0VzhYQUVNRjQ5RmtNdUlEM2FpUW9WOEY1TzVCcWp5d9IB9AFBVV95cUxNOWVEeGFhNFRRUmNwdVBKSEk3NTBPMzBvSWRBZ1Z6VXI5cUIxQVE2SHNoNTJabWlYejZSQTZobktDWXJmSy1YQzZsOFQxY19YRWRHQmd3bWNmNTZSM2o0WXlkaU04dDdGeEZUempSN2dESUJoZDNab2xfYXA2eUNFQnhEdE1DMjhCZ05fS0Npd3hwakpmSkxSVWxJNG9IQ3NERlF4Ymh3TDZ6NllQMjJ4TE5uZjMwZFhKNExsbjFJN3pXSk93ZWxuNk5xQW92di1FM21aLWE0bnI5aVhkaDJwMklhOWFqMmpRZ09PQ2M1QXF0M0xN?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" style="animation-delay:640ms" data-color="accent-yellow">
-          <div class="card-tag accent-yellow">Audio Gear</div>
-          <p class="card-hook">For value-driven Indian tech users, finding the best future-proof budget headphones for 2026 is a smart move.</p>
-          <h2 class="card-title">The 5 Best Budget And Cheap Headphones of 2026 - RTINGS.com</h2>
-          <div class="card-bullets"><ul>
-            <li>Getting top-tier audio won't break the bank; 2026 promises incredibly affordable, high-quality headphone options.</li>
-            <li>RTINGS.com, a trusted source for detailed reviews, will reveal exactly which cheap headphones genuinely offer the best value.</li>
-            <li>Future-proof your sound setup! This list looks ahead to 2026, helping you make smart, long-lasting audio investments now.</li>
-          </ul></div>
-          <div class="card-footer">
-            <span class="card-source">RTINGS.com</span>
-            <div class="card-links">
-              <a href="articles/the-5-best-budget-and-cheap-headphones-of-2026-rtingscom.html" class="btn-brief">Full Brief →</a>
-              <a href="https://news.google.com/rss/articles/CBMia0FVX3lxTE9UTmFoZ29ET1I4LTFoUWk0ajd0RnprV0FCYTFScHdEOXA5V3V3c0pDSWxUdEVVREZkdFBxeHFpS05fR1RjT1lSYUxnRW85czlYUlMxR2FIWUJYbUJjTkVyY3hQbS1PbUVHOFhN?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card" style="animation-delay:720ms" data-color="accent-gray">
-          <div class="card-tag accent-gray">Refurb Picks</div>
-          <p class="card-hook">This signals a major push for more affordable, quality tech options for everyday Indians.</p>
-          <h2 class="card-title">Edify targets $10M ARR, brings Ravi Bishnoi on board to scale refurbished tech market - Adgully.com</h2>
-          <div class="card-bullets"><ul>
-            <li>Cricketer Ravi Bishnoi is now involved with Edify, venturing beyond the pitch to scale a tech startup.</li>
-            <li>Edify aims for a hefty $10 million annual revenue, signaling aggressive growth in India's refurbished tech market.</li>
-            <li>The company's strategy spotlights the immense potential of affordable, quality refurbished electronics for Indian buyers.</li>
-          </ul></div>
-          <div class="card-footer">
-            <span class="card-source">Adgully.com</span>
-            <div class="card-links">
-              <a href="articles/edify-targets-10m-arr-brings-ravi-bishnoi-on-board-to-scale-refurbished-tech-mar.html" class="btn-brief">Full Brief →</a>
-              <a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxOb1h2VHVnYmUyLVYycXlLQzVGU09xYVBMbHNOdlZ5TFJ6OEpNajRDb3ZVR0RZdW45elRTWUFHVC1PMFFwRWcyb2ZIOURueVBPTF81MFFYcFg1Y1VMTzhmTF9YbG1mUktRUWhob1l3Ymh3aXNwT3N5MVdvdmRpSzZZcG80bHBuSHlFMW9zX2NXeXhYMHIweFhnem1NLWRLaDFRQ2QtZ0JubFZOWFpBeVNua3pRTDlzRlU5eHc?oc=5" target="_blank" rel="noopener" class="btn-source">Source ↗</a>
-            </div>
-          </div>
-        </article>
-
-          <!-- MID-FEED AD SLOT — appears after article 5 (insert via Python if needed) -->
-          <!-- To activate: move this block into news_engine.py after the 5th card -->
           <div class="ad-mid-feed">
             <span class="ad-label-inline">Advertisement</span>
-            <!-- PASTE YOUR IN-FEED AD CODE (e.g. Google AdSense native) HERE -->
-            <div class="ad-placeholder" style="min-height:90px; width:100%;">
-              In-feed advertisement — appears between articles
-            </div>
+            <ins class="adsbygoogle"
+                 style="display:block;width:100%;"
+                 data-ad-client="ca-pub-2453013968799709"
+                 data-ad-slot="auto"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
           </div>
-
         </div>
       </main>
 
-      <!-- RIGHT: SIDEBAR — moves BELOW articles on mobile via CSS order -->
       <aside class="sidebar">
-
-        <!-- SIDEBAR AD SLOT -->
         <div class="ad-sidebar">
           <span class="ad-label-inline">Advertisement</span>
-          <!-- PASTE YOUR SIDEBAR AD CODE (300x250 or 300x600) HERE -->
-          <div class="ad-placeholder" style="min-height:100px; width:100%;">
-            Sidebar ad (300×250)
-          </div>
+          <ins class="adsbygoogle"
+               style="display:block;width:100%;"
+               data-ad-client="ca-pub-2453013968799709"
+               data-ad-slot="auto"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
         <div class="sidebar-section">
@@ -944,29 +434,23 @@
           
           <div class="deal-card  deal-featured">
             <span class="deal-badge">🔥 Hot</span>
-            <div class="deal-meta"><span class="deal-sub">r/slickdeals.net</span></div>
-            <p class="deal-title">Select Accts: 2-Pk 3.4-Oz Sensodyne Repair & Protect Whitening Toothpaste $8.70 w/ S&S</p>
-            <a href="https://slickdeals.net/f/19414737-2-pack-3-4-ounce-sensodyne-repair-protect-whitening-toothpaste-8-69-w-s-s-free-shipping-w-prime-or-on-35?utm_source=rss&utm_content=fp&utm_medium=RSS2" target="_blank" rel="noopener sponsored" class="deal-btn">
-              Claim Deal →
-            </a>
+            <div class="deal-meta"><span class="deal-sub">reddit.com</span></div>
+            <p class="deal-title">10 Best Creatine Supplements in India - Reviews & Buyer’s Guide</p>
+            <a href="deals/10-best-creatine-supplements-in-india-reviews-buyers-guide.html" class="deal-btn">View Deal →</a>
           </div>
 
           <div class="deal-card">
             
-            <div class="deal-meta"><span class="deal-sub">r/slickdeals.net</span></div>
-            <p class="deal-title">EGO Power+ 56V 765 CFM Brushless Leaf Blower + 5.0Ah & 2.5Ah Battery + Charger $330 + Free S&H</p>
-            <a href="https://slickdeals.net/f/19371312-ego-power-56v-765-cfm-brushless-leaf-blower-5-0ah-2-5ah-battery-charger-330-free-s-h?utm_source=rss&utm_content=fp&utm_medium=RSS2" target="_blank" rel="noopener sponsored" class="deal-btn">
-              Claim Deal →
-            </a>
+            <div class="deal-meta"><span class="deal-sub">reddit.com</span></div>
+            <p class="deal-title">10 Best Refrigerators in India</p>
+            <a href="deals/10-best-refrigerators-in-india.html" class="deal-btn">View Deal →</a>
           </div>
 
           <div class="deal-card">
             
-            <div class="deal-meta"><span class="deal-sub">r/slickdeals.net</span></div>
-            <p class="deal-title">ThermoMaven 110ml Electric Salt & Pepper Grinder Set w/ LED & USB-C Charging (3 Colors) $20 + Free S&H</p>
-            <a href="https://slickdeals.net/f/19416435-110ml-thermomaven-electric-salt-pepper-grinder-set-w-led-usb-c-charging-3-colors-20-free-shipping?utm_source=rss&utm_content=fp&utm_medium=RSS2" target="_blank" rel="noopener sponsored" class="deal-btn">
-              Claim Deal →
-            </a>
+            <div class="deal-meta"><span class="deal-sub">reddit.com</span></div>
+            <p class="deal-title">10 Best Electric Shavers for Men in India</p>
+            <a href="deals/10-best-electric-shavers-for-men-in-india.html" class="deal-btn">View Deal →</a>
           </div>
           <a class="deals-link" href="deals.html">View all deals →</a>
         </div>
@@ -974,28 +458,25 @@
         <div class="sidebar-section">
           <div class="section-label">About</div>
           <div class="about-widget">
-            <p>CatchTheBrief uses AI to read tech articles and extract the 3 facts that actually matter — so you don't have to.</p>
-            <p class="disclaimer">
-              Summaries are AI-generated. Deal links may be affiliate links — we earn a small commission at no cost to you. Updated daily via automation.
-            </p>
+            <p>CatchTheBrief uses AI to read news and extract what actually matters — so you don't have to.</p>
+            <p>Covering tech, cricket, entertainment, business and more — updated daily for Indian readers.</p>
+            <p class="disclaimer">Summaries are AI-generated. Deal links may be affiliate links — we earn a small commission at no cost to you. Updated daily via automation.</p>
           </div>
         </div>
-
       </aside>
     </div>
 
-    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-logo">
         <span class="logo-catch">Catch</span><span class="logo-the">The</span><span class="logo-brief">Brief</span>
       </div>
       <div class="footer-meta">
-        <div>Summaries by Google Gemini · Deals from community forums</div>
-        <div>Last updated: 14 April 2026 at 5:37 AM IST</div>
+        <div>Summaries by Google Gemini · Deals from India community forums</div>
+        <div>Last updated: 14 April 2026 at 9:17 AM IST</div>
         <div>© 2026 CatchTheBrief.com</div>
       </div>
     </footer>
 
-  </div><!-- /site-wrap -->
+  </div>
 </body>
 </html>
