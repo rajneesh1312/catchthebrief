@@ -1,41 +1,41 @@
 {
   "date": "2026-04-16",
-  "generated_at": "2026-04-16T08:57:48.425936+05:30",
+  "generated_at": "2026-04-16T11:13:47.377546+05:30",
   "briefs": [
     {
-      "title": "Paytm is Now Officially More Indian Than Ever!",
+      "title": "Paytm's Big Move: Majority Indian-Owned, Homegrown Pride!",
       "category": "India Tech",
-      "slug": "paytm-is-now-officially-more-indian-than-ever",
+      "slug": "paytm-s-big-move-majority-indian-owned-homegrown-pride",
       "source": "yourstory.com",
-      "url": "https://catchthebrief.com/articles/paytm-is-now-officially-more-indian-than-ever.html"
+      "url": "https://catchthebrief.com/articles/paytm-s-big-move-majority-indian-owned-homegrown-pride.html"
     },
     {
-      "title": "OpenAI Fights Cyber Threats; NVIDIA Unleashes Quantum AI Tools",
-      "category": "AI & ML",
-      "slug": "openai-fights-cyber-threats-nvidia-unleashes-quantum-ai-tools",
-      "source": "yourstory.com",
-      "url": "https://catchthebrief.com/articles/openai-fights-cyber-threats-nvidia-unleashes-quantum-ai-tools.html"
-    },
-    {
-      "title": "Homegrown Heroes: Indian Funds Powering Startups, GobbleCube Bags $15M",
+      "title": "Indian Funds To The Rescue! GobbleCube Nabs $15M As Homegrown Cash Surges",
       "category": "Startup Funding",
-      "slug": "homegrown-heroes-indian-funds-powering-startups-gobblecube-bags-15m",
+      "slug": "indian-funds-to-the-rescue-gobblecube-nabs-15m-as-homegrown-cash-surges",
       "source": "inc42.com",
-      "url": "https://catchthebrief.com/articles/homegrown-heroes-indian-funds-powering-startups-gobblecube-bags-15m.html"
+      "url": "https://catchthebrief.com/articles/indian-funds-to-the-rescue-gobblecube-nabs-15m-as-homegrown-cash-surges.html"
     },
     {
-      "title": "Switzerland Calling: QAI Ventures to Back India's Quantum AI Startups",
-      "category": "Startup Funding",
-      "slug": "switzerland-calling-qai-ventures-to-back-india-s-quantum-ai-startups",
-      "source": "yourstory.com",
-      "url": "https://catchthebrief.com/articles/switzerland-calling-qai-ventures-to-back-india-s-quantum-ai-startups.html"
-    },
-    {
-      "title": "DevSparks Bengaluru 2026: Cracking AI's Future for Developers!",
+      "title": "AI's New Frontier: OpenAI Defends, NVIDIA Explores Quantum",
       "category": "AI & ML",
-      "slug": "devsparks-bengaluru-2026-cracking-ai-s-future-for-developers",
+      "slug": "ai-s-new-frontier-openai-defends-nvidia-explores-quantum",
       "source": "yourstory.com",
-      "url": "https://catchthebrief.com/articles/devsparks-bengaluru-2026-cracking-ai-s-future-for-developers.html"
+      "url": "https://catchthebrief.com/articles/ai-s-new-frontier-openai-defends-nvidia-explores-quantum.html"
+    },
+    {
+      "title": "5 Indian AI Startups That Sparkled This April",
+      "category": "AI & ML",
+      "slug": "5-indian-ai-startups-that-sparkled-this-april",
+      "source": "inc42.com",
+      "url": "https://catchthebrief.com/articles/5-indian-ai-startups-that-sparkled-this-april.html"
+    },
+    {
+      "title": "Bengaluru's DevSparks 2026: Cracking AI for Developers",
+      "category": "AI & ML",
+      "slug": "bengaluru-s-devsparks-2026-cracking-ai-for-developers",
+      "source": "yourstory.com",
+      "url": "https://catchthebrief.com/articles/bengaluru-s-devsparks-2026-cracking-ai-for-developers.html"
     }
   ]
 }
