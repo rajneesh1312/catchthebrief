@@ -1,6 +1,6 @@
 """
-CatchTheBrief — News Engine v5.0
-Session 5: Design Overhaul (HTML generation updated to match new templates)
+CatchTheBrief — News Engine v4.0
+Session 4: Content Engine Rewrite
 - India tech/startup RSS feeds (8 sources)
 - Fetch wide: 15-20 articles from past 24 hours
 - AI ranking: Gemini picks top 5 in ONE call
@@ -8,16 +8,12 @@ Session 5: Design Overhaul (HTML generation updated to match new templates)
 - og:image extraction from source articles
 - Unique meta tags per article
 - Groq fallback when Gemini quota exhausted
-- Session 5: Hero card + 2x2 grid layout on homepage
-- Session 5: Progress bar, back-to-top, share buttons on article pages
-- Session 5: New CSS classes matching Inter + Space Grotesk design system
 """
 
 import os
 import json
 import time
 import re
-import urllib.parse
 import xml.etree.ElementTree as ET
 import urllib.request
 import urllib.error
@@ -544,158 +540,27 @@ def generate_brief(article, gemini, groq):
         "pub_date": article.get("pub_date", ""),
     }
 
-# ─── HTML GENERATION (Session 5) ─────────────────────────────────────────────
-
-# Category → CSS badge class (matches .badge.ai / .badge.startup etc in new templates)
-CATEGORY_CSS = {
-    "AI & ML":          "ai",
-    "Startup Funding":  "startup",
-    "Digital India":    "policy",
-    "Product Launch":   "product",
-    "India Tech":       "funding",
-}
-
-# Emoji placeholder shown when og:image is not found
-CATEGORY_EMOJI = {
-    "AI & ML":          "🤖",
-    "Startup Funding":  "💰",
-    "Digital India":    "🇮🇳",
-    "Product Launch":   "🚀",
-    "India Tech":       "💻",
-}
-
-# Gradient background for emoji placeholder cards
-CATEGORY_GRADIENT = {
-    "AI & ML":          "background:linear-gradient(135deg,#EDE9FE,#DDD6FE);",
-    "Startup Funding":  "background:linear-gradient(135deg,#D1FAE5,#A7F3D0);",
-    "Digital India":    "background:linear-gradient(135deg,#FEE2E2,#FECACA);",
-    "Product Launch":   "background:linear-gradient(135deg,#FEF3C7,#FDE68A);",
-    "India Tech":       "background:linear-gradient(135deg,#DBEAFE,#BFDBFE);",
-}
+# ─── HTML GENERATION ──────────────────────────────────────────────────────────
 
 def color_class(category):
-    """Return CSS badge class string for a given category."""
-    return CATEGORY_CSS.get(category, "funding")
+    return CATEGORY_COLORS.get(category, "funding")
 
 def facts_to_html(facts):
-    """Convert facts list to <li> items — inserted into .facts-list in article.html."""
     if not facts:
         return "<li>See source article for full details</li>"
     return "\n".join(f"<li>{f}</li>" for f in facts)
 
-def make_share_urls(title, slug):
-    """Build WhatsApp and Twitter/X share URLs for an article."""
-    article_url  = f"{SITE_URL}/articles/{slug}.html"
-    encoded_text = urllib.parse.quote(f"{title} — Read the full brief: {article_url}")
-    whatsapp_url = f"https://wa.me/?text={encoded_text}"
-    twitter_url  = f"https://twitter.com/intent/tweet?text={encoded_text}"
-    return whatsapp_url, twitter_url
+def share_text(title):
+    encoded = urllib.parse.quote(f"{title} — {SITE_URL}")
+    return encoded
 
-def hero_image_html(image_url, image_alt, category):
-    """
-    Returns HTML for {{HERO_IMAGE_HTML}} in article.html.
-    Shows <img> if URL exists, otherwise a gradient emoji placeholder.
-    """
-    if image_url:
-        alt = (image_alt or "").replace('"', "&quot;")
-        return f'<img src="{image_url}" alt="{alt}" loading="lazy">'
-    emoji = CATEGORY_EMOJI.get(category, "📰")
-    return f'<div class="hero-image-placeholder">{emoji}</div>'
-
-def card_image_html(image_url, image_alt, category):
-    """
-    Returns HTML for the image area inside a homepage article card.
-    Shows <img> if URL exists, otherwise a gradient emoji placeholder.
-    """
-    if image_url:
-        alt = (image_alt or "").replace('"', "&quot;")
-        return f'<img src="{image_url}" alt="{alt}" loading="lazy">'
-    emoji    = CATEGORY_EMOJI.get(category, "📰")
-    gradient = CATEGORY_GRADIENT.get(category, "background:#F0F4F8;")
-    return f'<div class="card-img-placeholder" style="{gradient}">{emoji}</div>'
-
-def generate_hero_card(brief, image_url, slug):
-    """
-    Build the large hero card (article #1) for index.html.
-    Full-width split layout: image left, content right.
-    """
-    css     = color_class(brief["category"])
-    img     = card_image_html(image_url, brief["title"], brief["category"])
-    preview = brief["hook"][:200].strip()
-    url     = f"/articles/{slug}.html"
-
-    return f"""<a href="{url}" class="hero-card">
-  <div class="hero-img-wrap">
-    {img}
-  </div>
-  <div class="hero-content">
-    <div class="hero-eyebrow">
-      <span class="badge {css}">{brief["category"]}</span>
-      <span class="read-time">{brief["read_time"]}</span>
-    </div>
-    <h2>{brief["title"]}</h2>
-    <p class="hook-preview">{preview}</p>
-    <span class="read-btn">Read brief <span class="arrow">→</span></span>
-  </div>
-</a>"""
-
-def generate_grid_card(brief, image_url, slug):
-    """
-    Build a regular grid card (articles #2-5) for the 2×2 grid on index.html.
-    """
-    css     = color_class(brief["category"])
-    img     = card_image_html(image_url, brief["title"], brief["category"])
-    preview = brief["hook"][:140].strip()
-    url     = f"/articles/{slug}.html"
-
-    return f"""<a href="{url}" class="article-card">
-  <div class="card-img-wrap">
-    {img}
-  </div>
-  <div class="card-body">
-    <div class="card-eyebrow">
-      <span class="badge {css}">{brief["category"]}</span>
-      <span class="read-time">{brief["read_time"]}</span>
-    </div>
-    <h3>{brief["title"]}</h3>
-    <p class="card-preview">{preview}</p>
-    <span class="card-read-link">Read brief →</span>
-  </div>
-</a>"""
-
-def build_all_articles_html(briefs_data):
-    """
-    Assemble the full {{ALL_ARTICLES}} block for index.html:
-      Article 0       → hero card (full width)
-      Articles 1-2    → first .grid-2x2 row
-      Articles 3-4    → second .grid-2x2 row
-    briefs_data: list of (brief_dict, image_url, slug)
-    """
-    if not briefs_data:
-        return '<p style="color:#718096;text-align:center;padding:40px 0;">No briefs today. Check back tomorrow!</p>'
-
-    blocks = []
-
-    # Hero card — article 0
-    brief, image_url, slug = briefs_data[0]
-    blocks.append(generate_hero_card(brief, image_url, slug))
-
-    # Grid row 1 — articles 1 & 2
-    row1 = briefs_data[1:3]
-    if row1:
-        cards = "\n".join(generate_grid_card(b, img, s) for b, img, s in row1)
-        blocks.append(f'<div class="grid-2x2">\n{cards}\n</div>')
-
-    # Grid row 2 — articles 3 & 4
-    row2 = briefs_data[3:5]
-    if row2:
-        cards = "\n".join(generate_grid_card(b, img, s) for b, img, s in row2)
-        blocks.append(f'<div class="grid-2x2">\n{cards}\n</div>')
-
-    return "\n\n".join(blocks)
+try:
+    import urllib.parse
+except ImportError:
+    pass
 
 def generate_article_page(brief, image_url, image_alt, slug, article_index, total):
-    """Render article.html template with all Session 5 injection tags."""
+    """Render article.html template with brief content."""
     template_path = TEMPLATES_DIR / "article.html"
     if not template_path.exists():
         print(f"  WARNING: {template_path} not found — skipping article page")
@@ -703,37 +568,37 @@ def generate_article_page(brief, image_url, image_alt, slug, article_index, tota
 
     template = template_path.read_text(encoding="utf-8")
 
-    meta_desc    = brief["hook"][:160].replace('"', "'")
-    og_image     = image_url or f"{SITE_URL}/images/defaults/tech.jpg"
-    whatsapp_url, twitter_url = make_share_urls(brief["title"], slug)
+    meta_desc = brief["hook"][:160].replace('"', "'")
+    og_title = brief["title"]
+    og_desc = meta_desc
+    share_encoded = urllib.parse.quote(f"{brief['title']} — Read the full brief: {SITE_URL}/articles/{slug}.html")
+    whatsapp_url = f"https://wa.me/?text={share_encoded}"
+    twitter_url = f"https://twitter.com/intent/tweet?text={share_encoded}"
 
     replacements = {
-        "{{TITLE}}":            brief["title"],
+        "{{TITLE}}": brief["title"],
         "{{META_DESCRIPTION}}": meta_desc,
-        "{{OG_TITLE}}":         brief["title"],
-        "{{OG_DESCRIPTION}}":   meta_desc,
-        "{{OG_IMAGE}}":         og_image,
-        "{{SITE_URL}}":         SITE_URL,
-        "{{SLUG}}":             slug,
-        "{{LABEL}}":            brief["category"],
-        "{{COLOR}}":            color_class(brief["category"]),
-        "{{READ_TIME}}":        brief["read_time"],
-        "{{PUB_DATE}}":         brief.get("pub_date", ""),
-        "{{HERO_IMAGE_HTML}}":  hero_image_html(image_url, brief["title"], brief["category"]),
-        "{{HOOK}}":             brief["hook"].replace("\n", " "),
-        "{{CONTEXT}}":          brief["context"].replace("\n", " "),
-        "{{KEY_FACTS}}":        facts_to_html(brief["facts"]),
-        "{{WHAT_NEXT}}":        brief["what_next"].replace("\n", " "),
-        "{{WHY_INDIA}}":        brief["why_india"],
-        "{{SOURCE_NAME}}":      brief["source_name"],
-        "{{SOURCE_LINK}}":      brief["source_link"],
-        "{{WHATSAPP_URL}}":     whatsapp_url,
-        "{{TWITTER_URL}}":      twitter_url,
-        # Legacy tags kept for backwards compatibility
-        "{{IMAGE_URL}}":        image_url or get_default_image(brief["category"]),
-        "{{IMAGE_ALT}}":        image_alt or brief["title"],
-        "{{ARTICLE_INDEX}}":    str(article_index),
-        "{{TOTAL_ARTICLES}}":   str(total),
+        "{{OG_TITLE}}": og_title,
+        "{{OG_DESCRIPTION}}": og_desc,
+        "{{OG_IMAGE}}": image_url or f"{SITE_URL}/images/defaults/tech.jpg",
+        "{{SITE_URL}}": SITE_URL,
+        "{{LABEL}}": brief["category"],
+        "{{COLOR}}": color_class(brief["category"]),
+        "{{READ_TIME}}": brief["read_time"],
+        "{{IMAGE_URL}}": image_url or get_default_image(brief["category"]),
+        "{{IMAGE_ALT}}": image_alt or brief["title"],
+        "{{HOOK}}": brief["hook"].replace("\n", " "),
+        "{{CONTEXT}}": brief["context"].replace("\n", " "),
+        "{{KEY_FACTS}}": facts_to_html(brief["facts"]),
+        "{{WHAT_NEXT}}": brief["what_next"].replace("\n", " "),
+        "{{WHY_INDIA}}": brief["why_india"],
+        "{{SOURCE_NAME}}": brief["source_name"],
+        "{{SOURCE_LINK}}": brief["source_link"],
+        "{{PUB_DATE}}": brief["pub_date"],
+        "{{WHATSAPP_URL}}": whatsapp_url,
+        "{{TWITTER_URL}}": twitter_url,
+        "{{ARTICLE_INDEX}}": str(article_index),
+        "{{TOTAL_ARTICLES}}": str(total),
     }
 
     html = template
@@ -742,8 +607,31 @@ def generate_article_page(brief, image_url, image_alt, slug, article_index, tota
 
     return html
 
+def article_card_html(brief, image_url, slug, is_hero=False):
+    """Generate article card HTML for homepage."""
+    color = color_class(brief["category"])
+    hook_preview = brief["hook"][:120] + "…" if len(brief["hook"]) > 120 else brief["hook"]
+    img_tag = ""
+    if image_url:
+        img_tag = f'<img src="{image_url}" alt="{brief["title"]}" loading="lazy">'
+    else:
+        img_tag = f'<div class="card-img-placeholder"></div>'
+
+    hero_class = " hero-card" if is_hero else ""
+    return f"""<article class="article-card{hero_class}">
+  <a href="/articles/{slug}.html">
+    <div class="card-img">{img_tag}</div>
+    <div class="card-body">
+      <span class="badge badge-{color}">{brief["category"]}</span>
+      <span class="read-time">{brief["read_time"]}</span>
+      <h2 class="card-title">{brief["title"]}</h2>
+      <p class="card-preview">{hook_preview}</p>
+    </div>
+  </a>
+</article>"""
+
 def generate_homepage(briefs_data, now):
-    """Render index.html with Session 5 hero card + 2×2 grid layout."""
+    """Render index.html template."""
     template_path = TEMPLATES_DIR / "index.html"
     if not template_path.exists():
         print(f"  WARNING: {template_path} not found")
@@ -751,14 +639,17 @@ def generate_homepage(briefs_data, now):
 
     template = template_path.read_text(encoding="utf-8")
 
-    count_str = f"{len(briefs_data)} brief{'s' if len(briefs_data) != 1 else ''}"
+    cards_html = ""
+    for i, (brief, image_url, slug) in enumerate(briefs_data):
+        cards_html += article_card_html(brief, image_url, slug, is_hero=(i == 0))
+        cards_html += "\n"
 
     replacements = {
-        "{{ALL_ARTICLES}}":  build_all_articles_html(briefs_data),
-        "{{LAST_UPDATED}}":  human_date(now),
-        "{{ISO_DATE}}":      iso_date(now),
-        "{{ARTICLE_COUNT}}": count_str,
-        "{{SITE_URL}}":      SITE_URL,
+        "{{ALL_ARTICLES}}": cards_html,
+        "{{LAST_UPDATED}}": human_date(now),
+        "{{ISO_DATE}}": iso_date(now),
+        "{{ARTICLE_COUNT}}": f"{len(briefs_data)} briefs",
+        "{{SITE_URL}}": SITE_URL,
     }
 
     html = template
@@ -814,7 +705,7 @@ Sitemap: {SITE_URL}/sitemap.xml
 
 def main():
     print("=" * 60)
-    print("CatchTheBrief News Engine v5.0")
+    print("CatchTheBrief News Engine v4.0")
     print(f"Run time: {human_date(ist_now())} IST")
     print("=" * 60)
 
