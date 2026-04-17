@@ -1,41 +1,41 @@
 {
   "date": "2026-04-17",
-  "generated_at": "2026-04-17T10:44:38.387671+05:30",
+  "generated_at": "2026-04-17T11:11:46.533563+05:30",
   "briefs": [
     {
-      "title": "India's New Privacy Law: Are Startups Ready for the Cost?",
+      "title": "DPDPA: Are Indian Startups Ready for the Privacy Challenge?",
       "category": "Digital India",
-      "slug": "india-s-new-privacy-law-are-startups-ready-for-the-cost",
+      "slug": "dpdpa-are-indian-startups-ready-for-the-privacy-challenge",
       "source": "inc42.com",
-      "url": "https://catchthebrief.com/articles/india-s-new-privacy-law-are-startups-ready-for-the-cost.html"
+      "url": "https://catchthebrief.com/articles/dpdpa-are-indian-startups-ready-for-the-privacy-challenge.html"
     },
     {
-      "title": "AI Fights Hackers, NVIDIA Dives Quantum: Tech's New Battlegrounds",
+      "title": "AI Fights Cyber Attacks; NVIDIA Powers Quantum Research!",
       "category": "AI & ML",
-      "slug": "ai-fights-hackers-nvidia-dives-quantum-tech-s-new-battlegrounds",
+      "slug": "ai-fights-cyber-attacks-nvidia-powers-quantum-research",
       "source": "yourstory.com",
-      "url": "https://catchthebrief.com/articles/ai-fights-hackers-nvidia-dives-quantum-tech-s-new-battlegrounds.html"
+      "url": "https://catchthebrief.com/articles/ai-fights-cyber-attacks-nvidia-powers-quantum-research.html"
     },
     {
-      "title": "Pocket FM's Big Win: Claims Profit & $400M Yearly Revenue!",
+      "title": "Pocket FM: Audio Stories Turn Profitable, Raking In $400 Million!",
       "category": "India Tech",
-      "slug": "pocket-fm-s-big-win-claims-profit-400m-yearly-revenue",
+      "slug": "pocket-fm-audio-stories-turn-profitable-raking-in-400-million",
       "source": "inc42.com",
-      "url": "https://catchthebrief.com/articles/pocket-fm-s-big-win-claims-profit-400m-yearly-revenue.html"
+      "url": "https://catchthebrief.com/articles/pocket-fm-audio-stories-turn-profitable-raking-in-400-million.html"
     },
     {
-      "title": "Indigo's New Bet: Flying High with Sarla Air Taxis!",
-      "category": "Startup Funding",
-      "slug": "indigo-s-new-bet-flying-high-with-sarla-air-taxis",
-      "source": "yourstory.com",
-      "url": "https://catchthebrief.com/articles/indigo-s-new-bet-flying-high-with-sarla-air-taxis.html"
-    },
-    {
-      "title": "Ola Krutrim's Kruti AI Chatbot Vanishes Offline! What Happened?",
+      "title": "GramIQ: OpenAI Helps Farmers Actually See Their Profits!",
       "category": "AI & ML",
-      "slug": "ola-krutrim-s-kruti-ai-chatbot-vanishes-offline-what-happened",
-      "source": "inc42.com",
-      "url": "https://catchthebrief.com/articles/ola-krutrim-s-kruti-ai-chatbot-vanishes-offline-what-happened.html"
+      "slug": "gramiq-openai-helps-farmers-actually-see-their-profits",
+      "source": "yourstory.com",
+      "url": "https://catchthebrief.com/articles/gramiq-openai-helps-farmers-actually-see-their-profits.html"
+    },
+    {
+      "title": "Indigo's New Horizon: Investing in India's Own Air Taxis!",
+      "category": "Startup Funding",
+      "slug": "indigo-s-new-horizon-investing-in-india-s-own-air-taxis",
+      "source": "yourstory.com",
+      "url": "https://catchthebrief.com/articles/indigo-s-new-horizon-investing-in-india-s-own-air-taxis.html"
     }
   ]
 }
