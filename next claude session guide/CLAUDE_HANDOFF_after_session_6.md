@@ -56,7 +56,11 @@ CatchTheBrief should follow a similar "audience first, money later" path.
                   fetch_and_rank.yml:        4:30 PM UTC = 10:00 PM IST
                   generate_and_publish.yml:  2:30 AM UTC =  8:00 AM IST
                   daily.yml:                 manual trigger only (legacy fallback)
-- Newsletter:   Buttondown (free, up to 100 subscribers — migrate to Brevo/MailerLite at 80 subs)
+- Newsletter:   MailerLite (free plan: 500 subs / 12,000 emails/month — permanent free tier, NOT a trial)
+                  Account ID: 2285640 | Form ID: 185448516399662487
+                  Form action: https://assets.mailerlite.com/jsonp/2285640/forms/185448516399662487/subscribe
+                  Email field name: fields[email] | Hidden inputs: ml-submit=1, anticsrf=true
+                  Universal script added to <head> of all pages (index.html + article.html)
 - Dependencies: requests, beautifulsoup4, google-genai  (NO lxml — causes Windows build error)
 - Analytics:    Google Analytics GA4 (G-V6N03CT88P) — keep on all pages
 - AdSense:      PAUSED — ca-pub-2453013968799709 (commented out in templates, re-add after 90 days)
@@ -456,6 +460,7 @@ Legacy tags still handled (backwards compat): {{IMAGE_URL}}, {{IMAGE_ALT}},
 22. Source diversity filter too aggressive (left only 2 candidates) → FIXED Session 6: max 3 per source instead of 1
 23. /archive/ returning 404 → FIXED Session 6: archive/index.html now generated and auto-regenerated daily
 24. Buttondown subscribe "not found" after submit → FIXED Session 6: removed target="_blank", inline JS shows ✓ success message
+26. Buttondown account rejected by their team → FIXED Session 6: migrated to MailerLite (permanent free plan)
 25. "All Briefs" back button looked like plain text → FIXED Session 6: pill button with border + hover
 
 ---
@@ -531,7 +536,7 @@ python generate_and_publish.py
 - [x] Daily cron verified — two separate workflows (Session 6)
 - [x] Manual workflow test — GREEN tick confirmed
 - [x] Google Analytics wired (G-V6N03CT88P)
-- [x] Buttondown newsletter live (catchthebrief)
+- [x] MailerLite newsletter embedded — account 2285640, form 185448516399662487 (Session 6)
 - [x] Groq fallback wired in engine
 - [x] Deals section paused (commented out in engine + templates)
 - [x] AdSense code commented out in templates
@@ -559,7 +564,7 @@ python generate_and_publish.py
 - [x] Manual brief injection — manual_brief key skips AI (Session 6)
 - [x] Two cron jobs — fetch_and_rank.yml + generate_and_publish.yml (Session 6)
 - [x] archive/index.html — browse page, auto-regenerated daily (Session 6)
-- [x] Newsletter form — inline JS success, no page redirect (Session 6)
+- [x] Newsletter form — MailerLite embedded, inline JS success, no page redirect (Session 6)
 - [x] "All Briefs" back button — pill style with border + hover (Session 6)
 - [ ] Date-prefixed article slugs — YYYY-MM-DD-slug.html (Session 7)
 - [ ] Per-day archive pages — /archive/YYYY-MM-DD.html (Session 7)
@@ -578,7 +583,7 @@ python generate_and_publish.py
 | Google AdSense    | ⏸️ PAUSED — code commented out, re-add after 90 days  |
 | Amazon Associates | ⏸️ PAUSED — tag saved (catchthebrief-21)              |
 | Google Analytics  | ✅ Live — G-V6N03CT88P (keep — need data)             |
-| Newsletter        | ✅ Buttondown — username: catchthebrief               |
+| Newsletter        | ✅ MailerLite — account: 2285640, form: 185448516399662487 |
 
 ### Monetization re-entry plan (Day 90+):
 1. AdSense: re-add code only after 500+ daily visitors confirmed in GA4
