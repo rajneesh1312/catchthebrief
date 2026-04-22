@@ -596,7 +596,7 @@
       <div class="newsletter-emoji">📬</div>
       <h3>Never miss a brief</h3>
       <p>Get 5 sharp India tech & startup stories in your inbox every morning. Free, always.</p>
-      <form class="newsletter-form" action="https://buttondown.com/api/emails/embed-subscribe/catchthebrief" method="post" target="_blank">
+      <form class="newsletter-form" id="home-newsletter-form" action="https://buttondown.com/api/emails/embed-subscribe/catchthebrief" method="post">
         <input type="email" name="email" placeholder="your@email.com" required>
         <button type="submit">Subscribe →</button>
       </form>
@@ -619,6 +619,20 @@
     </div>
     <p class="footer-copy">© 2026 CatchTheBrief · Made with ☕ in India</p>
   </footer>
+
+
+  <script>
+    (function() {
+      const form = document.getElementById('home-newsletter-form');
+      if (!form) return;
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        fetch(form.action, { method: 'POST', body: data, mode: 'no-cors' });
+        form.innerHTML = '<p style="color:#86EFAC;font-size:16px;font-weight:600;text-align:center;padding:8px 0;">✓ You\'re in! Check your inbox for a confirmation email.</p>';
+      });
+    })();
+  </script>
 
 </body>
 </html>

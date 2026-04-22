@@ -1,13 +1,15 @@
-name: Daily Content Build (Legacy — use fetch_and_rank.yml + generate_and_publish.yml instead)
+name: Fetch and Rank Articles
 
 on:
-  workflow_dispatch:         # manual trigger only — auto-schedule replaced by two separate workflows
+  schedule:
+    - cron: '30 16 * * *'   # 4:30 PM UTC = 10:00 PM IST daily
+  workflow_dispatch:          # allow manual trigger for testing
 
 permissions:
-  contents: write            # needed to commit generated files
+  contents: write
 
 jobs:
-  build:
+  fetch-and-rank:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,18 +24,18 @@ jobs:
       - name: Install dependencies
         run: pip install requests beautifulsoup4 google-genai
 
-      - name: Run content engine
+      - name: Fetch articles and rank candidates
         env:
           GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
           GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
           GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
           GROQ_API_KEY:     ${{ secrets.GROQ_API_KEY }}
-        run: python news_engine.py
+        run: python fetch_and_rank.py
 
-      - name: Commit and push generated files
+      - name: Commit review_candidates.json
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add -A
-          git diff --cached --quiet || git commit -m "Daily build: $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git add review_candidates.json
+          git diff --cached --quiet || git commit -m "Candidates: $(date -u '+%Y-%m-%d') — ready for review"
           git push

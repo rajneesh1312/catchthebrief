@@ -1,0 +1,70 @@
+{
+  "generated_at": "2026-04-22T16:30:18.686907+05:30",
+  "manually_reviewed": false,
+  "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
+  "_manual_brief_template": {
+    "_instructions": "To publish your own written article: copy this template into any top_5 entry as a 'manual_brief' key, fill in the fields, set manually_reviewed to true, commit before 8 AM IST.",
+    "title": "Your headline here (max 12 words, punchy)",
+    "category": "India Tech | AI & ML | Startup Funding | Digital India | Product Launch",
+    "read_time": "3 min read",
+    "hook": "3-4 sentence opening. Tell it like a story. Conversational, chai-over-friend tone.",
+    "context": "2-3 sentences of background. What led to this? Why now?",
+    "facts": [
+      "Fact 1 — include a number, name, or date",
+      "Fact 2 — include a number, name, or date",
+      "Fact 3 — include a number, name, or date",
+      "Fact 4 — include a number, name, or date",
+      "Fact 5 — include a number, name, or date"
+    ],
+    "what_next": "2-3 sentences. What should readers watch for? When will we know more?",
+    "why_india": "One sentence. Why does this matter specifically for Indian readers?",
+    "source_name": "Your name, or the publication name",
+    "source_link": "https://link-to-original-source.com"
+  },
+  "top_5": [
+    {
+      "rank": 1,
+      "title": "From data to decisions: What it takes to build real-time, AI-led consumer businesses in India",
+      "source": "yourstory.com",
+      "url": "https://yourstory.com/2026/04/from-data-to-decisions-what-it-takes-to-build-real-time-ai-led-consumer-businesses-in-india",
+      "summary": "Building a real-time, AI-led consumer business in such a category requires more than just data collection: it demands a system where data flows contin"
+    },
+    {
+      "rank": 2,
+      "title": "Shadowfax’s M-Cap Nears $1 Bn Mark, Shares Soar To All-Time High Of ₹160.7",
+      "source": "inc42.com",
+      "url": "https://inc42.com/buzz/shadowfaxs-m-cap-nears-1-bn-mark-shares-soar-to-all-time-high-of-%e2%82%b9160-7/",
+      "summary": "Update &#124; April 22, 2026, 15:45 IST Shares of Shadowfax Technologies ended today’s trading session 1.68% higher at ₹157.25 apiece.&#8230;"
+    },
+    {
+      "rank": 3,
+      "title": "Emversity Buys Lanstitut To Scale Healthcare Staffing In Germany",
+      "source": "inc42.com",
+      "url": "https://inc42.com/buzz/emversity-buys-lanstitut-to-scale-healthcare-staffing-in-germany/",
+      "summary": "Bengaluru-based Emversity has acquired Kerala-based healthcare talent mobility platform Lanstitut Technologies. In a statement, Emversity said that La"
+    },
+    {
+      "rank": 4,
+      "title": "M2P Fintech Appoints Ex-Hitachi Payments’ Vivek Seshadri As Group CFO",
+      "source": "inc42.com",
+      "url": "https://inc42.com/buzz/m2p-fintech-appoints-ex-hitachi-payments-vivek-seshadri-as-group-cfo/",
+      "summary": "Chennai-based soonicorn M2P Fintech has onboarded Hitachi Payments’ chief financial officer (CFO) Vivek Seshadri to take over as the startup’s&#8230;"
+    },
+    {
+      "rank": 5,
+      "title": "Ternus takes over as Apple CEO, succeeds Cook",
+      "source": "yourstory.com",
+      "url": "https://yourstory.com/2026/04/ternus-takes-over-as-apple-ceo-succeeds-cook",
+      "summary": "John Ternus is set to take over as CEO of Apple from Tim Cook, who will transition to executive chairman. The change marks a rare leadership shift for"
+    }
+  ],
+  "remaining_candidates": [
+    {
+      "rank": 6,
+      "title": "M2P Fintech ropes in ex-Hitachi exec Vivek Seshadri as CFO",
+      "source": "yourstory.com",
+      "url": "https://yourstory.com/2026/04/m2p-fintech-ex-hitachi-payment-services-exec-cfo",
+      "summary": "Vivek Seshadri brings more than 15 years of work experience and will oversee M2P’s finance, investor relations, and M&A initiatives. "
+    }
+  ]
+}

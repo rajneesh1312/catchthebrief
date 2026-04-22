@@ -1,13 +1,15 @@
-name: Daily Content Build (Legacy — use fetch_and_rank.yml + generate_and_publish.yml instead)
+name: Generate and Publish Briefs
 
 on:
-  workflow_dispatch:         # manual trigger only — auto-schedule replaced by two separate workflows
+  schedule:
+    - cron: '30 2 * * *'    # 2:30 AM UTC = 8:00 AM IST daily
+  workflow_dispatch:          # allow manual trigger for testing
 
 permissions:
-  contents: write            # needed to commit generated files
+  contents: write
 
 jobs:
-  build:
+  generate-and-publish:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,13 +24,13 @@ jobs:
       - name: Install dependencies
         run: pip install requests beautifulsoup4 google-genai
 
-      - name: Run content engine
+      - name: Generate briefs and publish site
         env:
           GEMINI_API_KEY_1: ${{ secrets.GEMINI_API_KEY_1 }}
           GEMINI_API_KEY_2: ${{ secrets.GEMINI_API_KEY_2 }}
           GEMINI_API_KEY_3: ${{ secrets.GEMINI_API_KEY_3 }}
           GROQ_API_KEY:     ${{ secrets.GROQ_API_KEY }}
-        run: python news_engine.py
+        run: python generate_and_publish.py
 
       - name: Commit and push generated files
         run: |

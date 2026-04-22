@@ -800,6 +800,160 @@ def save_archive(briefs_data, now):
     path.write_text(json.dumps(archive, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"  Archive saved: {path}")
 
+def generate_archive_index():
+    """Read all archive JSON files and write archive/index.html."""
+    ARCHIVE_DIR.mkdir(exist_ok=True)
+    json_files = sorted(ARCHIVE_DIR.glob("*.json"), reverse=True)
+    if not json_files:
+        print("  No archive files found — skipping archive index")
+        return
+
+    CATEGORY_CSS_MAP = {
+        "AI & ML": "ai", "Startup Funding": "startup",
+        "Digital India": "policy", "Product Launch": "product", "India Tech": "funding",
+    }
+    CATEGORY_LABEL_MAP = {
+        "AI & ML": "AI &amp; ML", "Startup Funding": "Startup Funding",
+        "Digital India": "Digital India", "Product Launch": "Product Launch", "India Tech": "India Tech",
+    }
+
+    day_blocks = []
+    for i, jf in enumerate(json_files):
+        try:
+            data = json.loads(jf.read_text(encoding="utf-8"))
+        except Exception:
+            continue
+        date_str = data.get("date", "")
+        briefs = data.get("briefs", [])
+        # Format date nicely
+        try:
+            dt = datetime.strptime(date_str, "%Y-%m-%d")
+            nice_date = f"{dt.day} {dt.strftime('%B')}, {dt.year}"
+        except Exception:
+            nice_date = date_str
+
+        delay = i * 0.05
+        items = []
+        for n, b in enumerate(briefs, 1):
+            slug = b.get("slug", "")
+            title = b.get("title", "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+            source = b.get("source", "")
+            cat = b.get("category", "India Tech")
+            css = CATEGORY_CSS_MAP.get(cat, "funding")
+            label = CATEGORY_LABEL_MAP.get(cat, cat)
+            items.append(
+                f'<li class="brief-item"><a class="brief-link" href="/articles/{slug}.html">'
+                f'<span class="brief-num">{n}</span>'
+                f'<div class="brief-info"><div class="brief-title">{title}</div>'
+                f'<div class="brief-source">{source}</div></div>'
+                f'<span class="brief-cat {css}">{label}</span>'
+                f'<span class="brief-arrow">→</span></a></li>'
+            )
+        items_html = "\n        ".join(items)
+        day_blocks.append(f"""    <div class="day-block" style="animation-delay:{delay:.2f}s">
+      <div class="day-header">
+        <span class="day-date">{nice_date}</span>
+        <span class="day-count">{len(briefs)} briefs</span>
+      </div>
+      <ul class="brief-list">
+        {items_html}
+      </ul>
+    </div>""")
+
+    blocks_html = "\n\n".join(day_blocks)
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Archive — CatchTheBrief</title>
+  <meta name="description" content="Browse all past India tech &amp; startup briefs from CatchTheBrief.">
+  <link rel="canonical" href="{SITE_URL}/archive/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6N03CT88P"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-V6N03CT88P');</script>
+  <style>
+    :root{{--bg-primary:#FAFAFA;--bg-card:#FFFFFF;--bg-accent:#F0F4F8;--text-primary:#1A1A2E;--text-secondary:#4A5568;--text-muted:#718096;--accent-primary:#2563EB;--border:#E2E8F0;--border-strong:#CBD5E0;--shadow-sm:0 1px 3px rgba(0,0,0,0.06);--shadow-md:0 4px 12px rgba(0,0,0,0.08);--font-head:'Space Grotesk',sans-serif;--font-body:'Inter',sans-serif;--max-w:860px;}}
+    *,*::before,*::after{{box-sizing:border-box;margin:0;padding:0;}}
+    body{{font-family:var(--font-body);background:var(--bg-primary);color:var(--text-primary);line-height:1.6;-webkit-font-smoothing:antialiased;}}
+    a{{color:inherit;text-decoration:none;}}
+    header{{position:sticky;top:0;z-index:100;background:rgba(250,250,250,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}}
+    .header-inner{{max-width:var(--max-w);margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;}}
+    .logo{{font-family:var(--font-head);font-size:20px;font-weight:700;letter-spacing:-0.5px;}}
+    .logo span{{color:var(--accent-primary);}}
+    .back-link{{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-body);font-size:13px;font-weight:600;color:var(--text-secondary);padding:8px 16px;border:1.5px solid var(--border-strong);border-radius:999px;background:var(--bg-card);transition:color 0.2s,border-color 0.2s,background 0.2s;}}
+    .back-link:hover{{color:var(--accent-primary);border-color:var(--accent-primary);background:#EFF6FF;}}
+    main{{max-width:var(--max-w);margin:0 auto;padding:48px 20px 80px;}}
+    .page-title{{font-family:var(--font-head);font-size:clamp(28px,4vw,40px);font-weight:700;letter-spacing:-0.8px;margin-bottom:8px;}}
+    .page-subtitle{{font-size:16px;color:var(--text-muted);margin-bottom:48px;}}
+    .day-block{{margin-bottom:40px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);transition:box-shadow 0.2s;animation:fadeUp 0.4s ease both;}}
+    .day-block:hover{{box-shadow:var(--shadow-md);}}
+    .day-header{{padding:18px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--bg-accent);}}
+    .day-date{{font-family:var(--font-head);font-size:16px;font-weight:700;letter-spacing:-0.3px;}}
+    .day-count{{font-size:12px;color:var(--text-muted);background:var(--border);padding:3px 10px;border-radius:999px;}}
+    .brief-list{{list-style:none;}}
+    .brief-item{{border-bottom:1px solid var(--border);}}
+    .brief-item:last-child{{border-bottom:none;}}
+    .brief-link{{display:flex;align-items:center;gap:14px;padding:14px 24px;transition:background 0.15s;}}
+    .brief-link:hover{{background:#F7FAFF;}}
+    .brief-num{{font-family:var(--font-head);font-size:12px;font-weight:700;color:var(--text-muted);min-width:20px;text-align:center;}}
+    .brief-info{{flex:1;}}
+    .brief-title{{font-size:15px;font-weight:600;color:var(--text-primary);line-height:1.4;margin-bottom:3px;}}
+    .brief-source{{font-size:12px;color:var(--text-muted);}}
+    .brief-cat{{display:inline-block;font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;white-space:nowrap;}}
+    .brief-cat.ai{{background:#EDE9FE;color:#7C3AED;}} .brief-cat.startup{{background:#D1FAE5;color:#059669;}} .brief-cat.policy{{background:#FEE2E2;color:#DC2626;}} .brief-cat.product{{background:#FEF3C7;color:#D97706;}} .brief-cat.funding{{background:#DBEAFE;color:#2563EB;}}
+    .brief-arrow{{font-size:14px;color:var(--text-muted);flex-shrink:0;}}
+    .brief-link:hover .brief-arrow{{color:var(--accent-primary);}}
+    footer{{border-top:1px solid var(--border);padding:32px 20px;}}
+    .footer-inner{{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}}
+    .footer-logo{{font-family:var(--font-head);font-size:16px;font-weight:700;}}
+    .footer-logo span{{color:var(--accent-primary);}}
+    .footer-tagline{{font-size:13px;color:var(--text-muted);margin-top:2px;}}
+    .footer-links{{display:flex;gap:20px;list-style:none;}}
+    .footer-links a{{font-size:13px;color:var(--text-muted);transition:color 0.2s;}}
+    .footer-links a:hover{{color:var(--accent-primary);}}
+    .footer-copy{{font-size:12px;color:var(--text-muted);text-align:center;margin-top:20px;}}
+    @keyframes fadeUp{{from{{opacity:0;transform:translateY(12px);}}to{{opacity:1;transform:translateY(0);}}}}
+    @media(max-width:640px){{main{{padding:32px 16px 60px;}}.brief-link{{padding:12px 16px;}}.day-header{{padding:14px 16px;}}.brief-cat{{display:none;}}}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">Catch<span>The</span>Brief</a>
+      <a href="/" class="back-link">← Today's Briefs</a>
+    </div>
+  </header>
+  <main>
+    <h1 class="page-title">Archive</h1>
+    <p class="page-subtitle">Every brief we've published — newest first.</p>
+{blocks_html}
+  </main>
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">Catch<span>The</span>Brief</div>
+        <div class="footer-tagline">India's daily tech &amp; startup briefing</div>
+      </div>
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/archive/">Archive</a></li>
+        <li><a href="https://buttondown.com/catchthebrief" target="_blank" rel="noopener">Newsletter</a></li>
+      </ul>
+    </div>
+    <p class="footer-copy">© 2026 CatchTheBrief · Made with ☕ in India</p>
+  </footer>
+</body>
+</html>"""
+
+    out_path = ARCHIVE_DIR / "index.html"
+    out_path.write_text(html, encoding="utf-8")
+    print(f"  Archive index written: {out_path} ({len(json_files)} days)")
+
+
 def write_robots_txt():
     """Create robots.txt for Google crawling."""
     content = f"""User-agent: *
@@ -896,7 +1050,10 @@ def main():
     # ── Step 7: Save archive ──────────────────────────────────────────────────
     save_archive(briefs_data, now)
 
-    # ── Step 8: robots.txt ────────────────────────────────────────────────────
+    # ── Step 8: Archive index ─────────────────────────────────────────────────
+    generate_archive_index()
+
+    # ── Step 9: robots.txt ────────────────────────────────────────────────────
     write_robots_txt()
 
     # ── Summary ───────────────────────────────────────────────────────────────
