@@ -623,6 +623,7 @@ def generate_hero_card(brief, image_url, slug):
     img     = card_image_html(image_url, brief["title"], brief["category"])
     preview = brief["hook"][:200].strip()
     url     = f"/articles/{slug}.html"
+    cat     = brief["category"].replace("&", "&amp;")
 
     return f"""<a href="{url}" class="hero-card">
   <div class="hero-img-wrap">
@@ -630,7 +631,7 @@ def generate_hero_card(brief, image_url, slug):
   </div>
   <div class="hero-content">
     <div class="hero-eyebrow">
-      <span class="badge {css}">{brief["category"]}</span>
+      <span class="badge {css}">{cat}</span>
       <span class="read-time">{brief["read_time"]}</span>
     </div>
     <h2>{brief["title"]}</h2>
@@ -647,6 +648,7 @@ def generate_grid_card(brief, image_url, slug):
     img     = card_image_html(image_url, brief["title"], brief["category"])
     preview = brief["hook"][:140].strip()
     url     = f"/articles/{slug}.html"
+    cat     = brief["category"].replace("&", "&amp;")
 
     return f"""<a href="{url}" class="article-card">
   <div class="card-img-wrap">
@@ -654,7 +656,7 @@ def generate_grid_card(brief, image_url, slug):
   </div>
   <div class="card-body">
     <div class="card-eyebrow">
-      <span class="badge {css}">{brief["category"]}</span>
+      <span class="badge {css}">{cat}</span>
       <span class="read-time">{brief["read_time"]}</span>
     </div>
     <h3>{brief["title"]}</h3>
@@ -715,7 +717,7 @@ def generate_article_page(brief, image_url, image_alt, slug, article_index, tota
         "{{OG_IMAGE}}":         og_image,
         "{{SITE_URL}}":         SITE_URL,
         "{{SLUG}}":             slug,
-        "{{LABEL}}":            brief["category"],
+        "{{LABEL}}":            brief["category"].replace("&", "&amp;"),
         "{{COLOR}}":            color_class(brief["category"]),
         "{{READ_TIME}}":        brief["read_time"],
         "{{PUB_DATE}}":         brief.get("pub_date", ""),
