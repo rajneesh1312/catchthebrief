@@ -316,6 +316,76 @@ REASON5: one line reason"""
         print(f"  Ranking parse error: {e}")
         return list(range(min(5, len(articles))))
 
+# ─── STEP 3b: SOURCE DIVERSITY ENFORCEMENT ───────────────────────────────────
+
+SOURCE_CAPS = {"yourstory.com": 1}
+DEFAULT_SOURCE_CAP = 2
+
+def _domain_of(article):
+    url = article.get("link", "")
+    m = re.search(r"https?://(?:www\.)?([^/]+)", url)
+    return m.group(1).lower() if m else "unknown"
+
+def enforce_source_diversity(top_indices, articles):
+    """Enforce hard per-source caps on the AI's ranked picks.
+
+    The prompt asks for diversity but Gemini/Groq don't reliably comply (we saw
+    2-3 YourStory articles in top-5 even after Session 10's prompt-level cap).
+    This runs after rank_articles() and:
+      1. Keeps AI's order for picks that don't violate caps.
+      2. Drops violators.
+      3. Fills empty slots from the remaining candidate pool, preferring
+         sources that haven't been used yet (so under-represented feeds like
+         medianama, entrackr, the-ken, cnbctv18 finally get airtime).
+    """
+    def cap_for(domain):
+        return SOURCE_CAPS.get(domain, DEFAULT_SOURCE_CAP)
+
+    counts = {}
+    final = []
+    dropped = []
+    for idx in top_indices:
+        domain = _domain_of(articles[idx])
+        if counts.get(domain, 0) < cap_for(domain):
+            final.append(idx)
+            counts[domain] = counts.get(domain, 0) + 1
+        else:
+            dropped.append((idx, domain))
+
+    if dropped:
+        labels = []
+        for idx, dom in dropped:
+            title = articles[idx].get("title", "")[:40]
+            labels.append(f"{title} ({dom})")
+        print(f"  Diversity: dropped {len(dropped)} over-cap pick(s): " + ", ".join(labels))
+
+    if len(final) >= 5:
+        return final[:5]
+
+    used = set(final)
+    pool = [i for i in range(len(articles)) if i not in used]
+
+    while len(final) < 5 and pool:
+        best = None
+        best_count = None
+        for i in pool:
+            domain = _domain_of(articles[i])
+            if counts.get(domain, 0) >= cap_for(domain):
+                continue
+            c = counts.get(domain, 0)
+            if best is None or c < best_count:
+                best = i
+                best_count = c
+        if best is None:
+            break
+        domain = _domain_of(articles[best])
+        final.append(best)
+        counts[domain] = counts.get(domain, 0) + 1
+        pool.remove(best)
+        print(f"  Diversity: swapped in {articles[best]['title'][:50]} ({domain})")
+
+    return final[:5]
+
 # ─── STEP 4: SAVE CANDIDATES JSON ────────────────────────────────────────────
 
 def get_source_name(url):
@@ -411,6 +481,13 @@ def main():
 
     print(f"\n[Step 3] AI ranking {len(articles)} articles → top 5...")
     top_indices = rank_articles(articles, gemini, groq)
+
+    print("\n[Step 3b] Enforcing source diversity caps...")
+    pre = [get_source_name(articles[i]["link"]) for i in top_indices]
+    top_indices = enforce_source_diversity(top_indices, articles)
+    post = [get_source_name(articles[i]["link"]) for i in top_indices]
+    print(f"  Before: {pre}")
+    print(f"  After:  {post}")
 
     print("\n[Step 4] Saving review_candidates.json...")
     save_candidates(articles, top_indices)
