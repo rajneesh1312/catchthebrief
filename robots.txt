@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /review_candidates.json
-Disallow: /manual_briefs.json
 
 Sitemap: https://catchthebrief.com/sitemap.xml
