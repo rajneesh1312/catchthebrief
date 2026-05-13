@@ -322,8 +322,8 @@ URL: {url}
 ═══════════════════════════════════════════════════════════════
 HARD BANS — NEVER USE THESE PHRASES OR PATTERNS ANYWHERE
 ═══════════════════════════════════════════════════════════════
-• "This isn't X; it's Y" PATTERN (any noun) — never. Includes "This isn't just X; it's Y", "This is not just", "This isn't about X; it's Y", "This is not about", "This isn't merely", "This isn't only", "More than just", "Not only X; Y". The whole pattern is banned regardless of what X and Y are.
-• Filler bridges: "This is a significant move" / "This move directly…" / "This move signals…" / "This move marks…" / "This signals a shift" / "It's no surprise that" / "Make no mistake"
+• "isn't X; it's Y" / "is not X; it's Y" PATTERN — never. Banned with OR without a leading "This/It/The real X". Examples ALL banned: "This isn't just X", "The real bottleneck isn't just X", "It's not just A; it's B", "This isn't merely", "Isn't about X; it's Y", "More than just", "Not only X; Y". The pattern is banned regardless of what comes before "isn't" or "is not", and regardless of what fills X and Y.
+• Filler bridges: "This is a significant move" / NEVER start any sentence with "This move " followed by a verb (use "The move", "The deal", "The JV", or name the actual subject) / "This signals a shift" / "It's no surprise that" / "Make no mistake"
 • Forced openers: "Imagine you're…" / "Picture this…" / "In a move that…" / "Get ready for…" / "Buckle up"
 • Corporate-blog crutches: "Doubling down" / "Strategic vote of confidence" / "Shake up" / "Game-changing" / "Set to disrupt" / "Eyeing" / "Underscores" / "Cementing its position"
 • Vague flattery: "India's booming startup ecosystem" / "India's growing tech ecosystem" / standalone "ecosystem" used as filler / "vibrant" / "bustling" / "robust" / "seamless" / "seamlessly" / "empowering" / "thriving" / "Indian readers"
@@ -460,13 +460,15 @@ def parse_brief(raw_text):
 # section. Keep this conservative — only patterns that are nearly always slop.
 # Order: structural patterns first, then specific phrases, then vague words.
 BANNED_PHRASES = [
-    # "This isn't X; it's Y" structural pattern — catch with semicolon anchor
-    "this isn't just", "this is not just", "this isn't merely", "this isn't only",
-    "this isn't about", "this is not about", "more than just",
-    # Filler bridges
-    "this is a significant move", "this move directly", "this move signals",
-    "this move marks", "this signals a shift", "make no mistake",
-    "it's no surprise",
+    # "X isn't Y; it's Z" structural pattern — bare prefixes catch the pattern
+    # whether or not it leads with "This" (the workaround we saw in v4)
+    "isn't just", "is not just", "isn't merely", "is not merely",
+    "isn't only", "is not only", "isn't about", "is not about",
+    "more than just",
+    # Filler bridges. "this move " (with trailing space) catches every
+    # "This move {verb}…" sentence — almost always corporate filler.
+    "this is a significant move", "this move ", "this signals a shift",
+    "make no mistake", "it's no surprise",
     # Forced openers
     "imagine you're", "picture this", "in a move that", "get ready for",
     "buckle up",
