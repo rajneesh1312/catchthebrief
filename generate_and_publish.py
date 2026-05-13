@@ -511,6 +511,19 @@ def generate_yesterday_teaser_html(now):
         f'</div>\n'
     )
 
+def build_prev_next_nav(prev_slug, next_slug):
+    if not prev_slug and not next_slug:
+        return ""
+    prev_part = (
+        f'<a href="/articles/{prev_slug}.html" class="nav-btn nav-prev">← Previous Brief</a>'
+        if prev_slug else '<span></span>'
+    )
+    next_part = (
+        f'<a href="/articles/{next_slug}.html" class="nav-btn nav-next">Next Brief →</a>'
+        if next_slug else '<span></span>'
+    )
+    return f'<nav class="article-nav">{prev_part}{next_part}</nav>'
+
 def build_take_html(take_text):
     if not take_text:
         return ""
@@ -521,7 +534,7 @@ def build_take_html(take_text):
         '</div>'
     )
 
-def generate_article_page(brief, image_url, slug, article_index, total, now):
+def generate_article_page(brief, image_url, slug, article_index, total, prev_slug, next_slug, now):
     template_path = TEMPLATES_DIR / "article.html"
     if not template_path.exists():
         print(f"  WARNING: {template_path} not found")
@@ -586,6 +599,7 @@ def generate_article_page(brief, image_url, slug, article_index, total, now):
         "{{IMAGE_ALT}}":       brief["title"],
         "{{ARTICLE_INDEX}}":   str(article_index),
         "{{TOTAL_ARTICLES}}":  str(total),
+        "{{PREV_NAV}}":        build_prev_next_nav(prev_slug, next_slug),
         "{{JSON_LD}}":         json.dumps(json_ld_data, ensure_ascii=False),
     }
     html = template
@@ -635,6 +649,8 @@ def generate_sitemap(slugs, now):
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
         f'  <url><loc>{SITE_URL}/</loc><lastmod>{iso_date(now)}</lastmod></url>',
         f'  <url><loc>{SITE_URL}/archive/</loc><lastmod>{iso_date(now)}</lastmod></url>',
+        f'  <url><loc>{SITE_URL}/about.html</loc><lastmod>{iso_date(now)}</lastmod></url>',
+        f'  <url><loc>{SITE_URL}/privacy.html</loc><lastmod>{iso_date(now)}</lastmod></url>',
     ]
     # Include all historical article pages, not just today's
     seen_slugs = set()
@@ -957,7 +973,9 @@ def main():
     # ── Write article pages ───────────────────────────────────────────────────
     print("\n[Step 3] Writing article HTML pages...")
     for i, (brief, image_url, slug) in enumerate(briefs_data):
-        html = generate_article_page(brief, image_url, slug, i + 1, len(briefs_data), now)
+        prev_slug = briefs_data[i - 1][2] if i > 0 else ""
+        next_slug = briefs_data[i + 1][2] if i + 1 < len(briefs_data) else ""
+        html = generate_article_page(brief, image_url, slug, i + 1, len(briefs_data), prev_slug, next_slug, now)
         if html:
             out_path = ARTICLES_DIR / f"{slug}.html"
             out_path.write_text(html, encoding="utf-8")

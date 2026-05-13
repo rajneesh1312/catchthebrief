@@ -283,7 +283,7 @@ Here are {len(articles_to_rank)} articles from the past 24 hours:
 Pick the TOP 5 most valuable articles. Criteria:
 1. IMPACT — affects Indian tech workers, founders, or consumers directly
 2. NOVELTY — genuinely new news, not a repeat or follow-up
-3. VARIETY — HARD RULE: select at most 2 articles from the same source domain.
+3. VARIETY — HARD RULES: select at most 2 articles from the same source domain, and at most 1 article from yourstory.com (their content trends PR-heavy).
    The 5 articles MUST span at least 3 different sub-topics (funding, AI, policy, product, industry).
 4. RELEVANCE — "Would a 28-year-old Bangalore engineer or startup founder actually care?"
 5. NO PR — penalise press releases, brand announcements, and sponsored content heavily
