@@ -322,7 +322,7 @@ URL: {url}
 ═══════════════════════════════════════════════════════════════
 HARD BANS — NEVER USE THESE PHRASES OR PATTERNS ANYWHERE
 ═══════════════════════════════════════════════════════════════
-• "isn't X; it's Y" / "is not X; it's Y" PATTERN — never. Banned with OR without a leading "This/It/The real X". Examples ALL banned: "This isn't just X", "The real bottleneck isn't just X", "It's not just A; it's B", "This isn't merely", "Isn't about X; it's Y", "More than just", "Not only X; Y". The pattern is banned regardless of what comes before "isn't" or "is not", and regardless of what fills X and Y.
+• THE NEGATIVE-CONTRAST PATTERN — banned in EVERY tense and EVERY phrasing. NEVER write any sentence of the form "X [negation] just/merely/only/about Y; it's Z" or its grammatical cousins. Specifically banned negation verbs: isn't, is not, aren't, are not, wasn't, was not, weren't, were not, won't, will not, doesn't, does not, didn't, did not, hasn't, has not, haven't, have not. Specifically banned modifiers: just, merely, only, about. Examples ALL banned: "This isn't just X", "The bottleneck isn't just X", "It's not just A; it's B", "It won't just speed up X; it will Y", "Allianz doesn't just sell insurance; it…", "More than just". The contrast structure is the slop, not any single word — kill it at the root by writing positive, declarative sentences instead.
 • Filler bridges: "This is a significant move" / NEVER start any sentence with "This move " followed by a verb (use "The move", "The deal", "The JV", or name the actual subject) / "This signals a shift" / "It's no surprise that" / "Make no mistake"
 • Forced openers: "Imagine you're…" / "Picture this…" / "In a move that…" / "Get ready for…" / "Buckle up"
 • Corporate-blog crutches: "Doubling down" / "Strategic vote of confidence" / "Shake up" / "Game-changing" / "Set to disrupt" / "Eyeing" / "Underscores" / "Cementing its position"
@@ -460,10 +460,11 @@ def parse_brief(raw_text):
 # section. Keep this conservative — only patterns that are nearly always slop.
 # Order: structural patterns first, then specific phrases, then vague words.
 BANNED_PHRASES = [
-    # "X isn't Y; it's Z" structural pattern — bare prefixes catch the pattern
-    # whether or not it leads with "This" (the workaround we saw in v4)
-    "isn't just", "is not just", "isn't merely", "is not merely",
-    "isn't only", "is not only", "isn't about", "is not about",
+    # NOTE: the "X isn't Y; it's Z" structural pattern is handled by
+    # ISN_T_PATTERN below — it catches all tenses (isn't/won't/wasn't/doesn't…)
+    # plus all modifiers (just/merely/only/about) in one rule. Earlier we
+    # listed literal variants here, but the model kept finding fresh tense
+    # workarounds (v4: "isn't just" → v5: "won't just").
     "more than just",
     # Filler bridges. "this move " (with trailing space) catches every
     # "This move {verb}…" sentence — almost always corporate filler.
@@ -481,8 +482,19 @@ BANNED_PHRASES = [
     "seamlessly", "vibrant", "bustling",
 ]
 
+# Catches the full "X (tense+negation) (modifier) Y; it's Z" pattern in any
+# tense the model might try. Bullet-proof against future tense workarounds.
+ISN_T_PATTERN = re.compile(
+    r"\b(?:isn'?t|is\s+not|aren'?t|are\s+not"
+    r"|wasn'?t|was\s+not|weren'?t|were\s+not"
+    r"|won'?t|will\s+not"
+    r"|doesn'?t|does\s+not|didn'?t|did\s+not"
+    r"|hasn'?t|has\s+not|haven'?t|have\s+not)"
+    r"\s+(?:just|merely|only|about)\b"
+)
+
 def find_banned(brief):
-    """Return list of banned substrings present in any brief section."""
+    """Return list of banned phrase/pattern hits across all brief sections."""
     sections = [
         brief.get("title", ""),
         brief.get("hook", ""),
@@ -491,8 +503,13 @@ def find_banned(brief):
         brief.get("why_india", ""),
         brief.get("take", ""),
     ]
-    text = " ".join(sections).lower()
-    return [p for p in BANNED_PHRASES if p in text]
+    # Normalize curly apostrophes so "won't" (U+2019) and "won't" (ASCII)
+    # both match the regex/literals uniformly.
+    text = " ".join(sections).lower().replace("’", "'")
+    hits = [p for p in BANNED_PHRASES if p in text]
+    for m in ISN_T_PATTERN.finditer(text):
+        hits.append(m.group(0))
+    return hits
 
 
 def load_manual_briefs():
