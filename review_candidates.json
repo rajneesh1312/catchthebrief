@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T17:14:03.381927+05:30",
+  "generated_at": "2026-05-13T17:49:06.000307+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,47 +24,103 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "Shri Dharmendra Pradhan invites world to Bharat Innovates 2026 deeptech push",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/05/india-bharat-innovates-2026-deeptech-startups-france-global-innovation",
-      "summary": "Union Education Minister Dharmendra Pradhan has invited the global community to participate in Bharat Innovates 2026, positioning the upcoming event "
-    },
-    {
-      "rank": 2,
       "title": "Maharashtra Seeks Shutdown Of Ola, Uber, Rapido Bike Taxi Services",
       "source": "Inc42",
       "url": "https://inc42.com/buzz/maharashtra-seeks-shutdown-of-ola-uber-rapido-bike-taxi-services/",
       "summary": "Maharashtra transport minister Pratap Sarnaik wrote to the state’s cyber crime department seeking immediate shutdown of app-based bike taxi services&#"
     },
     {
+      "rank": 2,
+      "title": "Meesho built Valmo to keep deliveries in-house—until orders surged to 5,000 a minute",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/meesho-built-valmo-to-keep-deliveries-in-house-until-orders-surged-to-5000-a-minute/",
+      "summary": "The post Meesho built Valmo to keep deliveries in-house—until orders surged to 5,000 a minute appeared first on The Ken.\n"
+    },
+    {
       "rank": 3,
+      "title": "Meet LiteFold, a biotech startup using proprietary AI to speed up drug discovery",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/05/litefold-biotech-startup-using-proprietary-ai-speed-up-drug-discovery",
+      "summary": "Bengaluru and Delaware-based LiteFold is a biotech AI-native platform designed to accelerate computational biology workflows.\n"
+    },
+    {
+      "rank": 4,
       "title": "[Update] JFS Incorporates JV With Allianz To Foray Into General Insurance Segment",
       "source": "Inc42",
       "url": "https://inc42.com/buzz/jfs-inks-agreement-with-allianz-to-formalise-insurance-jv/",
       "summary": "Update &#124; May 13, 2026,16:15 IST Jio Financial Services (JFS) and Allianz have incorporated their joint venture, Jio Allianz General&#8230;"
+    },
+    {
+      "rank": 5,
+      "title": "[UPDATE] Spotify Confirms It Has Discontinued the Premium Lite Plan Six Months After Launch in India",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/apps/news/spotify-premium-price-in-india-revision-lite-plan-discontinues-11489006",
+      "summary": "Spotify has updated its website and mobile app to remove its most affordable Premium subscription plan in India. Dubbed Spotify Premium Lite, the plan"
     }
   ],
   "remaining_candidates": [
     {
-      "rank": 4,
-      "title": "Startup news and updates: Daily roundup (May 13, 2026)",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/05/startup-news-and-updates-daily-roundup-may-13-2026",
-      "summary": "YourStory presents the daily news roundup from the Indian startup ecosystem and beyond. Here’s the roundup for Wednesday, May 13, 2026.\n\n"
-    },
-    {
-      "rank": 5,
+      "rank": 6,
       "title": "Wipro Consumer Care Ventures invests in pan-Asian food brand Moi Soi",
       "source": "YourStory",
       "url": "https://yourstory.com/2026/05/wipro-consumer-care-ventures-invests-in-pan-asian-food-brand-moi-soi",
       "summary": "Moi Soi will use the capital to strengthen distribution network, portfolio, and branding. \n\n"
     },
     {
-      "rank": 6,
-      "title": "Uber To Set Up Data Centre In India In Partnership With Adani Group",
+      "rank": 7,
+      "title": "IPL's TV slump, viewer fatigue, and the rise of digital streaming",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/05/ipl-tv-slump-viewer-fatigue-rise-of-digital-streaming",
+      "summary": "Linear television ratings for IPL 2026 have fallen sharply in the first half of the season, even as digital numbers continue to climb."
+    },
+    {
+      "rank": 8,
+      "title": "Zaggle Q4: Profit Jumps 30% To ₹40.6 Cr, Revenue Up 50% YoY",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/uber-to-set-up-data-centre-in-india-in-partnership-with-adani-group/",
-      "summary": "Ride-hailing giant Uber is setting up its first data centre in India, in partnership with Adani Group, in a major&#8230;"
+      "url": "https://inc42.com/buzz/zaggle-q4-profit-jumps-30-to-%e2%82%b940-6-cr-revenue-up-50-yoy/",
+      "summary": "Fintech SaaS company Zaggle reported a 30.4% increase in its consolidated net profit to ₹40.6 Cr in the quarter ended&#8230;"
+    },
+    {
+      "rank": 9,
+      "title": "From Bengaluru to Mumbai to Pune, metro projects are colliding with India’s monsoons",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/urban-flooding-along-metro-corridors/",
+      "summary": "The post From Bengaluru to Mumbai to Pune, metro projects are colliding with India’s monsoons appeared first on The Ken.\n"
+    },
+    {
+      "rank": 10,
+      "title": "iQOO 15T Launch Date, Key Specifications Announced as Company Reveals Design",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/mobiles/news/iqoo-15t-china-launch-date-specifications-features-weibo-11489293",
+      "summary": "The iQOO 15T is all set to be launched in China next week, the company announced on Wednesday. It is expected to join the brand’s flagship lineup, whi"
+    },
+    {
+      "rank": 11,
+      "title": "This is an Offer You Can’t Refuse: Shivam Ranjan on Motorola’s Big Razr Fold Bet",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/mobiles/features/this-is-an-offer-you-can-t-refuse-shivam-ranjan-on-motorola-s-big-razr-fold-bet-11489202",
+      "summary": "Motorola may have arrived late to the book-style foldable segment, but the company believes timing matters more than speed. In an exclusive interactio"
+    },
+    {
+      "rank": 12,
+      "title": "EU targets social media giants with new law on ‘addictive design’",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/05/223-eu-social-media-giants-new-law-addictive-design/",
+      "summary": "The Digital Fairness Act which seeks to tackle addictive designs like “endless scrolling, autoplay, push notifications” on social media will built on "
+    },
+    {
+      "rank": 13,
+      "title": "MobiKwik plans to scale merchant payments and lending with NBFC to drive growth: Q4 FY26 earnings",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/05/223-mobikwik-merchant-payments-nbfc-growth-strategy-fy26/",
+      "summary": "MobiKwik is expanding aggressively into merchant payments, aiming to challenge Pine Labs with PoS devices, AI integration, and NBFC-led lending growth"
+    },
+    {
+      "rank": 14,
+      "title": "Canada says age checks must be proportionate and privacy-protective",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/05/223-canada-age-checks-proportionate-privacy-protective/",
+      "summary": "Opening the public consultation, the privacy regulator warned against making age checks \"the default condition for accessing the internet\" and underli"
     }
   ]
 }
