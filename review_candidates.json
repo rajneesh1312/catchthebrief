@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T17:49:06.000307+05:30",
+  "generated_at": "2026-05-13T23:54:52.197102+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,38 +24,38 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "Maharashtra Seeks Shutdown Of Ola, Uber, Rapido Bike Taxi Services",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/maharashtra-seeks-shutdown-of-ola-uber-rapido-bike-taxi-services/",
-      "summary": "Maharashtra transport minister Pratap Sarnaik wrote to the state’s cyber crime department seeking immediate shutdown of app-based bike taxi services&#"
-    },
-    {
-      "rank": 2,
-      "title": "Meesho built Valmo to keep deliveries in-house—until orders surged to 5,000 a minute",
-      "source": "The Ken",
-      "url": "https://the-ken.com/story/meesho-built-valmo-to-keep-deliveries-in-house-until-orders-surged-to-5000-a-minute/",
-      "summary": "The post Meesho built Valmo to keep deliveries in-house—until orders surged to 5,000 a minute appeared first on The Ken.\n"
-    },
-    {
-      "rank": 3,
       "title": "Meet LiteFold, a biotech startup using proprietary AI to speed up drug discovery",
       "source": "YourStory",
       "url": "https://yourstory.com/2026/05/litefold-biotech-startup-using-proprietary-ai-speed-up-drug-discovery",
       "summary": "Bengaluru and Delaware-based LiteFold is a biotech AI-native platform designed to accelerate computational biology workflows.\n"
     },
     {
-      "rank": 4,
-      "title": "[Update] JFS Incorporates JV With Allianz To Foray Into General Insurance Segment",
+      "rank": 2,
+      "title": "Delhi NCR Emerges As India’s Top D2C Hub",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/jfs-inks-agreement-with-allianz-to-formalise-insurance-jv/",
-      "summary": "Update &#124; May 13, 2026,16:15 IST Jio Financial Services (JFS) and Allianz have incorporated their joint venture, Jio Allianz General&#8230;"
+      "url": "https://inc42.com/buzz/delhi-ncr-emerges-as-indias-top-d2c-hub/",
+      "summary": "Delhi NCR emerged as India’s leading startup hub for the D2C ecosystem, topping the charts in both deal count and&#8230;"
+    },
+    {
+      "rank": 3,
+      "title": "From Bengaluru to Mumbai to Pune, metro projects are colliding with India’s monsoons",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/urban-flooding-along-metro-corridors/",
+      "summary": "The post From Bengaluru to Mumbai to Pune, metro projects are colliding with India’s monsoons appeared first on The Ken.\n"
+    },
+    {
+      "rank": 4,
+      "title": "WhatsApp Introduces Incognito Chat With Meta AI for Private Conversations",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/ai/news/whatsapp-incognito-chat-meta-ai-roll-out-features-11489530",
+      "summary": "WhatsApp is adding a new privacy-focused mode for Meta AI that is designed for conversations users may not want to keep or share. The feature creates "
     },
     {
       "rank": 5,
-      "title": "Canada says age checks must be proportionate and privacy-protective",
+      "title": "EU targets social media giants with new law on ‘addictive design’",
       "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/05/223-canada-age-checks-proportionate-privacy-protective/",
-      "summary": "Opening the public consultation, the privacy regulator warned against making age checks \"the default condition for accessing the internet\" and underli"
+      "url": "https://www.medianama.com/2026/05/223-eu-social-media-giants-new-law-addictive-design/",
+      "summary": "The Digital Fairness Act which seeks to tackle addictive designs like “endless scrolling, autoplay, push notifications” on social media will built on "
     }
   ],
   "remaining_candidates": [
@@ -75,48 +75,41 @@
     },
     {
       "rank": 8,
-      "title": "Zaggle Q4: Profit Jumps 30% To ₹40.6 Cr, Revenue Up 50% YoY",
+      "title": "Meet The Startups From 10th Cohort Of Maruti Suzuki’s Accelerator Initiative",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/zaggle-q4-profit-jumps-30-to-%e2%82%b940-6-cr-revenue-up-50-yoy/",
-      "summary": "Fintech SaaS company Zaggle reported a 30.4% increase in its consolidated net profit to ₹40.6 Cr in the quarter ended&#8230;"
+      "url": "https://inc42.com/buzz/meet-the-startups-from-10th-cohort-of-maruti-suzukis-accelerator-initiative/",
+      "summary": "Auto giant Maruti Suzuki has selected six Indian startups for the tenth cohort of its flagship Accelerator Programme. The startups&#8230;"
     },
     {
       "rank": 9,
-      "title": "From Bengaluru to Mumbai to Pune, metro projects are colliding with India’s monsoons",
-      "source": "The Ken",
-      "url": "https://the-ken.com/story/urban-flooding-along-metro-corridors/",
-      "summary": "The post From Bengaluru to Mumbai to Pune, metro projects are colliding with India’s monsoons appeared first on The Ken.\n"
+      "title": "Veefin Solutions Q4: Profit Rises 106% QoQ To ₹16 Cr, Revenue Up 27%",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/veefin-solutions-q4-profit-rises-106-qoq-to-%e2%82%b916-cr-revenue-up-27/",
+      "summary": "Supply chain financing company Veefin Solutions reported a 106.5% increase in its consolidated net profit to ₹16 Cr in the&#8230;"
     },
     {
       "rank": 10,
-      "title": "iQOO 15T Launch Date, Key Specifications Announced as Company Reveals Design",
+      "title": "Sun Erupts with Powerful Solar Flare, Sending Plasma Toward Earth",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/news/iqoo-15t-china-launch-date-specifications-features-weibo-11489293",
-      "summary": "The iQOO 15T is all set to be launched in China next week, the company announced on Wednesday. It is expected to join the brand’s flagship lineup, whi"
+      "url": "https://www.gadgets360.com/science/news/powerful-m5-7-solar-flare-triggers-radio-blackouts-on-earth-11483174",
+      "summary": "The Sun unleashed an M5.7-class Solar Flare on May 10, 2026, disrupting high-frequency radio communications and launching a coronal mass ejection towa"
     },
     {
       "rank": 11,
-      "title": "This is an Offer You Can’t Refuse: Shivam Ranjan on Motorola’s Big Razr Fold Bet",
+      "title": "Apple Reportedly Plans to Unveil Camera App With Modifiable Controls, Revamped Siri App at WWDC 2026",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/features/this-is-an-offer-you-can-t-refuse-shivam-ranjan-on-motorola-s-big-razr-fold-bet-11489202",
-      "summary": "Motorola may have arrived late to the book-style foldable segment, but the company believes timing matters more than speed. In an exclusive interactio"
+      "url": "https://www.gadgets360.com/mobiles/news/apple-custom-camera-siri-app-launch-expected-at-wwdc-2026-report-11490102",
+      "summary": "Apple is reportedly planning major changes for iOS 27, including a customisable Camera app and a redesigned Siri experience. Users may be able to choo"
     },
     {
       "rank": 12,
-      "title": "EU targets social media giants with new law on ‘addictive design’",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/05/223-eu-social-media-giants-new-law-addictive-design/",
-      "summary": "The Digital Fairness Act which seeks to tackle addictive designs like “endless scrolling, autoplay, push notifications” on social media will built on "
-    },
-    {
-      "rank": 13,
       "title": "MobiKwik plans to scale merchant payments and lending with NBFC to drive growth: Q4 FY26 earnings",
       "source": "MediaNama",
       "url": "https://www.medianama.com/2026/05/223-mobikwik-merchant-payments-nbfc-growth-strategy-fy26/",
       "summary": "MobiKwik is expanding aggressively into merchant payments, aiming to challenge Pine Labs with PoS devices, AI integration, and NBFC-led lending growth"
     },
     {
-      "rank": 14,
+      "rank": 13,
       "title": "Canada says age checks must be proportionate and privacy-protective",
       "source": "MediaNama",
       "url": "https://www.medianama.com/2026/05/223-canada-age-checks-proportionate-privacy-protective/",
