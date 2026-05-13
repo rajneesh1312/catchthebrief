@@ -164,6 +164,60 @@ def generate_ai_image_url(title, category, slug):
         f"?width=1200&height=630&nologo=true&seed={seed}"
     )
 
+# ─── ARTICLE BODY EXTRACTION (for richer AI context) ─────────────────────────
+
+def extract_article_text(url, timeout=10, max_chars=3000):
+    """Fetch the actual article page and return cleaned body text.
+
+    RSS summaries are 150-400 chars and rarely contain the specific numbers,
+    dates, or quotes the brief prompt needs to write good KEY_FACTS. Fetching
+    the real article gives the LLM 10-20× more concrete data to work with —
+    same number of AI calls, dramatically richer input.
+
+    Returns "" on failure or paywall — caller should fall back to RSS summary.
+    """
+    raw = fetch_url(url, timeout=timeout)
+    if not raw:
+        return ""
+    try:
+        html = raw.decode("utf-8", errors="ignore")
+    except Exception:
+        return ""
+
+    # Strip non-content sections so they don't pollute the extracted text
+    for tag in ("script", "style", "nav", "header", "footer", "aside",
+                "form", "iframe", "noscript", "svg"):
+        html = re.sub(rf"<{tag}\b[^>]*>.*?</{tag}>", " ", html,
+                       flags=re.IGNORECASE | re.DOTALL)
+
+    # Prefer <article>, then <main>, then full body as fallback
+    body = ""
+    for pat in (r"<article\b[^>]*>(.*?)</article>",
+                r"<main\b[^>]*>(.*?)</main>"):
+        m = re.search(pat, html, re.IGNORECASE | re.DOTALL)
+        if m:
+            body = m.group(1)
+            break
+    if not body:
+        m = re.search(r"<body\b[^>]*>(.*?)</body>", html, re.IGNORECASE | re.DOTALL)
+        body = m.group(1) if m else html
+
+    text = re.sub(r"<[^>]+>", " ", body)
+    text = (text
+            .replace("&nbsp;", " ").replace("&amp;", "&")
+            .replace("&quot;", '"').replace("&apos;", "'")
+            .replace("&#8217;", "'").replace("&#8216;", "'")
+            .replace("&#8220;", '"').replace("&#8221;", '"')
+            .replace("&#8211;", "-").replace("&#8212;", "—")
+            .replace("&#8230;", "..."))
+    text = re.sub(r"\s+", " ", text).strip()
+
+    # Paywalled / error pages typically return very little real text
+    if len(text) < 500:
+        return ""
+
+    return text[:max_chars]
+
 # ─── og:image EXTRACTION (kept as utility, unused in main flow) ───────────────
 
 def extract_og_image(url):
@@ -268,11 +322,11 @@ URL: {url}
 ═══════════════════════════════════════════════════════════════
 HARD BANS — NEVER USE THESE PHRASES OR PATTERNS ANYWHERE
 ═══════════════════════════════════════════════════════════════
-• Constructions: "This isn't just X; it's Y" / "This is not just" / "This isn't merely" / "More than just" / "It's not only…"
-• Filler bridges: "This is a significant move" / "This signals a shift" / "It's no surprise that" / "Make no mistake"
+• "This isn't X; it's Y" PATTERN (any noun) — never. Includes "This isn't just X; it's Y", "This is not just", "This isn't about X; it's Y", "This is not about", "This isn't merely", "This isn't only", "More than just", "Not only X; Y". The whole pattern is banned regardless of what X and Y are.
+• Filler bridges: "This is a significant move" / "This move directly…" / "This move signals…" / "This move marks…" / "This signals a shift" / "It's no surprise that" / "Make no mistake"
 • Forced openers: "Imagine you're…" / "Picture this…" / "In a move that…" / "Get ready for…" / "Buckle up"
 • Corporate-blog crutches: "Doubling down" / "Strategic vote of confidence" / "Shake up" / "Game-changing" / "Set to disrupt" / "Eyeing" / "Underscores" / "Cementing its position"
-• Vague flattery: "India's booming startup ecosystem" / "India's growing tech ecosystem" / "vibrant" / "bustling" / "robust" / "seamless" / "empowering" / "thriving"
+• Vague flattery: "India's booming startup ecosystem" / "India's growing tech ecosystem" / standalone "ecosystem" used as filler / "vibrant" / "bustling" / "robust" / "seamless" / "seamlessly" / "empowering" / "thriving" / "Indian readers"
 • Exclamation marks anywhere.
 • Rhetorical questions in HOOK or TAKE.
 • Em-dashes are fine — use them naturally.
@@ -402,6 +456,43 @@ def parse_brief(raw_text):
         "facts":     [strip_md(f) for f in re.findall(r"[•\-\*]\s*(.+)", raw_facts)][:5],
     }
 
+# Lowercase substrings that count as "banned tells" if found in any generated
+# section. Keep this conservative — only patterns that are nearly always slop.
+# Order: structural patterns first, then specific phrases, then vague words.
+BANNED_PHRASES = [
+    # "This isn't X; it's Y" structural pattern — catch with semicolon anchor
+    "this isn't just", "this is not just", "this isn't merely", "this isn't only",
+    "this isn't about", "this is not about", "more than just",
+    # Filler bridges
+    "this is a significant move", "this move directly", "this move signals",
+    "this move marks", "this signals a shift", "make no mistake",
+    "it's no surprise",
+    # Forced openers
+    "imagine you're", "picture this", "in a move that", "get ready for",
+    "buckle up",
+    # Corporate-blog crutches
+    "doubling down", "strategic vote of confidence", "vote of confidence",
+    "game-changing", "set to disrupt", "underscores",
+    "cementing its position",
+    # Vague flattery — single-word matches kept narrow to avoid false positives
+    "booming startup ecosystem", "growing tech ecosystem",
+    "seamlessly", "vibrant", "bustling",
+]
+
+def find_banned(brief):
+    """Return list of banned substrings present in any brief section."""
+    sections = [
+        brief.get("title", ""),
+        brief.get("hook", ""),
+        brief.get("context", ""),
+        brief.get("what_next", ""),
+        brief.get("why_india", ""),
+        brief.get("take", ""),
+    ]
+    text = " ".join(sections).lower()
+    return [p for p in BANNED_PHRASES if p in text]
+
+
 def load_manual_briefs():
     """Load manual_briefs.json as a URL-keyed dict. Never raises — returns {} on any error."""
     if not MANUAL_BRIEFS_FILE.exists():
@@ -455,13 +546,50 @@ def generate_brief(candidate, gemini, groq, manual_briefs=None):
 
     url    = candidate["url"]
     source = candidate["source"]
+
+    # Pull the full article text so the AI has real data (numbers, dates, named
+    # entities) to write specific KEY_FACTS — not just paraphrase the RSS blurb.
+    article_text = extract_article_text(url)
+    if article_text:
+        print(f"  Fetched article body: {len(article_text)} chars")
+        body_for_prompt = article_text
+    else:
+        body_for_prompt = candidate.get("summary", "")[:400]
+        print(f"  Article fetch returned nothing — using RSS summary ({len(body_for_prompt)} chars)")
+
     prompt = BRIEF_PROMPT.format(
         title=candidate["title"], source=source,
-        description=candidate.get("summary", "")[:400], url=url,
+        description=body_for_prompt, url=url,
     )
     response, ai_source = ai_call(prompt, gemini, groq)
     if response:
         brief = parse_brief(response)
+
+        # Banned-phrase guard: if the draft contains slop tells, retry ONCE
+        # with explicit callouts. Costs +1 AI call when triggered, ~0 most days.
+        hits = find_banned(brief)
+        if hits:
+            print(f"  ⚠ Banned phrase(s) detected: {hits}. Retrying once.")
+            retry_prompt = (
+                prompt
+                + "\n\n═══════════════════════════════════════════════════════════════\n"
+                + "RETRY — YOUR PREVIOUS DRAFT VIOLATED THE BAN LIST\n"
+                + "═══════════════════════════════════════════════════════════════\n"
+                + f"Banned tokens found in your last response: {', '.join(hits)}\n"
+                + "Rewrite the brief avoiding ALL banned phrases AND patterns above.\n"
+                + "In particular: never open a sentence with 'This isn't' / 'This is not' / 'This move'.\n"
+                + "Lead sentences with a subject (a company, a person, a number) and an active verb."
+            )
+            response2, _ = ai_call(retry_prompt, gemini, groq)
+            if response2:
+                brief2 = parse_brief(response2)
+                hits2 = find_banned(brief2)
+                if len(hits2) < len(hits):
+                    print(f"  Retry kept: hits dropped {len(hits)} → {len(hits2)}")
+                    brief = brief2
+                else:
+                    print(f"  Retry rejected (hits unchanged: {len(hits2)}). Using original.")
+
         brief["source_name"] = source
         brief["source_link"] = url
         brief["pub_date"]    = ""

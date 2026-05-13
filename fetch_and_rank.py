@@ -139,7 +139,16 @@ def parse_rss(raw_bytes):
                               "pub_date": pub_date_raw, "pub_dt": None})
     return articles
 
-def fetch_all_articles():
+def fetch_all_articles(per_feed_cap=4):
+    """Fetch RSS feeds with a per-feed cap so every working feed gets airtime.
+
+    Previous behaviour was: collect everything, then truncate to first 25.
+    Because feeds iterate in order, that meant the first 2-3 feeds (TechCrunch
+    + YourStory + Inc42) ate all 25 slots and downstream feeds (gadgets360,
+    medianama, the-ken) never reached the AI ranker. Per-feed cap fixes the
+    diversity bottleneck without sending more articles to the AI overall —
+    rank_articles still slices to [:15] before the prompt.
+    """
     all_articles = []
     seen_links = set()
     for feed_url in RSS_FEEDS:
@@ -148,13 +157,17 @@ def fetch_all_articles():
         if not raw:
             continue
         items = parse_rss(raw)
+        kept = 0
         for item in items:
+            if kept >= per_feed_cap:
+                break
             if item["link"] not in seen_links:
                 seen_links.add(item["link"])
                 all_articles.append(item)
-        print(f"    → {len(items)} articles")
+                kept += 1
+        print(f"    → {kept} kept (of {len(items)} parsed, cap={per_feed_cap})")
     print(f"\nTotal unique articles: {len(all_articles)}")
-    return all_articles[:25]
+    return all_articles
 
 # ─── STEP 2: FILTER JUNK ─────────────────────────────────────────────────────
 
@@ -383,6 +396,21 @@ def enforce_source_diversity(top_indices, articles):
         counts[domain] = counts.get(domain, 0) + 1
         pool.remove(best)
         print(f"  Diversity: swapped in {articles[best]['title'][:50]} ({domain})")
+
+    # Soft fallback: if caps left us short of 5, fill remaining slots from the
+    # rejected/unused pool in original rank order. We'd rather ship 5 briefs
+    # with one source slightly over-represented than ship only 3.
+    if len(final) < 5:
+        leftovers = list(top_indices) + [i for i in range(len(articles)) if i not in final and i not in top_indices]
+        for idx in leftovers:
+            if len(final) >= 5:
+                break
+            if idx in final:
+                continue
+            domain = _domain_of(articles[idx])
+            final.append(idx)
+            counts[domain] = counts.get(domain, 0) + 1
+            print(f"  Diversity: ⚠ soft override — added {articles[idx]['title'][:50]} ({domain}, count now {counts[domain]})")
 
     return final[:5]
 
