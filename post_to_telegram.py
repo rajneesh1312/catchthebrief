@@ -35,7 +35,7 @@ def build_message(data):
     for i, b in enumerate(briefs, 1):
         lines.append(f"{i}. {b['title']}")
     lines.append("\nRead all 5 briefs 👉 https://catchthebrief.com")
-    lines.append("\n#IndiaStartups #IndianTech #CatchTheBrief")
+    lines.append("\n#IndiaStartups #IndiaTech #IndianStartups #StartupIndia #CatchTheBrief")
 
     return "\n".join(lines)
 

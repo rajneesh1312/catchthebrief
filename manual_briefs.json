@@ -1,0 +1,24 @@
+{
+  "_instructions": "Add briefs here to pre-write or override AI content. Matched by 'url'. This file is NEVER overwritten by automation — safe to edit any time.",
+  "_template": {
+    "url": "https://original-article-url.com/full-path",
+    "title": "Your rewritten headline (max 12 words)",
+    "category": "AI & ML",
+    "_category_options": "AI & ML | Startup Funding | Digital India | Product Launch | India Tech",
+    "read_time": "3 min read",
+    "hook": "3-4 sentence story-style opening. Set the scene. Make the reader care.",
+    "context": "2-3 sentences of background. What led to this?",
+    "facts": [
+      "Concrete fact with number, name, or date",
+      "Concrete fact with number, name, or date",
+      "Concrete fact with number, name, or date",
+      "Concrete fact with number, name, or date",
+      "Concrete fact with number, name, or date"
+    ],
+    "what_next": "2-3 sentences on what to watch for. When? What will happen?",
+    "why_india": "1 sentence why this specifically matters to Indian readers.",
+    "source_name": "Inc42",
+    "source_link": "https://original-article-url.com/full-path"
+  },
+  "briefs": []
+}

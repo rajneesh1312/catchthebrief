@@ -301,7 +301,7 @@
       border-left: 4px solid var(--accent-primary);
       border-radius: 0 12px 12px 0;
       padding: 20px 24px;
-      margin: 40px 0;
+      margin: 40px 0 20px;
     }
     .why-india-label {
       font-family: var(--font-head);
@@ -318,6 +318,32 @@
       color: var(--text-primary);
       line-height: 1.6;
       font-weight: 500;
+    }
+
+    /* The Take */
+    .take-box {
+      background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+      border-left: 4px solid var(--category-product);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin: 0 0 40px;
+    }
+    .take-label {
+      font-family: var(--font-head);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--category-product);
+      margin-bottom: 8px;
+    }
+    .take-text {
+      font-family: var(--font-body);
+      font-size: 16px;
+      color: var(--text-primary);
+      line-height: 1.6;
+      font-weight: 500;
+      font-style: italic;
     }
 
     /* Source row */
@@ -378,6 +404,7 @@
     .share-btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-md); }
     .share-btn.whatsapp  { background: #25D366; color: #fff; }
     .share-btn.twitter   { background: #000;    color: #fff; }
+    .share-btn.reddit    { background: #FF4500; color: #fff; }
     .share-btn.telegram  { background: #229ED9; color: #fff; }
     .share-btn.copy      {
       background: var(--bg-accent);
@@ -572,8 +599,7 @@
       <span class="badge {{COLOR}}">{{LABEL}}</span>
       <span class="meta-sep">·</span>
       <span class="meta-item">{{READ_TIME}}</span>
-      <span class="meta-sep">·</span>
-      <span class="meta-item">{{PUB_DATE}}</span>
+      {{PUB_DATE_HTML}}
     </div>
 
     <!-- Title -->
@@ -590,18 +616,18 @@
       <!-- Hook -->
       <div class="hook-section">{{HOOK}}</div>
 
-      <!-- Backstory -->
-      <div class="section-label">The Backstory</div>
+      <!-- How We Got Here -->
+      <div class="section-label">How We Got Here</div>
       <div class="context-block">{{CONTEXT}}</div>
 
-      <!-- Key Facts -->
-      <div class="section-label">Key Facts</div>
+      <!-- The Numbers -->
+      <div class="section-label">The Numbers</div>
       <ul class="facts-list">
         {{KEY_FACTS}}
       </ul>
 
-      <!-- What to Watch -->
-      <div class="section-label">What to Watch</div>
+      <!-- What Happens Next -->
+      <div class="section-label">What Happens Next</div>
       <div class="what-next-block">{{WHAT_NEXT}}</div>
 
       <!-- Why India -->
@@ -609,6 +635,9 @@
         <div class="why-india-label">🇮🇳 Why This Matters for India</div>
         <div class="why-india-text">{{WHY_INDIA}}</div>
       </div>
+
+      <!-- The Take -->
+      {{TAKE_SECTION}}
 
       <!-- Source -->
       <div class="source-row">
@@ -619,6 +648,18 @@
       </div>
 
     </div><!-- /article-body -->
+
+    <!-- Newsletter CTA (above share) -->
+    <div class="newsletter-cta">
+      <h3>📬 Enjoyed this brief?</h3>
+      <p>Get 5 sharp India tech & startup stories in your inbox every morning. Free, always.</p>
+      <form class="newsletter-form" id="article-newsletter-form" action="https://assets.mailerlite.com/jsonp/2285640/forms/185448516399662487/subscribe" method="post">
+        <input type="email" name="fields[email]" placeholder="your@email.com" autocomplete="email" required>
+        <input type="hidden" name="ml-submit" value="1">
+        <input type="hidden" name="anticsrf" value="true">
+        <button type="submit">Subscribe →</button>
+      </form>
+    </div>
 
     <!-- Share -->
     <div class="share-section">
@@ -631,6 +672,10 @@
         <a href="{{TWITTER_URL}}" target="_blank" rel="noopener" class="share-btn twitter">
           <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           Post on X
+        </a>
+        <a href="{{REDDIT_URL}}" target="_blank" rel="noopener" class="share-btn reddit">
+          <svg viewBox="0 0 24 24"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>
+          Share on Reddit
         </a>
         <button class="share-btn copy" onclick="copyLink(this)">
           <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
@@ -650,18 +695,6 @@
       </div>
     </div>
 
-    <!-- Newsletter CTA -->
-    <div class="newsletter-cta">
-      <h3>📬 Enjoyed this brief?</h3>
-      <p>Get 5 sharp India tech & startup stories in your inbox every morning. Free, always.</p>
-      <form class="newsletter-form" id="article-newsletter-form" action="https://assets.mailerlite.com/jsonp/2285640/forms/185448516399662487/subscribe" method="post">
-        <input type="email" name="fields[email]" placeholder="your@email.com" autocomplete="email" required>
-        <input type="hidden" name="ml-submit" value="1">
-        <input type="hidden" name="anticsrf" value="true">
-        <button type="submit">Subscribe →</button>
-      </form>
-    </div>
-
   </article>
 
   <!-- Footer -->
@@ -674,7 +707,8 @@
       <ul class="footer-links">
         <li><a href="/">Home</a></li>
         <li><a href="/archive/">Archive</a></li>
-        <li><a href="/#newsletter">Newsletter</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
         <li><a href="https://whatsapp.com/channel/0029VbCVn180bIdk2cPgSF1L" target="_blank" rel="noopener">WhatsApp</a></li>
         <li><a href="https://t.me/+i1f2M9MJ7mgyODFl" target="_blank" rel="noopener">Telegram</a></li>
       </ul>

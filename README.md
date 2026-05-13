@@ -1,178 +1,109 @@
 # CatchTheBrief
 
-> AI-curated tech news summaries and daily deals for Indian buyers.
-> Updated every morning automatically. No server required.
+India's daily tech and startup briefing. 5 sharp stories, every morning. Zero servers, zero cost.
+
+**Live site:** [catchthebrief.com](https://catchthebrief.com)
 
 ---
 
-## How it works
+## How It Works
 
-1. `news_engine.py` runs daily via GitHub Actions
-2. Fetches real article content from Google News RSS (10 categories)
-3. Passes full article body to Gemini AI → extracts 3 real insights + India angle hook
-4. Fetches top deals from r/IndiaDeals and r/deals, tags Amazon links with affiliate ID
-5. Builds `index.html`, `articles/*.html`, `deals.html`, `sitemap.xml`
-6. GitHub Actions commits the files and GitHub Pages serves them live
+Two GitHub Actions run on a schedule each day:
 
----
+| Step | File | Schedule | What it does |
+|------|------|----------|--------------|
+| 1 — Fetch & Rank | `fetch_and_rank.py` | 10:00 PM IST | Pulls RSS from 9 India tech sources, filters junk, AI-ranks top 15, saves `review_candidates.json` |
+| 2 — Generate & Publish | `generate_and_publish.py` | 8:00 AM IST | Reads the top 5 candidates, writes AI briefs, builds all HTML, pushes to GitHub Pages |
 
-## Local setup
-
-```bash
-# 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/catchthebrief.git
-cd catchthebrief
-
-# 2. Install dependencies
-pip install -r requirements.txt
-
-# 3. Set your Gemini API key
-# Windows CMD:
-set GEMINI_API_KEY=your_key_here
-# Windows PowerShell:
-$env:GEMINI_API_KEY="your_key_here"
-# Mac/Linux:
-export GEMINI_API_KEY=your_key_here
-
-# 4. Run
-python news_engine.py
-
-# 5. Open index.html in your browser
-```
-
-The script takes ~3 minutes to run (rate limiting between AI calls).
+Between steps, `review_candidates.json` can be edited manually on GitHub to swap articles or inject pre-written briefs.
 
 ---
 
-## Deployment to GitHub Pages
+## AI Stack
 
-### Step 1 — Create GitHub repo
-- Go to github.com → New repository → name it `catchthebrief`
-- Set to **Public** (required for free GitHub Pages)
-
-### Step 2 — Add your Gemini API key as a Secret
-- Repo → Settings → Secrets and variables → Actions → New repository secret
-- Name: `GEMINI_API_KEY`
-- Value: your actual Gemini API key
-
-### Step 3 — Push your code
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/catchthebrief.git
-git push -u origin main
-```
-
-### Step 4 — Enable GitHub Pages
-- Repo → Settings → Pages
-- Source: **Deploy from a branch**
-- Branch: `main` / `/ (root)`
-- Save
-
-### Step 5 — Connect custom domain (catchthebrief.com)
-- In Pages settings, enter `catchthebrief.com` in Custom domain field
-- At your domain registrar (GoDaddy, Namecheap, etc.), add these DNS records:
-
-```
-Type    Host    Value
-A       @       185.199.108.153
-A       @       185.199.109.153
-A       @       185.199.110.153
-A       @       185.199.111.153
-CNAME   www     YOUR_USERNAME.github.io
-```
-
-- Wait 10–30 minutes for DNS propagation
-- GitHub will auto-provision SSL (free)
-
-### Step 6 — Test automation
-- Repo → Actions → Daily Content Update → Run workflow (manual trigger)
-- Confirm it runs successfully before relying on the daily cron
+- **Primary:** Gemini 2.5 Flash (3-key rotation)
+- **Fallback:** Groq Llama 3.3 70B
+- **Images:** Pollinations.AI (deterministic, seed = MD5(slug)[:6])
 
 ---
 
-## Affiliate setup (Amazon Associates India)
+## Editorial Control
 
-1. Apply at https://affiliate-program.amazon.in/
-2. Once approved, get your tracking ID (format: `yourname-21`)
-3. Open `news_engine.py`, find this line:
-   ```python
-   AMAZON_AFFILIATE_TAG = "catchthebrief-21"
-   ```
-4. Replace with your actual tag
+**Manual override (persistent):** Edit `manual_briefs.json`. Add any brief keyed by URL. These are never overwritten by automation and take highest priority.
 
-Every Amazon.in link in the deals section will now be tagged automatically.
+**Daily override:** Edit `review_candidates.json` on GitHub before 8 AM IST. Add a `manual_brief` key to any entry, or reorder the `top_5` array.
 
 ---
 
-## Email newsletter (Buttondown — free tier)
+## Distribution
 
-1. Sign up at https://buttondown.email (free up to 100 subscribers)
-2. Create a newsletter called "CatchTheBrief"
-3. Go to Settings → API → copy your username
-4. Open `templates/index.html`, find:
-   ```html
-   action="https://buttondown.email/api/emails/embed-subscribe/catchthebrief"
-   ```
-5. Replace `catchthebrief` with your Buttondown username
+| Channel | File | Trigger |
+|---------|------|---------|
+| Newsletter | MailerLite (account 2285640) | Subscribers sign up on site |
+| Telegram | `post_to_telegram.py` | After publish step |
+| LinkedIn | `post_to_linkedin.py` | After publish step (token expires every 60 days) |
+| WhatsApp Channel | Manual | Separate from automation |
 
 ---
 
-## Project structure
+## Directory Structure
 
 ```
 catchthebrief/
-├── news_engine.py          # Master content engine
-├── requirements.txt        # Python dependencies
-├── .gitignore
-├── README.md
+├── .github/workflows/
+│   ├── generate_and_publish.yml   # Main daily workflow (8 AM IST)
+│   └── fetch_and_rank.yml         # Step 1 workflow (10 PM IST)
 ├── templates/
-│   ├── index.html          # Homepage template
-│   ├── article.html        # Individual article template
-│   └── deals.html          # Deals page template
-├── .github/
-│   └── workflows/
-│       └── daily.yml       # GitHub Actions cron job
-│
-# Generated daily by the engine (committed by bot):
-├── index.html
-├── deals.html
-├── sitemap.xml
-└── articles/
-    ├── ai-news-today.html
-    ├── laptop-deals-india.html
-    └── ...
+│   ├── index.html                 # Homepage template
+│   ├── article.html               # Article page template
+│   └── archive.html               # Archive page template
+├── articles/                      # Generated article pages (YYYY-MM-DD-slug.html)
+├── archive/                       # Per-day archive pages + JSON records
+├── next claude session guide/     # Session handoff notes
+├── generate_and_publish.py        # Step 2: generates briefs + builds site
+├── fetch_and_rank.py              # Step 1: fetches + ranks candidates
+├── post_to_telegram.py            # Posts daily summary to Telegram
+├── post_to_linkedin.py            # Posts daily summary to LinkedIn
+├── post_to_twitter.py             # Posts daily summary to Twitter/X
+├── manual_briefs.json             # Persistent editorial overrides (never auto-overwritten)
+├── review_candidates.json         # Today's ranked candidates (regenerated daily)
+├── index.html                     # Live homepage (generated)
+├── sitemap.xml                    # Full sitemap (generated, includes all articles)
+├── robots.txt
+├── favicon.svg
+├── about.html
+├── privacy.html
+└── 404.html
 ```
 
 ---
 
-## Customization
+## Required GitHub Secrets
 
-**Add/remove news categories** — edit `NEWS_CATEGORIES` list in `news_engine.py`
-
-**Change deal sources** — edit `REDDIT_SOURCES` list in `news_engine.py`
-
-**Change run time** — edit the cron schedule in `.github/workflows/daily.yml`
-- `'30 3 * * *'` = 3:30 AM UTC = 9:00 AM IST
-- Use https://crontab.guru to generate other schedules
-
-**Change email provider** — swap the `<form>` action URL in `templates/index.html`
-- Mailchimp embed: find it under Audience → Signup forms → Embedded forms
-- ConvertKit: Forms → your form → Embed
+| Secret | Used by |
+|--------|---------|
+| `GEMINI_API_KEY_1/2/3` | Both Python scripts |
+| `GROQ_API_KEY` | Both Python scripts |
+| `TELEGRAM_BOT_TOKEN` | `post_to_telegram.py` |
+| `TELEGRAM_CHAT_ID` | `post_to_telegram.py` |
+| `LINKEDIN_ACCESS_TOKEN` | `post_to_linkedin.py` (refresh every 60 days) |
+| `LINKEDIN_AUTHOR_URN` | `post_to_linkedin.py` |
 
 ---
 
-## Costs
+## Brief Format
 
-| Service | Cost |
-|---------|------|
-| GitHub Pages hosting | Free |
-| GitHub Actions (2000 min/month) | Free |
-| Gemini API (free tier, 1500 req/day) | Free |
-| Buttondown newsletter (≤100 subs) | Free |
-| Amazon Associates | Free (earn commission) |
-| Domain (catchthebrief.com) | ~₹1000/year |
+Each AI-generated brief follows this structure:
 
-**Total monthly cost: ₹0** (until you scale beyond free tiers)
+1. **Hook** — 3–4 sentence lead, conversational, angle-first
+2. **How We Got Here** — backstory context
+3. **The Numbers** — 5 bullet-point facts
+4. **What Happens Next** — forward-looking summary
+5. **Why This Matters for India** — specific India angle
+6. **The Take** — editorial opinion
+
+---
+
+## Development Notes
+
+See `next claude session guide/` for session-by-session implementation history and the current handoff document.

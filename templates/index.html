@@ -13,8 +13,13 @@
   <meta property="og:image" content="{{OG_IMAGE_HOME}}">
   <meta property="og:site_name" content="CatchTheBrief">
   <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CatchTheBrief — India's Daily Tech &amp; Startup Briefing">
+  <meta name="twitter:description" content="5 sharp, story-driven tech and startup briefs every morning. Built for India.">
+  <meta name="twitter:image" content="{{OG_IMAGE_HOME}}">
   <link rel="canonical" href="{{SITE_URL}}">
   <meta name="date" content="{{ISO_DATE}}">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"CatchTheBrief","url":"{{SITE_URL}}","description":"5 sharp India tech and startup briefs every morning.","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"{{SITE_URL}}/archive/"},"query-input":"required name=search_term_string"}}</script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -335,7 +340,7 @@
       color: var(--text-secondary);
       line-height: 1.55;
       display: -webkit-box;
-      -webkit-line-clamp: 2;
+      -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
@@ -383,6 +388,19 @@
     .read-time::before {
       content: '·';
       color: var(--border-strong);
+    }
+
+    /* ── Date Herald ──────────────────────────────────────── */
+    .date-herald {
+      margin-bottom: 20px;
+    }
+    .date-day {
+      font-family: var(--font-head);
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: var(--text-primary);
+      line-height: 1.1;
     }
 
     /* ── Newsletter CTA ────────────────────────────────────── */
@@ -644,6 +662,8 @@
 
   <!-- Main Content -->
   <main>
+    {{DATE_DISPLAY}}
+
     <div class="section-intro">
       <h2>Today's Briefs</h2>
       <span class="brief-count">{{ARTICLE_COUNT}} · {{LAST_UPDATED}}</span>
@@ -651,13 +671,11 @@
 
     {{ALL_ARTICLES}}
 
-    {{YESTERDAY_BRIEFS}}
-
     <!-- Newsletter CTA -->
     <div class="newsletter-section" id="newsletter">
       <div class="newsletter-emoji">📬</div>
-      <h3>Never miss a brief</h3>
-      <p>Get 5 sharp India tech & startup stories in your inbox every morning. Free, always.</p>
+      <h3>5 stories. 15 minutes. Everything that matters in India tech.</h3>
+      <p>Get sharp, story-driven briefs in your inbox every morning. Free, always.</p>
       <form class="newsletter-form" id="home-newsletter-form" action="https://assets.mailerlite.com/jsonp/2285640/forms/185448516399662487/subscribe" method="post">
         <input type="email" name="fields[email]" placeholder="your@email.com" autocomplete="email" required>
         <input type="hidden" name="ml-submit" value="1">
@@ -672,6 +690,8 @@
         <a href="https://t.me/+i1f2M9MJ7mgyODFl" target="_blank" rel="noopener">Telegram</a>
       </p>
     </div>
+
+    {{YESTERDAY_BRIEFS}}
   </main>
 
   <!-- Footer -->
@@ -684,7 +704,8 @@
       <ul class="footer-links">
         <li><a href="/">Home</a></li>
         <li><a href="/archive/">Archive</a></li>
-        <li><a href="#newsletter">Newsletter</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
         <li><a href="https://whatsapp.com/channel/0029VbCVn180bIdk2cPgSF1L" target="_blank" rel="noopener">WhatsApp</a></li>
         <li><a href="https://t.me/+i1f2M9MJ7mgyODFl" target="_blank" rel="noopener">Telegram</a></li>
       </ul>

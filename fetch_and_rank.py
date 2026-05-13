@@ -41,7 +41,20 @@ RSS_FEEDS = [
     "https://feeds.feedburner.com/gadgets360-latest",
     "https://www.medianama.com/feed/",
     "https://analyticsindiamag.com/feed/",
+    "https://www.cnbctv18.com/tech/feed/",
 ]
+
+SOURCE_NAMES = {
+    "yourstory.com":         "YourStory",
+    "inc42.com":             "Inc42",
+    "entrackr.com":          "Entrackr",
+    "the-ken.com":           "The Ken",
+    "gadgets360.com":        "Gadgets 360",
+    "medianama.com":         "MediaNama",
+    "analyticsindiamag.com": "Analytics India Mag",
+    "techcrunch.com":        "TechCrunch",
+    "cnbctv18.com":          "CNBC TV18",
+}
 
 GEMINI_KEYS = [k for k in [
     os.environ.get("GEMINI_API_KEY_1", ""),
@@ -268,13 +281,13 @@ Here are {len(articles_to_rank)} articles from the past 24 hours:
 {chr(10).join(lines)}
 
 Pick the TOP 5 most valuable articles. Criteria:
-1. IMPACT — affects Indian tech workers, founders, or consumers
-2. NOVELTY — genuinely new news, not a repeat
-3. VARIETY — IMPORTANT: the 5 selected articles MUST span at least 3 different sub-topics
-   (e.g. funding, AI, policy, product launch, industry). Do NOT select more than 1 article
-   about the same event or funding round.
-4. RELEVANCE — "Would a 28-year-old Bangalore engineer or startup founder care?"
-5. NO DUPLICATES — if multiple articles cover the same story, pick only the best one
+1. IMPACT — affects Indian tech workers, founders, or consumers directly
+2. NOVELTY — genuinely new news, not a repeat or follow-up
+3. VARIETY — HARD RULE: select at most 2 articles from the same source domain.
+   The 5 articles MUST span at least 3 different sub-topics (funding, AI, policy, product, industry).
+4. RELEVANCE — "Would a 28-year-old Bangalore engineer or startup founder actually care?"
+5. NO PR — penalise press releases, brand announcements, and sponsored content heavily
+6. NO DUPLICATES — if multiple articles cover the same story, pick only the best one
 
 Respond in EXACT format (no extra text):
 TOP5: [index1, index2, index3, index4, index5]
@@ -305,16 +318,19 @@ REASON5: one line reason"""
 
 # ─── STEP 4: SAVE CANDIDATES JSON ────────────────────────────────────────────
 
+def get_source_name(url):
+    m = re.search(r"https?://(?:www\.)?([^/]+)", url)
+    domain = m.group(1) if m else url
+    return SOURCE_NAMES.get(domain, domain)
+
 def save_candidates(articles, top_indices):
     top_5 = []
     for rank, idx in enumerate(top_indices, 1):
         a = articles[idx]
-        m = re.search(r"https?://(?:www\.)?([^/]+)", a["link"])
-        source = m.group(1) if m else a["link"]
         top_5.append({
             "rank":    rank,
             "title":   a["title"],
-            "source":  source,
+            "source":  get_source_name(a["link"]),
             "url":     a["link"],
             "summary": a["description"][:150],
         })
@@ -323,12 +339,10 @@ def save_candidates(articles, top_indices):
     remaining = []
     for rank, idx in enumerate(remaining_indices[:10], len(top_indices) + 1):
         a = articles[idx]
-        m = re.search(r"https?://(?:www\.)?([^/]+)", a["link"])
-        source = m.group(1) if m else a["link"]
         remaining.append({
             "rank":    rank,
             "title":   a["title"],
-            "source":  source,
+            "source":  get_source_name(a["link"]),
             "url":     a["link"],
             "summary": a["description"][:150],
         })

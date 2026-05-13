@@ -36,7 +36,8 @@ SITE_NAME       = "CatchTheBrief"
 ARTICLES_DIR    = Path("articles")
 ARCHIVE_DIR     = Path("archive")
 TEMPLATES_DIR   = Path("templates")
-CANDIDATES_FILE = Path("review_candidates.json")
+CANDIDATES_FILE    = Path("review_candidates.json")
+MANUAL_BRIEFS_FILE = Path("manual_briefs.json")
 
 GEMINI_KEYS = [k for k in [
     os.environ.get("GEMINI_API_KEY_1", ""),
@@ -105,9 +106,15 @@ def facts_to_html(facts):
     return "\n".join(f"<li>{f}</li>" for f in facts)
 
 def make_share_urls(title, slug):
-    article_url  = f"{SITE_URL}/articles/{slug}.html"
-    encoded_text = urllib.parse.quote(f"{title} — Read the full brief: {article_url}")
-    return f"https://wa.me/?text={encoded_text}", f"https://twitter.com/intent/tweet?text={encoded_text}"
+    article_url   = f"{SITE_URL}/articles/{slug}.html"
+    encoded_text  = urllib.parse.quote(f"{title} — Read the full brief: {article_url}")
+    encoded_url   = urllib.parse.quote(article_url)
+    encoded_title = urllib.parse.quote(title)
+    return (
+        f"https://wa.me/?text={encoded_text}",
+        f"https://twitter.com/intent/tweet?text={encoded_text}",
+        f"https://www.reddit.com/submit?url={encoded_url}&title={encoded_title}",
+    )
 
 def hero_image_html(image_url, image_alt, category):
     if image_url:
@@ -245,8 +252,9 @@ def ai_call(prompt, gemini, groq):
 # ─── BRIEF GENERATION ────────────────────────────────────────────────────────
 
 BRIEF_PROMPT = """You are a writer for CatchTheBrief, an Indian tech news site.
-Write in simple, conversational English — like explaining to a smart friend over chai.
-No jargon. No corporate language. Keep it engaging and human.
+Style: Conversational, direct, confident. Write like you're explaining to a sharp 28-year-old in Bangalore.
+No jargon. No corporate speak. Never use exclamation marks (!). Never open with a rhetorical question.
+Lead with the angle or implication — not "In a move that..." or scene-setting preamble.
 
 Article to brief:
 TITLE: {title}
@@ -254,29 +262,38 @@ SOURCE: {source}
 DESCRIPTION: {description}
 URL: {url}
 
-Write a brief in this EXACT format (use the exact labels):
+Write a brief in this EXACT format (use the exact section labels, no extra text):
 
-TITLE: [rewrite the headline to be punchy and engaging — max 12 words]
+TITLE: [rewrite the headline — specific, punchy, max 12 words, no exclamation marks]
 CATEGORY: [pick ONE: AI & ML | Startup Funding | Digital India | Product Launch | India Tech]
 READ_TIME: [e.g. "3 min read"]
 
-HOOK: [3-4 sentences. Story-style opening. Set the scene. Make the reader care. Friendly tone.]
+HOOK: [3-4 sentences. Lead with the most interesting fact or implication. Chai-over-friend tone. No rhetorical questions.]
 
-CONTEXT: [2-3 sentences. What's the background? What led to this? Make it feel like insider knowledge.]
+CONTEXT: [2-3 sentences. What led to this? The backstory that makes this make sense. Feel like insider knowledge.]
 
 KEY_FACTS:
-• [Concrete fact with number, name, or date]
-• [Concrete fact with number, name, or date]
-• [Concrete fact with number, name, or date]
-• [Concrete fact with number, name, or date]
-• [Concrete fact with number, name, or date]
+• [Concrete fact with a number, name, or date]
+• [Concrete fact with a number, name, or date]
+• [Concrete fact with a number, name, or date]
+• [Concrete fact with a number, name, or date]
+• [Concrete fact with a number, name, or date]
 
-WHAT_NEXT: [2-3 sentences. What to watch for. When? What will happen?]
+WHAT_NEXT: [2-3 sentences. What should readers watch for? When will we know more?]
 
-WHY_INDIA: [1 sentence. Why does this specifically matter to Indian readers?]"""
+WHY_INDIA: [1 sentence. Be specific — name a city, sector, company, or person that makes this relevant to India. Not a generic statement about "India's tech ecosystem".]
+
+TAKE: [1-2 sentences. Your honest, confident editorial opinion. What does this actually mean? What is being missed or oversimplified? Take a clear position.]"""
 
 def parse_brief(raw_text):
-    def get_section(text, label, next_labels):
+    def strip_md(text):
+        text = re.sub(r'\*\*(.+?)\*\*', r'\1', text)
+        text = re.sub(r'\*(.+?)\*',     r'\1', text)
+        text = re.sub(r'__(.+?)__',     r'\1', text)
+        text = re.sub(r'_(.+?)_',       r'\1', text)
+        return text.strip()
+
+    def get_section_raw(text, label, next_labels):
         match = re.search(rf"^{label}:\s*", text, re.IGNORECASE | re.MULTILINE)
         if not match:
             return ""
@@ -288,22 +305,60 @@ def parse_brief(raw_text):
                 end = min(end, start + nm.start())
         return text[start:end].strip()
 
+    def get_section(text, label, next_labels):
+        return strip_md(get_section_raw(text, label, next_labels))
+
     def get_line(text, label):
         match = re.search(rf"^{label}:\s*(.+)", text, re.IGNORECASE | re.MULTILINE)
-        return match.group(1).strip() if match else ""
+        return strip_md(match.group(1).strip()) if match else ""
+
+    raw_facts = get_section_raw(raw_text, "KEY_FACTS", ["WHAT_NEXT", "WHY_INDIA", "TAKE"])
 
     return {
         "title":     get_line(raw_text, "TITLE")    or "Tech Brief",
         "category":  get_line(raw_text, "CATEGORY") or "India Tech",
         "read_time": get_line(raw_text, "READ_TIME") or "3 min read",
-        "hook":      get_section(raw_text, "HOOK",      ["CONTEXT", "KEY_FACTS", "WHAT_NEXT", "WHY_INDIA"]),
-        "context":   get_section(raw_text, "CONTEXT",   ["KEY_FACTS", "WHAT_NEXT", "WHY_INDIA"]),
-        "what_next": get_section(raw_text, "WHAT_NEXT", ["WHY_INDIA", "SOURCE"]),
-        "why_india": get_section(raw_text, "WHY_INDIA", ["SOURCE", "---"]) or get_line(raw_text, "WHY_INDIA"),
-        "facts":     re.findall(r"[•\-\*]\s*(.+)", get_section(raw_text, "KEY_FACTS", ["WHAT_NEXT", "WHY_INDIA"]))[:5],
+        "hook":      get_section(raw_text, "HOOK",      ["CONTEXT", "KEY_FACTS", "WHAT_NEXT", "WHY_INDIA", "TAKE"]),
+        "context":   get_section(raw_text, "CONTEXT",   ["KEY_FACTS", "WHAT_NEXT", "WHY_INDIA", "TAKE"]),
+        "what_next": get_section(raw_text, "WHAT_NEXT", ["WHY_INDIA", "TAKE", "SOURCE"]),
+        "why_india": get_section(raw_text, "WHY_INDIA", ["TAKE", "SOURCE", "---"]) or get_line(raw_text, "WHY_INDIA"),
+        "take":      get_section(raw_text, "TAKE",      ["SOURCE", "---"]) or get_line(raw_text, "TAKE"),
+        "facts":     [strip_md(f) for f in re.findall(r"[•\-\*]\s*(.+)", raw_facts)][:5],
     }
 
-def generate_brief(candidate, gemini, groq):
+def load_manual_briefs():
+    """Load manual_briefs.json as a URL-keyed dict. Never raises — returns {} on any error."""
+    if not MANUAL_BRIEFS_FILE.exists():
+        return {}
+    try:
+        data   = json.loads(MANUAL_BRIEFS_FILE.read_text(encoding="utf-8"))
+        briefs = data.get("briefs", [])
+        return {b["url"]: b for b in briefs if "url" in b}
+    except Exception as e:
+        print(f"  Warning: could not read manual_briefs.json: {e}")
+        return {}
+
+def generate_brief(candidate, gemini, groq, manual_briefs=None):
+    # 1. Persistent editorial file (manual_briefs.json) — highest priority
+    if manual_briefs and candidate.get("url") in manual_briefs:
+        mb = manual_briefs[candidate["url"]]
+        print(f"  Editorial override (manual_briefs.json): {mb.get('title', '')[:60]}")
+        return {
+            "title":       mb.get("title",       candidate["title"]),
+            "category":    mb.get("category",    "India Tech"),
+            "read_time":   mb.get("read_time",   "3 min read"),
+            "hook":        mb.get("hook",        ""),
+            "context":     mb.get("context",     ""),
+            "facts":       mb.get("facts",       []),
+            "what_next":   mb.get("what_next",   ""),
+            "why_india":   mb.get("why_india",   ""),
+            "take":        mb.get("take",        ""),
+            "source_name": mb.get("source_name", candidate.get("source", "")),
+            "source_link": mb.get("source_link", candidate.get("url", "")),
+            "pub_date":    mb.get("pub_date",    ""),
+        }
+
+    # 2. Inline override from review_candidates.json
     if "manual_brief" in candidate:
         mb = candidate["manual_brief"]
         print(f"  Manual brief: {mb.get('title', '')[:60]}")
@@ -316,6 +371,7 @@ def generate_brief(candidate, gemini, groq):
             "facts":       mb.get("facts",     []),
             "what_next":   mb.get("what_next", ""),
             "why_india":   mb.get("why_india", ""),
+            "take":        mb.get("take",      ""),
             "source_name": mb.get("source_name", candidate.get("source", "")),
             "source_link": mb.get("source_link", candidate.get("url", "")),
             "pub_date":    mb.get("pub_date",  ""),
@@ -346,7 +402,7 @@ def generate_brief(candidate, gemini, groq):
                   "Check back tomorrow for more", "Follow the source for updates"],
         "what_next": "Follow the source for updates on this developing story.",
         "why_india": "This story has direct relevance to India's growing tech ecosystem.",
-        "source_name": source, "source_link": url, "pub_date": "",
+        "take": "", "source_name": source, "source_link": url, "pub_date": "",
     }
 
 # ─── HTML GENERATION ─────────────────────────────────────────────────────────
@@ -455,6 +511,16 @@ def generate_yesterday_teaser_html(now):
         f'</div>\n'
     )
 
+def build_take_html(take_text):
+    if not take_text:
+        return ""
+    return (
+        '<div class="take-box">'
+        '<div class="take-label">The Take</div>'
+        f'<div class="take-text">{take_text}</div>'
+        '</div>'
+    )
+
 def generate_article_page(brief, image_url, slug, article_index, total, now):
     template_path = TEMPLATES_DIR / "article.html"
     if not template_path.exists():
@@ -463,7 +529,7 @@ def generate_article_page(brief, image_url, slug, article_index, total, now):
     template  = template_path.read_text(encoding="utf-8")
     meta_desc = brief["hook"][:160].replace('"', "'")
     og_image  = image_url if image_url else f"{SITE_URL}/images/og-default.jpg"
-    wa_url, tw_url = make_share_urls(brief["title"], slug)
+    wa_url, tw_url, reddit_url = make_share_urls(brief["title"], slug)
 
     json_ld_data = {
         "@context": "https://schema.org",
@@ -486,6 +552,12 @@ def generate_article_page(brief, image_url, slug, article_index, total, now):
         },
     }
 
+    pub_date = brief.get("pub_date", "")
+    pub_date_html = (
+        f'<span class="meta-sep">·</span><span class="meta-item">{pub_date}</span>'
+        if pub_date else ""
+    )
+
     replacements = {
         "{{TITLE}}":           brief["title"],
         "{{META_DESCRIPTION}}": meta_desc,
@@ -497,17 +569,19 @@ def generate_article_page(brief, image_url, slug, article_index, total, now):
         "{{LABEL}}":           brief["category"].replace("&", "&amp;"),
         "{{COLOR}}":           color_class(brief["category"]),
         "{{READ_TIME}}":       brief["read_time"],
-        "{{PUB_DATE}}":        brief.get("pub_date", ""),
+        "{{PUB_DATE_HTML}}":   pub_date_html,
         "{{HERO_IMAGE_HTML}}": hero_image_html(image_url, brief["title"], brief["category"]),
         "{{HOOK}}":            brief["hook"].replace("\n", " "),
         "{{CONTEXT}}":         brief["context"].replace("\n", " "),
         "{{KEY_FACTS}}":       facts_to_html(brief["facts"]),
         "{{WHAT_NEXT}}":       brief["what_next"].replace("\n", " "),
         "{{WHY_INDIA}}":       brief["why_india"],
+        "{{TAKE_SECTION}}":    build_take_html(brief.get("take", "")),
         "{{SOURCE_NAME}}":     brief["source_name"],
         "{{SOURCE_LINK}}":     brief["source_link"],
         "{{WHATSAPP_URL}}":    wa_url,
         "{{TWITTER_URL}}":     tw_url,
+        "{{REDDIT_URL}}":      reddit_url,
         "{{IMAGE_URL}}":       image_url or get_default_image(brief["category"]),
         "{{IMAGE_ALT}}":       brief["title"],
         "{{ARTICLE_INDEX}}":   str(article_index),
@@ -532,6 +606,14 @@ def generate_homepage(briefs_data, now):
     if briefs_data and briefs_data[0][1]:
         og_image_home = briefs_data[0][1]
 
+    day_name  = now.strftime("%A")
+    date_disp = f"{now.day} {now.strftime('%B')} {now.year}"
+    date_display_html = (
+        f'<div class="date-herald">'
+        f'<div class="date-day">{day_name}, {date_disp}</div>'
+        f'</div>'
+    )
+
     replacements = {
         "{{ALL_ARTICLES}}":      build_all_articles_html(briefs_data),
         "{{LAST_UPDATED}}":      human_date(now),
@@ -540,6 +622,7 @@ def generate_homepage(briefs_data, now):
         "{{SITE_URL}}":          SITE_URL,
         "{{OG_IMAGE_HOME}}":     og_image_home,
         "{{YESTERDAY_BRIEFS}}":  generate_yesterday_teaser_html(now),
+        "{{DATE_DISPLAY}}":      date_display_html,
     }
     html = template
     for tag, value in replacements.items():
@@ -553,8 +636,18 @@ def generate_sitemap(slugs, now):
         f'  <url><loc>{SITE_URL}/</loc><lastmod>{iso_date(now)}</lastmod></url>',
         f'  <url><loc>{SITE_URL}/archive/</loc><lastmod>{iso_date(now)}</lastmod></url>',
     ]
-    for slug in slugs:
-        lines.append(f'  <url><loc>{SITE_URL}/articles/{slug}.html</loc><lastmod>{iso_date(now)}</lastmod></url>')
+    # Include all historical article pages, not just today's
+    seen_slugs = set()
+    if ARTICLES_DIR.exists():
+        for html_file in sorted(ARTICLES_DIR.glob("*.html")):
+            s = html_file.stem
+            seen_slugs.add(s)
+            lines.append(f'  <url><loc>{SITE_URL}/articles/{s}.html</loc><lastmod>{iso_date(now)}</lastmod></url>')
+    # Add today's new slugs in case they haven't been written to disk yet
+    for s in slugs:
+        if s not in seen_slugs:
+            seen_slugs.add(s)
+            lines.append(f'  <url><loc>{SITE_URL}/articles/{s}.html</loc><lastmod>{iso_date(now)}</lastmod></url>')
     if ARCHIVE_DIR.exists():
         for jf in sorted(ARCHIVE_DIR.glob("*.json")):
             date = jf.stem
@@ -840,6 +933,13 @@ def main():
     if not candidates:
         return
 
+    # ── Load editorial overrides ──────────────────────────────────────────────
+    manual_briefs = load_manual_briefs()
+    if manual_briefs:
+        print(f"  manual_briefs.json loaded — {len(manual_briefs)} override(s) available")
+    else:
+        print("  manual_briefs.json empty — no overrides")
+
     # ── Generate briefs + AI images ───────────────────────────────────────────
     print(f"\n[Step 2] Generating {len(candidates)} enhanced briefs...")
     briefs_data = []
@@ -847,7 +947,7 @@ def main():
 
     for i, candidate in enumerate(candidates):
         print(f"\n  Article {i+1}/{len(candidates)}: {candidate['title'][:70]}")
-        brief     = generate_brief(candidate, gemini, groq)
+        brief     = generate_brief(candidate, gemini, groq, manual_briefs)
         slug      = date_slug(date_str, brief["title"])
         image_url = generate_ai_image_url(brief["title"], brief["category"], slug)
         print(f"  AI image URL generated (seed deterministic)")

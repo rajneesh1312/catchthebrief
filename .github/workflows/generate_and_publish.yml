@@ -33,10 +33,18 @@ jobs:
         run: python generate_and_publish.py
 
       - name: Post daily Telegram message
+        continue-on-error: true
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID:   ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python post_to_telegram.py
+
+      - name: Post daily LinkedIn update
+        continue-on-error: true
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_AUTHOR_URN:   ${{ secrets.LINKEDIN_AUTHOR_URN }}
+        run: python post_to_linkedin.py
 
       - name: Commit and push generated files
         run: |
