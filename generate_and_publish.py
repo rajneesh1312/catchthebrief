@@ -30,6 +30,8 @@ except ImportError:
     GENAI_AVAILABLE = False
     print("google-genai not installed — Gemini unavailable")
 
+import generate_editor_note
+
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
 SITE_URL        = "https://catchthebrief.com"
 SITE_NAME       = "CatchTheBrief"
@@ -796,6 +798,7 @@ def generate_article_page(brief, image_url, slug, article_index, total, prev_slu
 
     replacements = {
         "{{TITLE}}":           brief["title"],
+        "{{TITLE_URL_ENCODED}}": urllib.parse.quote(brief["title"]),
         "{{META_DESCRIPTION}}": meta_desc,
         "{{OG_TITLE}}":        brief["title"],
         "{{OG_DESCRIPTION}}":  meta_desc,
@@ -860,6 +863,7 @@ def generate_homepage(briefs_data, now):
         "{{OG_IMAGE_HOME}}":     og_image_home,
         "{{YESTERDAY_BRIEFS}}":  generate_yesterday_teaser_html(now),
         "{{DATE_DISPLAY}}":      date_display_html,
+        "{{EDITOR_NOTE_BANNER}}": generate_editor_note.banner_html(generate_editor_note.latest_note()),
     }
     html = template
     for tag, value in replacements.items():
@@ -891,6 +895,12 @@ def generate_sitemap(slugs, now):
         for jf in sorted(ARCHIVE_DIR.glob("*.json")):
             date = jf.stem
             lines.append(f'  <url><loc>{SITE_URL}/archive/{date}.html</loc><lastmod>{date}</lastmod></url>')
+    # Editor's Notes
+    note_slugs = generate_editor_note.all_slugs()
+    if note_slugs:
+        lines.append(f'  <url><loc>{SITE_URL}/editor-notes/</loc><lastmod>{note_slugs[0]}</lastmod></url>')
+        for s in note_slugs:
+            lines.append(f'  <url><loc>{SITE_URL}/editor-notes/{s}.html</loc><lastmod>{s}</lastmod></url>')
     lines.append('</urlset>')
     return "\n".join(lines)
 
@@ -1203,6 +1213,10 @@ def main():
             out_path = ARTICLES_DIR / f"{slug}.html"
             out_path.write_text(html, encoding="utf-8")
             print(f"  Written: articles/{slug}.html")
+
+    # ── Build Editor's Notes (no-op if editor_notes/ is empty) ───────────────
+    print("\n[Step 3b] Building Editor's Notes...")
+    generate_editor_note.build_all()
 
     # ── Write homepage ────────────────────────────────────────────────────────
     print("\n[Step 4] Writing homepage...")

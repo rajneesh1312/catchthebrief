@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <title>About — CatchTheBrief</title>
-  <meta name="description" content="CatchTheBrief is India's daily tech and startup briefing — 5 sharp stories, every morning.">
+  <meta name="description" content="CatchTheBrief is India's daily tech and startup briefing — 5 sharp stories, every morning. Edited by Rajneesh.">
   <meta property="og:title" content="About CatchTheBrief">
-  <meta property="og:description" content="5 sharp India tech and startup stories, every morning. Free, always.">
+  <meta property="og:description" content="5 sharp India tech and startup stories, every morning. Edited by Rajneesh.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,9 +27,39 @@
     .lead { font-size: 19px; color: #4A5568; margin-bottom: 48px; line-height: 1.7; }
     h2 { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; margin: 40px 0 12px; }
     p { color: #4A5568; margin-bottom: 16px; font-size: 17px; line-height: 1.75; }
+    .editor-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin: 8px 0 24px;
+      padding: 20px;
+      background: #fff;
+      border: 1px solid #E2E8F0;
+      border-radius: 12px;
+    }
+    .editor-avatar {
+      width: 56px; height: 56px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #2563EB, #7C3AED);
+      color: #fff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .editor-info { flex: 1; min-width: 0; }
+    .editor-name { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; color: #1A1A2E; }
+    .editor-role { font-size: 13px; color: #718096; margin-top: 2px; }
+    .editor-mail { font-size: 14px; color: #2563EB; font-weight: 500; margin-top: 6px; word-break: break-all; }
+    .editor-mail:hover { text-decoration: underline; }
     .subscribe-btn { display: inline-flex; align-items: center; background: #2563EB; color: #fff; font-weight: 600; font-size: 15px; padding: 12px 24px; border-radius: 999px; margin-top: 8px; transition: background 0.2s; }
     .subscribe-btn:hover { background: #1D4ED8; }
     footer { border-top: 1px solid #E2E8F0; padding: 28px 20px; text-align: center; font-size: 13px; color: #718096; }
+    .footer-editor { font-size: 13px; color: #4A5568; margin-bottom: 6px; }
+    .footer-editor strong { color: #1A1A2E; font-weight: 600; }
+    .footer-editor a { color: #2563EB; font-weight: 500; }
+    .footer-editor a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -47,12 +77,24 @@
     <p>CatchTheBrief is a daily briefing covering India's tech and startup ecosystem. Every morning, we publish 5 sharp, story-driven summaries of the most important news — written in plain English, not press release language.</p>
     <p>No paywalls. No spam. No fluff. Just the stories that matter to founders, engineers, product managers, and investors building in India.</p>
 
-    <h2>How it works</h2>
-    <p>Each night, we scan India's leading tech publications — YourStory, Inc42, Entrackr, The Ken, MediaNama, TechCrunch India, Gadgets 360, and more. The most impactful stories are selected, rewritten for clarity, and published by 8 AM IST.</p>
-    <p>Every brief includes the hook, the backstory, the key numbers, what happens next, and why it matters specifically for India. Plus an editorial take — our honest opinion on what it all means.</p>
+    <h2>Why I started this</h2>
+    <p>I'm Rajneesh — I built CatchTheBrief because I was tired of reading the same India tech story rewritten across five different sites. The signal is real: a funding round, a regulatory shift, a product launch. But it's buried under SEO-padded headlines and press-release language.</p>
+    <p>The goal here is simple: surface the 5 things that actually mattered overnight, written like one person explaining them to another over coffee. Every brief includes the hook, the backstory, the key numbers, what happens next, and why it matters specifically for India — plus an editorial take, not a hedge.</p>
+    <p>Some days I get it wrong. When that happens, I'd genuinely rather hear about it than not.</p>
 
-    <h2>Who makes this?</h2>
-    <p>CatchTheBrief is an independent project, built and curated in India. It runs entirely on AI-assisted tooling and GitHub Actions — zero servers, zero paywalls.</p>
+    <h2>How it works</h2>
+    <p>Each night, the system scans India's leading tech publications — YourStory, Inc42, The Ken, MediaNama, Gadgets 360 and others — and pulls the most consequential stories. Each one is curated, drafted, reviewed against an editorial checklist, and published by 8 AM IST. Manual overrides exist for the days when a story deserves a personal take.</p>
+
+    <h2>The editor</h2>
+    <div class="editor-card">
+      <div class="editor-avatar">R</div>
+      <div class="editor-info">
+        <div class="editor-name">Rajneesh</div>
+        <div class="editor-role">Founder &amp; editor, CatchTheBrief · based in India</div>
+        <a class="editor-mail" href="mailto:catchthebrief@gmail.com">catchthebrief@gmail.com</a>
+      </div>
+    </div>
+    <p>Disagree with a take? Spot a story we missed? Reply to any morning brief, or write directly to <a href="mailto:catchthebrief@gmail.com" style="color:#2563EB;font-weight:600;">catchthebrief@gmail.com</a>. I read every reply.</p>
 
     <h2>Subscribe</h2>
     <p>Get the 5 briefs straight to your inbox every morning.</p>
@@ -65,6 +107,9 @@
       <a href="https://t.me/+i1f2M9MJ7mgyODFl" target="_blank" rel="noopener" style="color:#2563EB;font-weight:600;">Telegram</a>
     </p>
   </main>
-  <footer>© 2026 CatchTheBrief · Made with ☕ in India</footer>
+  <footer>
+    <p class="footer-editor">Edited by <strong>Rajneesh</strong> · <a href="mailto:catchthebrief@gmail.com">catchthebrief@gmail.com</a></p>
+    © 2026 CatchTheBrief · Made with ☕ in India
+  </footer>
 </body>
 </html>

@@ -581,6 +581,38 @@
       margin-left: auto;
       margin-right: auto;
     }
+    .footer-editor {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 24px;
+      margin-bottom: 4px;
+    }
+    .footer-editor strong { color: var(--text-primary); font-weight: 600; }
+    .footer-editor a {
+      color: var(--accent-primary);
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .footer-editor a:hover { color: var(--accent-hover); text-decoration: underline; }
+    /* ── Reader response prompt ────────────────────────────── */
+    .reader-response {
+      margin: 36px auto 0;
+      padding: 18px 22px;
+      max-width: 680px;
+      background: var(--bg-accent);
+      border-left: 3px solid var(--accent-primary);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    .reader-response a {
+      color: var(--accent-primary);
+      font-weight: 600;
+      transition: color 0.15s;
+    }
+    .reader-response a:hover { color: var(--accent-hover); text-decoration: underline; }
 
     /* ── Fade-in ───────────────────────────────────────────── */
     @keyframes fadeUp {
@@ -686,6 +718,12 @@
 
     </div><!-- /article-body -->
 
+    <!-- Reader response -->
+    <div class="reader-response">
+      Disagree with this take? Spotted something we missed?
+      <a href="mailto:catchthebrief@gmail.com?subject=Re%3A%20{{TITLE_URL_ENCODED}}">Reply to the editor →</a>
+    </div>
+
     <!-- Newsletter CTA (above share) -->
     <div class="newsletter-cta">
       <h3>📬 Enjoyed this brief?</h3>
@@ -757,6 +795,7 @@
         <li><a href="https://t.me/+i1f2M9MJ7mgyODFl" target="_blank" rel="noopener">Telegram</a></li>
       </ul>
     </div>
+    <p class="footer-copy footer-editor">Edited by <strong>Rajneesh</strong> · <a href="mailto:catchthebrief@gmail.com">catchthebrief@gmail.com</a></p>
     <p class="footer-copy">© 2026 CatchTheBrief · Made with ☕ in India</p>
   </footer>
 

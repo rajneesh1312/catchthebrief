@@ -563,6 +563,62 @@
       margin-left: auto;
       margin-right: auto;
     }
+    .footer-editor {
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 24px;
+      margin-bottom: 4px;
+    }
+    .footer-editor strong { color: var(--text-primary); font-weight: 600; }
+    .footer-editor a {
+      color: var(--accent-primary);
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+    .footer-editor a:hover { color: var(--accent-hover); text-decoration: underline; }
+    /* ── Editor's Note banner ──────────────────────────────── */
+    .editor-note-banner {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      max-width: var(--max-w);
+      margin: 0 auto 28px;
+      padding: 14px 18px;
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+      transition: background 0.15s, border-color 0.15s, transform 0.15s;
+    }
+    .editor-note-banner:hover {
+      background: #FEF3C7;
+      border-color: #FBBF24;
+      transform: translateY(-1px);
+    }
+    .enb-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #B45309;
+      white-space: nowrap;
+    }
+    .enb-title {
+      flex: 1;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-primary);
+      line-height: 1.45;
+    }
+    .enb-arrow {
+      font-size: 18px;
+      color: #B45309;
+      font-weight: 600;
+    }
+    @media (max-width: 640px) {
+      .editor-note-banner { flex-wrap: wrap; gap: 6px 12px; }
+      .enb-title { flex-basis: 100%; font-size: 14px; }
+    }
 
     /* ── Fade-in Animation ─────────────────────────────────── */
     @keyframes fadeUp {
@@ -674,6 +730,8 @@
     {{DATE_DISPLAY}}
     <p class="site-tagline">5 India tech &amp; startup stories. Written clearly. Every morning at 8 AM.</p>
 
+    {{EDITOR_NOTE_BANNER}}
+
     <div class="section-intro">
       <h2>Today's Briefs</h2>
       <span class="brief-count">{{ARTICLE_COUNT}} · {{LAST_UPDATED}}</span>
@@ -720,6 +778,7 @@
         <li><a href="https://t.me/+i1f2M9MJ7mgyODFl" target="_blank" rel="noopener">Telegram</a></li>
       </ul>
     </div>
+    <p class="footer-copy footer-editor">Edited by <strong>Rajneesh</strong> · <a href="mailto:catchthebrief@gmail.com">catchthebrief@gmail.com</a></p>
     <p class="footer-copy">© 2026 CatchTheBrief · Made with ☕ in India</p>
   </footer>
 
