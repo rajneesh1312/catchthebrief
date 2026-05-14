@@ -153,7 +153,7 @@ generate_title_card.py           # NEW — standalone renderer
 
 ## Open items — user actions
 
-None blocking. The next daily build at 8 AM IST (2:30 AM UTC) will:
+None blocking. The next daily build (cron at 02:30 UTC, **actual delivery ~11:00 AM – noon IST** — see "Schedule reality" below) will:
 1. Install Pillow on the runner
 2. Render `og-default.png`
 3. Render a per-brief title card for each of today's 5 briefs
@@ -164,6 +164,24 @@ None blocking. The next daily build at 8 AM IST (2:30 AM UTC) will:
 If anything breaks at the Pillow install step (network hiccup on the runner, etc.), the renderer falls back to `og-default.png` silently and pages still publish — just without per-article cards.
 
 **Optional preview:** before the next scheduled build, run `python generate_and_publish.py` locally (or just `python generate_title_card.py` to preview the four card templates without touching the AI engine).
+
+---
+
+## Schedule reality — actual run times vs cron
+
+Audited during Session 13 cleanup. GitHub Actions free-tier scheduled workflows run consistently late.
+
+| Workflow | Cron (UTC) | Scheduled IST | Actual IST delivery (last 10 days) | Avg delay |
+|---|---|---|---|---|
+| `fetch_and_rank.yml` | `30 16 * * *` | 10:00 PM | ~11:00 PM – 11:55 PM | +1.5h |
+| `generate_and_publish.yml` | `30 2 * * *` | 8:00 AM | ~10:47 AM – 11:53 AM | +3h |
+
+The Telegram message the user sees in the morning lands around 11:30 AM IST. This is *not* a bug — it's how the Actions queue works for free repos around `:30` past the hour. Earlier session handoffs that say "8 AM IST" / "10 PM IST" are quoting the cron, not the delivery.
+
+Options if delivery time becomes a problem:
+- **Accept it.** 10 AM – noon IST is arguably a better engagement window than 8 AM for an India audience.
+- **Earlier cron** to compensate, e.g. `30 23 * * *` UTC = 5 AM IST scheduled. With the same drift it'd land at 8-9 AM IST in the normal case but 5 AM IST in the rare no-drift case.
+- **External dispatch** via cron-job.org or similar, calling the `workflow_dispatch` API at an exact time. Adds glue but gives precise control.
 
 ---
 
@@ -254,3 +272,17 @@ MODIFIED:
 ```
 
 No engine-pipeline restructuring beyond the default-card build step. The brief-generation prompt, source mix, banned-phrase guard, and editor-note system are unchanged.
+
+---
+
+## Files deleted in Session 13 cleanup
+
+After the main work shipped, we removed three orphaned files. All three were documented as legacy/unused across multiple prior handoffs; none were referenced by any scheduled workflow.
+
+| File | Why removed |
+|---|---|
+| `news_engine.py` | Old single-file engine (46KB). Replaced by `fetch_and_rank.py` + `generate_and_publish.py` in Session 7. Only call site was the legacy `daily.yml` workflow. |
+| `.github/workflows/daily.yml` | Header literally said *"Legacy — use fetch_and_rank.yml + generate_and_publish.yml instead"*. Manual-trigger only, no schedule, called `news_engine.py`. |
+| `post_to_twitter.py` | Documented in 4 prior handoffs as unused. Twitter API requires the paid $100/mo tier. No workflow ever invoked it. |
+
+README.md was also rewritten to reflect actual run times and remove the dead Twitter row from the distribution table. If you ever need the old code, it's preserved in git history (`git log --all -- news_engine.py`).
