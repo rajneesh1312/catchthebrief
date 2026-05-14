@@ -8,7 +8,7 @@ Session 7 changes:
 - Date-prefixed article slugs: YYYY-MM-DD-title.html
 - Per-day archive pages: archive/YYYY-MM-DD.html
 - Yesterday's briefs teaser on homepage
-- AI-generated images via Pollinations.AI (no source og:image scraping)
+- Branded title-card images generated server-side (Session 13 — replaces Pollinations.AI)
 - SEO: JSON-LD NewsArticle schema, og:site_name, og:locale, og:image on homepage, favicon
 """
 
@@ -16,7 +16,6 @@ import os
 import json
 import time
 import re
-import hashlib
 import urllib.parse
 import xml.etree.ElementTree as ET
 import urllib.request
@@ -31,6 +30,7 @@ except ImportError:
     print("google-genai not installed — Gemini unavailable")
 
 import generate_editor_note
+import generate_title_card
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
 SITE_URL        = "https://catchthebrief.com"
@@ -131,40 +131,24 @@ def card_image_html(image_url, image_alt, category):
     return f'<div class="card-img-placeholder" style="{gradient}">{emoji}</div>'
 
 def get_default_image(category):
-    defaults = {
-        "AI & ML":         "/images/defaults/ai.jpg",
-        "Startup Funding": "/images/defaults/startup.jpg",
-        "Digital India":   "/images/defaults/policy.jpg",
-        "Product Launch":  "/images/defaults/product.jpg",
-        "India Tech":      "/images/defaults/tech.jpg",
-    }
-    return defaults.get(category, "/images/defaults/tech.jpg")
+    """Absolute URL of the site-wide fallback OG card.
 
-# ─── AI IMAGE GENERATION (Pollinations.AI) ───────────────────────────────────
-
-def generate_ai_image_url(title, category, slug):
-    """Return a deterministic Pollinations.AI image URL for an article.
-
-    Uses slug as the seed source so the same article always gets the same image.
-    The URL is embedded directly in HTML — no file download needed.
-    Pollinations caches by prompt+seed, so repeat page loads are fast.
+    Session 13: branded title cards replace per-category default JPGs. We now
+    point every category at the same generated og-default.png. The fallback is
+    only used if a per-article title card failed to render.
     """
-    hints = {
-        "AI & ML":         "artificial intelligence India technology abstract blue modern",
-        "Startup Funding": "India startup business funding investment growth modern",
-        "Digital India":   "India digital innovation technology government modern",
-        "Product Launch":  "India tech product launch innovation modern design",
-        "India Tech":      "India technology industry digital innovation modern",
-    }
-    hint  = hints.get(category, "India technology news modern digital")
-    clean = re.sub(r"[^a-zA-Z0-9 ]", " ", title)[:50].strip()
-    prompt  = f"{clean} {hint} editorial illustration flat design"
-    encoded = urllib.parse.quote(prompt)
-    seed    = int(hashlib.md5(slug.encode()).hexdigest()[:6], 16) % 99999 + 1
-    return (
-        f"https://image.pollinations.ai/prompt/{encoded}"
-        f"?width=1200&height=630&nologo=true&seed={seed}"
-    )
+    return f"{SITE_URL}/images/og-default.png"
+
+# ─── TITLE CARD GENERATION (Session 13) ──────────────────────────────────────
+
+def generate_title_card_url(title, category, slug):
+    """Generate a branded 1200x630 PNG title card and return its absolute URL.
+
+    Falls back to the site-wide og-default.png if Pillow isn't installed or
+    the renderer fails (so the page still has a valid og:image).
+    """
+    url = generate_title_card.build_for_article(title, category, slug)
+    return url or f"{SITE_URL}/images/og-default.png"
 
 # ─── ARTICLE BODY EXTRACTION (for richer AI context) ─────────────────────────
 
@@ -927,8 +911,10 @@ def save_archive(briefs_data, now):
 
 # ─── ARCHIVE PAGE SHELL (shared by index + day pages) ────────────────────────
 
-def _archive_page_html(title, description, canonical, og_title, content_html):
+def _archive_page_html(title, description, canonical, og_title, content_html, og_image=None):
     """Shared HTML shell for all archive pages."""
+    if not og_image:
+        og_image = f"{SITE_URL}/images/og-default.png"
     return f"""<!DOCTYPE html>
 <html lang="en-IN">
 <head>
@@ -939,8 +925,13 @@ def _archive_page_html(title, description, canonical, og_title, content_html):
   <meta property="og:description" content="{description}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{canonical}">
+  <meta property="og:image" content="{og_image}">
   <meta property="og:site_name" content="CatchTheBrief">
   <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{og_title}">
+  <meta name="twitter:description" content="{description}">
+  <meta name="twitter:image" content="{og_image}">
   <link rel="canonical" href="{canonical}">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1054,12 +1045,14 @@ def generate_day_archive_page(archive_data):
         f'      <ul class="brief-list">{"".join(items)}</ul>\n'
         f'    </div>'
     )
+    day_card_url = generate_title_card.build_for_day(date_str, brief_count=len(briefs)) if date_str else ""
     html = _archive_page_html(
         title       = f"{nice_date} — CatchTheBrief",
-        description = f"5 India tech &amp; startup briefs from {nice_date} — CatchTheBrief.",
+        description = f"{len(briefs)} India tech &amp; startup briefs from {nice_date} — CatchTheBrief.",
         canonical   = f"{SITE_URL}/archive/{date_str}.html",
         og_title    = f"{nice_date} — CatchTheBrief",
         content_html = content,
+        og_image    = day_card_url or None,
     )
     out = ARCHIVE_DIR / f"{date_str}.html"
     out.write_text(html, encoding="utf-8")
@@ -1174,6 +1167,11 @@ def main():
     ARTICLES_DIR.mkdir(exist_ok=True)
     ARCHIVE_DIR.mkdir(exist_ok=True)
 
+    # Ensure the site-wide fallback OG card exists (Session 13).
+    default_card = generate_title_card.build_default()
+    if default_card:
+        print(f"  Default OG card ready: {default_card}")
+
     now = ist_now()
 
     # ── Read candidates ───────────────────────────────────────────────────────
@@ -1198,8 +1196,8 @@ def main():
         print(f"\n  Article {i+1}/{len(candidates)}: {candidate['title'][:70]}")
         brief     = generate_brief(candidate, gemini, groq, manual_briefs)
         slug      = date_slug(date_str, brief["title"])
-        image_url = generate_ai_image_url(brief["title"], brief["category"], slug)
-        print(f"  AI image URL generated (seed deterministic)")
+        image_url = generate_title_card_url(brief["title"], brief["category"], slug)
+        print(f"  Title card rendered: {image_url}")
         briefs_data.append((brief, image_url, slug))
         time.sleep(1.5)
 

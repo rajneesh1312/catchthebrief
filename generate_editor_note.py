@@ -141,6 +141,15 @@ def _render_note_page(note: dict, others: list[dict]) -> str:
         return ""
     template = TEMPLATE_PATH.read_text(encoding="utf-8")
     canonical = f"{SITE_URL}/editor-notes/{note['slug']}.html"
+    # Per-note branded OG image (Session 13).
+    try:
+        import generate_title_card
+        og_image = generate_title_card.build_for_editor_note(note["title"], note["date"])
+    except Exception as e:
+        print(f"  editor-notes: title card render failed: {e}")
+        og_image = ""
+    if not og_image:
+        og_image = f"{SITE_URL}/images/og-default.png"
     other_items = []
     for o in others:
         if o["date"] == note["date"]:
@@ -161,6 +170,7 @@ def _render_note_page(note: dict, others: list[dict]) -> str:
         "{{TITLE_URL_ENCODED}}": urllib.parse.quote(note["title"]),
         "{{META_DESCRIPTION}}":  html.escape(note["excerpt"], quote=True),
         "{{CANONICAL_URL}}":     canonical,
+        "{{OG_IMAGE}}":          og_image,
         "{{ISO_DATE}}":          note["date"],
         "{{NICE_DATE}}":         note["nice_date"],
         "{{BODY_HTML}}":         note["body_html"],
