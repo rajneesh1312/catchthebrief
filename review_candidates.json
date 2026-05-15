@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-14T23:47:54.820539+05:30",
+  "generated_at": "2026-05-15T23:37:53.942701+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,96 +24,103 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "Maharashtra Transport Minister seeks shutdown of Ola, Uber, Rapido ‘bike taxi’ services",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/05/223-maharashtra-transport-minister-shutdown-ola-uber-rapido-bike-taxi/",
-      "summary": "In his letter to the ADG of Police, Maharashtra Cyber, the transport minister alleged that the platforms have been operating passenger transport servi"
-    },
-    {
-      "rank": 2,
-      "title": "The new startup stack: From data pipelines to agentic AI systems",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/05/startup-stack-data-pipelines-agentic-ai-systems",
-      "summary": "At a Snowflake x AWS Mixer, founders and experts discussed the rise of agentic AI, decision-grade data, and the next startup stack.\n\n"
-    },
-    {
-      "rank": 3,
-      "title": "OpenAI backs kids safety law, says AI must avoid social media’s failures",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/05/223-openai-backs-kids-online-safety-act-ai-not-repeat-social-media-mistakes/",
-      "summary": "OpenAI has endorsed the Kids Online Safety Act and new AI safety bills while positioning artificial intelligence as essential public infrastructure.\nT"
-    },
-    {
-      "rank": 4,
-      "title": "D2C 3.0: The New Rules Of India’s D2C Economy",
-      "source": "Inc42",
-      "url": "https://inc42.com/features/d2c-3-0-the-new-rules-of-indias-d2c-economy/",
-      "summary": "India’s direct-to-consumer (D2C) ecosystem is entering a new phase. A decade ago, most D2C brands were built around Instagram marketing,&#8230;"
-    },
-    {
-      "rank": 5,
-      "title": "Why Vijay Sales’ billionaire owners have no use for a family office—or even a wealth manager",
-      "source": "The Ken",
-      "url": "https://the-ken.com/story/why-vijay-sales-billionaire-owners-have-no-use-for-a-family-office-or-even-a-wealth-manager/",
-      "summary": "The post Why Vijay Sales’ billionaire owners have no use for a family office—or even a wealth manager appeared first on The Ken.\n"
-    }
-  ],
-  "remaining_candidates": [
-    {
-      "rank": 6,
       "title": "How Karnataka’s merchants are using digital payments to grow faster",
       "source": "YourStory",
       "url": "https://yourstory.com/2026/05/how-karnatakas-merchants-using-digital-payments-grow-faster",
       "summary": "\n\nFrom a flower stall and a family-run saree store to an expanding ice cream chain, businesses across Karnataka are using digital payments to streamli"
     },
     {
-      "rank": 7,
-      "title": "Inside VGU’s bet on Tier II founders and Rajasthan’s startup future",
+      "rank": 2,
+      "title": "Nazara Bulk Deal: Zerodha Buys Shares Worth ₹93 Cr, Promoter Mitter Infotech Offloads Stake",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/nazara-bulk-deal-zerodha-buys-shares-worth-%e2%82%b993-cr-promoter-mitter-infotech-offloads-stake/",
+      "summary": "Discount brokerage company Zerodha (Zerodha Broking Ltd) has purchased over 35 Lakh shares of listed gaming firm Nazara Technologies on&#8230;"
+    },
+    {
+      "rank": 3,
+      "title": "WhatsApp Reportedly Begins Beta Testing View-Once Disappearing Messages Feature on iOS",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/apps/news/whatsapp-for-ios-beta-after-reading-disappearing-messages-report-11501106",
+      "summary": "Meta-owned WhatsApp is rolling out a new disappearing messages option to some iPhone beta testers. The feature, previously spotted on Android, lets us"
+    },
+    {
+      "rank": 4,
+      "title": "Sony & Jio say FAST services are OTT, oppose TRAI’s proposal",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/05/223-sony-jio-fast-services-ott-trai-proposal/",
+      "summary": "While Jio said that FAST is OTT because it is delivered over the public internet, Sony underlined that FAST operates at the application layer and is s"
+    },
+    {
+      "rank": 5,
+      "title": "Shadowfax sees quick commerce as next growth engine, plans to add 100 dark stores in FY27",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/05/223-shadowfax-quick-commerce-dark-store-expansion-fy27/",
+      "summary": "Shadowfax plans to launch 100 dark stores in FY27 as it scales its vertical quick commerce ambitions.\nThe post Shadowfax sees quick commerce as next g"
+    }
+  ],
+  "remaining_candidates": [
+    {
+      "rank": 6,
+      "title": "Freshworks experts reveal the three signs your IT team is ready to modernize",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/05/vgus-tier-ii-founders-rajasthans-startup-future",
-      "summary": "As India’s startup ecosystem moves beyond just metro cities, Jaipur-based Vivekananda Global University is betting that founders no longer need to lea"
+      "url": "https://yourstory.com/2026/05/freshworks-experts-reveal-three-signs-it-team-modernize",
+      "summary": "Freshworks experts Vish Mehta and Reddy Ramprakash break down what it takes to modernize IT service management without adding more chaos.\n"
+    },
+    {
+      "rank": 7,
+      "title": "AONMeetings bets big on India with 450-partner push and browser-based meeting rooms",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/05/aonmeetings-bets-big-india-450-partner-push-browser-based-meeting-rooms",
+      "summary": "\n\nHIPAA-compliant conferencing platform AONMeetings has partnered with 3F Magnus Tech to expand across India while launching a hardware-free conferenc"
     },
     {
       "rank": 8,
-      "title": "Goldman Sachs Dumps Jio Financial Services Shares In ₹62 Cr Block Deal",
+      "title": "Mobavenue AI Q4: PAT Zooms 60% To  ₹8.4 Cr, Revenue Increases 42%",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/goldman-sachs-dumps-jio-financial-services-shares-in-%e2%82%b962-cr-block-deal/",
-      "summary": "Financial services giant Goldman Sachs today offloaded Jio Financial Services (JFS) shares worth ₹62 Cr via a block deal.  As&#8230;"
+      "url": "https://inc42.com/buzz/mobavenue-ai-q4-pat-zooms-60-to-%e2%82%b98-4-cr-revenue-increases-42/",
+      "summary": "Listed adtech company Mobavenue AI Tech’s net profit for the March 2026 quarter (Q4 FY26) jumped 60% to ₹8.4 Cr&#8230;"
     },
     {
       "rank": 9,
-      "title": "Shadowfax To Add 85 Dark Stores, Expand Network To 100 In FY27",
+      "title": "Oracle’s Palanivel Saravanan On Building AI-Ready Infrastructure For Startups to Scale",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/shadowfax-to-add-85-dark-stores-expand-network-to-100-in-fy27/",
-      "summary": "Logistics major Shadowfax plans to scale its dark store network to 100 stores from the current 15 in FY27 as&#8230;"
+      "url": "https://inc42.com/features/oracles-palanivel-saravanan-on-building-ai-ready-infrastructure-for-startups-to-scale/",
+      "summary": "Over the past decade, India’s cloud ecosystem has moved from being an enterprise-led, cost-optimisation layer to becoming a foundational driver&#8230;"
     },
     {
       "rank": 10,
-      "title": "New Study Suggests Uranus and Neptune May Contain More Rock Than Ice",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/science/news/new-study-suggests-uranus-and-neptune-may-not-be-ice-giants-after-all-11490842",
-      "summary": "New models suggest Uranus and Neptune may contain significantly more rock than ice beneath their atmospheres. The findings challenge decades of planet"
+      "title": "Can ‘drug visas’ soon outgrow drug manufacturing? This pharma company is betting on it",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/can-drug-visas-soon-outgrow-drug-manufacturing-this-pharma-company-is-betting-on-it/",
+      "summary": "The post Can ‘drug visas’ soon outgrow drug manufacturing? This pharma company is betting on it appeared first on The Ken.\n"
     },
     {
       "rank": 11,
-      "title": "Forza Horizon 6 Launch: Release Timings, Price, Ratings and Everything You Need to Know",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/games/news/forza-horizon-6-launch-timing-price-review-score-highest-rated-game-2026-11495955",
-      "summary": "Forza Horizon 6 launch is upon us. Ahead of release, Playground Games has revealed global release timings for the game. Forza Horizon 6 reviews are ou"
+      "title": "Can Adani do with apples what Mahindra did with grapes?",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/can-adani-do-for-apples-what-mahindra-did-for-grapes/",
+      "summary": "The post Can Adani do with apples what Mahindra did with grapes? appeared first on The Ken.\n"
     },
     {
       "rank": 12,
-      "title": "Apple in Talks to Upgrade 2028 iPhone With More Advanced Quad-Curved OLED Display: Report",
+      "title": "Scientists Solve Venus Cloud Puzzle Using Simple Fluid Dynamics",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/news/apple-2028-iphone-display-expected-advanced-quad-curved-oled-panel-samsung-lg-report-11495842",
-      "summary": "Apple is reportedly developing a more advanced OLED display for a 2028 iPhone that could reduce distortion and brightness loss around curved edges. Th"
+      "url": "https://www.gadgets360.com/science/news/scientists-solve-venus-cloud-mystery-using-a-kitchen-sink-physics-effect-11493791",
+      "summary": "Scientists discovered that a giant atmospheric wave on Venus behaves like a hydraulic jump seen in kitchen sinks. The process may explain the planet’s"
     },
     {
       "rank": 13,
-      "title": "Bihar court upholds producers’ rights over film and music catalogues",
+      "title": "Subnautica 2 Sells 2 Million Copies Within 12 Hours of Early Access Launch",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/games/news/subnautica-2-sells-2-million-copies-early-access-launch-unknown-worlds-11501127",
+      "summary": "Subnautica 2 has sold 2 million copies in just 12 hours after its early access launch. The survival title released in early access on May 14 on PC and"
+    },
+    {
+      "rank": 14,
+      "title": "Delhi HC refuses to stop ‘Dhurandhar’ OTT release  in “Tirchi Topiwale” copyright dispute",
       "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/05/223-bihar-court-upholds-producers-rights/",
-      "summary": "A Bihar court granted interim relief to Puja Entertainment in a major dispute over Bollywood film and music rights.\nThe post Bihar court upholds produ"
+      "url": "https://www.medianama.com/2026/05/223-delhi-hc-stop-dhurandhar-ott-tirchi-topiwale-copyright/",
+      "summary": "Refusing to stop the Dhurandhar's OTT release, the court said that the suppression of material facts weakened the interim relief claim as they remaine"
     }
   ]
 }
