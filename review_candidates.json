@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T23:50:38.228784+05:30",
+  "generated_at": "2026-05-22T23:47:20.995822+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,96 +24,89 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "NVIDIA’s Huang says world will have ‘billions of agents’ as AI boom lifts fiscal results",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/05/nvidia-jensen-huang-world-billions-of-agents-ai-drives-q1-earnings",
-      "summary": "NVIDIA reported a strong first quarter as its net income soared 211% year-on-year to $58.3 billion, and revenue rose 85% to $81.6 billion."
+      "title": "Elevation Capital Offloads Paytm Shares Worth ₹630 Cr",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/elevation-capital-offloads-paytm-shares-worth-%e2%82%b9630-cr/",
+      "summary": "Paytm early investor Elevation Capital offloaded 56.22 Lakh in a block deal valuing each share at ₹1,120.65. The investor raked&#8230;"
     },
     {
       "rank": 2,
-      "title": "Innovaccer Buys CaduceusHealth To Expand AI-Led Revenue Cycle Management",
+      "title": "Exclusive: Gabit Nets ₹36 Cr To Expand Wearables, Nutrition & Skincare Play",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/innovaccer-buys-caduceushealth-to-expand-ai-led-revenue-cycle-management/",
-      "summary": "Healthtech unicorn Innovaccer has acquired the assets of US-based revenue cycle management (RCM) services provider CaduceusHealth, marking its fifth a"
+      "url": "https://inc42.com/buzz/exclusive-gabit-nets-%e2%82%b936-cr-to-expand-wearables-nutrition-skincare-play/",
+      "summary": "Wearable healthtech startup Gabit has raised around ₹36.2 Cr (about $3.7 Mn) in a fresh funding round from a clutch&#8230;"
     },
     {
       "rank": 3,
-      "title": "Agent Traps: Enterprise Agentic AI Wave Brings In New Threats",
-      "source": "Inc42",
-      "url": "https://inc42.com/features/agent-traps-enterprise-agentic-ai-wave-brings-in-new-threats/",
-      "summary": "In April 2026, Vercel, a cloud application deployment platform, disclosed a security incident that did not originate within its own&#8230;"
+      "title": "Maharashtra lured Amazon, NTT with cheap green power. Then it changed the data-centre deal",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/solar-rules-changed-in-maharashtra/",
+      "summary": "The post Maharashtra lured Amazon, NTT with cheap green power. Then it changed the data-centre deal appeared first on The Ken.\n"
     },
     {
       "rank": 4,
-      "title": "Two ex-Tesla engineers show what is waste for Reliance or Praj is gold for them",
-      "source": "The Ken",
-      "url": "https://the-ken.com/story/two-ex-tesla-engineers-show-what-is-waste-for-reliance-or-praj-is-gold-for-them/",
-      "summary": "The post Two ex-Tesla engineers show what is waste for Reliance or Praj is gold for them appeared first on The Ken.\n"
+      "title": "Lenskart rolls out AI glasses amid mounting privacy concerns: Q4 FY26 earnings call",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/05/223-lenskart-ai-glasses-amid-mounting-privacy-concerns-q4-fy26-earnings-call/",
+      "summary": "Lenskart has begun rolling out its AI smart glasses brand 'B by Lenskart' with 30k pre-orders, as it pivots to a consumer-AI model and expands globall"
     },
     {
       "rank": 5,
-      "title": "MakeMyTrip Q4FY26: Myra scales to 80,000 daily conversations, now a full transaction agent",
+      "title": "Calcutta HC refuses to order OpenAI to show IndiaMart links on ChatGPT: what this means",
       "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/05/223-makemytrip-q4fy26-myra-80000-daily-conversations-transaction-agent/",
-      "summary": "In the Q4FY26 earnings call, MakeMyTrip CEO revealed how its AI agent Myra has scaled into a transaction agent directly assisting with over 200,000 bo"
+      "url": "https://www.medianama.com/2026/05/223-calcutta-hc-rejects-indiamart-plea-against-chatgpt-link-exclusion/",
+      "summary": "The Calcutta High Court has ruled on IndiaMART’s plea against ChatGPT link exclusion, but the order leaves bigger questions unanswered.\nThe post Calcu"
     }
   ],
   "remaining_candidates": [
     {
       "rank": 6,
-      "title": "It Always Seems Impossible Until It’s Done: Meaning and Modern Uses",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/05/always-seems-impossible-unless-done",
-      "summary": "In fast-moving workplaces and classrooms, complex goals often look unmanageable: shipping a new product, retraining for a different career"
+      "title": "Finnish phone maker HMD bundles Indian AI chatbot onto new smartphone in push to reach local market",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/05/21/finnish-phone-maker-hmd-bundles-indian-ai-chatbot-onto-new-smartphone-in-push-to-reach-local-market/",
+      "summary": "The partnership is a potential testing ground for both companies to gauge the appetite for an India-focused chatbot."
     },
     {
       "rank": 7,
-      "title": "AI stands for attention impairment",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/05/ai-stands-for-attention-impairment",
-      "summary": "In an age of infinite information, deep thinking increasingly feels endangered. The quiet erosion of attention, the decline of deep reading, and the h"
+      "title": "Madison India Capital Partially Exits Pine Labs Via ₹357 Cr Block Deal",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/madison-india-capital-partially-exits-pine-labs-via-%e2%82%b9357-cr-block-deal/",
+      "summary": "Madison India Capital today offloaded 2.48 Cr shares in fintech major Pine Labs in a block deal worth ₹356.86 Cr. &#8230;"
     },
     {
       "rank": 8,
-      "title": "Wakefit Q4: PAT Skyrockets To ₹122 Cr, Revenue Up 14% YoY",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/wakefit-q4-pat-skyrockets-to-%e2%82%b9122-cr-revenue-up-14-yoy/",
-      "summary": "Mattress brand Wakefit&#8217;s consolidated profit after tax (PAT) skyrocketed to ₹121.8 Cr against a loss of ₹26.2 Cr in the&#8230;"
+      "title": "NEET’s switch from pen-and-paper to computer: damned if you do, damned if you don’t",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/neets-switch-from-pen-and-paper-to-computer-damned-if-you-do-damned-if-you-dont/",
+      "summary": "The post NEET&#8217;s switch from pen-and-paper to computer: damned if you do, damned if you don&#8217;t appeared first on The Ken.\n"
     },
     {
       "rank": 9,
-      "title": "Scientists Discover New Fuel-Saving Route to the Moon",
+      "title": "Mysterious Stacked Rocks Spotted by NASA Perseverance Rover on Mars",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/science/news/scientists-discover-new-fuel-saving-route-to-the-moon-11528118",
-      "summary": "A new study has revealed a fuel-efficient path to the Moon using hidden gravitational corridors in space. The route saves propellant, lowers mission c"
+      "url": "https://www.gadgets360.com/science/news/nasa-s-perseverance-rover-spots-strange-stacked-rock-on-mars-11532305",
+      "summary": "NASA’s Perseverance rover photographed a strange rock formation on Mars that appears to show three stacked rocks. Scientists believe wind and ancient "
     },
     {
       "rank": 10,
-      "title": "Madhu Vidhu OTT Release: Where to Watch, Plot, Cast, IMDb Rating, and More",
+      "title": "Meta Launches Forum App as a Reddit-Like Platform for Discussions With AI-Powered Assistant for Admins",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/entertainment/news/madhu-vidhu-ott-release-where-to-watch-plot-cast-imdb-rating-and-malayalam-family-drama-explained-11528455",
-      "summary": "Madhu Vidhu explores the highs and lows of married life through a heartfelt story of love, adjustment, and emotional struggles."
+      "url": "https://www.gadgets360.com/apps/news/meta-forum-app-facebook-listing-store-ios-features-11533633",
+      "summary": "Meta has silently listed a new Forum app on Apple's App Store. This new social networking platform is designed to work like Reddit. Users can sign in "
     },
     {
       "rank": 11,
-      "title": "Oppo Find X9s Review: A Premium Smartphone That’s Almost ‘Pro’",
+      "title": "Xiaomi 17T Series Teased to Arrive in Two Display Variants; Colour Options Revealed Ahead of Debut",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/reviews/oppo-find-x9s-review-11527820",
-      "summary": "Oppo’s Find X9s is a good attempt at tackling the ongoing memory crisis and coming up with the eventual successor to its Find X9. It offers a good bal"
+      "url": "https://www.gadgets360.com/mobiles/news/xiaomi-17t-series-design-colour-options-display-variants-teased-specifications-features-11533522",
+      "summary": "Xiaomi 17T series will be launched in select global markets in two display variants, the smartphone maker announced on Friday. Additionally, the small"
     },
     {
       "rank": 12,
-      "title": "Delhi HC questions Raghav Chadha’s personality rights plea, reserves order",
+      "title": "Can content moderation be a solution for children’s online harms? #NAMA",
       "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/05/223-delhi-hc-raghav-chadha-personality-rights-plea/",
-      "summary": "Reserving the order, Justice Subramonium Prasad said the content doesn't show a personality rights violation, as it is just criticism of Raghav Chadha"
-    },
-    {
-      "rank": 13,
-      "title": "Digital Literacy: How parents and schools can build children’s agency against online harms #NAMA",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/05/223-parents-schools-social-media-curbs-children/",
-      "summary": "A Bengaluru roundtable on child online safety explored age verification, digital literacy, parental responsibility and the role of schools in reducing"
+      "url": "https://www.medianama.com/2026/05/223-content-moderation-solution-children-online-harms/",
+      "summary": "When age verification fails &#038; automated filters get bypassed, how do we ensure child safety online? Experts at the MediaNama event discussed whet"
     }
   ]
 }
