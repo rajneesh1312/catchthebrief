@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T02:14:51.544514+05:30",
+  "generated_at": "2026-06-03T01:26:51.772506+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,96 +24,96 @@
   "top_5": [
     {
       "rank": 1,
+      "title": "VC funding into Indian startups halves YoY in May",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/06/vc-funding-into-indian-startups-halves-yoy-in-may",
+      "summary": "The lower number of deals and even lesser high value transactions saw venture capital inflow into Indian startups remaining modest for May 2026.\n"
+    },
+    {
+      "rank": 2,
+      "title": "Exclusive: Sarvam AI To Open Voice AI Agents Platform For Public Use",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/exclusive-sarvam-ai-to-open-voice-ai-agents-platform-for-public-use/",
+      "summary": "Indian AI startup Sarvam AI is planning to open up access for its voice AI agents platform to the general&#8230;"
+    },
+    {
+      "rank": 3,
+      "title": "Govt unlikely to dilute AI labeling rule for social media platforms: reports",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/06/223-govt-dilute-ai-labeling-rule-social-media/",
+      "summary": "A Govt. official said that the ministry \"won't compromise on the AI labeling rule,\" and it is trying to \"introduce a schedule identifying advisories\" "
+    },
+    {
+      "rank": 4,
+      "title": "Apple removes Sharechat’s Vibely from App Store over anonymous chat concerns",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/06/223-apple-removes-sharechat-vibely-app-store/",
+      "summary": "Apple has removed Vibely from the App Store, citing violations of policies governing anonymous interactions and user-generated content.\nThe post Apple"
+    },
+    {
+      "rank": 5,
+      "title": "Equity investing is sold as a must. The affluent can do just fine without it",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/equity-investing-is-sold-as-a-must-the-affluent-can-do-just-fine-without-it/",
+      "summary": "The post Equity investing is sold as a must. The affluent can do just fine without it appeared first on The Ken.\n"
+    }
+  ],
+  "remaining_candidates": [
+    {
+      "rank": 6,
+      "title": "When every minute counts: How the PM RAHAT scheme is transforming emergency care in India",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/06/pm-rahat-scheme-transforming-emergency-care-india",
+      "summary": "Designed to eliminate delays in trauma care, the PM Rahat Scheme aligns citizens, hospitals, and systems around one urgent goal: life-saving treatment"
+    },
+    {
+      "rank": 7,
       "title": "From a Koramangala 2BHK to Rs 100 Cr ARR: How 3 CAs built RegisterKaro",
       "source": "YourStory",
       "url": "https://yourstory.com/2026/05/from-koramangala-2bhk-100-cr-arr-how-3-cas-built-registerkaro",
       "summary": "\n\nStarted during the second wave of COVID-19, RegisterKaro has grown from a small WhatsApp-led operation into a 500-member legaltech platform incorpor"
     },
     {
-      "rank": 2,
-      "title": "Ola Electric Opens QIP, Sets Floor Price Of ₹37.74 Floor Price",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/ola-electric-opens-qip-sets-floor-price-of-%e2%82%b937-74-floor-price/",
-      "summary": "Ola Electric has launched its qualified institutional placement (QIP) to bolster its position in the E2W market.  The company has&#8230;"
-    },
-    {
-      "rank": 3,
-      "title": "Amazon Now Replaces Google Maps With MapmyIndia’s Mappls APIs",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/amazon-now-replaces-google-maps-with-mapmyindias-mappls-apis/",
-      "summary": "MapmyIndia is deepening its push into India&#8217;s booming quick commerce sector. After Zepto, the company has onboarded Amazon Now as&#8230;"
-    },
-    {
-      "rank": 4,
-      "title": "Explainer: Delhi HC orders Google de-indexing, Indian Kanoon search restrictions in right to be forgotten case",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/06/223-google-de-indexing-indian-kanoon-search-restrictions-right-to-be-forgotten/",
-      "summary": "The court directed Google to de-index relevant content judgements related to name-based search results &#038; asked Indian Kanoon to make the orders a"
-    },
-    {
-      "rank": 5,
-      "title": "Who is liable for spoiled food on quick-commerce apps? FSSAI sends notice to Blinkit",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/06/223-spoiled-food-quick-commerce-apps-fssai-notice-blinkit/",
-      "summary": "Citing sections 26 &#038; 27 of the FSS Act, FSSAI asked Blinkit to provide a formal explanation of the spoiled food complaints and submit a comprehen"
-    }
-  ],
-  "remaining_candidates": [
-    {
-      "rank": 6,
-      "title": "Why VGU’s student founders are building from Rajasthan, not leaving it",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/06/vgus-student-founders-building-from-rajasthan",
-      "summary": "From agritech and service innovation to heritage-led consumer brands, VGU’s student founders are building startups rooted in Rajasthan’s realities and"
-    },
-    {
-      "rank": 7,
-      "title": "Tie a Knot and Hang On: Practical Resilience from Roosevelt",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/06/tie-knot-hang-practical-resilience",
-      "summary": "In a world of shifting markets, exam stress, and family pressures, the ground can feel slippery. The line, “When you come to the end of your rope"
-    },
-    {
       "rank": 8,
-      "title": "LVX Bets On AI To Transform Private Market Dealmaking",
+      "title": "Amazon Rolls Out Ads On Prime Music",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/lvx-bets-on-ai-to-transform-private-market-dealmaking/",
-      "summary": "Bengaluru-based VC firm LVX (formerly LetsVenture) has unveiled Elvix, an AI-powered intelligence platform designed to simplify deal evaluation and de"
+      "url": "https://inc42.com/buzz/amazon-puts-ads-on-prime-music-pulls-offline-listening/",
+      "summary": "Amazon India will introduce advertisements on its Prime Music service and remove offline download support for Prime members in India&#8230;"
     },
     {
       "rank": 9,
-      "title": "Sun Pharma bought the dip in its $11.7B Organon deal. Just not the right kind of dip",
-      "source": "The Ken",
-      "url": "https://the-ken.com/story/sun-pharma-bought-the-dip-in-its-11-7b-organon-deal-just-not-the-right-kind-of-dip/",
-      "summary": "The post Sun Pharma bought the dip in its $11.7B Organon deal. Just not the right kind of dip appeared first on The Ken.\n"
+      "title": "TRAI’s Early Assessment Suggests That Airtel’s Priority Postpaid Plan Doesn’t Violate Net Neutrality: Report",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/trais-early-assessment-suggests-that-airtels-priority-postpaid-plan-doesnt-violate-net-neutrality-report/",
+      "summary": "About a month after Airtel&#8217;s Priority Postpaid stirred debate over net neutrality, the Telecom Regulatory Authority of India (TRAI)’s preliminar"
     },
     {
       "rank": 10,
-      "title": "Find X9 Ultra Review: Oppo's Crown Jewel",
+      "title": "Nothing Ear 3a, CMF Buds Neo Spotted on Regulatory Databases Ahead of Anticipated Debut",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/reviews/oppo-find-x9-ultra-review-11548534",
-      "summary": "The Oppo Find X9 Ultra is the Android flagship that should appeal to camera enthusiasts with a decent budget who don't want to compromise on any aspec"
+      "url": "https://www.gadgets360.com/audio/news/nothing-ear-3a-cmf-buds-neo-sdppi-bis-listing-expected-launch-report-11581450",
+      "summary": "Nothing Ear 3a and CMF Buds Neo have appeared on certification platforms, suggesting that both earbuds could launch soon. The Nothing Ear 3a was spott"
     },
     {
       "rank": 11,
-      "title": "Xiaomi 17T India Launch Roundup: Launch Date, Expected Specifications",
+      "title": "Samsung Galaxy Z Fold 8, Galaxy Z Fold 8 Ultra Could Feature Vastly Different Designs, Leaked Dummy Units Suggest",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/features/xiaomi-17t-roundup-india-launch-date-expected-specifications-11576503",
-      "summary": "Xiaomi 17T is scheduled to launch in India on June 4. Ahead of its debut, the company has confirmed a MediaTek Dimensity 8500-Ultra chipset, Leica-bac"
+      "url": "https://www.gadgets360.com/mobiles/news/samsung-galaxy-z-fold-8-ultra-series-design-dummy-units-renders-leak-11581225",
+      "summary": "The design of Samsung Galaxy Z Fold 8 and Fold 8 Ultra has leaked again through dummies. The renders offer a side-by-side look at the upcoming foldabl"
     },
     {
       "rank": 12,
-      "title": "WWE 2K26 Review: The Show Must Go On",
+      "title": "How to Check CIBIL Score Online via Different Platforms: A Step-by-Step Guide",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/games/reviews/wwe-2k26-review2k-visual-concepts-ps5-11576232",
-      "summary": "WWE 2K26's core gameplay remains fun and the action feels more authentic than ever. Improved presentation, through both visuals and sound, make WWE 2K"
+      "url": "https://www.gadgets360.com/how-to/features/how-to-check-cibil-score-online-a-step-by-step-guide-11581112",
+      "summary": "The Credit Information Bureau of India Limited is the agency that provides your CIBIL score, which helps banks determine whether you will be able to r"
     },
     {
       "rank": 13,
-      "title": "Smart TV makers should stay outside the proposed television streaming rules, manufacturers tell TRAI",
+      "title": "Zee5’s digital business breaks even, said CEO Punit Goenka",
       "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/06/223-smart-tv-makers-stay-outside-proposed-television-streaming-rules-manufacturers-trai/",
-      "summary": "LG and MAIT have urged TRAI to exclude TV manufacturers from any ALTD and FAST regulatory framework, arguing that app providers — not device makers — "
+      "url": "https://www.medianama.com/2026/06/223-zee5s-digital-business-breaks-even-ceo-punit-goenka/",
+      "summary": "Zee Entertainment reported strong digital momentum in FY26, with ZEE5 achieving breakeven and operational profitability. The company is also expanding"
     }
   ]
 }
