@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T00:43:05.649674+05:30",
+  "generated_at": "2026-06-12T00:50:23.661297+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,96 +24,103 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "Reliance partners with Meta to build a 168 MW data center in Gujarat",
+      "title": "Delhi HC orders Vercel, GitHub to remove fake IndiaMART websites, blocks WhatsApp accounts",
       "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/06/223-reliance-meta-build-a-168-mw-data-center-gujarat/",
-      "summary": "Meta revealed that it will cover the energy and water supporting facility costs for the 168 MW data center to be built by Reliance in Jamnagar and the"
+      "url": "https://www.medianama.com/2026/06/223-delhi-hc-vercel-github-fake-indiamart-websites/",
+      "summary": "While Vercel and Netlify have been asked to disable impersonating IndiaMART sites, GitHub has been asked to block a repository of the source code of t"
     },
     {
       "rank": 2,
-      "title": "Anthropic opens Mythos-class AI to the public, but keeps high-risk capabilities behind guardrails",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/06/223-anthropic-mythos-class-ai-public-data-retention/",
-      "summary": "Both the Claude Fable 5 and Claude Mythos 5 have a mandatory 30-day data retention requirement, as Anthropic wants to defend against novel attacks and"
+      "title": "IN-SPACe Funds Three Spacetech Startups Under Technology Adoption Fund",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/in-space-funds-three-spacetech-startups-under-technology-adoption-fund/",
+      "summary": "The Indian National Space Promotion and Authorisation Centre (IN-SPACe) has picked the first set of three Indian spacetech startups for&#8230;"
     },
     {
       "rank": 3,
-      "title": "Fidelity Sells Meesho Shares Worth ₹988 Cr A Day After Lock-In Expiry",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/fidelity-sells-meesho-shares-worth-%e2%82%b9988-cr-a-day-after-lock-in-expiry/",
-      "summary": "Ecommerce major Meesho’s early backer Fidelity has offloaded its shares worth ₹988.44 Cr  from its two holding entities via a&#8230;"
+      "title": "IIT Delhi alumnus co-founded Coram AI raises $35 million in Series B",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/06/iit-delhi-alumnus-co-founded-coram-ai-raises-35-million-in-series-b",
+      "summary": "Coram AI will use the fresh capital towards AI product development, expand go-to-market teams, strengthen customer success, and grow its engineering p"
     },
     {
       "rank": 4,
-      "title": "Rivvun AI Bags $7.5 Mn To Help Enterprises Reduce Revenue Leakages",
+      "title": "After SoftBank, ADIA Offloads Lenskart Shares Worth ₹1,960 Cr",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/rivvun-ai-bags-7-5-mn-to-help-enterprise-reduce-revenue-leakages/",
-      "summary": "Enterprise tech startup Rivvun AI has raised $7.5 Mn (about ₹72 Cr ) in an oversubscribed seed round led by&#8230;"
+      "url": "https://inc42.com/buzz/after-softbank-adia-offloads-lenskart-shares-worth-%e2%82%b91960-cr/",
+      "summary": "Lenskart’s backer Abu Dhabi Investment Authority (ADIA) today offloaded 4 Cr shares in a block deal worth ₹1,960 Cr.  As&#8230;"
     },
     {
       "rank": 5,
-      "title": "Nine Indian startups join WEF's Tech Pioneers cohort",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/06/nine-indian-startups-join-wefs-tech-pioneers-cohort",
-      "summary": "The WEF said these 100 early-stage startups from 23 countries are building the infrastructure for the next era of AI and are developing breakthrough t"
+      "title": "Firstcry’s winning formula is running out of road. It keeps doubling down on it anyway",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/firstcrys-winning-formula-is-running-out-of-road-it-keeps-doubling-down-on-it-anyway/",
+      "summary": "The post Firstcry’s winning formula is running out of road. It keeps doubling down on it anyway appeared first on The Ken.\n"
     }
   ],
   "remaining_candidates": [
     {
       "rank": 6,
-      "title": "From a college dorm room to aerospace manufacturing, the RVCE duo is building India's precision future",
+      "title": "India's healthcare deep tech is ready for the world stage at Bharat Innovates 2026",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/06/aerospace-manufacturing-rvce-duo-building-indias-precision-future",
-      "summary": "Ethereal Machines builds India's precision manufacturing future — designing its own five-axis CNC machines and offering them as an on-demand service f"
+      "url": "https://yourstory.com/2026/06/indian-healthcare-biotech-startups-bharat-innovates-2026-france",
+      "summary": "When Shradha Sharma, Founder and CEO of YourStory and The Bharat Project, gathered six healthcare and biotech founders for a round table"
     },
     {
       "rank": 7,
-      "title": "Health insurance without the overspend: How to choose the right cover",
+      "title": "One prompt, one platform: How Intuit is rethinking the financial journey with agentic AI",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/03/health-insurance-without-overspend-how-choose-right-cover",
-      "summary": "\nA lower premium doesn’t always mean better value. Here’s how to balance coverage, costs, and long-term protection when choosing a health insurance pl"
+      "url": "https://yourstory.com/2026/06/intuit-rethinking-financial-journey-agentic-ai",
+      "summary": "At DevSparks Bengaluru 2026, Intuit's Aavishkar Bharara used a single relatable story to show how agentic AI can collapse fragmented financial workflo"
     },
     {
       "rank": 8,
-      "title": "Honasa Eyes ₹5,500 Cr Revenue For FY31",
+      "title": "D2C Brand Manam Chocolate Nets $9 Mn To Expand Retail Footprint",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/honasa-eyes-%e2%82%b95500-cr-revenue-for-fy31/",
-      "summary": "Honasa Consumer, the parent entity of BPC brands like Mamaearth, Aqualogica, and BBlunt, laid out its long-term vision to reach&#8230;"
+      "url": "https://inc42.com/buzz/d2c-brand-manam-chocolate-nets-9-mn-to-expand-retail-footprint/",
+      "summary": "D2C premium craft chocolate brand Manam Chocolate has raised $9 Mn (about ₹86 Cr) in its Series A funding round&#8230;"
     },
     {
       "rank": 9,
-      "title": "Blackstone’s next big IPO looks built more for its own exit than the public’s entry",
+      "title": "Anand Mahindra built an elite engg university. It isn’t attracting elite students",
       "source": "The Ken",
-      "url": "https://the-ken.com/story/blackstones-next-big-ipo-looks-built-more-for-its-own-exit-than-the-publics-entry/",
-      "summary": "The post Blackstone&#8217;s next big IPO looks built more for its own exit than the public&#8217;s entry appeared first on The Ken.\n"
+      "url": "https://the-ken.com/story/anand-mahindra-built-an-elite-engg-university-it-isnt-attracting-elite-students/",
+      "summary": "The post Anand Mahindra built an elite engg university. It isn&#8217;t attracting elite students appeared first on The Ken.\n"
     },
     {
       "rank": 10,
-      "title": "Astronomers Discover Two Galaxies That Appear to Lack Dark Matter",
+      "title": "JWST Reveals the True Identity of Mysterious Little Red Dots",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/science/news/astronomers-discover-two-galaxies-that-appear-to-lack-dark-matter-11617375",
-      "summary": "Researchers studying FCC 224 and FCC 240 in the Fornax Cluster found evidence that both galaxies contain surprisingly little dark matter. The discover"
+      "url": "https://www.gadgets360.com/science/news/jwst-reveals-the-true-identity-of-mysterious-little-red-dots-11622831",
+      "summary": "Using JWST, astronomers obtained the most detailed spectrum yet of a little red dot and found evidence that these mysterious objects are rapidly growi"
     },
     {
       "rank": 11,
-      "title": "Vivo Y05e Passes Through Thailand's NBTC Certification Database, Might Launch Soon",
+      "title": "Honor Magic 9 Series to Launch With Official Stylus Accessory, Tipster Claims",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/news/vivo-y05e-nbtc-certification-listing-specifications-features-11618333",
-      "summary": "Vivo Y05e is likely to launch soon. While Vivo remains tight-lipped about the arrival of this new Y series smartphone, it has been spotted on Thailand"
+      "url": "https://www.gadgets360.com/mobiles/news/honor-magic-9-series-pro-rsr-stylus-ai-support-leak-weibo-11623435",
+      "summary": "Honor Magic 9 series is tipped to introduce support for an official stylus accessory. The stylus is tipped to offer a range of AI-powered features. Th"
     },
     {
       "rank": 12,
-      "title": "Telegram Rolls Out Native watchOS App for Apple Watch Users With Support for Texting, Voice Messages and More",
+      "title": "Samsung Galaxy S25 Gets New Galaxy AI Features From Galaxy S26 With New One UI 8.5 Update",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/apps/news/telegram-native-apple-watch-app-for-watchos-users-release-11618273",
-      "summary": "Telegram has launched a fully native Apple Watch app, bringing direct access to chats, contacts, and messaging tools on watchOS. Users can send and re"
+      "url": "https://www.gadgets360.com/mobiles/news/samsung-one-ui-8-5-galaxy-ai-features-roll-out-galaxy-s25-11623481",
+      "summary": "Samsung has reportedly started rolling out a new One UI 8.5 update for the Galaxy S25 series in South Korea. The release adds several Galaxy AI featur"
     },
     {
       "rank": 13,
-      "title": "How Apple’s new Child Account feature raises privacy and data protection concerns",
+      "title": "Snapchat locks public Spotlight sharing for under-16 users",
       "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/06/223-apples-new-child-account-feature-raises-privacy-data-protection-concerns/",
-      "summary": "Apple unveiled a Child Account feature at WWDC, making parental controls mandatory for under-13 users, letting parents manage apps, websites, content "
+      "url": "https://www.medianama.com/2026/06/223-snapchat-public-spotlight-sharing-under-16-users/",
+      "summary": "The new Snapchat update prevents under-16s from sharing Spotlight posts with the general public and provides them a separate profile where their Stori"
+    },
+    {
+      "rank": 14,
+      "title": "Explainer: What Canada’s Safe Social Media Act means for platforms, chatbots, and children",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/06/223-canadas-safe-social-media-act-platforms-chatbots-children/",
+      "summary": "Canada tabled Bill C-34 on June 10, 2026, proposing strict digital safety rules for social media and AI chatbots, establishing a new regulator, and se"
     }
   ]
 }
