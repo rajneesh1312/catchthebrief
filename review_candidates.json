@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T23:40:41.840757+05:30",
+  "generated_at": "2026-06-27T23:08:57.092192+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,96 +24,68 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "[Weekly funding roundup June 20-26] CRED fundraise helps VC inflow to cross $1B",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/06/weekly-funding-roundup-june-20-26-cred-leads-vc-inflow-to-cross-1-billion",
-      "summary": "Venture capital funding into Indian startups crossed the $1-billion mark on a weekly basis for the first time since 2023 and this was primarily due to"
-    },
-    {
-      "rank": 2,
-      "title": "India Drops 20% Local Sourcing Rule, Keeps Security Guardrails For Satcom",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/india-drops-20-local-sourcing-rule-keeps-security-guardrails-for-satcom/",
-      "summary": "For years, the biggest question surrounding India&#8217;s satellite broadband market wasn&#8217;t whether global players such as Starlink, Eutelsat On"
-    },
-    {
-      "rank": 3,
-      "title": "[Update] After Quitting Uber, Prabhjeet Singh To Join OpenAI As India MD",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/uber-india-head-prabhjeet-singh-steps-down/",
-      "summary": "Update &#124; June 26, 22:21 IST Hours after it emerged that Prabhjeet Singh had stepped down as Uber India head,&#8230;"
-    },
-    {
-      "rank": 4,
       "title": "After Mythos suspension, India pushes for stable AI access from the US",
       "source": "MediaNama",
       "url": "https://www.medianama.com/2026/06/223-mythos-india-us-stable-ai-access/",
       "summary": "Meity Secretary S. Krishnan said that there was \"an understanding\" with the US that \"access to technology, once it is provided, will not be cut off\" a"
     },
     {
+      "rank": 2,
+      "title": "[Weekly funding roundup June 20-26] CRED fundraise helps VC inflow to cross $1B",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/06/weekly-funding-roundup-june-20-26-cred-leads-vc-inflow-to-cross-1-billion",
+      "summary": "Venture capital funding into Indian startups crossed the $1-billion mark on a weekly basis for the first time since 2023 and this was primarily due to"
+    },
+    {
+      "rank": 3,
+      "title": "How Telangana police is using air-gapped AI systems for child sexual abuse investigations",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/06/223-telangana-police-using-air-gapped-ai-systems-child-sexual-abuse-investigations/",
+      "summary": "Telangana Cyber Security Bureau deploys C-SIGHT, an offline AI platform developed with Vatins Systems, to investigate child sexual exploitation materi"
+    },
+    {
+      "rank": 4,
+      "title": "How to Use App Bubbles on Android 17 for Improved Multitasking, App Switching",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/how-to/features/how-to-use-app-bubbles-on-android-17-for-improved-multitasking-app-switching-11691855",
+      "summary": "Android 17 update brings various new features, fresh animations, and security and privacy tools. Among the many new functionalities, Google has also i"
+    },
+    {
       "rank": 5,
-      "title": "Inside India’s 90-day countdown for CBSE schools to embrace AI",
-      "source": "The Ken",
-      "url": "https://the-ken.com/story/inside-indias-90-day-countdown-for-cbse-schools-to-embrace-ai/",
-      "summary": "The post Inside India’s 90-day countdown for CBSE schools to embrace AI appeared first on The Ken.\n"
+      "title": "Smartphones Launched in India (June 2026): Motorola Edge 70 Pro+, Samsung Galaxy A27 5G and More",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/mobiles/features/smartphones-launched-in-india-june-2026-motorola-edge-70-pro-plus-samsung-galaxy-a27-5g-11691848",
+      "summary": "Motorola launched the Edge 70 Pro+ in India in June, powered by the MediaTek Dimensity 8500 chipset, while Xiaomi brought the 17T with a Leica-branded"
     }
   ],
   "remaining_candidates": [
     {
       "rank": 6,
-      "title": "Why Sachin Tendulkar is betting on sportswear built for Indian feet",
+      "title": "How Shashi Kumar built Akshayakalpa into a Rs 700 Cr enterprise with just 2,800 farmers",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/06/why-sachin-tendulkar-is-betting-on-sportswear-built-for-indian-feet",
-      "summary": "Ten X You was founded to serve everyday athletes, not professionals. The Bengaluru startup is building shoes around Indian foot shapes and taking aim "
+      "url": "https://yourstory.com/2026/06/shashi-kumar-akshayakalpa-700-crore-enterprise-2800-farmers",
+      "summary": "In this episode of the Prime Venture Partners Podcast, Shashi Kumar, Founder & CEO of Akshayakalpa, speaks about building a profitable Rs 60-crore-a-m"
     },
     {
       "rank": 7,
-      "title": "One accident, lakhs in costs: Why the right car insurance matters",
+      "title": "Why value fashion is becoming India’s dominant retail story",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/06/one-accident-lakhs-in-costs-why-the-right-car-insurance-matters",
-      "summary": "\nFrom repair bills and medical expenses to third-party liabilities, a single accident can derail your finances. Here's how the right insurance cover c"
+      "url": "https://yourstory.com/2026/06/why-value-fashion-is-becoming-indias-dominant-retail-story",
+      "summary": "Indian consumers are not merely seeking cheaper clothes. They are seeking fashionable, trend-relevant apparel at prices that feel justified by the val"
     },
     {
       "rank": 8,
-      "title": "BYJU’S Lenders Seek 30% Stake In Aakash To Settle Legal Battle: Report",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/byjus-lenders-seek-30-stake-in-aakash-to-settle-legal-battle-report/",
-      "summary": "Global lenders of the embattled edtech firm BYJU’S are in advanced talks to acquire a roughly 30% stake in Aakash&#8230;"
+      "title": "OnePlus Nord Buds 4 Review: Pro Features, Budget Price",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/audio/reviews/oneplus-nord-buds-4-review-11689951",
+      "summary": "The OnePlus Nord Buds 4 is a great budget-friendly package that punches far above its weight class. Even with all the corporate shifting happening in "
     },
     {
       "rank": 9,
-      "title": "Steam Summer Sale 2026 Best Deals: Kingdom Come: Deliverance 2, Resident Evil Requiem, Black Ops 7 and More",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/games/features/steam-summer-sale-2026-best-deals-kingdom-come-deliverance-2-black-ops-7-resident-evil-requiem-11692261",
-      "summary": "Steam Summer Sale, as expected, brings deep discounts on several popular games. Games like The Witcher 3, Far Cry 4, Ghostwire Tokyo, Dishonored, A Pl"
-    },
-    {
-      "rank": 10,
-      "title": "Microsoft Extends Windows 10 Extended Security Updates for Another Year Despite Pushing Users to Update to Windows 11",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/laptops/news/microsoft-windows-10-consumer-extended-security-updates-programme-date-extension-11691544",
-      "summary": "Microsoft's consumer ESU programme for Windows 10 users was set to provide security updates until October this year. However, Microsoft has now quietl"
-    },
-    {
-      "rank": 11,
-      "title": "ONMO+ Cloud Gaming Platform Launched in India With Pro Controller, 3-Month Subscription",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/games/news/onmo-plus-cloud-gaming-platform-price-in-india-features-specifications-11691476",
-      "summary": "OnMobile Global marked its foray into India’s cloud gaming market with the launch of ONMO+ on Friday. It is a cloud gaming platform that combines a ha"
-    },
-    {
-      "rank": 12,
       "title": "US reportedly wants OpenAI to delay GPT-5.6 rollout after restrictions on Anthropic’s models",
       "source": "MediaNama",
       "url": "https://www.medianama.com/2026/06/223-us-openai-delay-gpt-5-6-rollout/",
       "summary": "While the White House asked OpenAI to limit the GPT 5.6 release, the company revealed plans to make it available only to a small group of partners wit"
-    },
-    {
-      "rank": 13,
-      "title": "How Telangana police is using air-gapped AI systems for child sexual abuse investigations",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/06/223-telangana-police-using-air-gapped-ai-systems-child-sexual-abuse-investigations/",
-      "summary": "Telangana Cyber Security Bureau deploys C-SIGHT, an offline AI platform developed with Vatins Systems, to investigate child sexual exploitation materi"
     }
   ]
 }
