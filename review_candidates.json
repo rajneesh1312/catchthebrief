@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T23:09:24.804739+05:30",
+  "generated_at": "2026-07-18T23:01:36.918967+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,96 +24,89 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "Profitability, Geopolitical Concerns Weigh On Zepto’s IPO Valuation",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/profitability-geopolitical-concerns-weigh-on-zeptos-ipo-valuation/",
-      "summary": "Quick commerce major Zepto could make its stock market debut at a valuation significantly below its peak private valuation of&#8230;"
+      "title": "Google now lets users connect apps to AI Mode in Search",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/07/223-google-lets-users-connect-apps-ai-mode-search/",
+      "summary": "Google is adding Instacart, Canva and YouTube Music integrations to AI Mode, letting users complete tasks across apps while raising questions about pr"
     },
     {
       "rank": 2,
-      "title": "H2LooP is building AI coding tools for the software hidden inside hardware",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/07/h2loop-ai-embedded-software-coding",
-      "summary": "The Bengaluru startup makes hardware-aware AI models for firmware and embedded systems, and has raised $2 million to take them into chips, cars and de"
-    },
-    {
-      "rank": 3,
       "title": "AI models invented policies to refuse criticism of repressive govts: Meta Oversight Board",
       "source": "MediaNama",
       "url": "https://www.medianama.com/2026/07/223-ai-models-policies-criticism-repressive-govts-meta-oversight-board/",
       "summary": "The Board found that AI models refused 34% requests of generating politically critical material for repressive govts like China, Saudi Arabia etc.  co"
     },
     {
+      "rank": 3,
+      "title": "Indian Listed New-Age Tech Company Tracker: Market Cap, Revenue & More",
+      "source": "Inc42",
+      "url": "https://inc42.com/features/indian-listed-new-age-tech-company-tracker-market-cap-revenue-more/",
+      "summary": "For years, we at Inc42 have tracked the Indian tech startup ecosystem and seen it grow from a kid to&#8230;"
+    },
+    {
       "rank": 4,
-      "title": "Blackrock gives Udaan more time. But time has never been its problem",
-      "source": "The Ken",
-      "url": "https://the-ken.com/story/blackrock-gives-udaan-more-time-but-time-has-never-been-its-problem/",
-      "summary": "The post Blackrock gives Udaan more time. But time has never been its problem appeared first on The Ken.\n"
+      "title": "Armory first built a counter-drone system in six months, and now it has a Rs 100 crore defence order",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/07/armory-rs-100-crore-defence-order",
+      "summary": "The Gurugram-based startup's AI-powered system SURGE detects, tracks and neutralises rogue drones, and has become one of the youngest Indian defence f"
     },
     {
       "rank": 5,
-      "title": "Privacy-preserving age verification is contradictory by design, says EDRi advisor at SFLC discussion",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/07/223-privacy-preserving-age-verification-contradiction-sflc/",
-      "summary": "Experts from across the world debated whether age verification can protect children without undermining privacy, anonymity and free expression.\nThe po"
+      "title": "Best Water-Resistant Smartphones You Can Buy in India: OnePlus 15, Oppo F33 Pro 5G and More",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/mobiles/features/best-waterproof-phones-in-india-durability-ip-rating-oneplus-15-nord-6-motorola-edge-70-max-oppo-f33-pro-5g-11780601",
+      "summary": "There are multiple smartphones available in India that offer high ingress protection ratings. For reference, the OnePlus 15 and OnePlus Nord 6 are cla"
     }
   ],
   "remaining_candidates": [
     {
       "rank": 6,
-      "title": "5 Books that changed millions of lives around the world",
+      "title": "5 Books that tell the difference between happiness & peace",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/06/books-changed-life-around-world",
-      "summary": "Discover five influential books that transformed millions of lives through powerful lessons on purpose, habits, mindset, and personal growth."
+      "url": "https://yourstory.com/2026/06/books-explore-difference-happiness-peace",
+      "summary": "Discover five insightful books that explore the difference between happiness and peace, and why inner calm may matter more than constant joy."
     },
     {
       "rank": 7,
-      "title": "Aurrevia launches Category III alternative investment fund",
+      "title": "Cost-effective drones are winning wars, and Unmannd is building the ones that fight back",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/07/aurrevia-launches-category-iii-aif",
-      "summary": "The investment platform has received a $10 million commitment from Kothari Family Office.\n\n\n\n"
+      "url": "https://yourstory.com/2026/07/unmannd-modern-warfare-drones",
+      "summary": "This Bengaluru-based defencetech startup builds autonomous drones for battlefield logistics and air defence, and have passed the Indian Army qualifica"
     },
     {
       "rank": 8,
-      "title": "MakeMyTrip Files Confidentially For India IPO",
+      "title": "Meet The 50 D2C Brands From D2CX By Inc42’s 8th Cohort",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/makemytrip-files-confidentially-for-india-ipo/",
-      "summary": "Travel tech giant MakeMyTrip has confidentially filed its draft red herring prospectus (DRHP) with the SEBI for the India IPO&#8230;"
+      "url": "https://inc42.com/startups/meet-the-50-d2c-brands-from-d2cx-by-inc42s-8th-cohort/",
+      "summary": "Saturation doesn&#8217;t seem to be a concern that plagues India&#8217;s D2C boom. What began as a handful of digital-first brands&#8230;"
     },
     {
       "rank": 9,
-      "title": "IPO-Bound Jio Platforms’ Q1 Profit Jumps 9% YoY To ₹7,764 Cr",
+      "title": "New-Age Tech Stocks: Fino Payments Bank Surges 29%, Go Digit Leads Weekly Losers",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/ipo-bound-jio-platforms-q1-profit-jumps-9-yoy-to-%e2%82%b97764-cr/",
-      "summary": "IPO-bound Jio Platforms reported a consolidated profit after tax (PAT) of ₹7,764 Cr in the first quarter of FY27 (Q1&#8230;"
+      "url": "https://inc42.com/buzz/new-age-tech-stocks-fino-payments-bank-surges-29-go-digit-leads-weekly-losers/",
+      "summary": "As the June quarter earnings season gathered pace, investors remained largely cautious on listed new-age tech stocks this week despite&#8230;"
     },
     {
       "rank": 10,
-      "title": "Redmi Note 17 Pro Global Variant Reportedly Appears on NBD Database Alongside Poco Model",
+      "title": "Galaxy Unpacked Roundup: Samsung Galaxy Z Fold 8 Series, New Galaxy Watch Models and Everything Else to Expect on July 22",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/news/redmi-note-17-pro-global-variant-nbd-listing-expected-launch-poco-model-report-11785184",
-      "summary": "The Redmi Note 17 Pro 5G's purported global variant has been spotted on the NBD import-export database, suggesting the smartphone could launch in inte"
+      "url": "https://www.gadgets360.com/mobiles/features/samsung-galaxy-unpacked-roundup-everything-expected-to-launch-z-fold-8-ultra-watch-9-glasses-11775840",
+      "summary": "Samsung is scheduled to host its next Galaxy Unpacked event on July 22 in London, UK. The event will begin at 2 pm local time (6:30 pm IST). The South"
     },
     {
       "rank": 11,
-      "title": "Google Pixel 11a Codename Reportedly Spotted in Phone App",
+      "title": "Top 5 Features Worth Trying Out on Apple's iOS 27 Public Beta: Siri AI, New Photo Editing Tools and More",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/news/google-pixel-11a-codename-phone-app-report-11785100",
-      "summary": "The codename of the Google Pixel 11a reportedly appeared in the beta version of Google’s Phone app. The upcoming handset is said to be linked to the c"
+      "url": "https://www.gadgets360.com/mobiles/features/ios-27-public-beta-update-top-5-features-for-iphone-apple-intelligence-siri-11775032",
+      "summary": "iOS 27 Public Beta is finally out for eligible iPhone users. It provides users with an early opportunity to try out all of the new features that Apple"
     },
     {
       "rank": 12,
-      "title": "Huawei Mate XT 2 Leaked Patent Reveals New Tri-Fold Design and Folding Mechanism",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/news/huawei-mate-xt-2-design-patent-specifications-features-leak-11784913",
-      "summary": "A new leak suggests that Huawei could introduce major design changes with the Mate XT2 tri-fold smartphone. The upcoming tri-fold smartphone is said t"
-    },
-    {
-      "rank": 13,
-      "title": "Google now lets users connect apps to AI Mode in Search",
+      "title": "Privacy-preserving age verification is contradictory by design, says EDRi advisor at SFLC discussion",
       "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/07/223-google-lets-users-connect-apps-ai-mode-search/",
-      "summary": "Google is adding Instacart, Canva and YouTube Music integrations to AI Mode, letting users complete tasks across apps while raising questions about pr"
+      "url": "https://www.medianama.com/2026/07/223-privacy-preserving-age-verification-contradiction-sflc/",
+      "summary": "Experts from across the world debated whether age verification can protect children without undermining privacy, anonymity and free expression.\nThe po"
     }
   ]
 }
