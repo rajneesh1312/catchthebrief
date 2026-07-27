@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-26T23:04:00.569352+05:30",
+  "generated_at": "2026-07-27T23:36:44.822144+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,68 +24,96 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "Founder burnout in startups; VC inflow plummets",
+      "title": "Enerzolve is building Indian silicon and power electronics for the country's electricity grid",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/07/founder-burnout-in-startups-vc-inflow-plummets",
-      "summary": "The BII Founder Wellness Survey understands how founders, investors, and other startup ecosystem participants manage their physical and mental well-be"
+      "url": "https://yourstory.com/2026/07/enerzolve-power-electronics-india-grid",
+      "summary": "The Bengaluru-based startup makes hardware for smart grids and battery storage. It raised $5.1 million in a seed round co-led by Jungle Ventures and K"
     },
     {
       "rank": 2,
-      "title": "Flipkart’s Digital Mall Now Has A Food Court",
+      "title": "Delhi HC Restrains ‘Zepto Finance’ From Using Zepto Trademark",
       "source": "Inc42",
-      "url": "https://inc42.com/features/flipkarts-digital-mall-now-has-a-food-court/",
-      "summary": "When Flipkart entered quick commerce last year, many were sceptical of the move, as the ecommerce giant was seen as&#8230;"
+      "url": "https://inc42.com/buzz/delhi-hc-restrains-zepto-finance-from-using-zepto-trademark/",
+      "summary": "Delhi High Court (HC) has granted Zepto an ex-parte interim injunction against entities operating under the name &#8220;Zepto Finance&#8221;, restrain"
     },
     {
       "rank": 3,
-      "title": "Swiggy Plummets, BlueStone Soars Amid Bearish Week For New-Age Tech Stocks",
+      "title": "Why Enterprise Trust Is India’s Next AI Growth Frontier",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/swiggy-plummets-bluestone-soars-amid-bearish-week-for-new-age-tech-stocks/",
-      "summary": "It was a bearish week for India&#8217;s new-age tech stocks as renewed geopolitical tensions and a broad-based market selloff weighed&#8230;"
+      "url": "https://inc42.com/resources/why-enterprise-trust-is-indias-next-ai-growth-frontier/",
+      "summary": "Zero data retention is today a promise, not an architecture. As enterprise knowledge flows into the models, a new trust&#8230;"
     },
     {
       "rank": 4,
-      "title": "Top 5 WhatsApp Privacy Settings Every Indian User Should Enable Right Now",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/apps/features/whatsapp-privacy-settings-every-indian-user-should-enable-right-now-11816102",
-      "summary": "In recent years, WhatsApp has become a crucial part of everyday communication. Not just in India, but globally, billions use it for keeping in touch w"
+      "title": "RBI’s pipeline for hackers now starts at IIT Kanpur. It isn’t where they want to end up",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/rbis-pipeline-for-hackers-now-starts-at-iit-kanpur-it-isnt-where-they-want-to-end-up/",
+      "summary": "The post RBI’s pipeline for hackers now starts at IIT Kanpur. It isn&#8217;t where they want to end up appeared first on The Ken.\n"
     },
     {
       "rank": 5,
-      "title": "Logitech Signature Comfort Plus M850 L Review: Creature Comforts for Those Who Need It",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/laptops/reviews/logitech-signature-comfort-plus-m850-l-review-11812426",
-      "summary": "The Logitech Signature Comfort Plus M850 L is a basic mouse with good ergonomics and a tiny cushion attached to it for added comfort. It’s an everyday"
+      "title": "Parliamentary finance committee calls for regulatory framework for virtual digital assets",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/07/223-parliamentary-panel-crypto-vda-regulation/",
+      "summary": "India's finance panel says the Securities Markets Code leaves many cryptocurrencies outside regulation and recommends dedicated legislation.\nThe post "
     }
   ],
   "remaining_candidates": [
     {
       "rank": 6,
-      "title": "Manufacturing, AI, sustainability: Test your business creativity with Edition 242 of our weekly quiz!",
+      "title": "7 Books that help you become less reactive & more reflective",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/07/manufacturing-ai-sustainability-business-creativity-entrepreneur-quiz",
-      "summary": "This insightful feature from YourStory tests and strengthens your business acumen! Here are 5 questions to kick off this 242nd quiz. Ready?"
+      "url": "https://yourstory.com/2026/06/books-less-reactive-more-reflective",
+      "summary": "Discover seven insightful books that help you develop emotional control, self-awareness, patience, and a more reflective mindset."
     },
     {
       "rank": 7,
-      "title": "46 years of celebration: Montreal International Jazz Festival wraps up spectacular 2026 edition",
+      "title": "Number of Indians with income above Rs 100 Cr crosses 500 mark in FY26",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/07/montreal-international-jazz-festival-creativity-photography",
-      "summary": "In this photo essay from Canada, we showcase 25 bands who performed at the legendary Montreal International Jazz Festival."
+      "url": "https://yourstory.com/2026/07/number-of-indians-with-income-above-100-crore-crosses-500",
+      "summary": "A total of 576 individuals declared annual incomes of more than Rs 100 crore in FY26, up from 415 a year earlier, according to Finance Ministry data t"
     },
     {
       "rank": 8,
-      "title": "Can Parliamentary Panel’s Latest Recommendations Break Crypto Policy Deadlock?",
+      "title": "Ex-Share.Market CEO Ujjwal Jain Launches Wealth Management Startup Atyx.AI",
       "source": "Inc42",
-      "url": "https://inc42.com/features/can-parliamentary-panels-latest-recommendations-break-crypto-policy-deadlock/",
-      "summary": "For years, India’s approach towards cryptocurrencies has largely revolved around taxation, anti-money laundering (AML) compliance and transaction repo"
+      "url": "https://inc42.com/buzz/ex-share-market-ceo-ujjwal-jain-launches-wealth-management-startup-atyx-ai/",
+      "summary": "Former Share.Market CEO Ujjwal Jain and ex-Microsoft researcher Debopam Bhattacharjee have teamed up to launch a new fintech venture Atyx.AI. &#8230;"
     },
     {
       "rank": 9,
-      "title": "Best Smartphones With 120Hz Refresh Rate Display Under Rs 20,000 in India: iQOO Z11 Lite, Moto G37 Power, More",
+      "title": "Redmi Note 17 India Launch Teased; Price in India Leaked Online",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/features/best-smartphones-india-120hz-display-under-rs-20000-iqoo-z11-lite-moto-g37-power-11817225",
-      "summary": "Some of the best smartphones with a 120Hz refresh rate display under Rs. 20,000 include the iQOO Z11 Lite, Moto G37 Power, Realme C100x, Poco M8 5G, a"
+      "url": "https://www.gadgets360.com/mobiles/news/redmi-note-17-india-launch-teaser-price-expected-leak-11828592",
+      "summary": "Redmi has begun teasing the Redmi Note 17 for the Indian market through its official X account, offering a first look at the handset while drawing att"
+    },
+    {
+      "rank": 10,
+      "title": "Blockaid Reports $450,000 Exploit as Garden Finance Disables App",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/cryptocurrency/news/blockaid-reports-usd-450000-exploit-as-garden-finance-disables-app-crypto-hacks-scams-july-2026-11828571",
+      "summary": "Garden Finance has taken its application offline after a security incident involving an external solver led to the theft of approximately $450,000 in "
+    },
+    {
+      "rank": 11,
+      "title": "Oppo A7 Pro Max Officially Teased With Massive 10,000mAh Battery Ahead of Launch",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/mobiles/news/oppo-a7-pro-max-launch-teaser-design-battery-11828326",
+      "summary": "Oppo has unveiled the first official teaser for the Oppo A7 Pro Max, confirming a 10,000mAh battery and revealing the smartphone's rear design before "
+    },
+    {
+      "rank": 12,
+      "title": "Bank of Baroda launches forensic probe after customer data appears on dark web",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/07/223-bank-of-baroda-forensic-probe-customer-data-dark-web/",
+      "summary": "Bank of Baroda is investigating a dark web leak of customer and internal records. The bank says its core banking systems remain secure and has begun c"
+    },
+    {
+      "rank": 13,
+      "title": "How Mumbai Police is using surveillance to stop youth from protesting",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/07/223-mumbai-police-surveillance-protests/",
+      "summary": "Protesters allege Mumbai Police used surveillance, detentions and GPS tracking to discourage participation in demonstrations.\nThe post How Mumbai Poli"
     }
   ]
 }
