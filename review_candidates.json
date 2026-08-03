@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-02T23:03:20.070124+05:30",
+  "generated_at": "2026-08-03T23:47:33.231324+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,68 +24,96 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "[Update] Zepto Confirms IPO Pause, Plans Pre-IPO Fundraise",
+      "title": "Govt Opens Door to MDR On UPI, To Amend Digital Payment Rules",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/zepto-to-now-re-attempt-ipo-by-may-2027-report/",
-      "summary": "Update &#124; Aug 1, 19:47 IST Quick commerce startup Zepto officially confirmed that it has paused its IPO, saying it&#8230;"
+      "url": "https://inc42.com/buzz/govt-opens-door-to-mdr-on-upi-to-amend-digital-payment-rules/",
+      "summary": "In what could likely pave the way for the reintroduction of the merchant discount rate (MDR) on UPI payments, the&#8230;"
     },
     {
       "rank": 2,
-      "title": "Ask Google Pay Explained: What It Is, Features, How to Use, and More",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/how-to/features/ask-google-pay-explained-what-it-is-features-how-to-use-and-more-11848600",
-      "summary": "Ask Google Pay, the new AI chatbot, was recently launched in India by the tech giant for its digital payments platform. Google aims to bring a convers"
+      "title": "Spinny Converts Parent Into Public Entity Ahead Of IPO Plans",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/spinny-converts-parent-into-public-entity-ahead-of-ipo-plans/",
+      "summary": "Used-car marketplace Spinny has converted its parent company, Valuedrive Technologies Private Ltd, into a public entity by dropping the “Private”&#823"
     },
     {
       "rank": 3,
-      "title": "Startup eyes AI search boom; VC slowdown tests startups",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/08/startup-eyes-ai-search-boom-vc-slowdown-tests-startups",
-      "summary": "DareAISearch is helping brands improve visibility across AI platforms as AI powered discovery reshapes online search. Meanwhile, Indian startup fundin"
+      "title": "Lowdown: RBI issues new cybersecurity framework for commercial banks",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/08/223-rbi-cybersecurity-framework-commercial-banks/",
+      "summary": "The new cybersecurity framework mandating vulnerability assessments and disaster recovery drills every 6 months is applicable to all commercial banks "
     },
     {
       "rank": 4,
-      "title": "Indian Startup IPO Tracker 2026",
-      "source": "Inc42",
-      "url": "https://inc42.com/features/indian-startup-ipo-tracker-2026/",
-      "summary": "Dalal Street emerged as a founder’s paradise in 2025, with 18 Indian startups listing on the bourses and collectively mopping&#8230;"
+      "title": "WhatsApp tests age declaration: What the DPDP Act requires next",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/08/223-whatsapp-age-verification-dpdp-act/",
+      "summary": "WhatsApp has started testing an age verification prompt for some users in India. While the feature isn't mandatory yet, it appears to be part of Meta'"
     },
     {
       "rank": 5,
-      "title": "Adidas Hyperboost Edge Review: 45mm Foam, No Plate — Is This Boost Reborn?",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/wearables/reviews/adidas-hyperboost-edge-review-11856227",
-      "summary": "At Rs. 19,999 in India, it's priced right in line with where a shoe like this should sit, of course, not cheap, but not out of step with rivals like t"
+      "title": "7 Books that make you realise you can't control everything",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/06/books-realise-cant-control-everything",
+      "summary": "Discover seven insightful books that explore uncertainty, acceptance, and the freedom that comes from letting go of control."
     }
   ],
   "remaining_candidates": [
     {
       "rank": 6,
-      "title": "Youth Photographic Society showcases winners of 2026 international competition",
+      "title": "5 Books that explore the cost of chasing perfection",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/07/youth-photographic-society-creativity-awards",
-      "summary": "In this photo essay, we showcase the YPS photography exhibition at Karnataka Chitrakala Parishath, along with curator insights."
+      "url": "https://yourstory.com/2026/06/5-books-explore-cost-chasing-perfection",
+      "summary": "Discover five insightful books that reveal how perfectionism can undermine happiness, creativity, relationships, and personal growth."
     },
     {
       "rank": 7,
-      "title": "Health, safety, AI: test your business creativity with Edition 243 of our weekly quiz!",
+      "title": "Operation Sindoor architect AK Bharti signs off after 39 years",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/08/health-safety-ai-business-creativity-quiz-entrepreneur",
-      "summary": "This insightful feature from YourStory tests and strengthens your business acumen! Here are 5 questions to kick off this 243rd quiz. Ready?"
+      "url": "https://yourstory.com/2026/08/air-marshal-ak-bharti-operation-sindoor",
+      "summary": "Air Marshal A.K. Bharti retires after 39 years, remembered for Operation Sindoor, fighter leadership and his long life of service."
     },
     {
       "rank": 8,
-      "title": "Sarvam’s AI Arsenal",
+      "title": "After Verloop, Muskesh Bansal-Led NuPlay Eyes Another Acquisition In 12 Months",
       "source": "Inc42",
-      "url": "https://inc42.com/features/sarvams-ai-arsenal/",
-      "summary": "In June, Sarvam AI entered India&#8217;s unicorn club, raising $234 Mn (about ₹2,210 Cr) in a $300 Mn Series B&#8230;"
+      "url": "https://inc42.com/buzz/after-verloop-muskesh-bansal-led-nuplay-eyes-another-acquisition-in-six-months/",
+      "summary": "Barely two years old and one acquisition down, enterprise AI startup NuPlay, rebranded from its earlier name Nurix AI, is&#8230;"
     },
     {
       "rank": 9,
-      "title": "UFS 2.2, UFS 3.1 or UFS 4.1: Which Storage Standard Should You Choose?",
+      "title": "Tata 1mg refused to get carried away in the e-pharmacy battle. It’s in no mood to change its mind",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/tata-1mg-refused-to-get-carried-away-in-the-e-pharmacy-battle-its-in-no-mood-to-change-its-mind/",
+      "summary": "The post Tata 1mg refused to get carried away in the e-pharmacy battle. It’s in no mood to change its mind appeared first on The Ken.\n"
+    },
+    {
+      "rank": 10,
+      "title": "Boltt Smartphone India Launch Date Announced; Flipkart Microsite Goes Live",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/features/ufs-2-2-vs-ufs-3-1-vs-ufs-4-1-explained-11844208",
-      "summary": "Storage standards have evolved alongside smartphone hardware, making UFS an important part of overall performance. While UFS 2.2 remains suitable for "
+      "url": "https://www.gadgets360.com/mobiles/news/boltt-smartphone-india-launch-date-announced-flipkart-availability-11860322",
+      "summary": "Fire-Boltt has confirmed that its first Boltt smartphone will launch in India on August 25 at 12pm IST through a Flipkart microsite. The teaser showca"
+    },
+    {
+      "rank": 11,
+      "title": "OnePlus Independence Day Sale 2026 Announced: Discounts on OnePlus 15, OnePlus 15R, Nord CE 6, More",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/mobiles/news/oneplus-independence-day-sale-2026-15-15r-13s-nord-ce-6-buds-3r-pad-4-offers-discounts-11860181",
+      "summary": "OnePlus announced its Independence Day Sale 2026 in India. The sale will begin on August 7, with offers on flagship smartphones including the OnePlus "
+    },
+    {
+      "rank": 12,
+      "title": "Oppo F35 Series India Launch Tipped for Early September; Find X9s Pro Could Follow",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/mobiles/news/oppo-f35-series-india-launch-timeline-expected-find-x9s-pro-leak-11860020",
+      "summary": "A tispter has suggested that the Oppo F35 series could launch in India around the end of August or in early September, ahead of the Flipkart Big Billi"
+    },
+    {
+      "rank": 13,
+      "title": "Why Google pulled its new AI feature from Google Earth",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/08/223-google-pulled-ai-google-earth/",
+      "summary": "Google said it is rolling back the AI image generation feature in Google Earth while working on \"implementing stronger guardrails\" as user-generated i"
     }
   ]
 }
