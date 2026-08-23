@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-22T22:21:41.647440+05:30",
+  "generated_at": "2026-08-23T22:23:27.298066+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,89 +24,68 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "Karnataka govt launches low cost AI computing device KEO",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/08/karnataka-govt-launches-low-cost-ai-computing-device-keo",
-      "summary": "The government aims to democratise the access to artificial intelligence (AI) through the introduction of KEO.\n"
+      "title": "Navi’s Solo Run Ends",
+      "source": "Inc42",
+      "url": "https://inc42.com/features/navis-solo-run-ends/",
+      "summary": "For almost eight years, Sachin Bansal has tried to build Navi without having to answer to institutional investors. The Flipkart&#8230;"
     },
     {
       "rank": 2,
-      "title": "Raana Semiconductors In Talks To Raise ₹100 Cr For Silicon-Growth Equipment",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/raana-semiconductors-in-talks-to-raise-%e2%82%b9100-cr-for-silicon-growth-equipment/",
-      "summary": "Semiconductor startup Raana Semiconductors is in advanced talks to raise ₹100 Cr (around $10.4 Mn) in its Series A funding&#8230;"
-    },
-    {
-      "rank": 3,
-      "title": "PhysicsWallah to launch personal AI tutoring services by next quarter",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/08/223-physicswallah-personal-ai-tutoring-services/",
-      "summary": "The AI tutor to be launched in next quarter has less than 1% hallucination rate, and is designed for one-on-one teaching, nudging students towards new"
-    },
-    {
-      "rank": 4,
-      "title": "What does the industry want from TRAI on spam? #NAMA",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/08/223-what-industry-want-trai-spam/",
-      "summary": "Industry experts highlighted a range of things they want TRAI to fix regarding spam like implementation of the consent system, keep AI as signal not j"
-    },
-    {
-      "rank": 5,
-      "title": "How Much RAM Do You Really Need in a Smartphone?",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/features/how-much-ram-need-in-smartphones-8gb-24gb-uses-11926888",
-      "summary": "Smartphones are available with 4GB, 6GB, 8GB, 12GB and 16GB of RAM. 4GB is generally limited to entry-level phones, while 6GB can handle everyday use."
-    }
-  ],
-  "remaining_candidates": [
-    {
-      "rank": 6,
-      "title": "Rooftop solar crosses 50 lakh homes as PM Surya Ghar triples its pace",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/08/pm-surya-ghar-50-lakh-rooftop-solar-homes",
-      "summary": "India's rooftop solar push has reached 50 lakh homes in just over two years. Here's how PM Surya Ghar is accelerating adoption."
-    },
-    {
-      "rank": 7,
-      "title": "From income to long-term opportunity: The rise of expertise-led side hustles",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/08/from-income-to-long-term-opportunity-the-rise-of-expertise-led-side-hustles-",
-      "summary": "\nProfessionals are increasingly turning their skills, networks, and experience into additional income streams, especially in areas such as financial a"
-    },
-    {
-      "rank": 8,
       "title": "FY26 Financial Tracker: Tracking The Financial Performance Of Indian Startups",
       "source": "Inc42",
       "url": "https://inc42.com/features/fy26-financial-tracker-tracking-the-financial-performance-of-indian-startups/",
       "summary": "The Indian startup ecosystem continued to mature in FY26, with 22 new-age tech companies making their public market debut as&#8230;"
     },
     {
-      "rank": 9,
+      "rank": 3,
+      "title": "Samsung Galaxy Z Fold 8 Ultra Review: The Best Z Fold Yet",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/mobiles/reviews/samsung-galaxy-z-fold-8-ultra-review-11948538",
+      "summary": "Samsung has fixed almost everything with last year's Fold 7. The display crease on the main display is nearly gone, the screen handles sunlight better"
+    },
+    {
+      "rank": 4,
+      "title": "Skullcandy Method 360 ANC Review: Bose-Tuned Sound at Half the Price?",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/audio/reviews/skullcandy-method-360-anc-review-11924552",
+      "summary": "Skullycandy’s Method 360 ANC is a mid-range take on the more expensive Bose QuietComfort Ultra TWS, aiming to deliver better sound and ANC capabilitie"
+    },
+    {
+      "rank": 5,
+      "title": "This book examines how Indian companies turned crisis into growth",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/08/book-how-indian-companies-turned-crisis-into-growth",
+      "summary": "BOOK-COMPANIES\n03:36 PM, 23 Aug 2026  440 Words \nNew Delhi, Aug 23 (PTI) A new book, \"The Art of Enduring: How Great Companies Turn Crisis into Opport"
+    }
+  ],
+  "remaining_candidates": [
+    {
+      "rank": 6,
+      "title": "Startups, sustainability, style: Gifts World Expo Bengaluru kicks off 6th edition",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/08/startups-sustainability-style-gifts-world-expo-photography",
+      "summary": "In this photo essay, we showcase highlights from an industry-leading exhibition at Palace Grounds, Bengaluru."
+    },
+    {
+      "rank": 7,
+      "title": "Software, services, AI: test your business creativity with Edition 246 of our weekly quiz!",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/08/software-services-ai-business-creativity-entrepreneur-quiz",
+      "summary": "This insightful feature from YourStory tests and strengthens your business acumen! Here are 5 questions to kick off this 246th quiz. Ready?"
+    },
+    {
+      "rank": 8,
       "title": "Wakefit Surges 17% To Lead New-Age Tech Stocks This Week; Lenskart, Turtlemint Hit New Highs",
       "source": "Inc42",
       "url": "https://inc42.com/buzz/wakefit-surges-17-to-lead-new-age-tech-stocks-this-week-lenskart-turtlemint-hit-new-highs/",
       "summary": "A majority of India’s new-age tech stocks ended the week in the green, with Wakefit emerging as the biggest gainer&#8230;"
     },
     {
-      "rank": 10,
-      "title": "How to Check Battery Health on an Android Phone: A Step-by-Step Guide",
+      "rank": 9,
+      "title": "AMOLED vs OLED vs LCD Phone Displays Explained: Which Display Is Right for You?",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/how-to/features/poco-m8x-5g-battery-charging-details-announced-specifications-features-11925241",
-      "summary": "Google lets Android phone users check the battery health of their handsets directly in the Settings menu. Hence, users do not have to download third-p"
-    },
-    {
-      "rank": 11,
-      "title": "Best Gaming Laptops Under Rs 1 Lakh in India From Asus, Acer, HP and More",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/laptops/features/best-gaming-laptops-under-rs-1-lakh-in-india-asus-acer-hp-lenovo-msi-11922145",
-      "summary": "Gaming laptop buyers have several options below Rs. 1 lakh, with the models in this list offering Nvidia GeForce RTX 3050 graphics and at least 16GB R"
-    },
-    {
-      "rank": 12,
-      "title": "Punjab-Haryana High Court orders crackdown on cybercrime, flags gaps in law",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/08/223-punjab-haryana-hc-crackdown-cybercrime/",
-      "summary": "Ordering the crackdown, the Punjab &#038; Haryana HC observed that cybercrime in the region has reached \"epidemic proportions\", and the current legal "
+      "url": "https://www.gadgets360.com/mobiles/features/amoled-vs-oled-vs-lcd-phone-displays-explained-11936865",
+      "summary": "OLED and AMOLED displays produce light at the pixel level, while LCD screens rely on a separate backlight. This difference affects how each screen han"
     }
   ]
 }
