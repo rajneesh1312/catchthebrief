@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-30T00:58:37.865881+05:30",
+  "generated_at": "2026-08-31T00:53:42.732046+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,85 +24,78 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "Jio Platforms secures Sebi nod for $3.8B IPO, India's biggest ever",
+      "title": "Online grocery venture Satvacart shuts down after 12-year run",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/08/jio-platforms-gets-sebi-nod-for-38-bn-ipo-set-to-be-indias-biggest",
-      "summary": "The company plans to issue up to 27 crore fresh equity shares, equivalent to about 2.9% of its post-issue equity base, according to its draft prospect"
+      "url": "https://yourstory.com/2026/08/grocery-venture-satvacart-shuts-down-after-12-year-run",
+      "summary": "Founder Rahul Saxena said the company explored fresh funding and acquisition opportunities before deciding to wind down operations.\n"
     },
     {
       "rank": 2,
-      "title": "Gnani.ai launches Artha sovereign AI stack in India",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/08/223-gnani-ai-artha-sovereign-ai/",
-      "summary": "Gnani.ai has launched Artha, a sovereign AI stack combining its 30-billion-parameter Evon v3.3 model with the Plexus platform for developing AI agents"
+      "title": "Zerodha’s Diversification Clock Is Ticking",
+      "source": "Inc42",
+      "url": "https://inc42.com/features/zerodhas-diversification-clock-is-ticking/",
+      "summary": "Zerodha’s core business is no longer growing. Regulatory curbs and changing investor behaviour are cooling trading activity and squeezing brokerage&#8"
     },
     {
       "rank": 3,
-      "title": "Ola Electric Secures Centre’s ₹95.81 Cr Incentive Under PLI-Auto Scheme",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/ola-electric-secures-centres-%e2%82%b995-81-cr-incentive-under-pli-auto-scheme/",
-      "summary": "Electric two-wheeler maker Ola Electric has secured a ₹95.81 Cr incentive under the government’s Production Linked Incentive (PLI) Scheme from&#8230;"
-    },
-    {
-      "rank": 4,
-      "title": "Special Newsletter: Unanswered Questions, August Edition",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/08/223-special-newsletter-unanswered-questions-august-2026/",
-      "summary": "MediaNama asked authorities and technology companies important questions throughout August. This special edition brings them together.\nThe post Specia"
-    },
-    {
-      "rank": 5,
-      "title": "How to Check Jio Data Balance and Plan Validity Using Various Methods: A Step-by-Step Guide",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/telecom/features/how-to-check-jio-data-balance-using-myjio-app-website-whatsapp-11957063",
-      "summary": "Jio offers multiple ways to check the data remaining on an active mobile plan. Users can view their balance and plan validity through the MyJio App af"
-    }
-  ],
-  "remaining_candidates": [
-    {
-      "rank": 6,
-      "title": "(Weekly funding roundup Aug 22-28) Marginal rise in VC inflow",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/08/weekly-funding-roundup-aug-22-28-marginal-rise-in-vc-inflow",
-      "summary": "The total funding for the week was $245 million across 27 deals, compared to $187 million raised in the previous week. \n\n\n\n\n"
-    },
-    {
-      "rank": 7,
-      "title": "Myntra Tech Threads 2026 brings brands together to discuss tech-led fashion, beauty and lifestyle commerce",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/08/myntra-tech-threads-2026-brings-brands-together-discuss-tech-led-fashion-commerce",
-      "summary": "\n\nMyntra’s flagship brand conclave featured discussions on AI, personalization, creator-led commerce, and faster fulfilment, along with Myntra’s lates"
-    },
-    {
-      "rank": 8,
       "title": "FY26 Financial Tracker: Tracking The Financial Performance Of Indian Startups",
       "source": "Inc42",
       "url": "https://inc42.com/features/fy26-financial-tracker-tracking-the-financial-performance-of-indian-startups/",
       "summary": "The Indian startup ecosystem continued to mature in FY26, with 22 new-age tech companies making their public market debut as&#8230;"
     },
     {
-      "rank": 9,
-      "title": "New-Age Tech Stocks See Mixed Week; Ather Rallies 10%, Shiprocket Falls 9%",
+      "rank": 4,
+      "title": "Gnani.ai launches Artha sovereign AI stack in India",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/08/223-gnani-ai-artha-sovereign-ai/",
+      "summary": "Gnani.ai has launched Artha, a sovereign AI stack combining its 30-billion-parameter Evon v3.3 model with the Plexus platform for developing AI agents"
+    },
+    {
+      "rank": 5,
+      "title": "Smartphones Launching in September 2026: iPhone 18 Pro Lineup, iPhone Ultra, Poco F9 Series and More",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/mobiles/features/smartphones-launching-in-september-2026-iphone-18-pro-lineup-ultra-poco-f9-series-11967791",
+      "summary": "September will bring a mix of flagship, foldable and budget smartphones, with launches spread across India, China and global markets. Vivo has two lin"
+    }
+  ],
+  "remaining_candidates": [
+    {
+      "rank": 6,
+      "title": "Smartworks to invest Rs 600 Cr in FY27 to expand biz, meet rising demand for managed office spaces",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/08/smartworks-to-invest-rs-600-cr-in-fy27-to-expand-biz-meet-rising-demand-for-managed-office-spaces",
+      "summary": "The Gurugram-based listed realty firm has signed up more than 3.5 million square feet of space, which is either under construction or coming up for co"
+    },
+    {
+      "rank": 7,
+      "title": "Narrate the story behind the brand: Gifts World Expo highlights shifting customer expectations",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/08/brand-story-gifts-exhibition-customer-photography",
+      "summary": "In this photo essay, we showcase more highlights from a leading gifting platform at Palace Grounds, Bengaluru."
+    },
+    {
+      "rank": 8,
+      "title": "Indian Startup IPO Tracker 2026",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/new-age-tech-stocks-see-mixed-week-ather-rallies-10-shiprocket-falls-9/",
-      "summary": "Investor sentiment towards new-age tech stocks remained subdued this week even as the IPO pipeline continued to expand. Shiprocket, LEAP&#8230;"
+      "url": "https://inc42.com/features/indian-startup-ipo-tracker-2026/",
+      "summary": "Dalal Street emerged as a founder’s paradise in 2025, with 18 Indian startups listing on the bourses and collectively mopping&#8230;"
+    },
+    {
+      "rank": 9,
+      "title": "Smartphones Launched in India (August 2026): Google Pixel 11 Series, Realme P4s 5G, Vivo S2, and More",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/mobiles/features/smartphones-launched-in-india-august-2026-google-pixel-11-series-iqoo-z11-redmi-note-17-and-more-11967367",
+      "summary": "The smartphone makers launched 23 handsets in India in August 2026. The Google Pixel 11 series was launched in India and other global markets in the f"
     },
     {
       "rank": 10,
-      "title": "How to Use AI to Summarise WhatsApp Chats: A Step-by-Step Guide",
+      "title": "Realme P4s vs iQOO Z11 vs Nothing Phone 4b: Price in India, Specifications and Features Compared",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/how-to/features/how-to-use-ai-to-summarise-whatsapp-chats-a-step-by-step-guide-11958749",
-      "summary": "WhatsApp lets users generate individual and group chat summaries for unread messages using Meta AI. Chat summaries allow you to catch up with long mes"
+      "url": "https://www.gadgets360.com/mobiles/features/realme-p4s-vs-iqoo-z11-vs-nothing-phone-4b-price-in-india-specifications-and-features-compared-11966945",
+      "summary": "The mid-range smartphone segment in India is becoming increasingly competitive. There are several competing brands packing large batteries, high-refre"
     },
     {
       "rank": 11,
-      "title": "Most Reliable Printers for Small Businesses to Buy in India From HP, Brother and More",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/laptops/features/best-printers-for-small-businesses-offers-price-in-india-hp-brother-11974586",
-      "summary": "Business owners across the world, regardless of their location, size, and scale, have to frequently print, scan, and copy documents. Currently, enterp"
-    },
-    {
-      "rank": 12,
       "title": "Meta’s teen-safety settlement is being called accountability. Experts say consent still isn’t",
       "source": "MediaNama",
       "url": "https://www.medianama.com/2026/08/223-metas-teen-safety-accountability/",
