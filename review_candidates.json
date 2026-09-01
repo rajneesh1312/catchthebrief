@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-01T03:04:07.428979+05:30",
+  "generated_at": "2026-09-02T00:59:42.375236+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,96 +24,96 @@
   "top_5": [
     {
       "rank": 1,
+      "title": "Whatfix co-founder and CEO Khadim Batti passes away",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/09/whatfix-co-founder-khadim-batti-passes-away",
+      "summary": "Batti co-founded Whatfix with Vara Kumar in 2014 in Bengaluru. The company is a digital adoption platform (DAP) that overlays software applications to"
+    },
+    {
+      "rank": 2,
+      "title": "Data centres, airports, IT parks: Adani and Tata get to cherry-pick India’s best electricity buyers",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/data-centres-airports-it-parks-adani-and-tata-get-to-cherry-pick-indias-best-electricity-buyers/",
+      "summary": "The post Data centres, airports, IT parks: Adani and Tata get to cherry-pick India’s best electricity buyers appeared first on The Ken.\n"
+    },
+    {
+      "rank": 3,
+      "title": "WhatsApp Reportedly Rolling Out AI Content Label for Channels on iOS",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/ai/news/whatsapp-ios-ai-content-label-for-channels-roll-out-report-11987631",
+      "summary": "WhatsApp is testing an AI content label for channel updates on iOS, allowing admins to disclose media created or edited using artificial intelligence."
+    },
+    {
+      "rank": 4,
+      "title": "OYO parent Prism to launch AI agent for end-to-end hotel operations",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/09/223-oyo-prism-ai-agent-hotel-operations/",
+      "summary": "The AI agent from Prism, OYO's parent firm will execute tasks like vendor renewals, occupancy calls, review action places \"without a human triggering "
+    },
+    {
+      "rank": 5,
+      "title": "The Enclosure of Android: What Google’s New Rules Mean for Digital Sovereignty",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/09/223-google-android-policies-india-digital-sovereignty/",
+      "summary": "The Android Developer Verification programme is more than a security measure. It represents another step towards centralising governance within Google"
+    }
+  ],
+  "remaining_candidates": [
+    {
+      "rank": 6,
+      "title": "Odisha's Lok Bhavan becomes India's first Platinum certified green Lok Bhavan",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/08/lok-bhavan-igbc-platinum-green-campus-odisha",
+      "summary": "Odisha's Lok Bhavan scores 88/100 to become India's first Platinum certified green campus under IGBC's stricter 2024 system."
+    },
+    {
+      "rank": 7,
       "title": "As Tim Cook steps down, India stands at the heart of Apple’s next chapter",
       "source": "YourStory",
       "url": "https://yourstory.com/2026/08/tim-cook-steps-down-india-heart-of-apples-next-chapter",
       "summary": "Tim Cook, once Steve Jobs’ operations man who made Apple’s ‘trains run on time’, turned India from a market of promise into a key centre for sales and"
     },
     {
-      "rank": 2,
-      "title": "BlackRock Buys Ather Shares Worth ₹445 Cr",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/blackrock-buys-ather-shares-worth-%e2%82%b9445-cr/",
-      "summary": "Asset management giant BlackRock has purchased nearly 26 Lakh shares of electric vehicle (EV) maker Ather Energy via an open-market&#8230;"
-    },
-    {
-      "rank": 3,
-      "title": "Google updates spam policy in Europe to avoid antitrust fine",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/08/223-google-search-spam-policy-eu-avoid-antitrust-fine/",
-      "summary": "Google has changed how it enforces its site reputation policy in the European Economic Area following scrutiny from the European Commission.\nThe post "
-    },
-    {
-      "rank": 4,
-      "title": "Zomato bans analogue dairy dishes, says non-compliant restaurants will be delisted",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/08/223-zomato-analogue-dairy-dishes/",
-      "summary": "The ban on dishes using analogue dairy products on Zomato &#038; the delisting of restaurants for non-compliance, comes after FSSAI asked businesses n"
-    },
-    {
-      "rank": 5,
-      "title": "Netflix went from Sacred Games to MTV Roadies. And it’s paying off",
-      "source": "The Ken",
-      "url": "https://the-ken.com/story/netflix-went-from-sacred-games-to-kapil-sharma-and-its-paying-off/",
-      "summary": "The post Netflix went from Sacred Games to MTV Roadies. And it’s paying off appeared first on The Ken.\n"
-    }
-  ],
-  "remaining_candidates": [
-    {
-      "rank": 6,
-      "title": "How new broadcast technology is changing the way fans watch cricket",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/08/how-new-broadcast-technology-is-changing-the-way-fans-watch-cricket",
-      "summary": "\n\nThe India-Afghanistan cricket series will bring together immersive camera angles, AI-led graphics, and a fan-powered sight screen to create new ways"
-    },
-    {
-      "rank": 7,
-      "title": "Govt notifies Rs 1,27,500-cr Semicon 2.0",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/08/government-notifies-rs-127l-cr-semicon-20-eligibility-norms-sops",
-      "summary": "The move comes at a time when semiconductors have emerged as a critical strategic resource globally, with the AI boom driving unprecedented demand for"
-    },
-    {
       "rank": 8,
-      "title": "BNP Paribas & Millennium Sell 10 Cr Eternal Shares In ₹3,265 Cr Block Deals",
+      "title": "Masters’ Union Secures University Status From Haryana Govt",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/bnp-paribas-millennium-sell-10-cr-eternal-shares-in-%e2%82%b93265-cr-block-deals/",
-      "summary": "French financial services giant BNP Paribas and US-based hedge fund Millennium Management sold over 9.9 Cr shares of listed foodtech&#8230;"
+      "url": "https://inc42.com/buzz/masters-union-secures-university-status-from-haryana-govt/",
+      "summary": "The state government of Haryana has granted full university status to Gurugram-based Masters’ Union (MU), paving the way for the&#8230;"
     },
     {
       "rank": 9,
-      "title": "E2W Registrations Contract By Over 16% In August; Ola Electric’s Market Share Improves",
+      "title": "InsuranceDekho + RenewBuy: Ankit Agrawal On Making Of A Pan-India Insurance Distribution Giant",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/e2w-registrations-contract-by-over-16-in-august-ola-electrics-market-share-improves/",
-      "summary": "Marking a second consecutive month of decline, monthly registrations of electric two-wheelers (E2Ws) in India fell below the 2 Lakh&#8230;"
+      "url": "https://inc42.com/features/insurancedekho-renewbuy-ankit-agrawal-on-making-of-a-pan-india-insurance-distribution-giant/",
+      "summary": "Gurugram-based insurance distribution platforms InsuranceDekho and RenewBuy have completed their merger, creating a combined entity that will operate "
     },
     {
       "rank": 10,
-      "title": "Xiaomi Pad 9 Pro Max Appears on Geekbench With Xring O3 Chip",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/tablets/news/xiaomi-pad-9-pro-max-geekbench-listing-xring-o3-chip-ram-os-11982476",
-      "summary": "The Xiaomi Pad 9 Pro Max has appeared in a Geekbench 6.7.1 listing with the company’s Xring O3 chipset. The tablet recorded 3,474 points in single-cor"
+      "title": "30 Startups To Watch: Startups That Caught Our Eye In August 2026",
+      "source": "Inc42",
+      "url": "https://inc42.com/startups/30-startups-to-watch-startups-that-caught-our-eye-in-august-2026/",
+      "summary": "August turned out to be yet another eventful month for the Indian startup ecosystem. The month marked multiple mega rounds,&#8230;"
     },
     {
       "rank": 11,
-      "title": "Philips 5G Smartphone India Launch Date Confirmed: Here’s What We Know",
+      "title": "Dyson Launches CameraJet Toothbrush With Camera and Wi-Fi Connectivity",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/news/philips-5g-smartphone-india-launch-date-design-amazon-specifications-features-11982355",
-      "summary": "Philips, a consumer electronics company, is set to launch its 5G phone in India soon. The brand has yet to confirm the official moniker, but it has no"
+      "url": "https://www.gadgets360.com/smart-home/news/dyson-camerajet-toothbrush-price-launch-specifications-features-11987695",
+      "summary": "Dyson has launched the Dyson CameraJet smart toothbrush featuring a camera powered by Gap Optical Targeting to identify gaps between teeth and precisi"
     },
     {
       "rank": 12,
-      "title": "The Blood of Dawnwalker Review: Rebel Wolves' Gothic RPG Delights and Disturbs",
+      "title": "Star Wars Zero Company Developer Bit Reactor Reportedly Furloughed Most of Its Employees Ahead of Launch",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/games/reviews/the-blood-of-dawnwalker-review-ps5-rebel-wolves-bandai-namco-11982157",
-      "summary": "The Blood of Dawnwalker's reactive gameplay and story systems work together for a deeply satisfying RPG experience where the game world responds to yo"
+      "url": "https://www.gadgets360.com/games/news/star-wars-zero-company-developer-bit-reactor-furloughs-most-employees-before-launch-report-11987790",
+      "summary": "Star Wars Zero Company launched to rave reviews on August 27, but weeks before the game's release, developer Bit Reactor reportedly furloughed most of"
     },
     {
       "rank": 13,
-      "title": "What India’s BRICS chairship can actually do for child safety online",
+      "title": "Meta to limit the reach of undisclosed AI-generated profiles on Instagram",
       "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/08/223-india-brics-chairship-child-safety-online/",
-      "summary": " As India hosts the BRICS Summit which has child safety in its core area of work, here's a look at where the members stand.  While China, Brazil have "
+      "url": "https://www.medianama.com/2026/09/223-meta-limit-ai-profile-instagram/",
+      "summary": "The renaming of 'AI creator' to 'AI-generated profile' targets those Instagram accounts where the person featured is AI-generated not human creators w"
     }
   ]
 }
