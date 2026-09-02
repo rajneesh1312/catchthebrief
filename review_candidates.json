@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-02T00:59:42.375236+05:30",
+  "generated_at": "2026-09-03T00:57:50.680511+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,96 +24,89 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "Whatfix co-founder and CEO Khadim Batti passes away",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/09/whatfix-co-founder-khadim-batti-passes-away",
-      "summary": "Batti co-founded Whatfix with Vara Kumar in 2014 in Bengaluru. The company is a digital adoption platform (DAP) that overlays software applications to"
+      "title": "Ultrahuman raises $60 million to expand smart ring business",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/09/223-ultrahuman-60-million-smart-ring/",
+      "summary": "The $60 million Ultrahuman raised in its Series C funding led by Qualcomm will be used to accelerate growth &#038; market expansion as the wearable te"
     },
     {
       "rank": 2,
-      "title": "Data centres, airports, IT parks: Adani and Tata get to cherry-pick India’s best electricity buyers",
-      "source": "The Ken",
-      "url": "https://the-ken.com/story/data-centres-airports-it-parks-adani-and-tata-get-to-cherry-pick-indias-best-electricity-buyers/",
-      "summary": "The post Data centres, airports, IT parks: Adani and Tata get to cherry-pick India’s best electricity buyers appeared first on The Ken.\n"
+      "title": "Adobe acquires Indian market intelligence startup Rilo",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/02/adobe-acquires-indian-market-intelligence-startup-rilo/",
+      "summary": "This is Adobe's second acquisition out of India after Rephrase.ai in 2023"
     },
     {
       "rank": 3,
-      "title": "WhatsApp Reportedly Rolling Out AI Content Label for Channels on iOS",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/ai/news/whatsapp-ios-ai-content-label-for-channels-roll-out-report-11987631",
-      "summary": "WhatsApp is testing an AI content label for channel updates on iOS, allowing admins to disclose media created or edited using artificial intelligence."
+      "title": "Delhi’s mass surveillance: track 50 million faces, identify them in five seconds",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/delhis-mass-surveillance-track-50-million-faces-identify-them-in-five-seconds/",
+      "summary": "The post Delhi’s mass surveillance: track 50 million faces, identify them in five seconds appeared first on The Ken.\n"
     },
     {
       "rank": 4,
-      "title": "OYO parent Prism to launch AI agent for end-to-end hotel operations",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/09/223-oyo-prism-ai-agent-hotel-operations/",
-      "summary": "The AI agent from Prism, OYO's parent firm will execute tasks like vendor renewals, occupancy calls, review action places \"without a human triggering "
+      "title": "OpenAI Teases Astra, Says It Is the First Model to Meet ‘Critical Cybersecurity Threshold'",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/ai/news/openai-astra-model-critical-cybersecurity-threshold-feature-cybersecurity-capabilities-11992933",
+      "summary": "OpenAI published a blog post on Tuesday detailing its new model Astra. The company says that Astra meets the Critical cybersecurity capability thresho"
     },
     {
       "rank": 5,
-      "title": "The Enclosure of Android: What Google’s New Rules Mean for Digital Sovereignty",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/09/223-google-android-policies-india-digital-sovereignty/",
-      "summary": "The Android Developer Verification programme is more than a security measure. It represents another step towards centralising governance within Google"
+      "title": "Reliance’s JioHotstar takes its streaming empire global — without sports",
+      "source": "TechCrunch",
+      "url": "https://techcrunch.com/2026/09/01/reliances-jiohotstar-takes-its-streaming-empire-global-without-sports/",
+      "summary": "JioHotstar will only have entertainment content when it launches in the UK, Canada, and Singapore. "
     }
   ],
   "remaining_candidates": [
     {
       "rank": 6,
-      "title": "Odisha's Lok Bhavan becomes India's first Platinum certified green Lok Bhavan",
+      "title": "10 Lessons from The Book of Joy about lasting happiness",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/08/lok-bhavan-igbc-platinum-green-campus-odisha",
-      "summary": "Odisha's Lok Bhavan scores 88/100 to become India's first Platinum certified green campus under IGBC's stricter 2024 system."
+      "url": "https://yourstory.com/2026/09/book-joy-lasting-happiness",
+      "summary": "Discover 10 timeless lessons from The Book of Joy on lasting happiness, compassion, gratitude, resilience, and finding meaning in difficult times."
     },
     {
       "rank": 7,
-      "title": "As Tim Cook steps down, India stands at the heart of Apple’s next chapter",
+      "title": "How Cashfree Payments is helping India’s next wave of SMBs build and scale",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/08/tim-cook-steps-down-india-heart-of-apples-next-chapter",
-      "summary": "Tim Cook, once Steve Jobs’ operations man who made Apple’s ‘trains run on time’, turned India from a market of promise into a key centre for sales and"
+      "url": "https://yourstory.com/2026/09/cashfree-payments-helping-indias-next-wave-smbs-build-scale",
+      "summary": "As India’s SMB ecosystem grows, Cashfree Payments helps businesses build trust, boost conversions, reduce friction, and expand globally."
     },
     {
       "rank": 8,
-      "title": "Masters’ Union Secures University Status From Haryana Govt",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/masters-union-secures-university-status-from-haryana-govt/",
-      "summary": "The state government of Haryana has granted full university status to Gurugram-based Masters’ Union (MU), paving the way for the&#8230;"
+      "title": "How Hexalog is helping MSMEs simplify cross-border logistics and scale globally",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/09/-hexalog-msmes-cross-border-logistics-scale",
+      "summary": "In a conversation with YourStory, Hexalog Co-founder and CEO Dibyanshu Tripathi explains how end-to-end logistics can help MSMEs improve working capit"
     },
     {
       "rank": 9,
-      "title": "InsuranceDekho + RenewBuy: Ankit Agrawal On Making Of A Pan-India Insurance Distribution Giant",
-      "source": "Inc42",
-      "url": "https://inc42.com/features/insurancedekho-renewbuy-ankit-agrawal-on-making-of-a-pan-india-insurance-distribution-giant/",
-      "summary": "Gurugram-based insurance distribution platforms InsuranceDekho and RenewBuy have completed their merger, creating a combined entity that will operate "
+      "title": "Samsung Galaxy A17, Galaxy A27, Galaxy F17, Galaxy A07 5G Prices Reportedly Hiked in India",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/mobiles/news/samsung-galaxy-a17-a27-f17-a07-5g-price-hike-in-india-report-11992902",
+      "summary": "Samsung could raise prices of the Galaxy A17, Galaxy A27, Galaxy F17 and Galaxy A07 5G in India, according to a leaked price revision document. The Ga"
     },
     {
       "rank": 10,
-      "title": "30 Startups To Watch: Startups That Caught Our Eye In August 2026",
-      "source": "Inc42",
-      "url": "https://inc42.com/startups/30-startups-to-watch-startups-that-caught-our-eye-in-august-2026/",
-      "summary": "August turned out to be yet another eventful month for the Indian startup ecosystem. The month marked multiple mega rounds,&#8230;"
+      "title": "Crimson Desert Has a New Playable Demo That Can Be Directly Streamed on a Desktop Browser",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/games/news/crimson-desert-new-playable-demo-cloud-steaming-browser-twitch-pearl-abyss-11992659",
+      "summary": "Pearl Abyss has released a new playable demo for Crimson Desert that be directly streamed on a desktop browser. The 20-minute demo is powered by Amazo"
     },
     {
       "rank": 11,
-      "title": "Dyson Launches CameraJet Toothbrush With Camera and Wi-Fi Connectivity",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/smart-home/news/dyson-camerajet-toothbrush-price-launch-specifications-features-11987695",
-      "summary": "Dyson has launched the Dyson CameraJet smart toothbrush featuring a camera powered by Gap Optical Targeting to identify gaps between teeth and precisi"
+      "title": "Journalist behind Ram Mandir theft story moves Supreme Court against Ghaziabad Police seeking X account data",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/09/223-ram-mandir-journalist-x-data-supreme-court/",
+      "summary": "Journalist Abhishek Upadhyay has moved the Supreme Court challenging a Ghaziabad Crime Branch notice seeking extensive data from his X account.\nThe po"
     },
     {
       "rank": 12,
-      "title": "Star Wars Zero Company Developer Bit Reactor Reportedly Furloughed Most of Its Employees Ahead of Launch",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/games/news/star-wars-zero-company-developer-bit-reactor-furloughs-most-employees-before-launch-report-11987790",
-      "summary": "Star Wars Zero Company launched to rave reviews on August 27, but weeks before the game's release, developer Bit Reactor reportedly furloughed most of"
-    },
-    {
-      "rank": 13,
-      "title": "Meta to limit the reach of undisclosed AI-generated profiles on Instagram",
+      "title": "On closer reading: What India’s APAAR student ID consent form actually asks parents",
       "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/09/223-meta-limit-ai-profile-instagram/",
-      "summary": "The renaming of 'AI creator' to 'AI-generated profile' targets those Instagram accounts where the person featured is AI-generated not human creators w"
+      "url": "https://www.medianama.com/2026/09/223-indias-apaar-student-parents/",
+      "summary": "India’s APAAR consent form raises questions over children’s privacy, recorded refusals, parental consent, third-party data sharing, recruitment agenci"
     }
   ]
 }
