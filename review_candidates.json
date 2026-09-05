@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-05T00:33:55.455891+05:30",
+  "generated_at": "2026-09-06T00:01:12.334333+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,96 +24,89 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "SUGAR Cosmetics Raises ₹145 Cr From A91 At A Near 80% Valuation Cut",
+      "title": "TCS HyperVault To Invest ₹70,000 Cr To Set Up AI Data Centre in Hyderabad",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/sugar-cosmetics-raises-%e2%82%b9145-cr-from-a91-at-a-near-80-valuation-cut/",
-      "summary": "D2C beauty and personal brand SUGAR Cosmetics has raised ₹144.47 Cr ($15.3 Mn) in a fresh equity round from VC&#8230;"
+      "url": "https://inc42.com/buzz/tcs-hypervault-to-invest-%e2%82%b970000-cr-to-set-up-ai-data-centre-in-hyderabad/",
+      "summary": "Tata Consultancy Services’ (TCS) data centre subsidiary, HyperVault, and its partners will invest up to ₹70,000 Cr to build and&#8230;"
     },
     {
       "rank": 2,
-      "title": "Inside Urban Company’s Marketplace Model: What It Earns From Every Booking",
-      "source": "Inc42",
-      "url": "https://inc42.com/features/inside-urban-companys-marketplace-model-what-it-keeps-from-every-booking/",
-      "summary": "Urban Company pioneered the home services model in the Indian startup ecosystem and completely changed the game.   It applied the&#8230;"
-    },
-    {
-      "rank": 3,
-      "title": "IFA 2026: Nvidia RTX Spark PCs, Local AI Tools Announced With October Launch Planned",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/ai/news/nvidia-rtx-spark-pcs-local-ai-tools-announced-ifa-2026-october-launch-12002932",
-      "summary": "Nvidia is expanding its local AI push with new hardware and software announced at IFA 2026. The company’s RTX Spark platform is set to reach Windows P"
-    },
-    {
-      "rank": 4,
-      "title": "WhatsApp Reportedly Rolling Out Third-Party AI Agent Chats to Android Users",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/apps/news/whatsapp-android-third-party-ai-agent-chats-roll-out-report-12002673",
-      "summary": "WhatsApp could soon allow users to bring compatible third-party agents into the messaging platform. A new Agents section reportedly lets users configu"
-    },
-    {
-      "rank": 5,
       "title": "A Mumbai court told Meta and Reddit to remove defamatory posts — and to leave the true ones up",
       "source": "MediaNama",
       "url": "https://www.medianama.com/2026/09/223-mumbai-court-meta-reddit-defamatory-posts/",
       "summary": "Mumbai court restrains defamatory content about Sayani Gupta and directs Meta and Reddit to remove it, raising questions over how platforms distinguis"
-    }
-  ],
-  "remaining_candidates": [
+    },
     {
-      "rank": 6,
-      "title": "8 Powerful Aldous Huxley quotes on society and solitude",
+      "rank": 3,
+      "title": "'Eye in sky': ISRO launches advanced earth observation satellite for 'strategic data'",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/09/aldous-huxley-quotes",
-      "summary": "Explore 8 powerful Aldous Huxley quotes on society and solitude that reveal timeless insights about individuality, conformity, and self-reflection."
+      "url": "https://yourstory.com/2026/09/eye-in-sky-isro-launches-advanced-earth-observation-satellite-for-strategic-data",
+      "summary": "The EOS-05 satellite was successfully placed in the intended sub-geosynchronous transfer orbit, about 18 minutes after it lifted off from the spacepor"
     },
     {
-      "rank": 7,
-      "title": "Google Cloud Startup Summit to explore how agentic AI can reshape startup growth",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/09/google-cloud-startup-summit-to-explore-how-agentic-ai-can-reshape-startup-growth",
-      "summary": "At Google Cloud Startup Summit 2026, founders will explore how agentic AI can help startups move beyond AI wrappers, reduce operational friction, and "
-    },
-    {
-      "rank": 8,
-      "title": "8 Taylor Jenkins Reid quotes to help men understand women",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/09/taylor-jenkins-quotes",
-      "summary": "Explore 8 Taylor Jenkins Reid quotes that capture the complexities of womanhood, from love and ambition to identity, independence, & self-worth."
-    },
-    {
-      "rank": 9,
-      "title": "Innoviti Slashes FY26 Loss By 57% To ₹26.7 Cr, Revenue Dips By 17%",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/innoviti-slashes-fy26-loss-by-57-to-%e2%82%b926-7-cr-revenue-dips-by-17/",
-      "summary": "Bessemer Venture Partners-backed digital payments startup Innoviti managed to cut its net loss by over 57% YoY to ₹26.7 Cr&#8230;"
-    },
-    {
-      "rank": 10,
-      "title": "A peptide party that never happened has raised questions Indian sellers are yet to answer",
-      "source": "The Ken",
-      "url": "https://the-ken.com/story/a-peptide-party-that-never-happened-has-raised-questions-indian-sellers-are-yet-to-answer/",
-      "summary": "The post A peptide party that never happened has raised questions Indian sellers are yet to answer appeared first on The Ken.\n"
-    },
-    {
-      "rank": 11,
-      "title": "IFA 2026: Lenovo Unveiled New IdeaPad, Yoga and ThinkBook Laptops",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/laptops/news/lenovo-ideapad-vibe-series-yoga-pro-9n-2-in-1-thinkbook-14-gen-9-price-specifications-launch-features-12003007",
-      "summary": "Lenovo has launched a new range of laptops and PCs at IFA 2026. It announced the new Lenovo IdeaPad Vibe series, Yoga Pro 9n, Yoga 9n 2-in-1, IdeaCent"
-    },
-    {
-      "rank": 12,
+      "rank": 4,
       "title": "Cradlewise raises $12 million to make AI cribs for newborns: What about DPDP compliance?",
       "source": "MediaNama",
       "url": "https://www.medianama.com/2026/09/223-cradlewise-ai-cribs-newborns/",
       "summary": "Cradlewise has raised $12 million to expand its AI-powered cribs, as questions remain over its finances, child data collection and compliance with Ind"
     },
     {
-      "rank": 13,
-      "title": "Apple faces a $2.7 billion lawsuit in the UK over unfair app tracking practices",
+      "rank": 5,
+      "title": "iPhone Ultra Roundup: Launch Date, Expected Price in India, Features, Specifications and More",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/mobiles/features/iphone-ultra-launch-date-expected-price-in-india-features-specifications-roundup-11987101",
+      "summary": "Apple’s ‘Surprise and shine’ event is all set to take place next week. After years of rumours, the Cupertino-based tech giant is finally expected to t"
+    }
+  ],
+  "remaining_candidates": [
+    {
+      "rank": 6,
+      "title": "One impulse, many manifestations: Indian Habitat Centre exhibition celebrates artistic creativity",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/09/art-exhibition-creativity-india-habitat-centre-photography",
+      "summary": "In this photo essay, we showcase artistic highlights from the ‘One | Many’ exhibition in New Delhi."
+    },
+    {
+      "rank": 7,
+      "title": "8 Powerful Aldous Huxley quotes on society and solitude",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/09/aldous-huxley-quotes",
+      "summary": "Explore 8 powerful Aldous Huxley quotes on society and solitude that reveal timeless insights about individuality, conformity, and self-reflection."
+    },
+    {
+      "rank": 8,
+      "title": "D2C Luggage Brand Mokobara Bags ₹170 Cr",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/d2c-luggage-brand-mokobara-bags-%e2%82%b9170-cr/",
+      "summary": "Travel and lifestyle brand Mokobara has raised ₹170 Cr (about $18 Mn) in a Series C funding round led by&#8230;"
+    },
+    {
+      "rank": 9,
+      "title": "FY26 Financial Tracker: Tracking The Financial Performance Of Indian Startups",
+      "source": "Inc42",
+      "url": "https://inc42.com/features/fy26-financial-tracker-tracking-the-financial-performance-of-indian-startups/",
+      "summary": "The Indian startup ecosystem continued to mature in FY26, with 22 new-age tech companies making their public market debut as&#8230;"
+    },
+    {
+      "rank": 10,
+      "title": "LG Xboom Bounce Review: Looks Like a Sci-Fi Prop, Sounds Surprisingly Good",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/audio/reviews/lg-xboom-bounce-review-11996511",
+      "summary": "The LG Xboom Bounce is a Bluetooth speaker that tries something different in a segment filled with increasingly similar designs. Developed with will.i"
+    },
+    {
+      "rank": 11,
+      "title": "How to Buy Refurbished Phones Safely in India?",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/how-to/features/how-to-choose-buy-refurbished-phone-in-india-11988122",
+      "summary": "Refurbished phones can be safe to buy in India when purchased from a manufacturer, known retailer, or reputable physical refurbisher. Before buying a "
+    },
+    {
+      "rank": 12,
+      "title": "Special Newsletter: 5 Talking Points—August Edition",
       "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/09/223-apple-lawsuit-uk-app-tracking/",
-      "summary": "The case led by a senior official from the UK's competition authority alleges that Apple's app tracking policy has caused significant harm to business"
+      "url": "https://www.medianama.com/2026/09/223-special-newsletter-5-talking-points-august-edition/",
+      "summary": "Five key August talking points on child safety, Meta’s teen protections, facial recognition, Google Search rules, and the regulatory gaps shaping Indi"
     }
   ]
 }
