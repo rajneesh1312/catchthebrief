@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-12T00:44:25.945413+05:30",
+  "generated_at": "2026-09-13T00:06:52.121284+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,92 +24,85 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "Karnataka launches Rs 25 crore Government First startup initiative",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/09/karnataka-government-first-startup-initiative",
-      "summary": "Karnataka’s Government First initiative will support 100 startups with Rs 25 crore, helping them pilot solutions and enter government procurement."
-    },
-    {
-      "rank": 2,
-      "title": "Amazon Pay To Double Down On Insurance With New Offerings",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/amazon-pay-to-double-down-on-insurance-with-new-offerings/",
-      "summary": "With an eye on expanding its financial services offerings, Amazon Pay is now reportedly doubling down on insurance in India. &#8230;"
-    },
-    {
-      "rank": 3,
-      "title": "Mitti Labs Enters Deal With Google For 1 Mn Carbon Credits",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/mitti-labs-enters-deal-with-google-for-1-mn-carbon-credits/",
-      "summary": "Climate tech startup Mitti Labs has signed a four-year agreement with Google to supply 1 Mn Carbon credits till 2030,&#8230;"
-    },
-    {
-      "rank": 4,
-      "title": "Bollywood is learning to make movies without those who make movies",
-      "source": "The Ken",
-      "url": "https://the-ken.com/story/bollywood-is-learning-to-make-movies-without-those-who-make-movies/",
-      "summary": "The post Bollywood is learning to make movies without those who make movies appeared first on The Ken.\n"
-    },
-    {
-      "rank": 5,
-      "title": "Japan Digital Agency Reports Potential Leak of 246,000 Records After Cyberattack",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/cryptocurrency/news/japan-digital-agency-reports-potential-leak-of-246000-records-after-cyberattack-crypto-scams-hacks-data-breach-12034550",
-      "summary": "Japan’s Digital Agency said a cyberattack on its Government Solution Service network may have exposed personal information from about 246,000 governme"
-    }
-  ],
-  "remaining_candidates": [
-    {
-      "rank": 6,
-      "title": "[Weekly funding roundup Sept 5-11] VC inflow doubles this week",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/09/weekly-funding-roundup-sept-5-11-vc-inflow-doubles-this-week",
-      "summary": "Indian startup funding doubled to $392M this week, with Pixxel, Popo Global, and Nua among the biggest deals. Spacetech, restaurants, and women’s well"
-    },
-    {
-      "rank": 7,
-      "title": "Why Gen Z is talking about therapy more than ever before",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/09/why-gen-z-is-talking-about-therapy-more-than-ever-before",
-      "summary": "Discover why Gen Z is embracing therapy, prioritising mental health, and changing conversations around emotional well-being."
-    },
-    {
-      "rank": 8,
-      "title": "GFF 2026: Here Are The New Launches Announced On Day 3",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/gff-2026-here-are-the-new-launches-announced-on-day-3/",
-      "summary": "The Global Fintech Festival (GFF) 2026 came to a close today with three days of conversations, launches, and partnerships. Following&#8230;"
-    },
-    {
-      "rank": 9,
-      "title": "Samsung Galaxy SmartTag 3 Design, Colourways and Price Leaked Online",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/smart-home/news/samsung-galaxy-smarttag-3-design-expected-colour-options-leak-price-report-12034272",
-      "summary": "Samsung Galaxy SmartTag 3 has appeared in leaked images that show a squircle-shaped body, a circular centre and possible Black and White finishes. The"
-    },
-    {
-      "rank": 10,
-      "title": "Samsung's Rumoured Android XR Smart Glasses With Colour Display: All You Need to Know",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/wearables/features/samsung-android-xr-glasses-display-features-report-12032608",
-      "summary": "Samsung is reportedly working on new Android XR glasses with a colour display. It will reportedly launch next year. It could feature ultra-small micro"
-    },
-    {
-      "rank": 11,
-      "title": "Top Products Launched at Global Fintech Fest 2026",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/09/223-agentic-ai-products-fintechs-gff-2026/",
-      "summary": "From the Department of Financial Services' open-source Android ATMs to NPCI's AiNxt to UPI Tap &#038; Pay to PhonePe's Cross Border Scan to BharatPe's"
-    },
-    {
-      "rank": 12,
       "title": "RBI asks payment operators to start quantum-proofing at GFF 2026",
       "source": "MediaNama",
       "url": "https://www.medianama.com/2026/09/223-rbi-payment-operators-quantum-proofing-gff-2026/",
       "summary": "While the RBI Deputy Governor asked banks, payment operators, fintechs and tech providers to move together to quantum proof the payments system, he pr"
     },
     {
-      "rank": 13,
+      "rank": 2,
+      "title": "Global Fintech Fest 2026: Key product launches from agentic UPI payments to Android ATMs",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/09/223-agentic-ai-products-fintechs-gff-2026/",
+      "summary": "From the Department of Financial Services' open-source Android ATMs to NPCI's AiNxt to UPI Tap &#038; Pay to PhonePe's Cross Border Scan to BharatPe's"
+    },
+    {
+      "rank": 3,
+      "title": "WestBridge-Backed Way2News Restrained From Using AppsForBharat’s Confidential Data",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/westbridge-backed-way2news-restrained-from-using-appsforbharats-confidential-data/",
+      "summary": "A Bengaluru commercial court has temporarily restrained hyperlocal news startup Way2News from using confidential information and intellectual property"
+    },
+    {
+      "rank": 4,
+      "title": "BRICS backs startup incubator network, considers innovation fund in New Delhi Declaration",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/09/brics-startup-incubator-network-considers-innovation-fund-new-delhi-declaration",
+      "summary": "The grouping also proposed a digital public infrastructure repository, deeper cooperation on AI and faster cross-border payments among member countrie"
+    },
+    {
+      "rank": 5,
+      "title": "Best Phones for Video Recording in India: iPhone 17 Pro Max, Galaxy S26 Ultra, and More",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/mobiles/features/best-phones-video-recording-in-india-iphone-17-pro-max-galaxy-s26-ultra-pixel-10-pro-xl-price-specifications-features-12018941",
+      "summary": "Here are the best phones for video recording in India right now. Our recommendations include the iPhone 17 Pro Max, Samsung Galaxy S26 Ultra, Google P"
+    }
+  ],
+  "remaining_candidates": [
+    {
+      "rank": 6,
+      "title": "Airtel bats for sovereign stack to process data from India",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/09/airtel-bats-for-sovereign-stack-to-process-data-from-india",
+      "summary": "According to Airtel it would be incorrect to equate local data residency with data sovereignty as it is about controlling the data with a sovereign te"
+    },
+    {
+      "rank": 7,
+      "title": "Charm, warmth and design: Inside Slohh by Roach and Hilton’s Curio Collection",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/09/slohh-by-roach-curio-collection-by-hilton-hotel-design-photography",
+      "summary": "In this photo essay, we showcase the Hilton Curio Collections’ first property in India, Slohh by Roach in Bengaluru."
+    },
+    {
+      "rank": 8,
+      "title": "ESDS Soars 92% To Lead New-Age Tech Stocks This Week, MDR Hopes Lift Fintechs",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/esds-soars-92-to-lead-new-age-tech-stocks-this-week-mdr-hopes-lift-fintechs/",
+      "summary": "New-age tech stocks delivered a mixed performance this week as weakness in the broader equity market kept investor sentiment cautious.&#8230;"
+    },
+    {
+      "rank": 9,
+      "title": "Indian Listed New-Age Tech Company Tracker: Market Cap, Revenue & More",
+      "source": "Inc42",
+      "url": "https://inc42.com/features/indian-listed-new-age-tech-company-tracker-market-cap-revenue-more/",
+      "summary": "For years, we at Inc42 have tracked the Indian tech startup ecosystem and seen it grow from a kid to&#8230;"
+    },
+    {
+      "rank": 10,
+      "title": "How to Free Up WhatsApp Storage Without Deleting Chats: A Step-by-Step Guide",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/how-to/features/how-to-use-whatsapp-storage-manager-to-free-up-storage-space-step-by-step-guide-12033412",
+      "summary": "WhatsApp has a built-in tool to free up storage space on your smartphone without deleting any of your chats. The app on both iOS and Android offers a "
+    },
+    {
+      "rank": 11,
+      "title": "Best Phones for Portrait Photography in India in 2026: Pixel 11 Pro, Vivo X300 Ultra, More",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/mobiles/features/best-phones-for-portrait-photography-in-india-in-2026-12013887",
+      "summary": "Portrait photography on smartphones has become more versatile, with flagship models offering dedicated telephoto cameras, large sensors and software t"
+    },
+    {
+      "rank": 12,
       "title": "PayU rolls out AI fraud protection tool for cross-border card payments",
       "source": "MediaNama",
       "url": "https://www.medianama.com/2026/09/223-payu-ai-fraud-protection-cross-border-card-payments/",
