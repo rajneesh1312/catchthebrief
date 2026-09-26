@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-26T01:36:17.311836+05:30",
+  "generated_at": "2026-09-27T00:48:45.030917+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,96 +24,89 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "PB Fintech crashes 36%, Turtlemint 20% as IRDAI overhaul rattles insurance stocks",
+      "title": "[Weekly funding roundup Sept 19-25] VC inflow gets the debt boost",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/09/pb-fintech-crashes-36-pc-turtlemint-20-pc-irdai-overhaul-rattles-insurance-stocks",
-      "summary": "Max Financial, HDFC Life and other insurance stocks also fell as proposed commission caps put distribution economics under pressure.\n"
+      "url": "https://yourstory.com/2026/09/weekly-funding-roundup-sept-19-25-vc-inflow-gets-the-debt-boost",
+      "summary": "Venture capital funding into Indian startups surged this week, driven primarily by a handful of large deals.\n"
     },
     {
       "rank": 2,
+      "title": "New-Age Tech Stocks: Insurtech Sell-Off Drags Combined M-Cap Down By $3.6 Bn This Week",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/new-age-tech-stocks-insurtech-sell-off-drags-combined-m-cap-down-by-3-6-bn-this-week/",
+      "summary": "New-age tech stocks saw a bearish week, with a sharp sell-off in PB Fintech and Turtlemint following IRDAI’s proposed commission&#8230;"
+    },
+    {
+      "rank": 3,
       "title": "MeitY plans to expand DigiLocker into private sectors like finance, education & health",
       "source": "MediaNama",
       "url": "https://www.medianama.com/2026/09/223-meity-digilocker-private-sectors-finance-health/",
       "summary": "The Request for Empanelment issued by MeitY seeks proposals from companies in health, finance and education sectors to integrate DigiLocker in their s"
     },
     {
-      "rank": 3,
-      "title": "YouTube expands likeness detection to voices as Indian courts target AI voice clones",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/09/223-youtube-likeness-detection-voices-clones/",
-      "summary": "Expanding the likeness detection tool to include voice, YouTube said this \"will improve match accuracy\" and lay \"the groundwork for broader voice prot"
-    },
-    {
       "rank": 4,
-      "title": "Magic Eden Investigates Possible Exploit After NFTs Move for 0 ETH",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/cryptocurrency/news/magic-eden-investigates-possible-exploit-after-nfts-move-for-0-eth-crypto-exploits-scams-hacks-crypto-security-12098042",
-      "summary": "Magic Eden is facing questions over unusual Ethereum NFT transactions involving several thousand tokens that appeared to move for 0 ETH. NFT trader Ci"
+      "title": "A WhatsApp status does not count as circulation in an objectionable statement case: Karnataka High Court",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/09/223-whatsapp-status-objectionable-statement/",
+      "summary": "The Karnataka High Court quashed an FIR over a communal WhatsApp status, holding that it did not amount to publication or circulation under IPC Sectio"
     },
     {
       "rank": 5,
-      "title": "How Pine Labs Shifted Gears: From PoS Devices To An AI-Powered Fintech Stack",
-      "source": "Inc42",
-      "url": "https://inc42.com/features/how-pine-labs-shifted-gears-from-pos-devices-to-an-ai-powered-fintech-stack/",
-      "summary": "In 1998, the newly incorporated Pine Labs was helping petrol pumps accept payments and manage loyalty programmes. Nearly three decades&#8230;"
+      "title": "How to Download Your Instagram Photos and Videos: A Step-by-Step Guide",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/how-to/features/how-to-download-your-instagram-photos-and-videos-a-step-by-step-guide-12081570",
+      "summary": "Instagram allows users to download photos and videos they have posted on Instagram directly to their smartphones' camera roll. This feature comes in h"
     }
   ],
   "remaining_candidates": [
     {
       "rank": 6,
-      "title": "From tokenmaxxing to context engineering: Why enterprise AI needs better context, not bigger prompts",
+      "title": "India’s connected car push: How simulation is preparing vehicles for real-world chaos",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/09/tokenmaxxing-context-engineering-why-enterprise-ai-needs-better-context-not-bigger-prompts",
-      "summary": "Drawing on Elastic's experience helping enterprises build AI for production, Head of Field Engineering Ravindra Ramnani explains why context engineeri"
+      "url": "https://yourstory.com/2026/09/connected-car-push-simulation-making-vehicles-safer-dspace",
+      "summary": "\nIndia’s proposed 2028 V2V/V2X mandate is pushing automakers to prove that connected safety systems can handle the country’s unpredictable roads befor"
     },
     {
       "rank": 7,
-      "title": "Engineering is not a degree anymore, it is a mindset: Google exec Amit Kumar",
+      "title": "6 R.F. Kuang book quotes that find beauty in contradictions",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/09/engineering-is-not-a-degree-anymore-it-is-a-mindset-google-amit-kumar",
-      "summary": "As India leapfrogs in global AI, enterprises are shifting from model debates to agentic value, hybrid cloud sovereignty, and a democratised engineerin"
+      "url": "https://yourstory.com/2026/09/rf-kuang-book-quotes-beauty-in-contradictions",
+      "summary": "Discover 6 thought-provoking R.F. Kuang quotes that explore contradiction, identity, language, power, and the beauty found in life's complexities."
     },
     {
       "rank": 8,
-      "title": "[Update] AceVector IPO Subscribed 23% On Day 1, Retail Quota Booked 62%",
+      "title": "Ride-Hailing Fear: Inside Bharat Taxi Coercion Allegations In Gujarat",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/acevector-ipo-subscribed-9-on-day-1-so-far-retail-investors-lead-bidding/",
-      "summary": "Update&#124; September 25, 2026 18:55 IST Snapdeal parent AceVector’s ₹420 Cr IPO was subscribed 23% at the end of the&#8230;"
+      "url": "https://inc42.com/buzz/ride-hailing-fear-inside-bharat-taxi-coercion-allegations-in-gujarat/",
+      "summary": "“I wanted to reach my hotel and did not feel comfortable cancelling the ride at midnight, but they were not&#8230;"
     },
     {
       "rank": 9,
-      "title": "[Update] Moneyview IPO Subscribed 6.01X At End Of Day 2",
+      "title": "True North Acquires Minority Stake in IPO-Bound InMobi",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/moneyview-ipo-subscribed-3-55x-on-day-2-niis-lead-with-7-77x-subscription/",
-      "summary": "Update &#124; September 25, 2026, 17:40 IST Moneyview’s IPO was subscribed 6.01X at the end of the second day of&#8230;"
+      "url": "https://inc42.com/buzz/true-north-acquires-minority-stake-in-ipo-bound-inmobi/",
+      "summary": "Private equity firm True North has reportedly acquired a minority stake worth around $50-60 Mn in IPO-bound adtech startup InMobi&#8230;"
     },
     {
       "rank": 10,
-      "title": "HDFC Bank’s losing streak and SBI’s dream rally have run their course",
-      "source": "The Ken",
-      "url": "https://the-ken.com/story/hdfc-banks-losing-streak-and-sbis-dream-rally-have-run-their-course/",
-      "summary": "The post HDFC Bank&#8217;s losing streak and SBI&#8217;s dream rally have run their course appeared first on The Ken.\n"
+      "title": "How to Check BSNL Prepaid Plan and Validity on Your Phone",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/telecom/features/bsnl-recharge-plan-how-to-check-balance-plan-validity-12082692",
+      "summary": "BSNL users can check their active recharge plan, remaining validity and account details through multiple channels. Depending on the method available t"
     },
     {
       "rank": 11,
-      "title": "Amazon Great Indian Festival 2026: Early Deals Are Now Live on OnePlus N6x, iQOO Z10 Lite 5G, and More",
+      "title": "Lava Virat Curve vs Poco M8 Power vs Vivo T5 Lite: Price in India, Specifications and Features Compared",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/news/amazon-great-indian-festival-2026-early-deals-offer-discounts-oneplus-n6x-iqoo-z10-lite-5g-12097640",
-      "summary": "Amazon is currently offering Early Deals ahead of the Great Indian Festival 2026. The sale offers customers access to discounted prices on several sma"
+      "url": "https://www.gadgets360.com/mobiles/features/lava-virat-curve-vs-poco-m8-power-vs-vivo-t5-lite-price-in-india-specifications-features-comparison-12087259",
+      "summary": "Lava Virat Curve 5G, Poco M8 Power and Vivo T5 Lite 5G are positioned in the sub-Rs. 25,000 segment in India. All three smartphones feature 120Hz disp"
     },
     {
       "rank": 12,
-      "title": "Marking 12 Years of Make in India, Gov't Targets the Brains Inside Our Smartphones",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/news/make-in-india-ashwini-vaishnaw-battery-component-smartphone-manufacturing-assembly-production-announcement-12097997",
-      "summary": "As the government celebrates 12 years of the Make in India initiative, Union Minister of Electronics and Information Technology, Ashwini Vaishnaw, has"
-    },
-    {
-      "rank": 13,
-      "title": "A WhatsApp status does not count as circulation in an objectionable statement case: Karnataka High Court",
+      "title": "YouTube expands likeness detection to voices as Indian courts target AI voice clones",
       "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/09/223-whatsapp-status-objectionable-statement/",
-      "summary": "The Karnataka High Court quashed an FIR over a communal WhatsApp status, holding that it did not amount to publication or circulation under IPC Sectio"
+      "url": "https://www.medianama.com/2026/09/223-youtube-likeness-detection-voices-clones/",
+      "summary": "Expanding the likeness detection tool to include voice, YouTube said this \"will improve match accuracy\" and lay \"the groundwork for broader voice prot"
     }
   ]
 }
