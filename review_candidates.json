@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T00:54:01.055358+05:30",
+  "generated_at": "2026-10-05T01:16:06.382179+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,68 +24,82 @@
   "top_5": [
     {
       "rank": 1,
+      "title": "Why did Virat Kohli give up a Rs 300 Cr Puma deal to back Abhishek Ganguly’s Agilitas?",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/10/why-did-virat-kohli-give-up-rs-300-cr-puma-deal-abhishek-gangulys-agilitas",
+      "summary": "In this episode of the Prime Venture Partners Podcast, Abhishek Ganguly shares how he built Puma India, how Virat Kohli’s one8 came about, and what Ag"
+    },
+    {
+      "rank": 2,
+      "title": "Indian Startup IPO Tracker 2026",
+      "source": "Inc42",
+      "url": "https://inc42.com/features/indian-startup-ipo-tracker-2026/",
+      "summary": "Dalal Street emerged as a founder’s paradise in 2025, with 18 Indian startups listing on the bourses and collectively mopping&#8230;"
+    },
+    {
+      "rank": 3,
+      "title": "Is Apple Pay’s India Entry Too Late?",
+      "source": "Inc42",
+      "url": "https://inc42.com/features/is-apple-pays-india-entry-too-late/",
+      "summary": "The past fortnight has brought several developments around Apple in India. The iPhone 18 Pro and Apple’s foldable iPhone Duo&#8230;"
+    },
+    {
+      "rank": 4,
+      "title": "India’s Bitchat ban highlights two key issues",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/10/223-indias-bitchat-ban-highlights-two-key-issues/",
+      "summary": "The Indian government has blocked Bitchat from the Google Play Store, Apple App Store and its website bitchat.free\nThe post India&#8217;s Bitchat ban "
+    },
+    {
+      "rank": 5,
+      "title": "Wi-Fi 5 vs Wi-Fi 6: What Is the Difference?",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/internet/features/wifi-5-vs-wifi-6-what-is-the-difference-12098234",
+      "summary": "Wi-Fi Alliance launched the Wi-Fi 6 standard in September 2019. There are many key differences between Wi-Fi 5 and Wi-Fi 6. The Wi-Fi 5, or 802.11ac, "
+    }
+  ],
+  "remaining_candidates": [
+    {
+      "rank": 6,
       "title": "From K-pop to AI, Karnataka seeks deeper ties with Korea",
       "source": "YourStory",
       "url": "https://yourstory.com/2026/10/karnataka-korean-investment-technology-partnerships",
       "summary": "From K-pop to AI, Karnataka is looking to turn India’s growing Korean connection into investment and technology partnerships. "
     },
     {
-      "rank": 2,
-      "title": "IPO-Bound Kuku Technologies Turns Profitable In FY26, Revenue Surges 6X To ₹1,484 Cr",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/ipo-bound-kuku-technologies-turns-profitable-in-fy26-revenue-surges-6x-to-%e2%82%b91484-cr/",
-      "summary": "Kuku Technologies Limited, parent company of audio OTT platform Kuku FM and microdrama app Kuku TV, swung into the black&#8230;"
-    },
-    {
-      "rank": 3,
-      "title": "New-Age Tech Stocks Extend Slide, Turtlemint Slumps Another 20% This Week",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/new-age-tech-stocks-extend-slide-turtlemint-slumps-another-20-this-week/",
-      "summary": "New-age tech stocks remained under pressure this week, with 47 stocks declining as benchmark indices recorded their eighth consecutive weekly&#8230;"
-    },
-    {
-      "rank": 4,
-      "title": "AirPods 5 Review: Getting Surprisingly Close to the Pros",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/audio/reviews/apple-airpods-5-review-12134643",
-      "summary": "AirPods 5 are an interesting step forward for Apple’s regular AirPods lineup. They keep the familiar open-fit design but add ANC (active noise cancell"
-    },
-    {
-      "rank": 5,
-      "title": "Best Laptops Under Rs. 90,000 in India to Buy During Amazon, Flipkart Sale: Acer Aspire 7 (2026), Dell 15 (2025) and More",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/laptops/features/best-laptops-under-rs-90000-in-india-acer-aspire-7-asus-vivobook-16-dell-15-hp-lenovo-ideapad-12114492",
-      "summary": "Amazon Great Indian Festival Sale 2026 and Flipkart Big Billion Days Sale 2026 are about to begin, during which you will be able to get your hands on "
-    }
-  ],
-  "remaining_candidates": [
-    {
-      "rank": 6,
+      "rank": 7,
       "title": "[Weekly funding roundup Sept 26-Oct 2] VC inflow continues to maintain strong momentum",
       "source": "YourStory",
       "url": "https://yourstory.com/2026/10/weekly-funding-roundup-sept-26-oct-2-vc-inflow-continues-to-maintain-strong-momentum",
       "summary": "October has begun on a positive note as weekly funding crossed $400 million and this was largely due the presence of two $100 million plus deals.\n"
     },
     {
-      "rank": 7,
-      "title": "Sebi working on second surveillance system to identify 'bad elements' among listed cos: Varshney",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/10/sebi-working-second-surveillance-system-identify-bad-elements-among-listed-cos-varshney",
-      "summary": "Varshney said the regulator is also working on identifying small initial public offerings (IPOs) that may not be suitable for the capital market."
-    },
-    {
       "rank": 8,
-      "title": "Indian Listed New-Age Tech Company Tracker: Market Cap, Revenue & More",
+      "title": "Jack Dorsey’s Bitchat Goes Offline In India, Apple Cites MeitY Order",
       "source": "Inc42",
-      "url": "https://inc42.com/features/indian-listed-new-age-tech-company-tracker-market-cap-revenue-more/",
-      "summary": "For years, we at Inc42 have tracked the Indian tech startup ecosystem and seen it grow from a kid to&#8230;"
+      "url": "https://inc42.com/buzz/jack-dorseys-bitchat-goes-offline-in-india-apple-cites-meity-order/",
+      "summary": "Bitchat, the decentralised messaging platform founded by Twitter (now X) cofounder Jack Dorsey, has been removed from Google Play Store&#8230;"
     },
     {
       "rank": 9,
-      "title": "Best Compact Smartphones to Buy During Amazon, Flipkart Sale",
+      "title": "Xiaomi Power Bank 20000 165W Review: One Brick to Charge It All",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/features/best-compact-smartphones-to-buy-during-amazon-flipkart-sale-12114345",
-      "summary": "Amazon and Flipkart are gearing up for their biggest festive sales of the year. The Great Indian Festival and Big Billion Days sales are set to begin "
+      "url": "https://www.gadgets360.com/mobiles/reviews/xiaomi-power-bank-20000-165w-review-12137239",
+      "summary": "The Xiaomi Power Bank 20000 165W is aimed at users who need more than an occasional phone top-up. Its 20,000mAh battery, up to 165W combined output, a"
+    },
+    {
+      "rank": 10,
+      "title": "Redmi 17C vs Poco M8x vs OnePlus N6x: Price in India, Specifications Compared",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/mobiles/news/redmi-17c-vs-poco-m8x-vs-oneplus-n6x-price-in-india-specifications-features-comparison-12126175",
+      "summary": "The Redmi 17C was recently launched in India with a starting price of Rs. 20,999. It runs on a MediaTek Dimensity 6300 5G chipset, paired with up to 6"
+    },
+    {
+      "rank": 11,
+      "title": "MediaNama in September 2026: the top 20 stories",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/10/223-medianama-in-september-2026-the-top-20-stories/",
+      "summary": "Policybazaar, network slicing, SIR, Muse, Bigbasket, NPCI\nThe post MediaNama in September 2026: the top 20 stories appeared first on MEDIANAMA.\n"
     }
   ]
 }
