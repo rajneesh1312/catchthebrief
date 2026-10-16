@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T01:29:40.398447+05:30",
+  "generated_at": "2026-10-17T01:09:22.014202+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,103 +24,110 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "Groww building in-house AI stack amid rising compute costs",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/10/223-groww-ai-stack-compute-costs/",
-      "summary": "During its Q2FY27 earnings call Groww CEO said that they are building their own in-house AI stack to reduce their \"per token cost\" and if they \"relied"
+      "title": "CERT-in Issues Critical Warning After AI Agents Broke Into Indian Organisations' Live Systems",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/ai/news/cert-in-ai-agents-indian-organisations-live-systems-access-warning-12195142",
+      "summary": "In its advisory CIAD-2026-0049, titled ‘AI Agents as Attack Vectors’, CERT-In highlighted two categories of incidents involving the information and co"
     },
     {
       "rank": 2,
-      "title": "Google and Amazon’s newfound fascination with India’s paddy fields",
-      "source": "The Ken",
-      "url": "https://the-ken.com/story/google-and-amazons-newfound-fascination-with-indias-paddy-fields/",
-      "summary": "The post Google and Amazon’s newfound fascination with India’s paddy fields appeared first on The Ken.\n"
+      "title": "Welcome competition but Indian laws apply to all: Reliance breaks silence on Musk's satcom row",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/10/welcome-competition-indian-laws-apply-reliance-breaks-silence-musks-satcom-row",
+      "summary": "In its first direct response to Musk's recent barbs, the company said it was placing \"the facts on record.\""
     },
     {
       "rank": 3,
-      "title": "BitChat blocking challenge: Kerala HC gives Govt. 4 weeks to respond",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/10/223-bitchat-blocking-challenge-kerala-hc/",
-      "summary": "The Kerala HC has reportedly given the Govt four weeks to respond to a petition challenging the blocking of Bitchat in India which alleges a violation"
+      "title": "Cult.fit Gets SEBI Clearance For ₹950 Cr+ IPO",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/cult-fit-gets-sebi-clearance-for-%e2%82%b9950-cr-ipo/",
+      "summary": "Markets regulator SEBI has given its go-ahead to gym chain Cult.fit’s ₹950 Cr IPO about three months after it filed&#8230;"
     },
     {
       "rank": 4,
-      "title": "[Update] Tonbo Imaging IPO Subscribed 4X On Day 1, NIIs Lead Demand",
+      "title": "FirstCry’s Core Revenue Engine Is Fighting Too Many Battles",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/tonbo-imaging-ipo-subscribed-1-47x-on-day-1-so-far-niis-lead-demand/",
-      "summary": "Update&#124; October 15, 18:45 IST Defence tech company Tonbo Imaging’s ₹852 Cr IPO was oversubscribed 4X at the end of&#8230;"
+      "url": "https://inc42.com/features/firstcrys-core-revenue-engine-is-fighting-too-many-battles/",
+      "summary": "Sixteen years since FirstCry began its journey, what began as a kidswear marketplace has spawned a massive multi-channel ecommerce and&#8230;"
     },
     {
       "rank": 5,
-      "title": "Jio Financial Services Q2 Profit Halves YoY To ₹340 Cr",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/jio-financial-services-q2-profit-halves-yoy-to-%e2%82%b9340-cr/",
-      "summary": "Jio Financial Services’ consolidated net profit declined 51% to ₹340.4 Cr in the second quarter of the financial year ended&#8230;"
+      "title": "Delhi Police tender sought facial recognition CCTV cameras for  Ramlila Maidan",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/10/223-delhi-police-facial-recognition-cameras-ramlila-maidan/",
+      "summary": "A new Delhi Police CCTV tender includes facial recognition, crowd analytics and vehicle number plate detection across Central and New Delhi districts."
     }
   ],
   "remaining_candidates": [
     {
       "rank": 6,
-      "title": "Figma announces new features to define how agents work on its platform",
+      "title": "India becomes the latest country to report rogue AI agent activity",
       "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/",
-      "summary": "Figma is also releasing its code layers feature in open beta."
+      "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
+      "summary": "The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive clou"
     },
     {
       "rank": 7,
+      "title": "AI execution company RapidCanvas raises $29M in Series B",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/10/ai-execution-company-rapidcanvas-raises-29m-in-series-b",
+      "summary": "RapidCanvas pairs its AI platform with field AI engineers to deliver custom AI solutions. AI engineers learn each customer's business processes, desig"
+    },
+    {
+      "rank": 8,
       "title": "5 Kristin Hannah lessons on the complexities of womanhood",
       "source": "YourStory",
       "url": "https://yourstory.com/2026/10/kristin-hannah-lessons",
       "summary": "Explore five powerful Kristin Hannah lessons that capture the complexities of womanhood, from love & sacrifice to resilience and the strength of women"
     },
     {
-      "rank": 8,
-      "title": "5 Non-fiction books you must read before 2026 ends",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/10/non-fiction-books",
-      "summary": "Discover five must-read nonfiction books before 2026 ends, exploring Indian politics, Kashmir, scams, archaeology and wildlife conservation."
-    },
-    {
       "rank": 9,
-      "title": "TechSparks 2026 grand finale: Intel, Jhunjhunwala, Food Pharmer on India’s rise",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/10/techsparks-2026-grand-finale-jhunjhunwala-food-pharmer",
-      "summary": "TechSparks 2026 finale: Intel, Sri Chaitanya, Prof. Jhunjhunwala and Food Pharmer on education, edge AI and a builder-first India."
+      "title": "Now, FSSAI Issues Show-Cause Notices To BigBasket, Flipkart Over Misleading Claims",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/now-fssai-issues-show-cause-notices-to-bigbasket-flipkart-over-misleading-claims/",
+      "summary": "The Food Safety and Standards Authority of India (FSSAI) has issued show-cause notices to quick commerce and ecommerce platforms BigBasket&#8230;"
     },
     {
       "rank": 10,
-      "title": "[Update] Zetwerk IPO Subscribed 23% On Day 1",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/zetwerk-ipo-subscribed-8-on-day-1-so-far/",
-      "summary": "Update &#124; October 10, 19:03 B2B manufacturing company Zetwerk’s IPO received muted response on day one as it was subscribed&#8230;"
+      "title": "Gnani, Eleven Labs’ cheap, human-like calls face a regulatory test",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/gnani-eleven-labs-cheap-human-like-calls-face-a-regulatory-test/",
+      "summary": "The post Gnani, Eleven Labs’ cheap, human-like calls face a regulatory test appeared first on The Ken.\n"
     },
     {
       "rank": 11,
-      "title": "Circle’s USDC Leads as First Stablecoin Subject to Fall Under New EU Rules",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/cryptocurrency/news/circle-s-usdc-leads-as-first-stablecoin-subject-to-fall-under-new-eu-rules-crypto-regulations-usdc-coin-token-12190597",
-      "summary": "The European Banking Authority has classified Circle’s USDC as the first significant e-money token under the EU’s Markets in Crypto-Assets Regulation."
+      "title": "2026–2036: The Ken’s second decade",
+      "source": "The Ken",
+      "url": "https://the-ken.com/blog/the-kens-second-decade/",
+      "summary": "Ten years ago, a handful of us launched the first version of The Ken as India’s first subscriptions-only business publication. We were yearning to rep"
     },
     {
       "rank": 12,
-      "title": "Amazon Great Indian Festival 2026: Best SSD Deals from SanDisk, Samsung, Seagate and More",
+      "title": "OpenAI AI Model Used Another Wallet’s Ethereum Testnet Funds Without Authorisation, Report Says",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/laptops/news/amazon-great-indian-festival-2026-best-ssd-deals-sandisk-samsung-seagate-more-12190024",
-      "summary": "Smartphones with higher storage capacities are becoming increasingly expensive amid rising memory prices. This makes it difficult for those to store a"
+      "url": "https://www.gadgets360.com/cryptocurrency/news/openai-agent-executes-ethereum-transactions-from-an-unowned-wallet-crypto-payments-ai-security-eth-12195980",
+      "summary": "OpenAI has disclosed that an internal AI research model used funds from an unauthorised Ethereum testnet wallet while completing a coding assignment i"
     },
     {
       "rank": 13,
-      "title": "Amazon Great Indian Festival 2026: Best Premium Smartwatch Deals",
+      "title": "Samsung Galaxy SmartTag 3 India Launch Timeline Confirmed by Company Executive",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/wearables/news/amazon-great-indian-festival-sale-2025-best-offers-deals-discounts-premium-smartwatch-apple-watch-garmin-vivoactive-12189152",
-      "summary": "Amazon’s Great Indian Festival offers interesting deals on wearables from big-name brands. These include the Apple Watch Series 11, Garmin Vivoactive "
+      "url": "https://www.gadgets360.com/smart-home/news/samsung-galaxy-smarttag-3-india-launch-timeline-executive-specifications-12195557",
+      "summary": "Samsung Galaxy SmartTag 3 will launch in India in January 2027, a company executive has confirmed. The latest location tracker from Samsung was recent"
     },
     {
       "rank": 14,
-      "title": "MEA admits India lacks a stand-alone tech diplomacy document",
+      "title": "Survey finds SIM binding may disrupt business, but will it stop fraud?",
       "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/10/223-mea-india-stand-alone-tech-diplomacy-document/",
-      "summary": "The 17th report of the Parliamentary Standing Committee on External Affairs saw the MEA admitting that \"no stand-alone policy document consolidates th"
+      "url": "https://www.medianama.com/2026/10/223-survey-sim-binding-disrupt-business-fraud/",
+      "summary": "While the survey on SIM binding underlined how firms expect forced logouts to disrupt business, it advises \"a risk-based approach that focuses on iden"
+    },
+    {
+      "rank": 15,
+      "title": "What NITI Aayog wants MeitY to do under its new data centre evaluation framework",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/10/223-niti-aayog-meity-data-centre-evaluation/",
+      "summary": "NITI Aayog has asked the Centre to establish \"a centralised audit mechanism with MeitY\" to inspect claims of data centres, while each state will publi"
     }
   ]
 }
