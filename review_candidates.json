@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T00:13:36.556195+05:30",
+  "generated_at": "2026-10-19T00:19:11.780362+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,96 +24,75 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "AI agents accessed Indian organisations’ systems without authorisation, CERT-In reveals",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/10/223-cert-in-ai-agents-unauthorised-access/",
-      "summary": "AI agents accessed live systems belonging to Indian organisations during research and evaluation, according to CERT-In.\nThe post AI agents accessed In"
+      "title": "Starlink, Jio & OneWeb: Untangling The Satcom Queue",
+      "source": "Inc42",
+      "url": "https://inc42.com/features/starlink-jio-oneweb-untangling-the-satcom-queue/",
+      "summary": "The irony was not lost on many. Around the same time as the internet in India’s national capital Delhi was&#8230;"
     },
     {
       "rank": 2,
-      "title": "Decoding Urban Company’s ₹2,500 Cr Fundraise Proposal",
+      "title": "Indian Startup IPO Tracker 2026",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/decoding-urban-companys-%e2%82%b92500-cr-fundraise-proposal/",
-      "summary": "Listed home services major Urban Company’s board approved a proposal to raise up to ₹2,500 Cr yesterday, seeking to shore&#8230;"
+      "url": "https://inc42.com/features/indian-startup-ipo-tracker-2026/",
+      "summary": "Dalal Street emerged as a founder’s paradise in 2025, with 18 Indian startups listing on the bourses and collectively mopping&#8230;"
     },
     {
       "rank": 3,
-      "title": "UPI transactions fell 1.8% to 24.07 billion in September 2026; value slipped to Rs 29.37 lakh crore",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/10/223-upi-transactions-september-value-slipped/",
-      "summary": "UPI processed 24.07 billion transactions to the value of Rs 29.37 lakh crore in September 2026. This represented a 1.8% decline in volume and a 1.5% d"
+      "title": "Fitbit Air Review: Is This Google’s Best Fitness Tracker Yet?",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/wearables/reviews/google-fitbit-air-review-12202519",
+      "summary": "The Google Fitbit Air is an interesting addition to the wearable segment, especially for people who want detailed health tracking without another scre"
     },
     {
       "rank": 4,
-      "title": "Visa Enables Round-the-Clock USDC Funding for Global Payments",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/cryptocurrency/news/visa-enables-round-the-clock-usdc-funding-for-global-payments-crypto-adoption-stablecoin-usdc-usdt-crypto-partnerships-12196249",
-      "summary": "Visa has launched USDC-based commercial funding for cross-border payouts through its Visa Direct service, with Inyo Global serving as its partner. The"
+      "title": "Flipkart Group cuts FY26 loss to Rs 8,468 crore, revenue nears Rs 1.5 lakh crore",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/10/223-flipkart-loss-revenue-rs-1-5-lakh-crore/",
+      "summary": "Flipkart Group's net loss was down 2% to Rs 8,468 crore in FY26, with revenue up 18% to Rs 1,45,880 crore. The growth was led by logistics and adverti"
     },
     {
       "rank": 5,
-      "title": "FY26 Financial Tracker: Tracking The Financial Performance Of Indian Startups",
-      "source": "Inc42",
-      "url": "https://inc42.com/features/fy26-financial-tracker-tracking-the-financial-performance-of-indian-startups/",
-      "summary": "The Indian startup ecosystem continued to mature in FY26, with 22 new-age tech companies making their public market debut as&#8230;"
+      "title": "FMCG firms grapple with input cost inflation in Q2, brace for margin pressure",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/10/fmcg-firms-input-cost-inflation-margin-pressure",
+      "summary": "Input-cost pressures intensified in the September quarter, reversing some of the moderation seen in the preceding quarter, which squeezed margins even"
     }
   ],
   "remaining_candidates": [
     {
       "rank": 6,
-      "title": "India becomes the latest country to report rogue AI agent activity",
-      "source": "TechCrunch",
-      "url": "https://techcrunch.com/2026/10/16/india-becomes-the-latest-country-to-report-rogue-ai-agent-activity/",
-      "summary": "The agents got in through credentials and connection settings left exposed in app configurations, public code repositories, and overly permissive clou"
+      "title": "How art platforms, exhibitions and awards strengthen the creative economy",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/10/art-platforms-exhibitions-awards-creative-economy-photography",
+      "summary": "In this photo essay from Lalit Kala Akademi in New Delhi, we showcase more highlights from an exhibition with 270 artworks from across India."
     },
     {
       "rank": 7,
-      "title": "ixigo Q2 profit at Rs 63 Cr on robust show in hotel booking biz",
+      "title": "Health, inclusion, computing: Test your business creativity with Edition 254 of our weekly quiz!",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/10/ixigo-q2-profit-at-rs-63-cr-on-robust-show-in-hotel-booking-biz",
-      "summary": "This was aided by the partial sale of stake in Freshbus and strong growth in the hotel bookings segment."
+      "url": "https://yourstory.com/2026/10/health-inclusion-computing-business-entrepreneur-creativity-quiz",
+      "summary": "This insightful feature from YourStory tests and strengthens your business acumen! Here are 5 questions to kick off this 254th quiz. Ready?"
     },
     {
       "rank": 8,
-      "title": "India’s massive AI opportunity; Women entrepreneurs in this year’s Mann Ki Baat",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/10/india-massive-ai-opportunity-women-entrepreneurship",
-      "summary": "Unlike previous digital revolutions (internet and smartphones) that democratised access, AI is democratising intelligence itself, raising overall prod"
+      "title": "Burma Burma Parent’s FY26 Loss Surges 31X YoY To ₹15 Cr",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/burma-burma-parents-fy26-loss-surges-31x-yoy-to-%e2%82%b915-cr/",
+      "summary": "Restaurant chain Burma Burma’s parent entity, Hunger Pangs Limited, saw its net loss skyrocket nearly 31X to ₹15.4 Cr in&#8230;"
     },
     {
       "rank": 9,
-      "title": "Shubhra Saxena’s It Matters A Lot: 5 Lessons on conscious living",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/10/lesson-conscious-living",
-      "summary": "Shubhra Saxena launches It Matters A Lot in New Delhi, exploring self-awareness, life lessons and the importance of conscious living."
+      "title": "Amazon Great Indian Festival 2026: Best Deals on All Haier Products Like Refrigerators, Washing Machines and Geysers",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/home-appliances/news/amazon-great-indian-festival-2026-best-deals-on-all-haier-products-refrigerators-washing-machines-geysers-12195282",
+      "summary": "Amazon Great Indian Festival Sale 2026 has listed various Haier home appliances at discounted prices. For reference, you can get the Haier 190L 5 Star"
     },
     {
       "rank": 10,
-      "title": "Nazara, Groww Gain Among New-Age Tech Stocks This Week, AceVector Falls 18%",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/nazara-groww-gain-among-new-age-tech-stocks-this-week-acevector-falls-18/",
-      "summary": "Fewer than half of the 67 new-age tech stocks under Inc42’s coverage advanced this week despite a broader market recovery.&#8230;"
-    },
-    {
-      "rank": 11,
-      "title": "Amazon Great Indian Festival 2026 Sale: Best Gaming Monitors Under Rs. 20,000",
+      "title": "Amazon Great Indian Festival 2026: Gaming Headset Deals Under Rs. 5,000",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/games/news/amazon-great-indian-festival-sale-2026-best-offers-deals-discounts-budget-gaming-monitors-12193649",
-      "summary": "Amazon’s Great Indian Festival Sale 2026 offers big deals on gaming monitors from top brands. This includes those from LG, Samsung, Lenovo and even Al"
-    },
-    {
-      "rank": 12,
-      "title": "Amazon Great Indian Festival 2026: Best Power Bank Deals",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/others/news/amazon-great-indian-festival-2026-best-power-bank-deals-xiaomi-boat-samsung-12195783",
-      "summary": "Here we have compiled a list of some of the best power bank deals available during the Amazon Great Indian Festival Sale 2026. The prices mentioned be"
-    },
-    {
-      "rank": 13,
-      "title": "Flipkart Group cuts FY26 loss to Rs 8,468 crore, revenue nears Rs 1.5 lakh crore",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/10/223-flipkart-loss-revenue-rs-1-5-lakh-crore/",
-      "summary": "Flipkart Group's net loss was down 2% to Rs 8,468 crore in FY26, with revenue up 18% to Rs 1,45,880 crore. The growth was led by logistics and adverti"
+      "url": "https://www.gadgets360.com/games/news/amazon-great-indian-festival-sale-2026-best-offers-deals-discounts-gaming-headset-under-5000-12194866",
+      "summary": "Amazon’s Great Indian Festival Sale offers several deals on gaming headsets. These headsets come with elongated boom microphones that deliver clear vo"
     }
   ]
 }
