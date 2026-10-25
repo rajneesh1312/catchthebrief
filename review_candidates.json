@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T00:26:06.838056+05:30",
+  "generated_at": "2026-10-26T00:42:00.330172+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,17 +24,17 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "Rs 10,000 Cr into restaurants. But why do 80% fail? Here's the Hotshare F&B investment playbook",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/10/the-hotshare-fb-investment-playbook",
-      "summary": "In this episode of the Prime Venture Partners Podcast, Lavanya, Founder, Hotshare, an F&B investment platform, explains what she looks for before fund"
+      "title": "Flipkart’s Summer Of Discontent",
+      "source": "Inc42",
+      "url": "https://inc42.com/features/flipkarts-summer-of-discontent/",
+      "summary": "Questions over an IPO and ESOPs, huge investments in quick commerce and food delivery and the pressure to deliver profits:&#8230;"
     },
     {
       "rank": 2,
-      "title": "PHP2Shell: Who Is At Risk And How Can Businesses Stay Safe?",
+      "title": "New-Age Tech Stocks Tumble This Week, Swiggy Leads Sell-Off With 24.5% Fall",
       "source": "Inc42",
-      "url": "https://inc42.com/features/php2shell-who-is-at-risk-and-how-can-businesses-stay-safe/",
-      "summary": "PHP, a programming language used to build websites, is at the centre of a major security concern after researchers uncovered&#8230;"
+      "url": "https://inc42.com/buzz/new-age-tech-stocks-tumble-this-week-swiggy-leads-sell-off-with-24-5-fall/",
+      "summary": "New-age tech stocks lost over $11 Bn in combined market capitalisation this week, with Swiggy leading a broad sell-off amid&#8230;"
     },
     {
       "rank": 3,
@@ -45,33 +45,33 @@
     },
     {
       "rank": 4,
-      "title": "Lowdown: India’s new telecom sandbox rules are in force. How much of the trials will the public see?",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/10/223-indias-telecom-sandbox-rules-trials-public/",
-      "summary": "India's new telecom sandbox rules allow the government to waive licensing and spectrum requirements for testing new technologies, but leave gaps in tr"
+      "title": "Beyond transactions: How PhonePe and Razorpay are using AI to improve digital payments",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/10/beyond-transactions-how-phonepe-and-razorpay-are-using-ai-to-improve-digital-payments",
+      "summary": "At TechSparks 2026, Deep Agrawal of PhonePe and Khilan Haria of Razorpay discussed how contextual payments and AI can improve customer experiences, ma"
     },
     {
       "rank": 5,
-      "title": "How to Check Airtel DTH Recharge Status: A Step-by-Step Guide",
+      "title": "iPhone 18 Pro Max Review: Powerful, Polished, but Who Should Actually Upgrade?",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/how-to/features/how-to-check-airtel-dth-recharge-status-online-and-offline-12215508",
-      "summary": "To avoid unnecessary connection drops, it is vital to keep track of your Airtel DTH connection’s balance. Airtel lets you do this in three ways. Two m"
+      "url": "https://www.gadgets360.com/mobiles/reviews/iphone-18-pro-max-review-12233041",
+      "summary": "The iPhone 18 Pro Max is a refined flagship rather than a major leap over the iPhone 17 Pro Max. Its familiar design and excellent display remain larg"
     }
   ],
   "remaining_candidates": [
     {
       "rank": 6,
-      "title": "5 Lessons to learn from Nexus by Yuval Noah Harari",
+      "title": "Gen Z is shaping India’s beauty market: prevention first,and going beyond the metros",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/10/lessons-nexus-yuval",
-      "summary": "Discover five key lessons from Yuval Noah Harari’s Nexus on information, power, artificial intelligence and how networks shape society."
+      "url": "https://yourstory.com/2026/10/gen-z-shaping-indias-beauty-market-prevention-firstand-going-beyond-metros",
+      "summary": "\n\nSubtitle: For this generation, beauty is prevention first with sun protection products seeing a 60% growth among Gen Z shoppers, finds a new report "
     },
     {
       "rank": 7,
-      "title": "5 Lessons from Prithvi Raj Banerjee’s Mindful Thinking",
+      "title": "What will it take for India’s fintech infrastructure to go global?",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/10/lessons-mindful-thinking",
-      "summary": "Discover five lessons from Prithvi Raj Banerjee’s Mindful Thinking to manage anxiety, boost productivity and reshape your thoughts."
+      "url": "https://yourstory.com/2026/10/what-will-it-take-for-indias-fintech-infrastructure-global",
+      "summary": "At TechSparks 2026, Movin Jain of Skydo and Srijon Biswas of PhonePe discussed building payments infrastructure at scale, the challenges of cross-bord"
     },
     {
       "rank": 8,
@@ -82,52 +82,24 @@
     },
     {
       "rank": 9,
-      "title": "Flipkart-Backed super.money’s FY26 Revenue Triples To ₹292 Cr",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/flipkart-backed-super-moneys-fy26-revenue-triples-to-%e2%82%b9292-cr/",
-      "summary": "UPI provider super.money reported a net loss of ₹263.8 Cr in FY26, 78.5% higher than ₹147.8 Cr loss incurred in&#8230;"
+      "title": "How to Free Up Space on Your Android Phone",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/mobiles/features/how-to-free-up-space-on-android-phone-delete-apps-and-photos-step-by-step-guide-12226369",
+      "summary": "Running out of storage on your Android smartphone will limit many capabilities of your handset. It will stop you from downloading new apps, capturing "
     },
     {
       "rank": 10,
-      "title": "Realme 17 Pro Series Tipped to Feature 10,000mAh Battery, 200-Megapixel Camera",
+      "title": "How to Turn Off Location Tracking for Apps on Android and iOS",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/news/realme-17-pro-plus-battery-camera-specifications-features-leak-12225965",
-      "summary": "Realme could launch a new smartphone with a 10,000mAh battery and a 200-megapixel primary rear camera. The handset is tipped to be either the Realme 1"
+      "url": "https://www.gadgets360.com/how-to/features/how-to-turn-off-location-tracking-for-apps-on-android-and-ios-12221704",
+      "summary": "Android and iPhone users can manage which apps have access to their location through their phone's privacy settings. Both platforms let users block lo"
     },
     {
       "rank": 11,
-      "title": "Best Smartphones with LTPO AMOLED Display in India: Samsung Galaxy S26 Ultra, Xiaomi 17 Ultra and More",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/features/best-smartphones-with-ltpo-amoled-display-in-india-samsung-galaxy-s26-ultra-motorola-signature-vivo-x300-oppo-find-x9-12217082",
-      "summary": "There are multiple flagship smartphones in India that are equipped with an LTPO AMOLED display. For reference, the Samsung Galaxy S26 Ultra is equippe"
-    },
-    {
-      "rank": 12,
-      "title": "What do Blinkit and Instamart’s order numbers reveal about their profitability gap?",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/10/223-blinkit-instamart-order-numbers-profitability-gap/",
-      "summary": "While customers spend nearly the same on every order on Blinkit and Instamart and the former handles 3 times more orders than the latter, Blinkit alre"
-    },
-    {
-      "rank": 13,
-      "title": "DrizzVision’s AI App Testing Ambition Meets Reality",
+      "title": "AI Can Be Cyborg or Centaur. But Can Enterprises Monetise It?",
       "source": "Analytics India Mag",
-      "url": "https://analyticsindiamag.com/ai-startups/drizzvisions-ai-app-testing-ambition-meets-reality",
-      "summary": "This Bengaluru startup is betting that AI can test mobile apps by seeing and using them like a person. Its benchmark shows results depend heavily on t"
-    },
-    {
-      "rank": 14,
-      "title": "Coforge Revenue Rises 54% as AI Engineering and Deal Bookings Gain Momentum",
-      "source": "Analytics India Mag",
-      "url": "https://analyticsindiamag.com/ai-news/coforge-revenue-rises-54-as-ai-engineering-and-deal-bookings-gain-momentum",
-      "summary": "Coforge’s revenue grew 53.6% year-on-year in Q2 FY27 as order intake reached $1.04 billion and the company raised its FY27 EBIT margin guidance to 16%"
-    },
-    {
-      "rank": 15,
-      "title": "Tech Mahindra Partners With SpaceXSI to Bring AI Into Software Engineering",
-      "source": "Analytics India Mag",
-      "url": "https://analyticsindiamag.com/ai-news/tech-mahindra-partners-with-spacexsi-to-bring-ai-into-software-engineering",
-      "summary": "The collaboration targets enterprise clients across six industries, with joint programmes focused on application modernisation, code quality and devel"
+      "url": "https://analyticsindiamag.com/ai-features/ai-can-be-cyborg-or-centaur-but-can-enterprises-monetise-it",
+      "summary": "Satish Viswanathan, former global data and AI lead for travel at Accenture, argues that companies are overlooking organisational readiness, workforce "
     }
   ]
 }
