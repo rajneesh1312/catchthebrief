@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T00:42:00.330172+05:30",
+  "generated_at": "2026-10-27T02:38:51.023821+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,82 +24,110 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "Flipkart’s Summer Of Discontent",
+      "title": "News Publishers Move SC To Challenge The DPDP Act",
       "source": "Inc42",
-      "url": "https://inc42.com/features/flipkarts-summer-of-discontent/",
-      "summary": "Questions over an IPO and ESOPs, huge investments in quick commerce and food delivery and the pressure to deliver profits:&#8230;"
+      "url": "https://inc42.com/buzz/news-publishers-move-sc-to-challenge-the-dpdp-act/",
+      "summary": "A group of 21 news publishers has reportedly challenged India’s Digital Personal Data Protection (DPDP) Act in the Supreme Court&#8230;"
     },
     {
       "rank": 2,
-      "title": "New-Age Tech Stocks Tumble This Week, Swiggy Leads Sell-Off With 24.5% Fall",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/new-age-tech-stocks-tumble-this-week-swiggy-leads-sell-off-with-24-5-fall/",
-      "summary": "New-age tech stocks lost over $11 Bn in combined market capitalisation this week, with Swiggy leading a broad sell-off amid&#8230;"
+      "title": "Same AI, different outcomes: what 25 lean AI startups got right",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/10/lean-ai-startup-scaling-framework-seven-growth-drivers",
+      "summary": "Why do lean AI startups scale while others stall? A Suvan Ventures report identifies seven growth drivers across 25 companies."
     },
     {
       "rank": 3,
-      "title": "PhonePe & Google Pay’s combined UPI app share fell to 77.8% in Sept 2026",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/10/223-phonepe-google-pay-upi-share-sept-2026/",
-      "summary": "Over the year, PhonePe's UPI market share fell by 0.9 percentage points from 46.47% while Google Pay's share declined by 3.2 percentage points from 35"
+      "title": "Pocket FM won’t stop throwing things at the wall",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/pocket-fm-wont-stop-throwing-things-at-the-wall/",
+      "summary": "The post Pocket FM won&#8217;t stop throwing things at the wall appeared first on The Ken.\n"
     },
     {
       "rank": 4,
-      "title": "Beyond transactions: How PhonePe and Razorpay are using AI to improve digital payments",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/10/beyond-transactions-how-phonepe-and-razorpay-are-using-ai-to-improve-digital-payments",
-      "summary": "At TechSparks 2026, Deep Agrawal of PhonePe and Khilan Haria of Razorpay discussed how contextual payments and AI can improve customer experiences, ma"
+      "title": "Bihar Partners with IT Cos to Train Government School Teachers In AI",
+      "source": "Analytics India Mag",
+      "url": "https://analyticsindiamag.com/ai-news/bihar-partners-with-it-cos-to-train-government-school-teachers-in-ai",
+      "summary": "The initiative will combine hands-on IT instruction for educators with plans to make computer education compulsory from 6th standard across Bihar’s go"
     },
     {
       "rank": 5,
-      "title": "iPhone 18 Pro Max Review: Powerful, Polished, but Who Should Actually Upgrade?",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/reviews/iphone-18-pro-max-review-12233041",
-      "summary": "The iPhone 18 Pro Max is a refined flagship rather than a major leap over the iPhone 17 Pro Max. Its familiar design and excellent display remain larg"
+      "title": "Meta Wants $95 Billion Through Stock Sales to Fund AI Infrastructure",
+      "source": "Analytics India Mag",
+      "url": "https://analyticsindiamag.com/ai-news/meta-wants-95-billion-through-stock-sales-to-fund-ai-infrastructure",
+      "summary": "NVIDIA, AMD and Broadcom have indicated an interest in purchasing up to $5 billion collectively in the Class A offering."
     }
   ],
   "remaining_candidates": [
     {
       "rank": 6,
-      "title": "Gen Z is shaping India’s beauty market: prevention first,and going beyond the metros",
+      "title": "Build, scale, and govern AI agents: Inside Google Cloud’s Gemini roadmap",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/10/gen-z-shaping-indias-beauty-market-prevention-firstand-going-beyond-metros",
-      "summary": "\n\nSubtitle: For this generation, beauty is prevention first with sun protection products seeing a 60% growth among Gen Z shoppers, finds a new report "
+      "url": "https://yourstory.com/2026/10/build-scale-and-govern-ai-agents-inside-google-clouds-gemini-roadmap",
+      "summary": "Join Google Cloud product leaders for the latest on the Gemini Enterprise Agent Platform and Gemini Enterprise for Customer Experience."
     },
     {
       "rank": 7,
-      "title": "What will it take for India’s fintech infrastructure to go global?",
+      "title": "Life After 55: Cradle Of Life is reimagining senior living lifestyle for retired Indians",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/10/what-will-it-take-for-indias-fintech-infrastructure-global",
-      "summary": "At TechSparks 2026, Movin Jain of Skydo and Srijon Biswas of PhonePe discussed building payments infrastructure at scale, the challenges of cross-bord"
+      "url": "https://yourstory.com/2026/09/life-after-55-cradle-of-life-is-reimagining-senior-living-lifestyle-for-retired-indians",
+      "summary": "\nSharad Gadsing on why senior living needs to move beyond real estate and ageing, and create communities designed around how people want to live.\n\nSen"
     },
     {
       "rank": 8,
-      "title": "Myntra Slips Into The Red In FY26, Reports ₹582 Cr Loss",
+      "title": "BioStack Nets $9.5 Mn To Build Training Datasets For Medical AI",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/myntra-slips-into-the-red-in-fy26-reports-%e2%82%b9582-cr-loss/",
-      "summary": "Fashion ecommerce platform Myntra reported a net loss of ₹581.8 Cr in the financial year ended March 31, 2026 (FY26),&#8230;"
+      "url": "https://inc42.com/buzz/biostack-nets-9-5-mn-to-build-training-datasets-for-medical-ai/",
+      "summary": "AI-powered healthtech platform BioStack has raised $9.5 Mn (₹90.4 Cr) in its seed funding round led by Peak XV Partners,&#8230;"
     },
     {
       "rank": 9,
-      "title": "How to Free Up Space on Your Android Phone",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/features/how-to-free-up-space-on-android-phone-delete-apps-and-photos-step-by-step-guide-12226369",
-      "summary": "Running out of storage on your Android smartphone will limit many capabilities of your handset. It will stop you from downloading new apps, capturing "
+      "title": "Matiks Bags $10 Mn To Take Its Puzzle Gaming Platform Global",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/matiks-bags-10-mn-to-take-its-puzzle-gaming-platform-global/",
+      "summary": "Social gaming platform Matiks has raised $10 Mn (₹95.1 Cr) in its Pre-Series A funding round led by General Catalyst. &#8230;"
     },
     {
       "rank": 10,
-      "title": "How to Turn Off Location Tracking for Apps on Android and iOS",
+      "title": "MEXC Set to Exit Netherlands After Confirming It Has No MiCA Licence",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/how-to/features/how-to-turn-off-location-tracking-for-apps-on-android-and-ios-12221704",
-      "summary": "Android and iPhone users can manage which apps have access to their location through their phone's privacy settings. Both platforms let users block lo"
+      "url": "https://www.gadgets360.com/cryptocurrency/news/mexc-exit-netherlands-after-confirming-no-mica-licence-crypto-regulations-law-12238954",
+      "summary": "Cryptocurrency exchange MEXC has confirmed that it lacks authorisation under the European Union’s Markets in Crypto-Assets Regulation (MiCA), promptin"
     },
     {
       "rank": 11,
-      "title": "AI Can Be Cyborg or Centaur. But Can Enterprises Monetise It?",
-      "source": "Analytics India Mag",
-      "url": "https://analyticsindiamag.com/ai-features/ai-can-be-cyborg-or-centaur-but-can-enterprises-monetise-it",
-      "summary": "Satish Viswanathan, former global data and AI lead for travel at Accenture, argues that companies are overlooking organisational readiness, workforce "
+      "title": "Sony-Backed Soneium Prepares Token Launch to Broaden Entertainment Reach",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/cryptocurrency/news/sony-backed-soneium-prepares-token-launch-broaden-entertainment-reach-crypto-adoption-tokens-crypto-industry-12238537",
+      "summary": "Sony-backed Ethereum Layer 2 network Soneium is preparing an ecosystem token called SONEIUM to connect creators, intellectual property owners, develop"
+    },
+    {
+      "rank": 12,
+      "title": "iPad Mini (2026) Launched in India With OLED Screen, A20 Pro Chip: Price, Specifications",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/tablets/news/ipad-mini-2026-price-in-india-launch-sale-date-features-specifications-12238695",
+      "summary": "Apple launched the iPad mini (2026) in India and global markets on Monday. The tablet has debuted mere days before the ‘Pro and Tell’ event, where the"
+    },
+    {
+      "rank": 13,
+      "title": "Lowdown: TRAI wants live TV apps like Samsung TV Plus to get a govt license",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/10/223-trai-live-tv-apps-govt-licence/",
+      "summary": "As many live TV channels on these apps like Samsung TV+ have no govt permission and are made for internet platforms, TRAI says it is \"a regulatory gap"
+    },
+    {
+      "rank": 14,
+      "title": "MakeMyTrip swings to profit in Q2, bus ticketing revenue jumps 16% despite macro headwinds",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/10/223-makemytrip-profit-ticketing-revenue-macro-headwinds/",
+      "summary": "MakeMyTrip reported a $1.8 million net profit in Q2 FY27, reversing last year's loss. Bus ticketing revenue surged 17%, while air ticketing revenue fe"
+    },
+    {
+      "rank": 15,
+      "title": "Maharashtra challenges FSSAI in Bombay HC over who can inspect big food businesses",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/10/223-maharashtra-challenges-fssai-food-businesses/",
+      "summary": "Maharashtra has moved the Bombay HC against FSSAI rules that it says prevent state officers from inspecting centrally licensed food businesses, includ"
     }
   ]
 }
