@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T02:38:51.023821+05:30",
+  "generated_at": "2026-10-28T02:21:28.970203+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,110 +24,110 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "News Publishers Move SC To Challenge The DPDP Act",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/news-publishers-move-sc-to-challenge-the-dpdp-act/",
-      "summary": "A group of 21 news publishers has reportedly challenged India’s Digital Personal Data Protection (DPDP) Act in the Supreme Court&#8230;"
+      "title": "Bengaluru AI Startup Simplismart Raises $14 Mn in NVIDIA-Backed Round",
+      "source": "Analytics India Mag",
+      "url": "https://analyticsindiamag.com/ai-news/bengaluru-ai-startup-simplismart-raises-14-mn-in-nvidia-backed-round",
+      "summary": "The company will use the funds to develop its AI inference platform, expand partnerships with cloud providers and sovereign AI players."
     },
     {
       "rank": 2,
-      "title": "Same AI, different outcomes: what 25 lean AI startups got right",
+      "title": "Capital no longer creates jobs, and AI is compounding the issue: Yatish Rajawat of Hundred Million Jobs",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/10/lean-ai-startup-scaling-framework-seven-growth-drivers",
-      "summary": "Why do lean AI startups scale while others stall? A Suvan Ventures report identifies seven growth drivers across 25 companies."
+      "url": "https://yourstory.com/2026/10/capital-jobs-ai-yatish-rajawat-hundred-million-jobs",
+      "summary": "At TechSparks 2026, K Yatish Rajawat of Hundred Million Jobs said MSMEs, data laws, entrepreneurship and reskilling will shape the next wave of employ"
     },
     {
       "rank": 3,
-      "title": "Pocket FM won’t stop throwing things at the wall",
-      "source": "The Ken",
-      "url": "https://the-ken.com/story/pocket-fm-wont-stop-throwing-things-at-the-wall/",
-      "summary": "The post Pocket FM won&#8217;t stop throwing things at the wall appeared first on The Ken.\n"
+      "title": "Calcutta HC seeks IP logs in ‘sealed cover’, asks platforms to block copies of Adani-Modi video",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/10/223-calcutta-hc-ip-logs-adani-modi-video/",
+      "summary": "The court asked YouTube, Instagram and X to preserve user information regarding the Adani-Modi video including IP logs at the time of upload and acces"
     },
     {
       "rank": 4,
-      "title": "Bihar Partners with IT Cos to Train Government School Teachers In AI",
+      "title": "Chai Point Cuts Monthly AWS Bill by 58%",
       "source": "Analytics India Mag",
-      "url": "https://analyticsindiamag.com/ai-news/bihar-partners-with-it-cos-to-train-government-school-teachers-in-ai",
-      "summary": "The initiative will combine hands-on IT instruction for educators with plans to make computer education compulsory from 6th standard across Bihar’s go"
+      "url": "https://analyticsindiamag.com/ai-news/chai-point-cuts-monthly-aws-bill-by-58",
+      "summary": "Monthly AWS bill fell from $10,877 to $4,550 over 12 months. The audit used Claude Code to examine Chai Point’s production and quality assurance cloud"
     },
     {
       "rank": 5,
-      "title": "Meta Wants $95 Billion Through Stock Sales to Fund AI Infrastructure",
-      "source": "Analytics India Mag",
-      "url": "https://analyticsindiamag.com/ai-news/meta-wants-95-billion-through-stock-sales-to-fund-ai-infrastructure",
-      "summary": "NVIDIA, AMD and Broadcom have indicated an interest in purchasing up to $5 billion collectively in the Class A offering."
+      "title": "NSE chief asks brokers’ body to set up a task force against AI cyberattacks",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/10/223-nse-chief-brokers-task-force-ai-cyberattacks/",
+      "summary": "Asking brokers' body ANMI to set up task force to tackle AI cyberattacks, the NSE chief said that they are reviewing \"every single part and component\""
     }
   ],
   "remaining_candidates": [
     {
       "rank": 6,
-      "title": "Build, scale, and govern AI agents: Inside Google Cloud’s Gemini roadmap",
+      "title": "5 lessons to learn from Sorrow and Bliss by Meg Mason",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/10/build-scale-and-govern-ai-agents-inside-google-clouds-gemini-roadmap",
-      "summary": "Join Google Cloud product leaders for the latest on the Gemini Enterprise Agent Platform and Gemini Enterprise for Customer Experience."
+      "url": "https://yourstory.com/2026/10/lesson-sorrow-bliss",
+      "summary": "Discover five powerful lessons from Sorrow and Bliss by Meg Mason about mental health, relationships, family, and finding happiness"
     },
     {
       "rank": 7,
-      "title": "Life After 55: Cradle Of Life is reimagining senior living lifestyle for retired Indians",
+      "title": "Noel Tata challenges resolution to reappoint Chandrasekaran as Tata Sons chairman",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/09/life-after-55-cradle-of-life-is-reimagining-senior-living-lifestyle-for-retired-indians",
-      "summary": "\nSharad Gadsing on why senior living needs to move beyond real estate and ageing, and create communities designed around how people want to live.\n\nSen"
+      "url": "https://yourstory.com/2026/10/noel-tata-challenges-resolution-reappoint-chandrasekaran-tata-sons-chairman",
+      "summary": "\nNoel Tata wrote to Tata Sons' company secretary Suprakash Mukhopadhyay on Monday, challenging the resolution for the reappointment of Chandrasekaran "
     },
     {
       "rank": 8,
-      "title": "BioStack Nets $9.5 Mn To Build Training Datasets For Medical AI",
+      "title": "Nova Spectral AI Raises ₹21.2 Cr To Build Indigenous Infrared Sensor Chips",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/biostack-nets-9-5-mn-to-build-training-datasets-for-medical-ai/",
-      "summary": "AI-powered healthtech platform BioStack has raised $9.5 Mn (₹90.4 Cr) in its seed funding round led by Peak XV Partners,&#8230;"
+      "url": "https://inc42.com/buzz/nova-spectral-ai-raises-%e2%82%b921-2-cr-to-build-indigenous-infrared-sensor-chips/",
+      "summary": "Bengaluru-based Nova Spectral AI has raised ₹21.2 Cr ($2.3 Mn) in a seed funding round led by Shastra VC, with&#8230;"
     },
     {
       "rank": 9,
-      "title": "Matiks Bags $10 Mn To Take Its Puzzle Gaming Platform Global",
+      "title": "Exclusive: Ex-Pixxel Engineer Effy John’s Parsec Aerospace In Talks To Raise $10 Mn",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/matiks-bags-10-mn-to-take-its-puzzle-gaming-platform-global/",
-      "summary": "Social gaming platform Matiks has raised $10 Mn (₹95.1 Cr) in its Pre-Series A funding round led by General Catalyst. &#8230;"
+      "url": "https://inc42.com/buzz/ex-pixxel-engineer-effy-johns-parsec-aerospace-in-talks-to-raise-10-mn/",
+      "summary": "Aerospace technology startup Parsec Aerospace, founded by former Pixxel engineer Effy John, is in talks to raise around $10 Mn&#8230;"
     },
     {
       "rank": 10,
-      "title": "MEXC Set to Exit Netherlands After Confirming It Has No MiCA Licence",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/cryptocurrency/news/mexc-exit-netherlands-after-confirming-no-mica-licence-crypto-regulations-law-12238954",
-      "summary": "Cryptocurrency exchange MEXC has confirmed that it lacks authorisation under the European Union’s Markets in Crypto-Assets Regulation (MiCA), promptin"
+      "title": "Live2.ai Raises ₹130 Cr To Scale AI Marketing SaaS Platform",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/live2-ai-raises-%e2%82%b9130-cr-to-scale-ai-marketing-saas-platform/",
+      "summary": "Bengaluru-based AI startup Live2.ai has raised ₹130 Cr ($13.7 Mn) in a pre-Series B funding round led by IvyCap Ventures.&#8230;"
     },
     {
       "rank": 11,
-      "title": "Sony-Backed Soneium Prepares Token Launch to Broaden Entertainment Reach",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/cryptocurrency/news/sony-backed-soneium-prepares-token-launch-broaden-entertainment-reach-crypto-adoption-tokens-crypto-industry-12238537",
-      "summary": "Sony-backed Ethereum Layer 2 network Soneium is preparing an ecosystem token called SONEIUM to connect creators, intellectual property owners, develop"
+      "title": "New-age venture capital would rather manufacture founders than find them",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/new-age-venture-capital-would-rather-manufacture-founders-than-find-them/",
+      "summary": "The post New-age venture capital would rather manufacture founders than find them appeared first on The Ken.\n"
     },
     {
       "rank": 12,
-      "title": "iPad Mini (2026) Launched in India With OLED Screen, A20 Pro Chip: Price, Specifications",
+      "title": "WhatsApp Is Reportedly Working on a New Settings Menu for Android Users",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/tablets/news/ipad-mini-2026-price-in-india-launch-sale-date-features-specifications-12238695",
-      "summary": "Apple launched the iPad mini (2026) in India and global markets on Monday. The tablet has debuted mere days before the ‘Pro and Tell’ event, where the"
+      "url": "https://www.gadgets360.com/apps/news/whatsapp-tests-redesigned-settings-menu-on-android-with-rounded-sections-12244283",
+      "summary": "WhatsApp's upcoming Android settings redesign introduces rounded containers that group related options together, replacing the existing flat list. The"
     },
     {
       "rank": 13,
-      "title": "Lowdown: TRAI wants live TV apps like Samsung TV Plus to get a govt license",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/10/223-trai-live-tv-apps-govt-licence/",
-      "summary": "As many live TV channels on these apps like Samsung TV+ have no govt permission and are made for internet platforms, TRAI says it is \"a regulatory gap"
+      "title": "Bloober Team's Silent Hill Remake Is Reportedly Targeting Launch in 2027",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/games/news/silent-hill-remake-bloober-team-launch-window-2027-report-12244233",
+      "summary": "Konami and Bloober Team are reportedly targeting a 2027 launch for Silent Hil remake. The horror title was announced last year, but does not have a re"
     },
     {
       "rank": 14,
-      "title": "MakeMyTrip swings to profit in Q2, bus ticketing revenue jumps 16% despite macro headwinds",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/10/223-makemytrip-profit-ticketing-revenue-macro-headwinds/",
-      "summary": "MakeMyTrip reported a $1.8 million net profit in Q2 FY27, reversing last year's loss. Bus ticketing revenue surged 17%, while air ticketing revenue fe"
+      "title": "Anthropic Says Mythos 5 Used Fake Identities to Get Malicious Code Approved on GitHub",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/ai/news/anthropic-finds-mythos-5-tried-to-manipulate-developers-in-github-test-12244032",
+      "summary": "Anthropic's evaluation of Mythos 5 revealed multiple cases of the AI model acting beyond the intended scope of cybersecurity tests. In one incident, i"
     },
     {
       "rank": 15,
-      "title": "Maharashtra challenges FSSAI in Bombay HC over who can inspect big food businesses",
+      "title": "Ofcom wants to regulate body-shaming and depression content. Can platforms even detect it?",
       "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/10/223-maharashtra-challenges-fssai-food-businesses/",
-      "summary": "Maharashtra has moved the Bombay HC against FSSAI rules that it says prevent state officers from inspecting centrally licensed food businesses, includ"
+      "url": "https://www.medianama.com/2026/10/223-ofcom-body-shaming-depression-content/",
+      "summary": "Ofcom wants platforms to protect children from two more types of harmful content. But can it show that existing rules work?\nThe post Ofcom wants to re"
     }
   ]
 }
