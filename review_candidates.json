@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-31T02:29:08.396552+05:30",
+  "generated_at": "2026-11-01T01:41:15.688293+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,24 +24,24 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "MeitY Floats New Privacy-Led Framework To Unlock Data For Training AI Models",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/meity-floats-new-privacy-led-framework-to-unlock-data-for-training-ai-models/",
-      "summary": "The IT ministry (MeitY) has proposed a consent-based framework to facilitate data sharing for training AI models in India.  Called&#8230;"
+      "title": "AU Small Finance Bank probes ‘potential data leak’ as hackers claim breach on dark web",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/10/223-au-small-finance-bank-data-leak-dark-web/",
+      "summary": "AU Small Finance Bank is investigating a potential data leak on a Salesforce-hosted platform after hackers claimed to have stolen customer and employe"
     },
     {
       "rank": 2,
-      "title": "AU Small Finance Bank Investigates Potential Leak; Vijay Sales Systems Allegedly Offered for Sale",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/internet/news/au-small-finance-bank-data-leak-vijay-sales-breach-report-12260309",
-      "summary": "AU Small Finance Bank is investigating a potential data leak involving a Salesforce-hosted platform used to store limited vehicle loan customer inform"
+      "title": "Google to put more ads in AI Mode as AI search slows revenue growth",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/10/223-google-expand-ai-mode-ads-search-revenue-growth-slows/",
+      "summary": "More ads are coming to Google's AI search. But what does this mean for websites that depend on search traffic?\nThe post Google to put more ads in AI M"
     },
     {
       "rank": 3,
-      "title": "TRAI September 2026 data: India adds 6.47M broadband connections to reach 1.108B",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/10/223-trai-september-broadband-connections/",
-      "summary": "India's broadband connections reached 1.108 billion in September 2026, up 0.59% from August. Jio and Airtel dominated the market, while 5G fixed wirel"
+      "title": "Are Boutique AI Firms India’s Next Big Thing?",
+      "source": "Analytics India Mag",
+      "url": "https://analyticsindiamag.com/it-services/are-boutique-ai-firms-indias-next-big-thing",
+      "summary": "AI-native consultancies are positioning themselves as smaller, faster engineering partners that can take AI projects from concept to production in day"
     },
     {
       "rank": 4,
@@ -52,82 +52,68 @@
     },
     {
       "rank": 5,
-      "title": "Inside, a treasure trove of govt data. Outside, AI agents",
-      "source": "The Ken",
-      "url": "https://the-ken.com/story/ai-agents-will-come-for-govt-data-govt-is-yet-to-decide-which-door-theyll-use/",
-      "summary": "The post Inside, a treasure trove of govt data. Outside, AI agents appeared first on The Ken.\n"
+      "title": "IPO-Bound StockGro’s FY26 Profit Jumps 3.3X YoY To ₹113 Cr, Revenue Doubles",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/ipo-bound-stockgros-fy26-profit-jumps-3-3x-yoy-to-%e2%82%b9113-cr-revenue-doubles/",
+      "summary": "StockGro-parent AssetGro Fintech Ltd net profit for the fiscal year FY26 jumped threefold while its operating revenue doubled year-on-year.  The&#8230"
     }
   ],
   "remaining_candidates": [
     {
       "rank": 6,
-      "title": "Policybazaar parent PB Fintech net profit rises 43% rise in Q2",
+      "title": "Jio Platforms’ first post-listing results: User growth, higher ARPU drive 13.7% profit rise in Q2",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/10/pb-fintech-net-profit-rises-43-rise-in-net-profit",
-      "summary": "The revenues for PB Fintech at the end of second quarter of FY27 stood at Rs 2178 crore which was an year-on-year growth of 35%\n"
+      "url": "https://yourstory.com/2026/10/jio-platforms-first-post-listing-results-user-growth-higher-arpu-drive-137-pc-profit-rise-in-q2",
+      "summary": "The digital and telecom company's consolidated revenue from operations rose 11.4% to Rs 40,475 crore during the quarter under review."
     },
     {
       "rank": 7,
-      "title": "Waiting for an AI law is a poor compliance strategy",
+      "title": "How Tagbin’s BRIXX uses AI to simplify building design and planning",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/10/waiting-for-an-ai-law-is-a-poor-compliance-strategy",
-      "summary": "India's courts and sectoral regulators have already begun assigning liability for AI failures. Businesses that are holding out for a statute are prepa"
+      "url": "https://yourstory.com/2026/10/how-tagbins-brixx-uses-ai-to-simplify-building-design-planning",
+      "summary": "At TechSparks 2026, Tagbin Co-founders Saurav Bhaik and Ankit Sinha demonstrated how BRIXX uses natural-language prompts to bring architectural design"
     },
     {
       "rank": 8,
-      "title": "[Update] CCI Clears Navi’s $100 Mn Investment From Prosus",
+      "title": "New-Age Tech Stocks Gain This Week Led By Ather & Zetwerk, CarTrade Sinks 22%",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/ipo-bound-navi-raises-100-mn-from-prosus-in-maiden-institutional-round/",
-      "summary": "Update &#124; Oct 30, 19:55 IST The Competition Commission of India (CCI) has cleared Prosus&#8217; investment in Navi to acquire&#8230;"
+      "url": "https://inc42.com/buzz/new-age-tech-stocks-gain-this-week-led-by-ather-zetwerk-cartrade-sinks-22/",
+      "summary": "New-age tech stocks largely advanced this week, with quarterly earnings driving sharp moves in individual counters. Of the 69 stocks&#8230;"
     },
     {
       "rank": 9,
-      "title": "Jio Platforms Q2 Profit Rises 14% YoY To ₹8,387 Cr, Revenue Up 11%",
+      "title": "E2W Registrations Rise 2.9% MoM To 2.15 Lakh In October, TVS & Hero Gain Market Share",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/jio-platforms-q2-profit-rises-14-yoy-to-%e2%82%b98387-cr-revenue-up-11/",
-      "summary": "Recently listed Jio Platforms reported a net profit of ₹8,387 Cr in Q2 FY27, a 13.7% increase from ₹7,379 Cr&#8230;"
+      "url": "https://inc42.com/buzz/e2w-registrations-rise-2-9-mom-to-2-15-lakh-in-october-tvs-hero-gain-market-share/",
+      "summary": "India’s electric two-wheeler (E2W) registrations rose 2.9% to 2,14,654 units in October from 2,08,688 units in September, with TVS Motor&#8230;"
     },
     {
       "rank": 10,
-      "title": "Assassin's Creed Valhalla, Black Flag Resynced Get New Game+; Ubisoft Shares Update on Assassin's Creed Hexe",
+      "title": "Best Value for Money Smartphones Under Rs 30,000 in India",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/games/news/assassins-creed-fall-update-ubisoft-valhalla-black-flag-resynced-codename-hexe-12260168",
-      "summary": "Ubisoft shared updates on the Assassin's Creed franchise on Thursday, revealing new content for Assassin's Creed Black Flag Resynced and Valhalla. Bot"
+      "url": "https://www.gadgets360.com/mobiles/features/best-value-for-money-smartphones-under-rs-30000-in-india-12255632",
+      "summary": "Smartphones under Rs. 30,000 offer a range of features, from high-refresh-rate displays and large batteries to versatile cameras and long-term softwar"
     },
     {
       "rank": 11,
-      "title": "North Korea’s Lazarus Group Linked to Alleged $6.3 Billion Binance Hack",
+      "title": "MacBook Pro (M6) vs MacBook Pro (M5): Price in India, Specifications and Features Compared",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/cryptocurrency/news/north-korea-lazarus-group-linked-to-alleged-usd-6-billion-binance-hack-crypto-scams-frauds-exploits-crypto-threats-12259835",
-      "summary": "Blockchain investigators have linked North Korea’s Lazarus Group to the alleged $6.3 billion Binance hack on October 29. TRM Labs attributed the incid"
+      "url": "https://www.gadgets360.com/laptops/features/macbook-pro-m6-vs-m5-price-in-india-specifications-apple-features-comparison-12249408",
+      "summary": "MacBook Pro (M6) starts at Rs. 2,39,900 in India for the 14-inch model with 16GB of unified memory and 1TB of SSD storage. The new model is suited to "
     },
     {
       "rank": 12,
-      "title": "Google to put more ads in AI Mode as AI search slows revenue growth",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/10/223-google-expand-ai-mode-ads-search-revenue-growth-slows/",
-      "summary": "More ads are coming to Google's AI search. But what does this mean for websites that depend on search traffic?\nThe post Google to put more ads in AI M"
+      "title": "Apple iPad Mini (2026) vs Oppo Pad Mini: Here’s What’s Different?",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/tablets/features/apple-ipad-mini-2026-versus-oppo-pad-mini-comparison-price-features-12242325",
+      "summary": "Apple has just launched its latest mini tablet called the iPad Mini (2026). The tablet directly competes with Oppo’s Pad Mini, which was recently laun"
     },
     {
       "rank": 13,
-      "title": "Shadowfax clocks Rs 1,538 cr revenue in Q2, profit rises 5x",
+      "title": "Special newsletter: Unanswered questions, October edition",
       "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/10/223-shadowfax-revenue-profit-5x/",
-      "summary": "Shadowfax reported 57% YoY revenue growth to Rs 1,537.7 crore in Q2 FY27, while net profit surged fivefold to Rs 68 crore, driven by strong growth in "
-    },
-    {
-      "rank": 14,
-      "title": "Amazon Warns Engineers Against AI Productivity Traps in Latest Memo",
-      "source": "Analytics India Mag",
-      "url": "https://analyticsindiamag.com/ai-news/amazon-warns-engineers-against-ai-productivity-traps-in-latest-memo",
-      "summary": "The company said that metrics that often grab attention, such as token usage, the number of AI tools used, code changes, the number of reviews, and mo"
-    },
-    {
-      "rank": 15,
-      "title": "Gnani AI Launches Prisma v3.0 Speech Recognition Model for 10 Languages",
-      "source": "Analytics India Mag",
-      "url": "https://analyticsindiamag.com/ai-news/gnani-ai-launches-prisma-v30-speech-recognition-model-for-10-languages",
-      "summary": "The company’s Prisma v3.0 supports nine Indian languages and English, with the company reporting lower transcription error rates than competing models"
+      "url": "https://www.medianama.com/2026/10/223-special-newsletter-unanswered-questions-october-edition/",
+      "summary": "From Meta's handling of child abuse ads and content blocking to AI-powered cyberattacks and user privacy, MediaNama shares five sets of questions that"
     }
   ]
 }
