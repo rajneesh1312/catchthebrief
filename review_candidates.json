@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-06T03:41:55.874669+05:30",
+  "generated_at": "2026-11-07T03:12:48.359706+05:30",
   "manually_reviewed": false,
   "review_deadline": "Edit this file before 8:00 AM IST if you want to change the top 5",
   "_manual_brief_template": {
@@ -24,110 +24,103 @@
   "top_5": [
     {
       "rank": 1,
-      "title": "CERT-In flags an AI threat actor targeting BFSI payment APIs for unauthorized fund transfers",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/11/223-cert-in-ai-threat-actor-bfsi-payment-api/",
-      "summary": "The Nov 4 advisory updates its Oct 9 advisory on exploitation of payment disbursement APIs for unauthorised fund transfer and says threat actor CRAFTY"
+      "title": "Govt clears 12 more proposals worth over Rs 7,500 Cr under electronics components scheme",
+      "source": "YourStory",
+      "url": "https://yourstory.com/2026/11/govt-clears-12-proposals-rs-7500-cr-electronics-components-scheme",
+      "summary": "The government also launched the Semicon 2.0 web application portal under the ambitious Semicon India Programme."
     },
     {
       "rank": 2,
-      "title": "What NPCI’s new technology subsidiary is set up to do",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/11/223-npcis-new-technology-subsidiary/",
-      "summary": "NPCI has established NPCI Tech Solutions Limited as a wholly owned subsidiary and appointed Vishal Kanvaty as its CEO. The new entity will focus on AI"
+      "title": "ED Searches CoinDCX & Delta Exchange Over Alleged Illegal Cross-Border Transfers",
+      "source": "Inc42",
+      "url": "https://inc42.com/buzz/ed-searches-coindcx-delta-exchange-over-alleged-illegal-cross-border-transfers/",
+      "summary": "The Enforcement Directorate (ED) conducted searches at three premises linked to crypto exchanges CoinDCX and Delta Exchange India (DEI) over&#8230;"
     },
     {
       "rank": 3,
-      "title": "Daksham Capital raises Rs 125 Cr in first close of Rs 300 Cr fund",
-      "source": "YourStory",
-      "url": "https://yourstory.com/2026/11/daksham-capital-raises-rs-125-cr-first-close-rs-300-cr-fund",
-      "summary": "The fund will invest in startups at the pre-Series A and Series A stages, with cheque sizes ranging from Rs 5 crore to Rs 20 crore. It will focus on D"
+      "title": "Stockal’s US Trading Row: Missing Consent, A Chinese Microcap, And Unanswered Questions",
+      "source": "Inc42",
+      "url": "https://inc42.com/features/stockals-us-trading-row-missing-consent-a-chinese-microcap-and-unanswered-questions/",
+      "summary": "Indian investors who held Apple, Amazon, Tesla, and NVIDIA, shares allege they logged into their Stockal accounts to find those&#8230;"
     },
     {
       "rank": 4,
-      "title": "The Anthropic-Indian IT Partnership Is a Two-Way Bet",
-      "source": "Analytics India Mag",
-      "url": "https://analyticsindiamag.com/it-services/the-anthropic-indian-it-partnership-is-a-two-way-bet",
-      "summary": "Anthropic’s filing doesn’t name IT services as a rival, yet it trains their engineers, sells through their channels and builds its own deployment arm."
+      "title": "PhysicsWallah clocks Rs 144 cr profit in Q2FY27, revenue up 18%",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/11/223-physicswallah-profit-q2fy27-revenue-up-18/",
+      "summary": "PhysicsWallah reported a net profit of Rs 143.6 crore in Q2FY27 despite witnessing a loss of Rs 88.3 crore in Q1FY27 as its revenue grew 18% YoY while"
     },
     {
       "rank": 5,
-      "title": "CEO Harsh Jain Teases A Revamped Dream11 By 2026-End",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/ceo-harsh-jain-teases-a-revamped-dream11-by-2026-end/",
-      "summary": "Erstwhile real money gaming (RMG) giant Dream11’s cofounder and CEO Harsh Jain has hinted at plans to launch a revamped&#8230;"
+      "title": "RBI meets bankers amidst rising AI cyber-attacks, mandates security audits",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/11/223-rbi-bankers-ai-cyber-attacks-security-audits/",
+      "summary": "In the confidential advisory, RBI asked banks to maintain a full API client inventory, do security audits once a year, brief API clients every 3 month"
     }
   ],
   "remaining_candidates": [
     {
       "rank": 6,
-      "title": "India rebased its GDP. It still can’t see the Rs 34.5 lakh crore women do free",
+      "title": "When code is cheap, trust is not: Inside the AI-era engineering roundtable",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/11/india-gdp-unpaid-care-work-women-workforce",
-      "summary": "India’s GDP leaves out unpaid care work worth up to 17% of GDP, mostly done by women. Measuring it is key to more women in jobs."
+      "url": "https://yourstory.com/2026/11/when-code-is-cheap-trust-is-not-inside-the-ai-era-engineering-roundtable",
+      "summary": "In a closed-door roundtable, leaders from logistics, healthcare, telecom, fintech, and e-commerce discussed where to automate, where to keep humans in"
     },
     {
       "rank": 7,
-      "title": "How Pine Labs is building for the agent economy: CTO Sanjeev Kumar on trust, control and execution",
+      "title": "How Satin Group’s Sankalp plans to empower India’s next wave of founders",
       "source": "YourStory",
-      "url": "https://yourstory.com/2026/11/how-pine-labs-is-building-for-the-agent-economy-cto-sanjeev-kumar-on-trust-control-and-execution",
-      "summary": "At TechSparks 2026, Pine Labs Chief Technology Officer, Sanjeev Kumar showcased how developers, merchants, and teams can put AI agents to work, backed"
+      "url": "https://yourstory.com/2026/11/how-satin-groups-sankalp-plans-empower-indias-next-wave-founders",
+      "summary": "University incubators play an important role in nurturing early-stage ideas, but Sankalp aims to go further by helping entrepreneurs bridge the gap be"
     },
     {
       "rank": 8,
-      "title": "This Is Not About Money: Deepinder Goyal Defends Temple Amid Credibility Row",
+      "title": "MobiKwik To Begin NBFC Operations Within 6 Months Post RBI Clearance",
       "source": "Inc42",
-      "url": "https://inc42.com/buzz/this-is-not-about-money-deepinder-goyal-defends-temple-amid-credibility-row/",
-      "summary": "Addressing social media debates over the scientific validity of Temple&#8217;s eponymous brain-monitoring wearable, founder Deepinder Goyal issued a s"
+      "url": "https://inc42.com/buzz/mobikwik-to-begin-nbfc-operations-within-6-months-post-rbi-clearance/",
+      "summary": "MobiKwik’s wholly owned subsidiary, MobiKwik Financial Services Pvt Ltd (MFSPL), has received a Certificate of Registration (CoR) from the RBI&#8230;"
     },
     {
       "rank": 9,
-      "title": "Go Digit Q2 Profit Falls 31% To ₹142 Cr",
-      "source": "Inc42",
-      "url": "https://inc42.com/buzz/go-digit-q2-profit-falls-31-to-%e2%82%b9142-cr/",
-      "summary": "Insurtech Go Digit reported a 31.1% year-on-year (YoY) decline in its net profit for the September quarter (Q2 FY27) to&#8230;"
+      "title": "How the chief of staff became the executive assistant’s cooler cousin",
+      "source": "The Ken",
+      "url": "https://the-ken.com/story/how-the-chief-of-staff-became-the-executive-assistants-cooler-cousin/",
+      "summary": "The post How the chief of staff became the executive assistant’s cooler cousin appeared first on The Ken.\n"
     },
     {
       "rank": 10,
-      "title": "Rs 20,000 at home, Rs 20 lakh to get out: Kerala’s nurses can’t stay, and can’t leave",
-      "source": "The Ken",
-      "url": "https://the-ken.com/story/rs-20000-at-home-rs-20-lakh-to-get-out-keralas-nurses-cant-stay-and-cant-leave/",
-      "summary": "The post Rs 20,000 at home, Rs 20 lakh to get out: Kerala’s nurses can’t stay, and can’t leave appeared first on The Ken.\n"
+      "title": "Razer Hammerhead V3 Chroma Wired Earphones Launched With ANC, IPX4 Rating: Price, Features",
+      "source": "Gadgets 360",
+      "url": "https://www.gadgets360.com/audio/news/razer-hammerhead-v3-chroma-earphones-price-launch-specifications-features-12293354",
+      "summary": "Razer Hammerhead V3 Chroma wired gaming earphones have been launched with active noise cancellation (ANC), USB Type-C connectivity, and customisable C"
     },
     {
       "rank": 11,
-      "title": "Zomato Rolls Out Limitless Delivery in Delhi NCR, Mumbai, Kolkata, More Indian Cities",
+      "title": "Name of Motorola's Upcoming Wide Foldable Phone Revealed in New Leak",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/apps/news/zomato-limitless-delivery-goes-live-seven-indian-cities-12288181",
-      "summary": "Zomato's new Limitless Delivery feature gives users access to restaurants located much farther from their delivery addresses, with orders possible fro"
+      "url": "https://www.gadgets360.com/mobiles/news/motorola-razr-flex-2027-name-leak-specifications-features-12293112",
+      "summary": "Motorola's upcoming foldable smartphone could be named the Motorola Razr Flex 2027. The tipster shared a screenshot that appears to have been taken fr"
     },
     {
       "rank": 12,
-      "title": "WhatsApp for Android Could Soon Let You Preview Chats Without Opening Them",
+      "title": "Vodafone Idea (Vi) Rs. 35 Prepaid Plan Launched With Access to Two Regional OTT Platforms, 1GB Data",
       "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/apps/news/whatsapp-for-android-preview-chats-feature-report-12287780",
-      "summary": "WhatsApp is reportedly working on a feature that will let users preview a chat without opening it. This upcoming update could allow users to read the "
+      "url": "https://www.gadgets360.com/telecom/news/vodafone-idea-rs-35-prepaid-plan-regional-ott-platforms-benefits-data-12292886",
+      "summary": "Vodafone Idea (Vi) has launched the Rs. 35 Vi prepaid recharge plan. It is available as an add-on pack and does not replace the user's existing servic"
     },
     {
       "rank": 13,
-      "title": "Motorola Signature 27 Launched With Snapdragon 8 Elite Extreme Gen 6 Chipset: Price, Specifications",
-      "source": "Gadgets 360",
-      "url": "https://www.gadgets360.com/mobiles/news/motorola-signature-27-price-launch-sale-date-specifications-features-12287488",
-      "summary": "Motorola Signature 27 has been launched in select global markets, the company announced on Thursday. The smartphone is scheduled to go on sale globall"
+      "title": "TRAI recommends India-based network control, traffic monitoring for satellite providers",
+      "source": "MediaNama",
+      "url": "https://www.medianama.com/2026/11/223-trai-india-network-control-traffic-monitoring-satellite-providers/",
+      "summary": "In the new recommendation, TRAI has proposed a new authorisation category for satellite network providers which will allow them to supply network capa"
     },
     {
       "rank": 14,
-      "title": "IFF & SFLC moves Delhi HC over disputed Delhi Police takedown notices",
-      "source": "MediaNama",
-      "url": "https://www.medianama.com/2026/11/223-iff-sflc-delhi-hc-delhi-police-takedown-notices/",
-      "summary": "Challenging the authenticity of the Delhi Police takedown notices in court, both IFF and SFLC urged Delhi Police to withdraw the takedown notices or f"
-    },
-    {
-      "rank": 15,
-      "title": "AI Productivity to Add $28 Billion to $84 Billion to India's GDP: Cognizant Study",
+      "title": "Smaller Language Models Could Reshape How Enterprises Deploy AI",
       "source": "Analytics India Mag",
-      "url": "https://analyticsindiamag.com/ai-news/ai-productivity-to-add-28-billion-to-84-billion-to-indias-gdp-cognizant-study",
-      "summary": "The research surveyed 700 enterprise employees and 75 C-suite and business executives at companies with revenues up to and exceeding $10 billion."
+      "url": "https://analyticsindiamag.com/ai-features/smaller-language-models-could-reshape-how-enterprises-deploy-ai",
+      "summary": "As enterprises explore smaller language models for specialised tasks, developers see opportunities for tighter evaluation and control. But smaller mod"
     }
   ]
 }
